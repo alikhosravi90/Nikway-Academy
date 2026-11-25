@@ -1,5 +1,11 @@
 # NIKWAY Data Contract Fabric
 
+**Document ID:** ARC-15  
+**Document revision:** 0.2-draft  
+**Review status:** Proposed  
+**Owner role:** Architecture lead (assignment pending)  
+**Dependencies:** [Architecture index](README.md) and [documentation standard](../../governance/documentation-standard.md).
+
 Proposed, not implemented. Data contracts specify schema, semantics, producer/consumer ownership, quality, classification, access, tenant context, version, SLO, lineage, retention and compatibility.
 
 Candidate stack: ODCS, Data Contract CLI, Apicurio, OpenMetadata, Soda Core, OpenLineage, JSON Schema/Pydantic, SHACL, OpenAPI, AsyncAPI, Pact, OPA and GitHub. Verify format and tooling compatibility; API/event/tool contracts remain distinct from dataset contracts and may reference them.
