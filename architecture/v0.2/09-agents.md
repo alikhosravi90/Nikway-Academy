@@ -27,3 +27,6 @@ Adversarial tests, cross-tenant retrieval denial, budget limit, tool failure fal
 TutorPort.reply(prompt, locale) is asynchronous and provider-independent. The current MockTutor returns prewritten answers for three topics and explicitly declines unsupported topics. Chat survives module navigation but is session-only. No model call, retrieval system, tools, durable AI memory or autonomous action exists. Text rendering and prompt bounds were checked; this is not adversarial evaluation of an LLM.
 
 [Implementation package and decision reconciliation](implementation/phase-1-2/README.md) · [Acceptance evidence](implementation/phase-1-2/ACCEPTANCE.md).
+
+## Related architecture authority
+[ARC-19 — specialized design](./mcp-fabric.md) refines this document within its scope. Both remain proposed; unresolved conflicts require an ADR and review. Historical implementation evidence is not superseded by target design.
