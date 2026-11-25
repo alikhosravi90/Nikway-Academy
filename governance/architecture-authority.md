@@ -14,6 +14,7 @@ Status: proposed. Core ARC-01–12 define scope; extensions refine their own res
 | Agent tools | ARC-19 | ARC-09,17 |
 
 ## Open decisions
+
 - Confirm Vite baseline and SEO/PWA needs (ADR-001 pending).
 - Decide minimum MVP services versus optional candidates; avoid deploying overlapping CMS, knowledge and media systems without use cases.
 - Verify Moodle and LRS tenant isolation and protocol versions.
