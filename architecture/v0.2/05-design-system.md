@@ -25,3 +25,6 @@ WCAG 2.2 AA target; keyboard-only navigation, visible focus, screen-reader label
 The original teal/green visual identity and licensed local Noto Sans Arabic font were preserved. Shared Card, Heading, Progress, CourseRow, CourseDialog and Modal components are implemented, with official shadcn/ui Button/Dialog sources. RTL/LTR, 320/390 px reflow, dialog Escape, labels and reduced-motion support were tested locally in Chromium. This is partial accessibility evidence, not a full WCAG audit or certification.
 
 [Implementation package and decision reconciliation](implementation/phase-1-2/README.md) · [Acceptance evidence](implementation/phase-1-2/ACCEPTANCE.md).
+
+## Related architecture authority
+[ARC-13 — specialized design](./adaptive-experience.md) refines this document within its scope. Both remain proposed; unresolved conflicts require an ADR and review. Historical implementation evidence is not superseded by target design.
