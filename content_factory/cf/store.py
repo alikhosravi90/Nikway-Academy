@@ -110,3 +110,63 @@ class Repository:
         require(ctx,'author','reviewer')
         with self.db.transaction(ctx) as c:
             return c.execute('SELECT revision_id,title,number FROM revisions WHERE title ILIKE %s ORDER BY component_id,number',('%'+query+'%',)).fetchall()
+
+    def _dependencies(self,c,ctx,rids):
+        found={}
+        pending=list(rids)
+        while pending:
+            rid=pending.pop()
+            if rid in found: continue
+            # Lock state until the candidate transaction ends, including withdrawal races.
+            c.execute('SELECT state FROM states WHERE revision_id=%s FOR SHARE',(rid,))
+            data=self._read(c,ctx,rid)
+            if data['reviewStatus']!='approved_local': raise DomainError('dependency not approved or withdrawn')
+            found[rid]=data
+            if len(found)>100: raise DomainError('dependency graph exceeds local limit')
+            pending.extend(data['derivedFrom']+data['prerequisiteIds'])
+        return found
+
+    def prepare(self,ctx,course_id,rids,key):
+        require(ctx,'reviewer')
+        if not course_id.strip() or not key.strip() or not rids or len(rids)!=len(set(rids)) or len(rids)>30:
+            raise DomainError('invalid candidate request')
+        request_digest=sha(canonical({'course':course_id,'revisions':rids}))
+        with self.db.transaction(ctx) as c:
+            c.execute('SELECT pg_advisory_xact_lock(hashtextextended(%s,0))',(ctx.tenant+':'+key,))
+            existing=c.execute('SELECT manifest,request_digest FROM candidates WHERE request_key=%s',(key,)).fetchone()
+            if existing:
+                if existing['request_digest']!=request_digest: raise DomainError('idempotency key payload conflict')
+                self._dependencies(c,ctx,[x['revisionId'] for x in existing['manifest']['dependencies']])
+                return existing['manifest']
+            deps=self._dependencies(c,ctx,rids)
+            cid=str(uuid4())
+            ref=lambda r:{'id':r['id'],'revisionId':r['revisionId'],'semanticVersion':r['semanticVersion'],'checksum':r['checksum']}
+            manifest={'schemaVersion':'1.0.0','id':cid,'courseId':course_id,'status':'candidate_local','publication':'NOT_RELEASED','components':[ref(deps[r]) for r in rids],'dependencies':[ref(deps[r]) for r in sorted(deps)],'recipeVersion':'1.0.0'}
+            c.execute('INSERT INTO candidates(tenant,candidate_id,course_id,manifest,request_key,request_digest) VALUES(%s,%s,%s,%s,%s,%s)',(ctx.tenant,cid,course_id,Jsonb(manifest),key,request_digest))
+            for rid in deps:
+                c.execute('INSERT INTO usages VALUES(%s,%s,%s)',(ctx.tenant,cid,rid))
+            self.event(c,ctx,'content.candidate.prepared',{'candidateId':cid,'manifestDigest':sha(canonical(manifest))})
+            return manifest
+
+    def _candidate(self,c,ctx,cid):
+        row=c.execute('SELECT manifest FROM candidates WHERE candidate_id=%s',(cid,)).fetchone()
+        if not row: raise DomainError('candidate not found',404)
+        m=row['manifest']; self._dependencies(c,ctx,[x['revisionId'] for x in m['dependencies']])
+        return m
+
+    def candidate(self,ctx,cid):
+        with self.db.transaction(ctx) as c: return self._candidate(c,ctx,cid)
+
+    def package(self,ctx,cid):
+        from .render import build_package, zip_package
+        with self.db.transaction(ctx) as c:
+            m=self._candidate(c,ctx,cid)
+            contents=[self._read(c,ctx,r['revisionId']) for r in m['components']]
+            return zip_package(build_package(m,contents,instructor=ctx.role in ('author','reviewer')))
+
+    def events(self,ctx):
+        require(ctx,'author','reviewer','consumer')
+        with self.db.transaction(ctx) as c:
+            rows=c.execute('SELECT payload FROM events ORDER BY created_at,event_id').fetchall()
+            # Consumer gets delivery events only; never editorial notes or source evidence.
+            return [r['payload'] for r in rows if ctx.role!='consumer' or r['payload']['type']=='content.candidate.prepared']
