@@ -1,0 +1,28 @@
+{
+  "command": "PYTHONPATH=backend:. backend/.venv/bin/python -m pytest backend/tests/test_rules.py backend/tests/test_auth.py content/test_validate_package.py -q",
+  "passed": 32,
+  "failed": 0,
+  "skipped": 0,
+  "seconds": 0.55,
+  "frontend_component_tests": {
+    "passed": 4,
+    "source_receipt": "frontend/evidence/imported-content-browser.json"
+  },
+  "real_content_integration": {
+    "passed": 4,
+    "seconds": 3.79,
+    "log": "content-integration.log"
+  },
+  "real_oidc_security": {
+    "passed": 7,
+    "seconds": 3.829,
+    "log": "security-integration.log"
+  },
+  "log_normalization": "Only private Python installation prefix replaced; ResourceWarnings retained",
+  "source_hashes": {
+    "backend/app/main.py": "637a44e669e94a669135ad5c0e149a11ee0a4ac12eb0ad4b39fc701a90d3464b",
+    "backend/tests/test_content_integration.py": "f8518425c030d86ed606e32fa9524cf6a91d1c1f825d2e5aa2cbe8d328ccc42a",
+    "backend/tests/test_integration.py": "a0a55363c9a0c5e027c0793fbe648b5deea003d74d19a0324bc53505c675f963",
+    "content/validate_package.py": "36e15a71e63471b8792118e31c123c136d8fb744d50852d67eb0fe9982909ac3"
+  }
+}

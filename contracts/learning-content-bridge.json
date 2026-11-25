@@ -1,0 +1,36 @@
+{
+  "contractId": "nikway.learning-os.content-admission",
+  "version": "1.0.0",
+  "implementedProfile": "nikway.course.local-review.v1",
+  "producerBoundary": {
+    "implemented": "offline original-course producer",
+    "learningEngineering": "outcomes, assessment intent, human rubric and reference coverage",
+    "contentFactory": "authoring and immutable portable package assembly",
+    "externalServiceConnected": false
+  },
+  "wireProfiles": [
+    {
+      "id": "nikway.course.local-review.v1",
+      "schema": "content-package.schema.json",
+      "admission": "implemented_and_tested",
+      "rightsScope": "original content, local review only"
+    },
+    {
+      "id": "content-factory.ComponentInput@c979c74",
+      "admission": "unsupported_until_explicit_adapter",
+      "missingMapping": ["component revision assembly", "competency and source-evidence identifiers", "accessibility attestations", "rights decision", "learner/answer-key separation"],
+      "failurePolicy": "reject; never silently invent metadata or copy answer keys into lesson content"
+    }
+  ],
+  "operations": [
+    {"name":"validate","transport":"offline bytes","authority":"none","result":"schema, semantics and digest only"},
+    {"name":"importDraft","method":"POST","path":"/api/content-packages","authority":"active database reviewer membership","idempotency":"tenant + packageId + version + identical digest"},
+    {"name":"publishLocal","method":"POST","path":"/api/content-packages/{id}/publish","authority":"active database reviewer membership","preconditions":["expected_digest","expected_revision","current validation"],"effect":"immutable tenant-derived course version; no public deployment"},
+    {"name":"export","method":"GET","path":"/api/courses/{id}/package","authority":"active membership in course tenant","result":"exact portable source document, without runtime identity/tenant credentials"}
+  ],
+  "failureCodes": {"401":"authentication missing or invalid","403":"role or membership denied","404":"resource invisible or absent","409":"immutable version/digest/revision conflict","413":"byte limit exceeded","422":"schema/semantic/integrity failure"},
+  "limits": {"packageBytes":131072,"lessons":20,"lessonCharacters":10000,"versionCharacters":64},
+  "trustRules": ["tenant and actor derived at action time", "digest is not signature or approval", "draft cannot self-publish", "new versions preserve prior enrollments", "no remote fetch or executable content", "no numerical competency or credential claim"],
+  "learningProgressTool": {"version":"2","output":"bounded own-participation aggregates; authored content and learner evidence excluded"},
+  "remainingIntegrationGate": "Actual Content Factory ComponentInput adapter and producer/consumer conformance tests against its current pinned implementation"
+}

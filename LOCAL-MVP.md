@@ -1,5 +1,7 @@
 # NIKWAY Academy local MVP
 
+> Historical frozen baseline. For the separate patched content candidate, see [SECURE-CONTENT-MVP.md](SECURE-CONTENT-MVP.md). The six findings below describe the preserved baseline, not the new candidate.
+
 Status: **PARTIAL — operational local MVP; release NO-GO**. This candidate runs locally with synthetic learners and persistent data. Six HIGH findings remain in the pinned Keycloak image; security acceptance, merge and release are blocked. This is not the complete target Academy platform.
 
 ## Open and sign in

@@ -1,6 +1,8 @@
 # NIKWAY Academy
 
-Architecture v0.2 and operational local MVP candidate (release approval pending)
+Architecture v0.2, frozen local baseline and separate secure content candidate (merge/release approval pending)
+
+Current candidate: [secure content MVP evidence and commands](SECURE-CONTENT-MVP.md). Baseline: [registered immutable snapshot](baselines/local-mvp-2026-11-25.json).
 
 AI-native social learning and professional capability development platform.
 

@@ -1,4 +1,13 @@
-test_01_identity_and_tenant_boundary (test_integration.RealIntegration.test_01_identity_and_tenant_boundary) ... ok
+test_01_identity_and_tenant_boundary (test_integration.RealIntegration.test_01_identity_and_tenant_boundary) ... <local-python>/lib/python3.12/email/feedparser.py:473: ResourceWarning: unclosed <socket.socket [closed] fd=3, family=2, type=1, proto=6>
+  for lineno, line in enumerate(lines):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<local-python>/lib/python3.12/email/feedparser.py:473: ResourceWarning: unclosed <socket.socket [closed] fd=4, family=2, type=1, proto=6>
+  for lineno, line in enumerate(lines):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<local-python>/lib/python3.12/email/feedparser.py:473: ResourceWarning: unclosed <socket.socket [closed] fd=5, family=2, type=1, proto=6>
+  for lineno, line in enumerate(lines):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
 test_02_rls_role_and_sql_negative_cases (test_integration.RealIntegration.test_02_rls_role_and_sql_negative_cases) ... ok
 test_03_learning_review_and_replay (test_integration.RealIntegration.test_03_learning_review_and_replay) ... ok
 test_04_reviewer_cannot_accept_own_evidence (test_integration.RealIntegration.test_04_reviewer_cannot_accept_own_evidence) ... ok
@@ -7,6 +16,6 @@ test_06_tool_budget_concurrency (test_integration.RealIntegration.test_06_tool_b
 test_07_revoked_membership (test_integration.RealIntegration.test_07_revoked_membership) ... ok
 
 ----------------------------------------------------------------------
-Ran 7 tests in 3.993s
+Ran 7 tests in 3.829s
 
 OK

@@ -185,8 +185,15 @@ def invoke(body:ToolRequest,request:Request,ctx:Context=Depends(authenticated, s
     if reason:
         audit(ctx,request,'tool_denied')
         return JSONResponse({'code':'tool_denied','message':reason},status_code=403)
-    result = jsonable_encoder({'tool':'learning.progress','version':'1','result':progress(ctx)})
-    if len(json.dumps(result).encode()) > 32768:
+    # Tool context needs bounded progress facts, not entire authored lessons or learner evidence.
+    summary = {
+        'enrolled_courses': one(ctx.conn,'SELECT count(*) AS n FROM enrollments WHERE subject=:s',s=ctx.sub)['n'],
+        'completed_lessons': one(ctx.conn,'SELECT count(*) AS n FROM completions c JOIN enrollments e ON c.enrollment_id=e.id WHERE e.subject=:s',s=ctx.sub)['n'],
+        'submission_records_by_status': {r['status']:r['n'] for r in rows(ctx.conn,'SELECT status,count(*) AS n FROM submissions WHERE subject=:s GROUP BY status',s=ctx.sub)},
+        'scope': 'own tenant-bound participation records; not competency certification',
+    }
+    result = jsonable_encoder({'tool':'learning.progress','version':'2','result':summary})
+    if len(json.dumps(result,ensure_ascii=False).encode()) > 32768:
         audit(ctx,request,'tool_result_limit')
         return JSONResponse({'code':'result_limit','message':'Tool result limit exceeded'},status_code=413)
     audit(ctx,request,'tool_learning_progress')

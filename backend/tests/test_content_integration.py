@@ -80,5 +80,9 @@ class ContentIntegration(unittest.TestCase):
         status,r=self.call('/api/submissions/'+s2['id']+'/review',{'decision':'accepted','feedback':'شواهد بازبینی شد؛ پذیرش آزمایشی انسانی، بدون ادعای گواهی مهارت.','expected_revision':1});self.assertEqual(status,200,r);self.assertEqual(r['status'],'accepted')
         records=self.call('/api/submissions',who='learner-a')[1];self.assertEqual(next(x for x in records if x['id']==s['id'])['status'],'revision_requested')
         self.assertEqual(next(x for x in records if x['id']==s2['id'])['status'],'accepted')
+        status,tool=self.call('/api/tools/invoke',{'name':'learning.progress','arguments':{}},'learner-a')
+        self.assertEqual(status,200,tool);self.assertEqual(tool['version'],'2')
+        self.assertGreaterEqual(tool['result']['completed_lessons'],3)
+        self.assertLess(len(json.dumps(tool).encode()),2048)
 
 if __name__=='__main__':unittest.main()

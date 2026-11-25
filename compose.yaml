@@ -16,7 +16,10 @@ services:
     mem_limit: 512m
     cpus: 1.0
   keycloak:
-    image: quay.io/keycloak/keycloak:26.8.2@sha256:7e66a96e4739239070aeaf72e4c5decf0f7f682cfc725b9f7ea2b336eaba38b3
+    image: nikway-keycloak-custom:26.8.2-guava33.7.2
+    build:
+      context: ./infra/identity
+      dockerfile: Dockerfile.keycloak-source
     command: [start-dev, --import-realm]
     environment:
       KC_DB: postgres

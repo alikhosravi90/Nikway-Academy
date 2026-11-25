@@ -1,10 +1,10 @@
 # Portable learning package: bounded local profile
 
-Status: implemented offline contract and original sample; local API admission is a separate integration gate. This is not a running Content Factory service, general interoperability certification, signature, content approval, or release authorization.
+Status: implemented offline contract and original sample; local API admission, immutable publication and exact export have passed independent live checks. The current producer/consumer boundary is machine-readable in `contracts/learning-content-bridge.json`. This is not a running Content Factory service, general interoperability certification, signature, content approval, or release authorization.
 
 ## Ownership and reconciliation
 
-Read-only source review: Content Factory proposal `c861651`, `architecture/content-factory/README.md` (CF-01 v0.1.0, PROPOSED / NOT IMPLEMENTED), and Learning Engineering proposal `d8d3347a708749f545eb3f2ac7e339db3f277b1f`, `learning-engineering/CONTRACT.md`. Existing concurrent source work was not modified. The profile implements a small adapter to those proposals:
+Read-only source review: Content Factory proposal `c861651`, `architecture/content-factory/README.md` (CF-01 v0.1.0, PROPOSED / NOT IMPLEMENTED), and Learning Engineering proposal `d8d3347a708749f545eb3f2ac7e339db3f277b1f`, `learning-engineering/CONTRACT.md`. Existing concurrent source work was not modified. The profile implements a bounded course profile conceptually aligned with those proposals:
 
 | Proposed concept | This profile | Remaining scope |
 | --- | --- | --- |
@@ -45,3 +45,7 @@ Run `python -m unittest content.test_validate_package -v` and `python -m content
 A subsequent read-only inventory found Content Factory commit `c979c74` on `content-factory-mvp`, adding `content_factory/cf/contracts.py` and a local repository implementation. Its Pydantic `ComponentInput` version 1.0.0 is a **different wire contract**: one component with `semanticVersion`, `locale`, competency and evidence identifiers, accessibility assertions, audience, duration, provenance and body sections/exercise/questions. Questions include answer keys. Our course package version 1.0.0 does not denote compatibility with that independently named schema version.
 
 No actual conversion or service connection has been tested. The crosswalk above describes conceptual alignment with the pinned proposals, not successful interoperability with this newer implementation. A future adapter must explicitly map component revisions to course assemblies, obtain genuine competency/evidence/accessibility metadata, preserve provenance and rights, and separate learner-visible content from answer keys. Inventing missing metadata or copying assessment answers into learner lesson text is unacceptable. This implementation remains an independently validated offline course producer and local Learning OS admission profile; actual Content Factory export/import is deferred pending that contract reconciliation.
+
+## Progress tool compatibility
+
+The `learning.progress` tool response is version 2: bounded counts for own enrolled courses, completed lessons and submission records by status. It no longer includes authored lesson bodies or learner evidence. The full UI `/api/progress` response is unchanged. This prevents a valid imported Persian course from exhausting the tool output limit and reduces untrusted authored text in tool context.

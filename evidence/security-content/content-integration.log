@@ -1,9 +1,15 @@
-test_01_admission_authority_integrity_and_draft_visibility (test_content_integration.ContentIntegration.test_01_admission_authority_integrity_and_draft_visibility) ... ok
+test_01_admission_authority_integrity_and_draft_visibility (test_content_integration.ContentIntegration.test_01_admission_authority_integrity_and_draft_visibility) ... <local-python>/lib/python3.12/email/feedparser.py:88: ResourceWarning: unclosed <socket.socket [closed] fd=4, family=2, type=1, proto=6>
+  for ateof in reversed(self._eofstack):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<local-python>/lib/python3.12/email/feedparser.py:88: ResourceWarning: unclosed <socket.socket [closed] fd=5, family=2, type=1, proto=6>
+  for ateof in reversed(self._eofstack):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
 test_02_concurrent_import_publish_and_conflict (test_content_integration.ContentIntegration.test_02_concurrent_import_publish_and_conflict) ... ok
 test_03_export_new_version_and_tenant_isolation (test_content_integration.ContentIntegration.test_03_export_new_version_and_tenant_isolation) ... ok
 test_04_full_learning_revision_and_human_acceptance (test_content_integration.ContentIntegration.test_04_full_learning_revision_and_human_acceptance) ... ok
 
 ----------------------------------------------------------------------
-Ran 4 tests in 1.913s
+Ran 4 tests in 3.790s
 
 OK
