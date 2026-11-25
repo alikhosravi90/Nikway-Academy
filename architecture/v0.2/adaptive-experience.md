@@ -1,5 +1,11 @@
 # NIKWAY Adaptive Experience Architecture
 
+**Document ID:** ARC-13  
+**Document revision:** 0.2-draft  
+**Review status:** Proposed  
+**Owner role:** Architecture lead (assignment pending)  
+**Dependencies:** [Architecture index](README.md) and [documentation standard](../../governance/documentation-standard.md).
+
 Proposed extension to ARC-05 and ARC-06; not visually designed or usability tested.
 
 ## Layers
