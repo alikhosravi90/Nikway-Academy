@@ -32,3 +32,6 @@ Contract tests, replay, timeout, duplicate delivery and unavailable-engine tests
 LearningPort exposes initialize/read/dispatch/exportBackup/importBackup; TutorPort exposes reply. Adapter selection is centralized in app/services.ts. HashRouter, relative asset base and service-worker precache were exercised from a nested static-server path, including offline reload. No HTTP API, OIDC provider, LMS/LRS, media engine or model gateway is connected. Interoperability contract/replay tests for those engines remain pending.
 
 [Implementation package and decision reconciliation](implementation/phase-1-2/README.md) · [Acceptance evidence](implementation/phase-1-2/ACCEPTANCE.md).
+
+## Related architecture authority
+[ARC-18 — specialized design](./integration-fabric.md) refines this document within its scope. Both remain proposed; unresolved conflicts require an ADR and review. Historical implementation evidence is not superseded by target design.
