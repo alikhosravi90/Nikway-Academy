@@ -33,6 +33,8 @@ class PackageTests(unittest.TestCase):
         for depth in (25, 2000):
             with self.assertRaises(ValueError):
                 load_package(b'{"nested":' + b'['*depth + b'0' + b']'*depth + b'}')
+    def test_version_length(self):
+        self.check_bad(lambda p:p.update(version='1'*1000+'.0.0'))
     def test_nul_character(self):
         self.check_bad(lambda p:p['course'].update(title='title\x00invalid'))
     def test_nonobject(self):
