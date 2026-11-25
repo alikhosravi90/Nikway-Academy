@@ -25,3 +25,6 @@ Migration rollback, tenant isolation, duplicate-event handling, restore and dele
 Dexie schema v1 uses states and archive tables; the learning payload has version 2. On first initialization, valid nikway-demo-v1 localStorage data and its raw backup are migrated atomically. Existing IndexedDB state wins on later boots. The legacy key is never deleted or rewritten. Invalid input fails visibly; reset/import preserve a recovery copy. Transactions serialize concurrent changes. PostgreSQL, outbox, server sync, tenancy, encrypted backup and deletion propagation remain unimplemented.
 
 [Implementation package and decision reconciliation](implementation/phase-1-2/README.md) · [Acceptance evidence](implementation/phase-1-2/ACCEPTANCE.md).
+
+## Related architecture authority
+[ARC-15 — specialized design](./data-contract-fabric.md) refines this document within its scope. Both remain proposed; unresolved conflicts require an ADR and review. Historical implementation evidence is not superseded by target design.
