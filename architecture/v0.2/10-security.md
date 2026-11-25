@@ -32,3 +32,6 @@ Threat model review, access matrix tests, vulnerability scan and recovery eviden
 Implemented: Zod validation, React text rendering, bounded tutor prompts, validated backup import, transactional local writes, reset confirmation and dependency lockfile. The dated npm audit reported zero known vulnerabilities. No server authorization, OIDC, tenant isolation, encryption-at-rest guarantee, secret manager, upload malware scanning or security certification is claimed. Published evidence excludes local absolute paths and screenshots containing profile labels.
 
 [Implementation package and decision reconciliation](implementation/phase-1-2/README.md) · [Acceptance evidence](implementation/phase-1-2/ACCEPTANCE.md).
+
+## Related architecture authority
+[ARC-22 — specialized design](./security-defense-in-depth.md) refines this document within its scope. Both remain proposed; unresolved conflicts require an ADR and review. Historical implementation evidence is not superseded by target design.
