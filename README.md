@@ -19,3 +19,11 @@ AI-native social learning and professional capability development platform.
 - ARC-12 Standards Compliance Matrix
 
 Status: proposed, not validated or deployed. No license selected yet. No secrets or personal data permitted.
+
+## Content Factory proposal
+
+- [Content Factory and Hybrid Content Repository](architecture/content-factory/README.md)
+- [Benchmark references](architecture/content-factory/benchmarks.md)
+- [Pending validation gates](architecture/content-factory/validation-gates.md)
+
+Design registration only; original conversation details remain partially unavailable. No implementation or conformance claim.
