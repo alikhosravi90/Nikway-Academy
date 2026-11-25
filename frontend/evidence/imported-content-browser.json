@@ -89,5 +89,6 @@
     "Candidate uses currently running official Keycloak; if identity image changes auth browser rerun required",
     "No numeric grading, authoring UI, external publication or production-readiness claim"
   ],
-  "screenshots": "Ignored local test-results/screenshots; synthetic learner only"
+  "screenshots": "Ignored local test-results/screenshots; synthetic learner only",
+  "receipt_status": "INTERMEDIATE: official Keycloak runtime before custom identity rebuild; retained as historical evidence"
 }
