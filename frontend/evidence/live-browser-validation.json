@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-25",
+  "scope": "Local synthetic seeded tenants; real Keycloak PKCE, API and PostgreSQL",
+  "browser": "Playwright Chromium",
+  "tests": {
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "duration_seconds": 6.5
+  },
+  "journeys": [
+    "learner login, sequential completion, reload persistence, submission and logout",
+    "reviewer login, feedback and revision request",
+    "anonymous and forged token rejection, learner own-record visibility, tenant isolation and unauthorized review denial"
+  ],
+  "visual": {
+    "desktop_width": 1440,
+    "mobile_width": 320,
+    "horizontal_overflow": false,
+    "page_errors": [],
+    "screenshots": "Ignored local runtime files; not included in Git",
+    "console_errors": [],
+    "csp_violations": [],
+    "font_family": "n, Arial",
+    "tenant_identifier_direction": "ltr"
+  },
+  "limits": "Local Chromium only; no public deployment, external integrations, full accessibility audit or production readiness claim",
+  "runtime": "Current hardened runtime after infrastructure stop/start, restart and encrypted recovery checks",
+  "image_identities": {
+    "frontend": "sha256:769f40a9729dcdc6beb409b55ec0203dd7cc7210b409db302f636937263978f1",
+    "api": "sha256:f137537717f0949a5e64b55d5ed9432f83143703b1cd7bb53ed8818f65b26d52",
+    "postgres": "sha256:dd44c4c2bfcb4cbcb4dccbc86070687701c5990d152f5a7a947b286bccef49a5",
+    "keycloak": "sha256:7e66a96e4739239070aeaf72e4c5decf0f7f682cfc725b9f7ea2b336eaba38b3"
+  },
+  "post_switch_csp_recheck": {
+    "errors": [],
+    "csp_violations": [],
+    "mobile_overflow": false,
+    "login_logout": "PASS"
+  },
+  "runtime_window": {
+    "started_at": "2026-11-25T11:41:24.982568+00:00",
+    "completed_at": "2026-11-25T11:41:32.783349+00:00",
+    "before": {
+      "frontend": {
+        "image": "sha256:769f40a9729dcdc6beb409b55ec0203dd7cc7210b409db302f636937263978f1",
+        "container_id": "69c533bb77ca213572ccf4872581954b31a38037d82d204da0d06d80bf1be5e3",
+        "created_at": "2026-11-25T11:39:03.165094157Z",
+        "started_at": "2026-11-25T11:40:42.361408805Z"
+      },
+      "api": {
+        "image": "sha256:f137537717f0949a5e64b55d5ed9432f83143703b1cd7bb53ed8818f65b26d52",
+        "container_id": "d0316af4984baa2f964790710ae6f316c82e348a437a70740ff8118479ae0b1a",
+        "created_at": "2026-11-25T11:37:40.356682576Z",
+        "started_at": "2026-11-25T11:40:42.700074205Z"
+      },
+      "postgres": {
+        "image": "sha256:dd44c4c2bfcb4cbcb4dccbc86070687701c5990d152f5a7a947b286bccef49a5",
+        "container_id": "39eb2adbdc0d270b413b1044e151fbc0503ce8a29e08e2b97607c7b3565b50e4",
+        "created_at": "2026-11-25T11:37:38.537310996Z",
+        "started_at": "2026-11-25T11:40:42.374168251Z"
+      },
+      "keycloak": {
+        "image": "sha256:7e66a96e4739239070aeaf72e4c5decf0f7f682cfc725b9f7ea2b336eaba38b3",
+        "container_id": "d89436aa86ea4106b66b7e5ed8a2bf4a39530e19480518d91069ef40b5ee79a6",
+        "created_at": "2026-11-25T11:37:38.909751724Z",
+        "started_at": "2026-11-25T11:40:43.402836771Z"
+      }
+    },
+    "after": {
+      "frontend": {
+        "image": "sha256:769f40a9729dcdc6beb409b55ec0203dd7cc7210b409db302f636937263978f1",
+        "container_id": "69c533bb77ca213572ccf4872581954b31a38037d82d204da0d06d80bf1be5e3",
+        "created_at": "2026-11-25T11:39:03.165094157Z",
+        "started_at": "2026-11-25T11:40:42.361408805Z"
+      },
+      "api": {
+        "image": "sha256:f137537717f0949a5e64b55d5ed9432f83143703b1cd7bb53ed8818f65b26d52",
+        "container_id": "d0316af4984baa2f964790710ae6f316c82e348a437a70740ff8118479ae0b1a",
+        "created_at": "2026-11-25T11:37:40.356682576Z",
+        "started_at": "2026-11-25T11:40:42.700074205Z"
+      },
+      "postgres": {
+        "image": "sha256:dd44c4c2bfcb4cbcb4dccbc86070687701c5990d152f5a7a947b286bccef49a5",
+        "container_id": "39eb2adbdc0d270b413b1044e151fbc0503ce8a29e08e2b97607c7b3565b50e4",
+        "created_at": "2026-11-25T11:37:38.537310996Z",
+        "started_at": "2026-11-25T11:40:42.374168251Z"
+      },
+      "keycloak": {
+        "image": "sha256:7e66a96e4739239070aeaf72e4c5decf0f7f682cfc725b9f7ea2b336eaba38b3",
+        "container_id": "d89436aa86ea4106b66b7e5ed8a2bf4a39530e19480518d91069ef40b5ee79a6",
+        "created_at": "2026-11-25T11:37:38.909751724Z",
+        "started_at": "2026-11-25T11:40:43.402836771Z"
+      }
+    },
+    "runtime_unchanged": true,
+    "exit_code": 0
+  },
+  "receipt_correction": {
+    "supersedes": "2f699fe final browser image binding",
+    "previous_test_completed_local": "2026-11-25T15:09:02.784478397+03:30",
+    "frontend_recreated_local": "2026-11-25T15:09:03.165094157+03:30",
+    "reason": "Earlier browser tests ended before frontend recreation; later image inspection incorrectly associated the earlier test result with the replacement image. This rerun captures unchanged container and image identities before and after the entire test window."
+  }
+}

@@ -1,6 +1,6 @@
 # NIKWAY Academy
 
-Public architecture baseline — v0.2.0-draft (pending review)
+Architecture v0.2 and operational local MVP candidate (release approval pending)
 
 AI-native social learning and professional capability development platform.
 
@@ -18,14 +18,14 @@ AI-native social learning and professional capability development platform.
 - ARC-11 Integration Architecture
 - ARC-12 Standards Compliance Matrix
 
-Status: proposed, not validated or deployed. No license selected yet. No secrets or personal data permitted.
+Target architecture remains partially implemented. See [local MVP runbook and acceptance](LOCAL-MVP.md) for the installed, tested scope and remaining release blockers. No repository license selected yet. No secrets or personal data permitted.
 
 ## v0.2 draft and implementation evidence
 
 - [Twelve-document architecture pack v0.2](architecture/v0.2/README.md)
 - [Learning OS phases 1–2: implementation results and test evidence](architecture/v0.2/implementation/phase-1-2/README.md)
 
-The locally tested frontend prototype is implemented; the full target platform remains proposed/partial. Standards conformance, real backend/AI integrations and production readiness are not established. The evidence is from local execution, not repository CI. No running application is deployed by this documentation update.
+The original prototype is preserved with provenance. The current local MVP adds real OIDC authentication, PostgreSQL persistence, tenant isolation and an operational learning journey. The full target platform, AI/MCP providers, standards conformance and production readiness remain partial or unverified. See the runbook for current evidence and GitHub CI boundaries.
 
 ## Documentation navigation
 

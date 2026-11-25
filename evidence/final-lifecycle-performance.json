@@ -1,0 +1,62 @@
+{
+  "checked_at_utc": "2026-11-25T11:40:15.696280+00:00",
+  "scope": "Only Academy Compose lifecycle; source volumes preserved",
+  "persistence_tables": {
+    "academy": 11,
+    "keycloak": 6
+  },
+  "stop_start_persistence": "PASS",
+  "restart_persistence": "PASS",
+  "persistence_method": "All11 Academy tables plus6 persistent identity/configuration tables: sorted COPY SHA256 and row counts identical before/after. Session/lock tables excluded from lifecycle equality; full backups verified separately.",
+  "health_latency_ms": {
+    "samples": 50,
+    "errors": 0,
+    "median": 2.077,
+    "p95": 2.741,
+    "max": 3.103,
+    "scope": "Serial local unauthenticated health via nginx; not authenticated workload, concurrency, throughput or capacity benchmark"
+  },
+  "resources": [
+    {
+      "Name": "nikway-academy-local-frontend-1",
+      "CPUPerc": "0.00%",
+      "MemUsage": "10.7MiB / 256MiB",
+      "MemPerc": "4.18%",
+      "PIDs": "13"
+    },
+    {
+      "Name": "nikway-academy-local-api-1",
+      "CPUPerc": "0.10%",
+      "MemUsage": "56.77MiB / 512MiB",
+      "MemPerc": "11.09%",
+      "PIDs": "2"
+    },
+    {
+      "Name": "nikway-academy-local-keycloak-1",
+      "CPUPerc": "0.09%",
+      "MemUsage": "435.3MiB / 1GiB",
+      "MemPerc": "42.51%",
+      "PIDs": "37"
+    },
+    {
+      "Name": "nikway-academy-local-postgres-1",
+      "CPUPerc": "0.01%",
+      "MemUsage": "38.61MiB / 512MiB",
+      "MemPerc": "7.54%",
+      "PIDs": "10"
+    }
+  ],
+  "status": "PASS_LIMITED_LOCAL",
+  "post_start_command_readiness_wait_seconds": 2.232,
+  "post_restart_command_readiness_wait_seconds": 0.053,
+  "timing_boundary": "Readiness waits exclude Docker Compose command duration; total stop/start/restart wall time not measured.",
+  "authenticated_courses_latency_ms": {
+    "samples": 50,
+    "errors": 0,
+    "median": 5.992,
+    "p95": 7.578,
+    "max": 14.96,
+    "stable_response_length": true,
+    "scope": "Sequential GET /api/courses as real synthetic learner-a after PKCE login; tokens memory-only; includes authorization and DB read, excludes login time; not concurrent throughput or learning outcomes."
+  }
+}

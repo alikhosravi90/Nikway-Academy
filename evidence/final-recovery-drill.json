@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-11-25T11:41:06.303331+00:00",
+  "databases": {
+    "academy": {
+      "status": "PASS",
+      "method": "Encrypted archive COPY rows vs restored database COPY rows; each table rows sorted before SHA256",
+      "tables": 11,
+      "total_rows": 286
+    },
+    "keycloak": {
+      "status": "PASS",
+      "method": "Encrypted archive COPY rows vs restored database COPY rows; each table rows sorted before SHA256",
+      "tables": 101,
+      "total_rows": 1719
+    }
+  },
+  "scope": "Encrypted final Alpine runtime dumps restored to disposable databases, every table rows/digests matched. Disposables removed. No plaintext or credentials committed."
+}

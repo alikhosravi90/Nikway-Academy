@@ -1,0 +1,289 @@
+@import "tailwindcss";
+@import "./legacy.css";
+@theme inline {
+  --color-primary: #18877b;
+  --color-primary-foreground: white;
+  --color-background: #f6f8fa;
+  --color-foreground: #192c3c;
+  --color-border: #dce5e6;
+  --color-input: #dce5e6;
+  --color-ring: #18877b;
+  --color-muted: #edf5f2;
+  --color-muted-foreground: #697885;
+  --color-accent: #e6f4f0;
+  --color-accent-foreground: #0c8075;
+  --color-secondary: #e6f4f0;
+  --color-secondary-foreground: #0c8075;
+  --color-destructive: #b73c3c;
+  --color-popover: white;
+  --color-popover-foreground: #192c3c;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+/* Preserve the original visual identity; extend it using logical properties. */
+@theme inline {
+  --font-sans: n, Arial, sans-serif;
+}
+body {
+  font-family: n, Arial, sans-serif;
+}
+h2 {
+  line-height: 1.65;
+}
+p {
+  margin-block: 12px;
+}
+h3 {
+  line-height: 1.8;
+}
+button,
+input {
+  font-family: inherit;
+}
+button:not(:disabled) {
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+input {
+  max-width: 100%;
+}
+.hero-cta {
+  background: #c9e699;
+  color: #204c40;
+  padding: 12px 18px;
+  height: auto;
+}
+.hero-cta:hover {
+  background: #b9d987;
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header-actions button {
+  font-family: Arial, n;
+}
+.sidebar {
+  overflow-y: auto;
+}
+.content {
+  min-width: 0;
+}
+.course-info {
+  min-width: 0;
+}
+.footer-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.nikway-dialog {
+  max-width: 650px;
+  max-height: 85dvh;
+  overflow: auto;
+  background: white;
+  display: block;
+  padding: 30px;
+  text-align: start;
+}
+.nikway-dialog [data-slot="dialog-title"] {
+  padding-inline-end: 20px;
+  line-height: 1.8;
+}
+.nikway-dialog [data-slot="dialog-description"] {
+  margin-block: 8px 16px;
+}
+.nikway-dialog > [data-slot="dialog-close"] {
+  display: flex;
+  margin-inline-start: auto;
+  margin-top: 20px;
+}
+.boot {
+  max-width: 600px;
+  margin: 10vh auto;
+}
+.error-banner {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: #fff1eb;
+  color: #9c321f;
+  padding: 12px 24px;
+  text-align: center;
+}
+.error-banner button {
+  margin-inline-start: 12px;
+}
+.bubble {
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.import-label {
+  display: block;
+  margin-top: 16px;
+}
+.import-label input {
+  display: block;
+  margin-top: 8px;
+}
+.lab-options [data-slot="button"] {
+  white-space: normal;
+  height: auto;
+  justify-content: flex-start;
+  line-height: 1.9;
+}
+.skip-link {
+  position: fixed;
+  top: -70px;
+  z-index: 100;
+  background: white;
+  padding: 12px;
+}
+.skip-link:focus {
+  top: 0;
+}
+.stat strong {
+  white-space: nowrap;
+}
+.bar i {
+  font-style: normal;
+}
+.tag {
+  width: fit-content;
+}
+[dir="ltr"] .eyebrow {
+  letter-spacing: 1px;
+}
+nav a.active {
+  background: #e6f4f0;
+  color: #0c8075;
+  font-weight: bold;
+}
+@media (max-width: 650px) {
+  .sidebar {
+    overflow: visible;
+  }
+  .sidebar-caption {
+    display: none;
+  }
+  .side-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+    padding-top: 8px;
+  }
+  .side-bottom .avatar,
+  .side-bottom p {
+    display: none;
+  }
+  header {
+    height: auto;
+    min-height: 65px;
+    padding: 10px 15px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .header-actions {
+    gap: 4px;
+  }
+  header > span {
+    font-size: 11px;
+  }
+  .hero {
+    min-height: 0;
+  }
+  .hero p {
+    font-size: 12px;
+  }
+  .hero-cta {
+    white-space: normal;
+  }
+  .filters input {
+    width: 100%;
+  }
+  .course {
+    flex-wrap: wrap;
+  }
+  .course-info {
+    flex: 1;
+    min-width: 150px;
+  }
+  .nikway-dialog {
+    padding: 22px;
+  }
+  .footer-tools {
+    gap: 5px;
+  }
+  .heading {
+    margin-bottom: 18px;
+  }
+  .chat-form {
+    flex-wrap: wrap;
+  }
+  .chat-form input {
+    min-width: 160px;
+  }
+  .lab-options button {
+    font-size: 12px;
+  }
+  .stat strong {
+    font-size: 19px;
+  }
+  .boot {
+    margin: 20px 12px;
+  }
+  .brand {
+    display: block;
+  }
+  .skills button .flex {
+    flex-wrap: wrap;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Grid items must shrink below intrinsic form/text width on narrow screens. */
+.grid > * {
+  min-width: 0;
+}
+.cols {
+  grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+}
+@media (max-width: 1000px) {
+  .cols {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  .chat-form input {
+    flex-basis: 160px;
+    width: 160px;
+  }
+  .cards,
+  .skills {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+[data-variant="outline"] {
+  border-color: #dce5e6;
+  background: white;
+  color: #28524e;
+}

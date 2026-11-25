@@ -1,0 +1,44 @@
+{
+  "result": "PASS_LIMITED_LOCAL_REAL_INTEGRATION",
+  "timestamp_utc": "2026-11-25T11:18:16.285411+00:00",
+  "tests": 7,
+  "duration_seconds": 2.868,
+  "command": "ACADEMY_RUNTIME_ROOT=<integration checkout> python3 -m unittest discover -s backend/tests -p test_integration.py -v",
+  "runtime_head": "9cea1f7abc8c62ab510130862625f7d629ec908f",
+  "runtime_dirty": true,
+  "source_sha256": {
+    "backend/app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/auth.py": "51f443fe651dbd78f46a21ead526ae37003a64ade0e91e0f475d27df81c27a56",
+    "backend/app/db.py": "757f6de3c3842c3dc03748fd198b852f37b67e29f3fb03e4ef8b36e6a70311fa",
+    "backend/app/main.py": "d40161fedda10b6677b4e6af7b794933e5375a014ae403151f439486c85b9985",
+    "backend/app/migrate.py": "f0ce29fa3767fc6f7c4ab38024be48c8ed36cf49923560df69178acf1987dd64",
+    "backend/app/rules.py": "0ddd7b904fa672d3e9853f4e7327cc97ce5bc8fbaa7766cb2a03baf0bf2210f6",
+    "backend/migrations/env.py": "8fe00adedc26c6f29db1988ffa99f8c0c3a5a71e22f9118d35f98c6b81fea62b",
+    "backend/migrations/versions/001_core.py": "fd09f846569b7462c090172fe74f8331064657936fac86501dde1c6015c33c28",
+    "backend/migrations/versions/002_least_privilege.py": "9dcbbd5d34fdb529b818cb68e4038e8a2be97ca7c027e8d23456151ec0530bb5",
+    "backend/tests/test_auth.py": "d875d0eb0a3b759bf81c5f073093ed1b5a9ad753f6c73ddc5666a9ee63dd57ec",
+    "backend/tests/test_integration.py": "168e95256e714b1baf7e8e8b2fb3cd8941c98da6f53e116759ba47c4c9bbd64f",
+    "backend/tests/test_rules.py": "75322e1c5594f768b3a85359a6f359aca37d75804f67246b32a6b462a33af759"
+  },
+  "api_image_id": "sha256:f36e0035ef8baba89cebc9828de60afb94fbbd5bdf8ee0c28ecd8f6a63dcf0f0",
+  "scope": [
+    "real Keycloak authorization-code PKCE and active database membership",
+    "anonymous, forged token and genuine wrong-audience id_token rejection",
+    "cross-tenant enrollment, completion, submission, review, registration and tools denial",
+    "PostgreSQL non-superuser non-BYPASSRLS role; no-context and wrong-tenant RLS; immutable audit privileges",
+    "ordered lesson completion, enrollment and submission replay, human review stale revision and self-review denial",
+    "concurrent capacity registration prevents overbooking",
+    "concurrent tool budget <=20 successes from 25 requests",
+    "membership revoked before request denies and is restored in finally"
+  ],
+  "limitations": [
+    "local synthetic fixtures only",
+    "runtime working tree contained integration fixes; source hashes capture tested files instead of claiming clean-SHA CI",
+    "expired token covered by backend unit tests only, not live token expiration",
+    "tool kill-switch disabled runtime not exercised by this suite",
+    "no production readiness, compliance, external AI, MCP transport or live meeting claim"
+  ],
+  "fixture_policy": "Unique synthetic course/workshop/submission fixtures preserved; temporary membership revocation restored; tokens only in process memory",
+  "log": "evidence/local-mvp-governance-security.log",
+  "test_harness_sha256": "94dabb6e2b1096b75f1daa4df35c3c5ff6198e645f14cd9f55cefafef7f030ef"
+}

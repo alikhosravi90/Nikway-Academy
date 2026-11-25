@@ -1,0 +1,214 @@
+{
+  "checked_at_utc": "2026-11-25T11:13:37.313518+00:00",
+  "scope": "20 candidates from governance/agent-engineering-factory.md",
+  "status": "PARTIAL: availability and license-source review; not an integration or release certification",
+  "license_boundary": "Current upstream default-branch receipts, not exact installed release or transitive SBOM certification. No optional engines installed. Hosted product terms differ from OSS server licenses. Repository itself has no selected license.",
+  "tools": [
+    {
+      "tool": "Superpowers",
+      "availability": "plugin 7.0.1 available",
+      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
+      "scope_note": "Optional workflow; not runtime dependency",
+      "license_detected": "MIT",
+      "source": "https://github.com/obra/superpowers/blob/main/LICENSE",
+      "license_blob_sha": "abf0390320aa14406af7a520b9b0739fdda9bf08",
+      "license_sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+    },
+    {
+      "tool": "Spec Kit",
+      "availability": "Installed isolated specify1.4.4; not added to global PATH",
+      "compatibility": "PASS_LIMITED: initialized real pilot and imported pinned templates; evidence/local-mvp-governance.json",
+      "scope_note": "Necessary governance tooling installed in tools/spec-kit/venv",
+      "license_detected": "MIT",
+      "source": "https://github.com/github/spec-kit/blob/main/LICENSE",
+      "license_blob_sha": "28a50fa22639e32febe14e4ffc7a732b0ba8c90a",
+      "license_sha256": "2510b446bc1f0cf9702453075d20cd88631e20e5642658edb7325d9c1eb534f7"
+    },
+    {
+      "tool": "GitHub MCP",
+      "availability": "Connector exposed and used",
+      "compatibility": "PASS_LIMITED: created mission issues and Draft PR14",
+      "scope_note": "Connector implementation license is not established solely by upstream GitHub MCP license",
+      "license_detected": "MIT",
+      "source": "https://github.com/github/github-mcp-server/blob/main/LICENSE",
+      "license_blob_sha": "9a9cc50d37ea399f7ccc2f14b6c6d4cc4de02efc",
+      "license_sha256": "9e48ecfa18e2b15169746a3c97beda4d1d6c6796097038498ca434ca7e0ccd44"
+    },
+    {
+      "tool": "Context7",
+      "availability": "connector tools exposed",
+      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
+      "scope_note": "Optional documentation; server runtime version unverified",
+      "license_detected": "MIT",
+      "source": "https://github.com/upstash/context7/blob/master/LICENSE",
+      "license_blob_sha": "17900de42d69131467aaa7a53fa88b92d238dc63",
+      "license_sha256": "85cfb556dc2b22b55d2565674fcdaac82f3f2f6b7a928d27003132721bb6736c"
+    },
+    {
+      "tool": "Playwright",
+      "availability": "Installed project dependency with Chromium",
+      "compatibility": "PASS_LIMITED: real PKCE browser journey3/3; frontend/evidence/live-browser-validation.json",
+      "scope_note": "Used for operational frontend validation",
+      "license_detected": "Apache-2.0",
+      "source": "https://github.com/microsoft/playwright/blob/main/LICENSE",
+      "license_blob_sha": "df112373eb2e23e459bf93ec412be1764dc5a38b",
+      "license_sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb"
+    },
+    {
+      "tool": "Figma MCP",
+      "availability": "plugin 20.0.0 and connector tools available",
+      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
+      "scope_note": "Hosted service; seat, permissions and terms apply; no runtime dependency",
+      "license_detected": "Hosted proprietary service; no OSS grant established",
+      "source": "https://www.figma.com/legal/tos/",
+      "documentation": "https://developers.figma.com/docs/figma-mcp-server/"
+    },
+    {
+      "tool": "Product Design",
+      "availability": "plugin 0.1.56 available",
+      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
+      "scope_note": "Local manifest explicitly Proprietary; do not classify as open source",
+      "license_detected": "Proprietary",
+      "source": "Installed product-design 0.1.56 .codex-plugin/plugin.json license field",
+      "upstream_manifest_repository": "https://github.com/openai/openai/tree/master/chatgpt/oai-maintained-plugins/plugins/product-design",
+      "public_upstream_verification": "Not established; local publisher manifest is evidence"
+    },
+    {
+      "tool": "Poka-Yoke",
+      "availability": "plugin 0.2.0 available",
+      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
+      "scope_note": "Optional workflow; not runtime dependency",
+      "license_detected": "MIT",
+      "source": "https://github.com/rainmanjam/poka-yoke/blob/main/LICENSE",
+      "license_blob_sha": "649d2b199f66631bf36419120bf9bddeca24e0eb",
+      "license_sha256": "b8170477017eeaacc7df1a99df60de466652b26cc7d472fd5751ca2ba4805388"
+    },
+    {
+      "tool": "Docker",
+      "availability": "Local Engine/Compose available",
+      "compatibility": "PASS_LIMITED: four runtime services, one-shot migrations, isolated reproduction, persistence and restore",
+      "scope_note": "Existing unrelated services preserved",
+      "license_detected": "Apache-2.0",
+      "source": "https://github.com/moby/moby/blob/master/LICENSE",
+      "license_blob_sha": "6d8d58fb676bbbcc9b4432da4951e4b438478306",
+      "license_sha256": "7c87873291f289713ac5df48b1f2010eb6963752bbd6b530416ab99fc37914a8"
+    },
+    {
+      "tool": "Semgrep",
+      "availability": "not in PATH",
+      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
+      "scope_note": "Deferred; OSS engine license does not cover all commercial engines or rule licenses",
+      "license_detected": "LGPL-2.1",
+      "source": "https://github.com/semgrep/semgrep/blob/develop/LICENSE",
+      "license_blob_sha": "8000a6faacf471c537530805ab29523c7732e11a",
+      "license_sha256": "20c17d8b8c48a600800dfd14f95d5cb9ff47066a9641ddeab48dc54aec96e331"
+    },
+    {
+      "tool": "Trivy",
+      "availability": "Isolated verified v0.76.2 binary",
+      "compatibility": "PASS_LIMITED: exact runtime images scanned; final infrastructure evidence",
+      "scope_note": "Scanner findings are not blanket license/security approval",
+      "license_detected": "Apache-2.0",
+      "source": "https://github.com/aquasecurity/trivy/blob/main/LICENSE",
+      "license_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "binary_source": "https://github.com/aquasecurity/trivy/releases/download/v0.76.2/trivy_0.76.2_Linux-64bit.tar.gz",
+      "binary_archive_sha256": "bc0fc726e017b8927a62b2d3531d7a84ee01769daf5c99ed866dced54089fdbf"
+    },
+    {
+      "tool": "Renovate",
+      "availability": "not in PATH",
+      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
+      "scope_note": "Deferred; no bot installed or repository automation enabled",
+      "license_detected": "AGPL-3.0",
+      "source": "https://github.com/renovatebot/renovate/blob/main/license",
+      "license_blob_sha": "0ad25db4bd1d86c452db3f9602ccdbe172438f52",
+      "license_sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+    },
+    {
+      "tool": "Temporal",
+      "availability": "CLI absent; unrelated temporalio/temporal:1.9.1 container running",
+      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
+      "scope_note": "Deferred from Academy; do not reuse or modify unrelated runtime",
+      "license_detected": "MIT",
+      "source": "https://github.com/temporalio/temporal/blob/main/LICENSE",
+      "license_blob_sha": "3349f76795f4409cba6ae18ea56adf9fbd8346f3",
+      "license_sha256": "6aab9afd99ceb1dcaf6a0d91386b46baef9bce17ae4006044e0f231e31430b69"
+    },
+    {
+      "tool": "OpenHands",
+      "availability": "uv tool 1.16.0 installed; agent-canvas image cached",
+      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
+      "scope_note": "Optional; not invoked or given application credentials",
+      "license_detected": "MIT",
+      "source": "https://github.com/OpenHands/OpenHands/blob/main/LICENSE",
+      "license_blob_sha": "f6f60f52368bcc96f82fbe59ec65049c2c3af9db",
+      "license_sha256": "e1d1fa9f3a8d7bef24449d488fcd8f00f8f272cac297bb9bed161eb6175b876a"
+    },
+    {
+      "tool": "LiteLLM",
+      "availability": "not in PATH",
+      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
+      "scope_note": "Deferred; MIT outside enterprise path, enterprise license separate",
+      "license_detected": "NOASSERTION",
+      "source": "https://github.com/BerriAI/litellm/blob/main/LICENSE",
+      "license_blob_sha": "2ffbfec19ad5a1fd2a489d1f4f7ce81a899eb77b",
+      "license_sha256": "4a5f5d029fb0fa6410cc3d416093d1f41571f0911f04b518088a54ea335bab30",
+      "license_review": "MIT outside litellm/enterprise; separate enterprise license"
+    },
+    {
+      "tool": "Ollama",
+      "availability": "0.34.0; local listener 11434",
+      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
+      "scope_note": "Optional; model weights each have separate license; no inference benchmark",
+      "license_detected": "MIT",
+      "source": "https://github.com/ollama/ollama/blob/main/LICENSE",
+      "license_blob_sha": "8e3dc978a7ca8c53f56bbedc5b558116140fc02e",
+      "license_sha256": "5934ed2ce0d15154bcdb9c85203210abac0da4314af34081e36df4599f90b226"
+    },
+    {
+      "tool": "Git worktree",
+      "availability": "Git 2.53.0; isolated worktrees active",
+      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
+      "scope_note": "Used successfully; Git license includes component notices",
+      "license_detected": "NOASSERTION",
+      "source": "https://github.com/git/git/blob/master/COPYING",
+      "license_blob_sha": "536e55524db72bd2acf175208aef4f3dfc148d42",
+      "license_sha256": "5b2198d1645f767585e8a88ac0499b04472164c0d2da22e75ecf97ef443ab32e",
+      "license_review": "GPL version 2; COPYING contains additional component notices"
+    },
+    {
+      "tool": "uv",
+      "availability": "0.13.1",
+      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
+      "scope_note": "Available; target backend install independently verified by root",
+      "license_detected": "Apache-2.0",
+      "source": "https://github.com/astral-sh/uv/blob/main/LICENSE-APACHE",
+      "license_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "license_review": "Apache-2.0 OR MIT; API selected LICENSE-APACHE; MIT alternative verified separately",
+      "alternative_license_source": "https://github.com/astral-sh/uv/blob/main/LICENSE-MIT"
+    },
+    {
+      "tool": "pnpm",
+      "availability": "12.14.0",
+      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
+      "scope_note": "Available; existing npm lockfile does not require pnpm migration",
+      "license_detected": "MIT",
+      "source": "https://github.com/pnpm/pnpm/blob/main/LICENSE",
+      "license_blob_sha": "565d3e85af157e84829fc486d58a199d4b4f4de4",
+      "license_sha256": "4b8e2a57502758b2d034ece9cabf19dd098c5609003ed8dbdafd085274f25bd9"
+    },
+    {
+      "tool": "BuildKit",
+      "availability": "0.34.0 via buildx0.38.0",
+      "compatibility": "PASS_LIMITED: pinned local image builds completed with cache hits",
+      "scope_note": "No controlled cache speedup benchmark",
+      "license_detected": "Apache-2.0",
+      "source": "https://github.com/moby/buildkit/blob/master/LICENSE",
+      "license_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  ],
+  "final_reconciliation": "Availability below reconciled against actual mission execution; upstream license receipts remain scoped as originally stated."
+}

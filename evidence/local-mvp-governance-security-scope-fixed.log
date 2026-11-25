@@ -1,0 +1,12 @@
+test_01_identity_and_tenant_boundary (test_integration.RealIntegration.test_01_identity_and_tenant_boundary) ... ok
+test_02_rls_role_and_sql_negative_cases (test_integration.RealIntegration.test_02_rls_role_and_sql_negative_cases) ... ok
+test_03_learning_review_and_replay (test_integration.RealIntegration.test_03_learning_review_and_replay) ... ok
+test_04_reviewer_cannot_accept_own_evidence (test_integration.RealIntegration.test_04_reviewer_cannot_accept_own_evidence) ... ok
+test_05_capacity_concurrency (test_integration.RealIntegration.test_05_capacity_concurrency) ... ok
+test_06_tool_budget_concurrency (test_integration.RealIntegration.test_06_tool_budget_concurrency) ... ok
+test_07_revoked_membership (test_integration.RealIntegration.test_07_revoked_membership) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 3.515s
+
+OK

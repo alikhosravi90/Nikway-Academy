@@ -1,0 +1,22 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.15, pytest-9.2.0, pluggy-1.7.0
+rootdir: <checkout>/backend
+configfile: pyproject.toml
+plugins: platformdirs-4.14.8, anyio-4.16.0
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_____________________ ERROR collecting tests/test_rules.py _____________________
+ImportError while importing test module '<checkout>/backend/tests/test_rules.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../../../../.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+backend/tests/test_rules.py:2: in <module>
+    from app.rules import next_completion, review_transition
+E   ModuleNotFoundError: No module named 'app.rules'
+=========================== short test summary info ============================
+ERROR backend/tests/test_rules.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.07s ===============================

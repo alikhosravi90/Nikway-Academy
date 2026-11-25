@@ -1,0 +1,86 @@
+{
+  "schema_version": "1",
+  "name": "NIKWAY Academy Local MVP",
+  "generated_at_utc": "2026-11-25T11:41:11.043915+00:00",
+  "status": "PARTIAL",
+  "local_runtime": "INSTALLED_RUNNING",
+  "release_gate": "NO-GO",
+  "release_blockers": [
+    {
+      "owner": "security / identity maintainer",
+      "reason": "Pinned Keycloak 26.8.2 has six HIGH findings (zero CRITICAL)",
+      "required_action": "Supported remediation or explicitly reviewed exception, rescan and identity regression; no exception granted in this mission."
+    }
+  ],
+  "publication": {
+    "repository": "https://github.com/alikhosravi90/Nikway-Academy",
+    "branch": "mission/local-mvp-release",
+    "pull_request": 14,
+    "base": "architecture/v0.2",
+    "merged": false,
+    "release_tag": null,
+    "candidate_commit": "Resolve PR head SHA; this manifest intentionally avoids a self-referential commit hash."
+  },
+  "urls": {
+    "frontend": "http://localhost:18401",
+    "health": "http://localhost:18400/api/health",
+    "identity": "http://localhost:18480/realms/academy"
+  },
+  "runtime_images": {
+    "api": "sha256:f137537717f0949a5e64b55d5ed9432f83143703b1cd7bb53ed8818f65b26d52",
+    "postgres": "sha256:dd44c4c2bfcb4cbcb4dccbc86070687701c5990d152f5a7a947b286bccef49a5",
+    "keycloak": "sha256:7e66a96e4739239070aeaf72e4c5decf0f7f682cfc725b9f7ea2b336eaba38b3",
+    "frontend": "sha256:769f40a9729dcdc6beb409b55ec0203dd7cc7210b409db302f636937263978f1"
+  },
+  "source_hashes": {
+    "compose.yaml": "3fb77d41e0c55b63b4d2d74d785a4f478659347b928092e6310a6dc8261bb001",
+    "backend/Dockerfile": "716a20fb19c811873ba6e52bfca99ca4648ec2497c853d7d91c98829e0a934f5",
+    "backend/requirements.txt": "13b8f2a9e2b85802433f78a5c4f03f91bfd3eb1ec86aa6eb1642617a1d2b8a37",
+    "backend/uv.lock": "692ab89280bdca3e11610b6a88c5461c0baa9d06cb29c2b5b212ab0ac18dcef5",
+    "frontend/Dockerfile": "cc2f571d16310e51a1e6c33770ae874f44e9d1f96fb8ba4fc07859a366249e51",
+    "frontend/package-lock.json": "99e728462d2f5d9b8add02c5b3ded0227543a56ce6f6437e00f89c8cc4f10dd7",
+    "infra/postgres/Dockerfile": "54005b71bbb7c8a32d4c47c9bc373e7456aee4c7a9dcf5c2f04bfc29fa6c8d5d"
+  },
+  "database": {
+    "volume": "nikway-academy-local_academy-db-v2",
+    "databases": [
+      "academy",
+      "keycloak"
+    ],
+    "previous_volume_preserved": true,
+    "migration_receipt": "evidence/postgres-volume-migration.json"
+  },
+  "evidence": {
+    "security": "evidence/local-mvp-governance-security-final-image.json",
+    "browser": "frontend/evidence/live-browser-validation.json",
+    "governance": "evidence/local-mvp-governance-final-validation.json",
+    "vulnerability": "evidence/final-running-images.json",
+    "tools_licenses": "evidence/tooling.json",
+    "fresh_install": "evidence/fresh-runtime-reproduction.json",
+    "recovery": "evidence/final-recovery-drill.json",
+    "persistence_resources_performance": "evidence/final-lifecycle-performance.json",
+    "acceptance": "evidence/local-mvp-acceptance.json"
+  },
+  "unavailable": [
+    "external LLM/AI tutor",
+    "MCP transport",
+    "video meetings",
+    "catalog authoring",
+    "multi-membership",
+    "credentials issuance",
+    "production email"
+  ],
+  "boundaries": [
+    "Local synthetic data only",
+    "No production deployment, merge or release approval",
+    "Original external source assets and old database volume preserved",
+    "Repository license not selected"
+  ],
+  "metrics": {
+    "concurrent_workers_limit": 4,
+    "logical_roles": 16,
+    "tokens_consumed": null,
+    "provider_cost": null,
+    "unknown_reason": "Agent platform does not expose reliable cumulative token/cost telemetry for this mission."
+  }
+}

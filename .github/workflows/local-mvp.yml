@@ -1,0 +1,48 @@
+name: Local MVP validation
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: local-mvp-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  operational-mvp:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Governance contracts
+        run: |
+          python3 scripts/validate_docs.py
+          python3 scripts/validate_missions.py --self-test
+      - name: Build and install isolated runtime
+        run: |
+          scripts/local-install.sh
+          scripts/local-start.sh
+          for i in $(seq 1 60); do
+            if curl --fail --silent http://localhost:18400/api/health; then exit 0; fi
+            sleep 2
+          done
+          exit 1
+      - name: Real OIDC and tenant security integration
+        run: python3 -m unittest discover -s backend/tests -p test_integration.py -v
+      - name: Real tool kill switch
+        run: python3 scripts/validate_tool_kill_switch.py
+      - name: Unit invariants
+        run: |
+          python3 -m venv /tmp/academy-tests
+          /tmp/academy-tests/bin/pip install -r backend/requirements.txt pytest==9.2.0
+          cd backend
+          /tmp/academy-tests/bin/python -m pytest tests/test_rules.py tests/test_auth.py -q
+      - name: Browser journey
+        working-directory: frontend
+        run: |
+          python3 -c "import json; c=json.load(open('../infra/runtime/credentials.json')); assert all(c[n]['password'] and c[n]['username'] for n in ('learner-a','learner-b','reviewer-a'))"
+          npm ci
+          npx playwright install --with-deps chromium
+          npm run test:e2e
+      - name: Stop only test project
+        if: always()
+        run: scripts/local-stop.sh

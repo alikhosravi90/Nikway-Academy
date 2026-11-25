@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-11-25T11:25:42.116310+00:00",
+  "scope": "Single idle snapshot before security refresh; not load/capacity benchmark",
+  "containers": [
+    {
+      "Name": "nikway-academy-local-frontend-1",
+      "CPUPerc": "0.00%",
+      "MemUsage": "10.86MiB / 256MiB",
+      "MemPerc": "4.24%",
+      "PIDs": "13"
+    },
+    {
+      "Name": "nikway-academy-local-api-1",
+      "CPUPerc": "0.08%",
+      "MemUsage": "62.48MiB / 512MiB",
+      "MemPerc": "12.20%",
+      "PIDs": "3"
+    },
+    {
+      "Name": "nikway-academy-local-keycloak-1",
+      "CPUPerc": "3.52%",
+      "MemUsage": "607.3MiB / 1GiB",
+      "MemPerc": "59.31%",
+      "PIDs": "41"
+    },
+    {
+      "Name": "nikway-academy-local-postgres-1",
+      "CPUPerc": "0.01%",
+      "MemUsage": "80.71MiB / 512MiB",
+      "MemPerc": "15.76%",
+      "PIDs": "13"
+    }
+  ],
+  "initial_capacity": {
+    "RAM_total_GiB": 30,
+    "RAM_available_GiB": 19,
+    "logical_CPUs": 12,
+    "disk_available_GiB": 139
+  }
+}
