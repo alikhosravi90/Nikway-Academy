@@ -1,5 +1,25 @@
 {
-  "timestamp": "2026-11-25T13:43:37.898541+00:00",
-  "scope": "Single local sample, not capacity or throughput benchmark",
-  "containers": []
+  "timestamp": "2026-11-25T13:44:19.984383+00:00",
+  "scope": "Single docker stats sample, not capacity or throughput benchmark",
+  "first_attempt": "Docker stats returned EOF and empty output; retried successfully",
+  "containers": [
+    {
+      "service": "db",
+      "memory_mib": 21.14,
+      "limit_mib": 512,
+      "cpu_percent": 0.01
+    },
+    {
+      "service": "moodle",
+      "memory_mib": 41.03,
+      "limit_mib": 1024,
+      "cpu_percent": 0.0
+    },
+    {
+      "service": "cron",
+      "memory_mib": 2.016,
+      "limit_mib": 384,
+      "cpu_percent": 0.0
+    }
+  ]
 }
