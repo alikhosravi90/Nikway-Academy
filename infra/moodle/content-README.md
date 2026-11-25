@@ -28,3 +28,5 @@ Implementation uses Moodle core `create_course`, `course_create_sections_if_miss
 - https://github.com/moodle/moodle/blob/MOODLE_503_STABLE/public/grade/grading/tests/generator/lib.php
 
 The PHP CLI is a privileged internal adapter, not an untrusted admission endpoint. Invoke only through the validator wrapper; no web route is installed. Runtime import, idempotency and browser learner/reviewer validation remain required before claiming operational PASS.
+
+Provider binding is rechecked immediately before every enrolment: auth `oidc`, exact local `mnethostid`, exact `keycloak:academy:<sub>` idnumber, matching username, and neither deleted nor suspended. Pure PHP fixture tests reject each mismatched field independently; read-only runtime validation confirms both configured synthetic identities satisfy the guard.

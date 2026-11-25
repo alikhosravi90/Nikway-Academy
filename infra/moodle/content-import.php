@@ -2,6 +2,7 @@
 // Operator-only CLI. Input must come from content-import.py after strict package admission.
 define('CLI_SCRIPT', true);
 require('/var/www/moodle/config.php');
+require_once(__DIR__ . '/nikway-content-binding.php');
 require_once($CFG->dirroot . '/course/lib.php');
 require_once($CFG->dirroot . '/course/modlib.php');
 require_once($CFG->dirroot . '/grade/grading/lib.php');
@@ -110,7 +111,8 @@ try {
     foreach (['learners' => 'student', 'reviewers' => 'teacher'] as $group => $role) {
         $roleid = $DB->get_field('role', 'id', ['shortname' => $role], MUST_EXIST);
         foreach ($input[$group] as $username) {
-            $user = $DB->get_record('user', ['username' => $username, 'deleted' => 0], '*', MUST_EXIST);
+            $user = $DB->get_record('user', ['username' => $username, 'mnethostid' => $CFG->mnet_localhost_id, 'deleted' => 0], '*', MUST_EXIST);
+            nikway_validate_content_binding($user, $username, (int)$CFG->mnet_localhost_id);
             $plugin->enrol_user($manual, $user->id, $roleid);
         }
     }

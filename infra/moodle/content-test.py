@@ -51,8 +51,8 @@ class Admission(unittest.TestCase):
             result = subprocess.CompletedProcess([], 0, '{"status":"created"}', '')
             with patch('sys.argv', ['adapter', str(source), '--archive', temp, '--container', 'isolated']), patch.object(subprocess, 'run', return_value=result) as run, patch('builtins.print'):
                 adapter.main()
-                self.assertEqual(len(run.call_args_list), 2)
-                envelope = json.loads(run.call_args_list[1].kwargs['input'])
+                self.assertEqual(len(run.call_args_list), 3)
+                envelope = json.loads(run.call_args_list[2].kwargs['input'])
                 self.assertEqual(envelope['package']['packageId'], '74f529fe-c81d-4d0c-98c8-56c31cfdd001')
                 self.assertEqual(next(Path(temp).glob('*.json')).read_bytes(), source.read_bytes())
 

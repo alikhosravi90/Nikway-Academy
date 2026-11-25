@@ -50,6 +50,8 @@ def main():
     envelope = {'package': package, 'raw_sha256': sha,
                 'learners': args.learner, 'reviewers': args.reviewer}
     # PHP is copied to a fixed ephemeral path, never a web-accessible upload.
+    subprocess.run(['docker', 'cp', str(Path(__file__).with_name('content-binding.php')),
+                    args.container + ':/tmp/nikway-content-binding.php'], check=True)
     subprocess.run(['docker', 'cp', str(Path(__file__).with_suffix('.php')),
                     args.container + ':/tmp/nikway-content-import.php'], check=True)
     result = subprocess.run(['docker', 'exec', '-i', args.container, 'php',
