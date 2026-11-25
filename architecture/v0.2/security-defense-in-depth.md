@@ -1,5 +1,11 @@
 # NIKWAY Academy Security Architecture — Defense in Depth
 
+**Document ID:** ARC-22  
+**Document revision:** 0.2-draft  
+**Review status:** Proposed  
+**Owner role:** Architecture lead (assignment pending)  
+**Dependencies:** [Architecture index](README.md) and [documentation standard](../../governance/documentation-standard.md).
+
 Status: proposed extension to ARC-10; not implemented, audited or certified.
 
 | Layer | Candidate controls and tools |
