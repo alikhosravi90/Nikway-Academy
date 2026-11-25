@@ -34,7 +34,7 @@ jobs:
         run: |
           python3 -m venv /tmp/academy-tests
           /tmp/academy-tests/bin/pip install -r backend/requirements.txt pytest==9.2.0
-          PYTHONPATH=backend:. /tmp/academy-tests/bin/python -m pytest backend/tests/test_rules.py backend/tests/test_auth.py content/test_validate_package.py -q
+          PYTHONPATH=backend:. /tmp/academy-tests/bin/python -m pytest backend/tests/test_rules.py backend/tests/test_auth.py backend/tests/test_integrations.py content/test_validate_package.py -q
       - name: Portable content admission and learning cycle
         run: |
           /tmp/academy-tests/bin/python -m unittest discover -s backend/tests -p test_content_integration.py -v
