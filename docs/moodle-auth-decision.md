@@ -33,3 +33,11 @@ Accordingly this is a **trusted loopback/internal-network synthetic pilot**, not
 - Wrong code verifier, invalid/replayed state, and unauthorized callback are rejected by the actual flow where tested; unexecuted cases remain unverified.
 
 No merge, release, public deployment, external email or real learner data is authorized by these scripts.
+
+## Internal token endpoint and Moodle's outbound policy
+
+Moodle's default outbound URL policy blocks RFC1918 addresses and allows only ports 80/443. The first live callback failed because `keycloak:8080` resolves inside the blocked 10/8 network. `auth-network.py` is a separate explicit local configuration step. It inspects the running candidate Keycloak network address, requires Moodle DNS to resolve to the same address, and subtracts only that IPv4 `/32` from the existing 10/8 block using exact CIDRs. All other original private/loopback/metadata-address blocks remain. Port 8080 is added to the allowed-port list; this port setting applies globally to Moodle outbound requests, while the private-address exception remains a single IP. No core/plugin security check is bypassed.
+
+The script checks the original or previously owned policy, performs the change in a database transaction, verifies the Keycloak URL passes and representative other private addresses remain blocked. Unexpected configuration or IP drift fails closed. An existing persisted exception does not itself track Docker address reassignment: if that IP is later given to another container, it could remain reachable. The pilot therefore depends on the trusted isolated Docker network, preserving the candidate container identity, and revalidating before adopting a changed runtime. Do not treat this as a production egress policy or automatic revocation mechanism.
+
+`auth-test.py` performs actual HTTP authorization/form_post/token-backed login through isolated cookie jars, observes S256, checks exact precreated profile IDs, logout, tenant-B rejection without account creation and unknown-state denial. It never prints credentials, cookies, authorization codes or tokens. Browser rendering remains an independent test.
