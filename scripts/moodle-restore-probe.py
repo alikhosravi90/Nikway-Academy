@@ -2,6 +2,8 @@
 """Restore DB + files into fresh isolated containers/volumes; never overwrite live Moodle."""
 import pathlib,subprocess,sys,json,secrets,time,urllib.request,hashlib,tarfile,io,os
 root=pathlib.Path(__file__).resolve().parents[1]; folder=pathlib.Path(sys.argv[1]).resolve(); rt=root/'infra/moodle/runtime'
+if not (folder/'COMPLETE').is_file(): raise SystemExit('Backup lacks COMPLETE marker; refusing partial backup.')
+subprocess.run(['sha256sum','--check','SHA256SUMS'],cwd=folder,check=True,capture_output=True)
 probe=rt/('restore-probe-'+secrets.token_hex(4));probe.mkdir(mode=0o700)
 project='nikway-moodle-restore-'+secrets.token_hex(4)
 compose=probe/'compose.json'; passfile=rt/'backup_passphrase'
@@ -27,6 +29,7 @@ try:
  run(c+['up','-d','db'])
  for _ in range(60):
   try:
+   exe('db',['pg_isready','-h','127.0.0.1','-U','postgres','-d','moodle'])
    assert exe('db',['psql','-U','postgres','-d','moodle','-At','-c',"SELECT 1 FROM pg_roles WHERE rolname='moodle'"]).strip()==b'1';break
   except (subprocess.CalledProcessError,AssertionError):time.sleep(1)
  else:raise RuntimeError('Probe DB readiness timeout')
@@ -51,6 +54,7 @@ try:
   except Exception:time.sleep(1)
  else:raise RuntimeError('Restored login page failed')
  courses=int(exe('db',['psql','-U','postgres','-d','moodle','-At','-c','SELECT count(*) FROM mdl_course']).decode())
- print(json.dumps({'status':'PASS','scope':'fresh isolated DB+data volumes and final app image','image':image,'database_image':dbimage,'tables':len(rows(original)),'rows':sum(n for n,h in rows(original).values()),'files_sha256_verified':len(expected),'courses':courses,'http_login_status':status,'elapsed_seconds':round(time.monotonic()-started,3),'probe_project':project,'live_data_untouched':True,'oidc_login_retested':False}))
+ learning=json.loads(exe('db',['psql','-U','postgres','-d','moodle','-At','-c',"SELECT json_build_object('submitted_assignments',(SELECT count(*) FROM mdl_assign_submission WHERE status='submitted'),'graded_assignments',(SELECT count(*) FROM mdl_assign_grades WHERE grade>=0),'assignment_grade_min',(SELECT min(grade) FROM mdl_assign_grades WHERE grade>=0),'assignment_grade_max',(SELECT max(grade) FROM mdl_assign_grades WHERE grade>=0),'gradebook_nonnull',(SELECT count(*) FROM mdl_grade_grades WHERE finalgrade IS NOT NULL),'feedback_records',(SELECT count(*) FROM mdl_assignfeedback_comments))"]).decode())
+ print(json.dumps({'status':'PASS','scope':'fresh isolated DB+data volumes and final app image','image':image,'database_image':dbimage,'tables':len(rows(original)),'rows':sum(n for n,h in rows(original).values()),'files_sha256_verified':len(expected),'courses':courses,'restored_learning_records':learning,'http_login_status':status,'elapsed_seconds':round(time.monotonic()-started,3),'probe_project':project,'live_data_untouched':True,'oidc_login_retested':False}))
 finally:
  run(c+['down','-v'])

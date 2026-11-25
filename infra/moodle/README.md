@@ -19,8 +19,9 @@ Backup after imports/auth provisioning and while no tests are writing:
 ```sh
 scripts/moodle-backup.sh
 python3 scripts/moodle-restore-verify.py infra/moodle/runtime/backups/TIMESTAMP
+python3 scripts/moodle-restore-probe.py infra/moodle/runtime/backups/TIMESTAMP
 ```
 
-Backup enables maintenance, pauses cron, encrypts PostgreSQL dump, persistent Moodle files (excluding regenerable caches/sessions), and config with AES256. The passphrase stays in ignored `backup_passphrase`; preserve it separately for recovery. Verification restores into a random disposable DB and compares every COPY table's canonical data, then drops it; restores encrypted data archive into a temporary directory and compares each file SHA256 without overwriting the live volume. This does not prove a full fresh-volume application restoration. There is no real email sending. Local bootstrap uses synthetic accounts/data only.
+Backup enables maintenance, pauses cron, encrypts PostgreSQL dump, persistent Moodle files (excluding regenerable caches/sessions), and config with AES256. The passphrase stays in ignored `backup_passphrase`; preserve it separately for recovery. Verification restores into a random disposable DB and compares every COPY table's canonical data, then drops it; restores encrypted data archive into a temporary directory and compares each file SHA256 without overwriting the live volume. The additional restore-probe command creates fresh isolated DB/data volumes and a temporary app on loopback18702, verifies every table/file digest and the login page, then removes only its temporary project. It does not retest OIDC login. There is no real email sending. Local bootstrap uses synthetic accounts/data only.
 
 The pinned maintained `microsoft/moodle-auth_oidc`5.3.0 plugin is included; no Microsoft365 suite. Core Moodle is GPLv3or later and plugin retains its GPL notice. Base/source hashes are pinned; Alpine package repository resolution means build is reproducible in procedure, not bit-identical across future package changes. This is an isolated local evaluation, not a production deployment.

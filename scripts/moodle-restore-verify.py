@@ -2,6 +2,8 @@
 """Restore encrypted DB to disposable database; validate data archive without overwrite."""
 import pathlib,subprocess,sys,secrets,json,hashlib
 root=pathlib.Path(__file__).resolve().parents[1]; folder=pathlib.Path(sys.argv[1]).resolve()
+if not (folder/'COMPLETE').is_file(): raise SystemExit('Backup lacks COMPLETE marker; refusing partial backup.')
+subprocess.run(['sha256sum','--check','SHA256SUMS'],cwd=folder,check=True,capture_output=True)
 c=[str(root/'scripts/moodle-compose.sh'),'exec','-T','db']
 passfile=root/'infra/moodle/runtime/backup_passphrase'
 def run(a,data=None): return subprocess.run(a,input=data,check=True,capture_output=True).stdout
