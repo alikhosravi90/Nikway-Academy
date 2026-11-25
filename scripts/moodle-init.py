@@ -3,15 +3,18 @@
 import json, os, pathlib, secrets
 root=pathlib.Path(__file__).resolve().parents[1]
 r=root/'infra/moodle/runtime'; r.mkdir(parents=True, exist_ok=True); r.chmod(0o700)
-if (r/'config.php').exists():
-    raise SystemExit('Private Moodle configuration already exists; preserved.')
+generated=('config.php','db_password','postgres_password','credentials.json','backup_passphrase')
+if any((r/name).exists() or (r/name).is_symlink() for name in generated):
+    raise SystemExit('Existing or partial private Moodle configuration preserved; no files overwritten.')
+def write(name,text):
+    with (r/name).open('x') as f: f.write(text)
 os.umask(0o077)
 pw=secrets.token_hex(32)
-(r/'db_password').write_text(pw+'\n')
-(r/'postgres_password').write_text(secrets.token_hex(32)+'\n')
-(r/'credentials.json').write_text(json.dumps({'username':'localadmin','password':secrets.token_urlsafe(32)+'Aa1!','url':'http://localhost:18701'})+'\n')
-(r/'backup_passphrase').write_text(secrets.token_urlsafe(48)+'\n')
-(r/'config.php').write_text('''<?php
+write('db_password',pw+'\n')
+write('postgres_password',secrets.token_hex(32)+'\n')
+write('credentials.json',json.dumps({'username':'localadmin','password':secrets.token_urlsafe(32)+'Aa1!','url':'http://localhost:18701'})+'\n')
+write('backup_passphrase',secrets.token_urlsafe(48)+'\n')
+write('config.php','''<?php
 unset($CFG); global $CFG; $CFG = new stdClass();
 $CFG->dbtype='pgsql'; $CFG->dblibrary='native'; $CFG->dbhost='db';
 $CFG->dbname='moodle'; $CFG->dbuser='moodle'; $CFG->dbpass='%s';
