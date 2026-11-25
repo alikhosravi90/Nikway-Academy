@@ -23,10 +23,15 @@ try:
     run(c+['pg_restore','-U','postgres','-d',name,'--exit-on-error'],dump)
     restored=run(c+['pg_dump','-U','postgres','-d',name,'--data-only'])
     assert rows(original)==rows(restored), 'Restored table data differs'
-    import tarfile,io
+    import tarfile,io,tempfile
     payload=decrypt('moodledata.tgz.gpg')
     with tarfile.open(fileobj=io.BytesIO(payload),mode='r:gz') as archive:
         members=archive.getmembers(); assert all(not pathlib.PurePosixPath(m.name).is_absolute() and '..' not in pathlib.PurePosixPath(m.name).parts for m in members)
-    print(json.dumps({'status':'PASS','tables':len(rows(original)),'rows':sum(x['rows'] for x in rows(original).values()),'data_archive_members':len(members),'data_scope':'archive readability and safe paths; no live volume overwrite','config_decryptable':decrypt('config.php.gpg').startswith(b'<?php')}))
+        expected={m.name:hashlib.sha256(archive.extractfile(m).read()).hexdigest() for m in members if m.isfile()}
+        with tempfile.TemporaryDirectory(prefix='moodle-data-restore-',dir=root/'infra/moodle/runtime') as target:
+            archive.extractall(target,filter='data')
+            actual={name:hashlib.sha256((pathlib.Path(target)/name).read_bytes()).hexdigest() for name in expected}
+            assert actual==expected, 'Restored data file digest differs'
+    print(json.dumps({'status':'PASS','tables':len(rows(original)),'rows':sum(x['rows'] for x in rows(original).values()),'data_archive_members':len(members),'data_files_restored_verified':len(expected),'data_scope':'temporary directory restoration and per-file SHA256; no live volume overwrite','config_decryptable':decrypt('config.php.gpg').startswith(b'<?php')}))
 finally:
     sql('postgres','DROP DATABASE IF EXISTS '+name)
