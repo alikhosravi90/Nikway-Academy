@@ -1,0 +1,33 @@
+
+==================================== ERRORS ====================================
+______________________ ERROR collecting tests/test_api.py ______________________
+ImportError while importing test module '/home/mohammadali/Documents/Codex/2026-11-25/referenced-chatgpt-conversation-this-is-an-3/work/content-factory/content_factory/tests/test_api.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/home/mohammadali/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_api.py:3: in <module>
+    from cf.api import create_app
+E   ModuleNotFoundError: No module named 'cf.api'
+___________________ ERROR collecting tests/test_consumer.py ____________________
+ImportError while importing test module '/home/mohammadali/Documents/Codex/2026-11-25/referenced-chatgpt-conversation-this-is-an-3/work/content-factory/content_factory/tests/test_consumer.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/home/mohammadali/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_consumer.py:4: in <module>
+    from cf.consumer import LocalConsumer
+E   ModuleNotFoundError: No module named 'cf.consumer'
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/fastapi/testclient.py:1
+  /home/mohammadali/Documents/Codex/2026-11-25/referenced-chatgpt-conversation-this-is-an-3/work/content-factory/content_factory/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+ERROR tests/test_api.py
+ERROR tests/test_consumer.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
+1 warning, 2 errors in 0.47s
