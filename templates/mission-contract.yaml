@@ -1,0 +1,23 @@
+mission_id: null
+version: '0.1-draft'
+objective: null
+scope: []
+exclusions: []
+dependencies: []
+inputs: []
+outputs: []
+owner_role: null
+resources: []
+authority: []
+restrictions: [no_public_deployment, no_unapproved_spend, no_secrets_in_git]
+budget: null
+timeout: null
+risks: []
+guardrails: []
+acceptance_criteria: []
+validation: []
+evidence: []
+rollback: null
+handover: null
+definition_of_done: []
+status: proposed
