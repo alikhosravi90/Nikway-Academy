@@ -37,3 +37,6 @@ No hierarchy cycles, duplicate preferred labels within a scheme and locale, or d
 The extracted sample catalog contains three courses, four resources and six competencies. Course/resource competency labels connect learning to evidence views. Stable semantic URIs, SKOS/OWL serializations, ontology validation and controlled vocabulary governance are still proposed; label-based associations are not a semantic conformance proof.
 
 [Implementation package and decision reconciliation](implementation/phase-1-2/README.md) · [Acceptance evidence](implementation/phase-1-2/ACCEPTANCE.md).
+
+## Related architecture authority
+[ARC-21 — specialized design](./schema-architecture.md) refines this document within its scope. Both remain proposed; unresolved conflicts require an ADR and review. Historical implementation evidence is not superseded by target design.
