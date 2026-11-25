@@ -1,0 +1,72 @@
+{
+  "name": "NIKWAY Academy secure content local candidate",
+  "release": false,
+  "merged": false,
+  "status": "PARTIAL",
+  "local_gate": "GO_BOUNDED_LOCAL",
+  "progress_percent": 92,
+  "baseline_commit": "7be59d794a7e73cdb32b7fd222f63473e83d815c",
+  "repository": "https://github.com/alikhosravi90/Nikway-Academy",
+  "branch": "mission/secure-content-mvp",
+  "draft_pr": 16,
+  "issue": 15,
+  "urls": {
+    "frontend": "http://localhost:18501",
+    "api": "http://localhost:18600",
+    "identity": "http://localhost:18580"
+  },
+  "database_volume": "nikway-academy-content_academy-db-v2",
+  "runtime_images": [
+    {
+      "name": "/nikway-academy-content-keycloak-1",
+      "id": "ee692fd6944b57d6b73527008938e50eb01278018b92a232a32aea46b51ffd97",
+      "image": "sha256:c03a8747a16c11dcba0ecdc04ecd8c87e1ae5a7342b1ee4e10f8db70292182da",
+      "started": "2026-11-25T12:26:13.8971504Z"
+    },
+    {
+      "name": "/nikway-academy-content-api-1",
+      "id": "366d7e618069dead3dc804ec4260c175914a27277670eb300503fdb2e5acd607",
+      "image": "sha256:cbd16a202d4c600e7dc086b120a7e779af48189b7ad3e20d5f3d07cb1fabb59b",
+      "started": "2026-11-25T12:26:13.137884141Z"
+    },
+    {
+      "name": "/nikway-academy-content-migrate-1",
+      "id": "fa9138b69492ec4d552687cb6691b4574b4a511f21e9c282aead32ad8ab1ac78",
+      "image": "sha256:fb1d9d7b6781c14668f7c0ab04688c33040fdb115162f9bd2baaa3607d4fe762",
+      "started": "2026-11-25T12:25:53.965712387Z"
+    },
+    {
+      "name": "/nikway-academy-content-frontend-1",
+      "id": "3622df843a7f4b1c52d3cccd09d8bf66326f1ebd8b7d061e6c7975f3f7bbbf7c",
+      "image": "sha256:45fd84fa320ed95a00166bb043be02a70fce874e38e2f01cd5738ada4b709b5d",
+      "started": "2026-11-25T12:26:12.856331695Z"
+    },
+    {
+      "name": "/nikway-academy-content-postgres-1",
+      "id": "6b4f04d5d8c6148a60a497fbeb59e9cf4032d1b5484c8a74955a71fe0ee30bb0",
+      "image": "sha256:38134cd212d8362cc8475d26447d59ff0a0b6240245954ca8bb0328d870ff332",
+      "started": "2026-11-25T12:26:12.868281131Z"
+    }
+  ],
+  "source_hashes": {
+    "compose.yaml": "f923b4ddffc2ead428ba5654738043b0ee237b9afa037057fef3ba3bb41c5150",
+    "backend/Dockerfile": "3fba8e2e7a5e1f125966824f3ad9006a43a894065b28a023276f896b75972597",
+    "backend/requirements.txt": "3150f48a30b9c75cfc40135abcd891e80c84a9725ce817bfb34b83ce69d061b0",
+    "backend/uv.lock": "08bef5ef5acf1db58843e3cafc7058dd83f0af0ca916429d36c31e2f19dbfe10",
+    "frontend/Dockerfile": "5db0c44045359556ea7280b2bdd6a5babd3cee3f44738a1e80e4f6f630e57801",
+    "frontend/package-lock.json": "99e728462d2f5d9b8add02c5b3ded0227543a56ce6f6437e00f89c8cc4f10dd7",
+    "infra/postgres/Dockerfile": "54005b71bbb7c8a32d4c47c9bc373e7456aee4c7a9dcf5c2f04bfc29fa6c8d5d",
+    "infra/identity/Dockerfile.keycloak-source": "b26a5cb26d1e7546f0370a2b9fae7912799df3ba4f6964b54e7e46b1ba2d9c36",
+    "contracts/content-package.schema.json": "0f1ef71d7e72e8f9dcf85333e88e3c81051d301ba742a3c0b1336b2512b3e7d1",
+    "contracts/learning-content-bridge.json": "39cd4afb927686e681d5f14c4ca058b2f3a5e69c9a7929da24d948db8b27e75f",
+    "frontend/vitest.config.ts": "0f99b9f340b81ac3949ff36306ba00ecc271df948eae67803000a25d32755812"
+  },
+  "acceptance": "evidence/security-content/acceptance.json",
+  "recovery_resources": "evidence/security-content/final-content-runtime-validation.json",
+  "scanner_scopes": "evidence/security-content/final-validation.md",
+  "baseline_registry": "baselines/local-mvp-2026-11-25.json",
+  "sample_course_id": "c66494a8-4b8c-59bd-b751-89e435dcc23f",
+  "sample_package": "content/examples/agent-engineering-basics.fa.json",
+  "exact_ci_sha": "Resolve PR checks; no self-referential commit hash",
+  "runtime_credentials": "Private ignored infra/runtime/credentials.json; never publish"
+}

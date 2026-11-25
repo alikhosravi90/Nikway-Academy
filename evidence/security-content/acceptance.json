@@ -1,0 +1,136 @@
+{
+  "status": "PARTIAL",
+  "local_content_acceptance": "GO_BOUNDED_LOCAL",
+  "merge_release": "NO-GO_WITHOUT_FINAL_USER_APPROVAL",
+  "baseline_preserved": true,
+  "baseline_commit": "7be59d794a7e73cdb32b7fd222f63473e83d815c",
+  "progress": {
+    "percent_rounded": 92,
+    "formula": "100 * (5 complete + 0.5 partial) / 6 requested follow-up deliverables",
+    "not_a_statistical_estimate": true
+  },
+  "deliverables": [
+    {
+      "id": 1,
+      "name": "Root cause and remediate six Keycloak findings",
+      "score": 1,
+      "status": "PASS_LOCAL_CUSTOM_BUILD",
+      "evidence": "keycloak-custom-scan.json"
+    },
+    {
+      "id": 2,
+      "name": "Benchmark alternatives if vendor fix unavailable",
+      "score": 1,
+      "status": "COMPLETE_BOUNDED",
+      "evidence": "identity-root-cause.md"
+    },
+    {
+      "id": 3,
+      "name": "Repeat security functional performance recovery",
+      "score": 1,
+      "status": "PASS_SCOPED",
+      "evidence": "final-validation.md"
+    },
+    {
+      "id": 4,
+      "name": "Learning OS / Engineering / Content Factory connection contract",
+      "score": 0.5,
+      "status": "PARTIAL",
+      "evidence": "../../contracts/learning-content-bridge.json",
+      "remaining": "Portable local profile defined and tested; current external ComponentInput adapter and producer/consumer conformance absent"
+    },
+    {
+      "id": 5,
+      "name": "Platform-independent content import and local publication",
+      "score": 1,
+      "status": "PASS",
+      "evidence": "portability-baseline.json"
+    },
+    {
+      "id": 6,
+      "name": "Original sample complete learning cycle",
+      "score": 1,
+      "status": "PASS",
+      "evidence": "../../frontend/evidence/imported-content-browser-final.json"
+    }
+  ],
+  "tests": {
+    "backend_and_schema_unit": 32,
+    "frontend_components": 4,
+    "real_content_integration": 4,
+    "real_identity_security": 7,
+    "independent_live_checks": 48,
+    "browser": 4,
+    "browser_skipped": 0,
+    "kill_switch": "PASS",
+    "preserved_prototype_units": 24
+  },
+  "security": {
+    "original_keycloak_high": 6,
+    "candidate_keycloak_high": 0,
+    "candidate_keycloak_critical": 0,
+    "image_scans": [
+      "api",
+      "keycloak"
+    ],
+    "runtime_filesystem_scans": [
+      "frontend",
+      "postgres"
+    ],
+    "suppressions": false,
+    "upstream_keycloak_tests": "SKIPPED",
+    "vendor_supported_distribution": false
+  },
+  "remaining_gates": [
+    {
+      "gate": "Successful exact-current-SHA CI",
+      "owner": "Integrator",
+      "action": "Require operational CI success on final PR HEAD; earlier runtime evidence does not substitute for this merge gate"
+    },
+    {
+      "gate": "External Content Factory interoperability",
+      "owner": "Learning Engineering / Content Factory / Learning OS contract owners",
+      "action": "Explicit metadata and answer-key-safe adapter; conformance tests against pinned ComponentInput implementation"
+    },
+    {
+      "gate": "Custom identity maintenance",
+      "owner": "Identity maintainer and final reviewer",
+      "action": "Accept ongoing derivative update ownership; prefer a future vendor-supported fixed distribution after regression"
+    },
+    {
+      "gate": "Exact frontend/PostgreSQL historical image provenance",
+      "owner": "Infrastructure",
+      "action": "Retain separate runtime-filesystem evidence; reconstruct and verify future immutable images before their adoption"
+    },
+    {
+      "gate": "Merge or release",
+      "owner": "User",
+      "action": "Explicit final approval; no merge/release performed"
+    }
+  ],
+  "ci": "See PR16 current checks and external exact-SHA CI receipt; do not infer success from this manifest",
+  "scope_limits": [
+    "Synthetic local data and loopback development runtime",
+    "No actual external Content Factory service connection",
+    "No automatic grades or credentials",
+    "No production certification",
+    "No repository redistribution license selected"
+  ],
+  "metrics": {
+    "concurrent_workers": 4,
+    "logical_roles": 16,
+    "tokens_consumed": null,
+    "provider_cost": null,
+    "telemetry_reason": "Reliable cumulative agent token/cost counters unavailable",
+    "authenticated_reads": {
+      "samples": 50,
+      "errors": 0,
+      "median_ms": 7.125,
+      "p95_ms": 8.224,
+      "max_ms": 115.453,
+      "scope": "Serial loopback read samples; no concurrency/throughput/capacity claim"
+    },
+    "stop_start_seconds": 26.284,
+    "restart_seconds": 17.793
+  }
+}

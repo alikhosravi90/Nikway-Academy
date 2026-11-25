@@ -1,0 +1,13 @@
+{
+  "run": "https://github.com/alikhosravi90/Nikway-Academy/actions/runs/45614064547",
+  "head_sha": "be329153200fcc25f34fab3a8cee1fb9c1be71aa",
+  "conclusion": "failure",
+  "consolidated_source_build_and_fresh_install": "PASS",
+  "real_identity_security": "PASS",
+  "kill_switch": "PASS",
+  "unit_invariants": "PASS",
+  "portable_content_admission": "PASS",
+  "failure": "npm test default Vitest discovery collected Playwright .spec suites including preserved prototype;28 unit assertions passed but3suite collection failures prevented browser step",
+  "fix": "Explicit separate unit test discovery; browser tests remain required in their own Playwright runner",
+  "scope": "No runtime application defect inferred; no whole-CI PASS claim"
+}

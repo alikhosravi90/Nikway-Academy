@@ -14,7 +14,7 @@
 Two reproducible routes are provided:
 
 1. `./infra/identity/build-custom-keycloak.sh`: tested source compilation and subsequent packaging sequence, with local ignored Mavencache. This is the route used for the evaluated image.
-2. `docker build -f infra/identity/Dockerfile.keycloak-source -t nikway-keycloak-custom:26.8.2-guava33.7.2 infra/identity`: self-contained multistage recipe with source checksum and pinned builder/runtime. This equivalent consolidated recipe has not been separately rebuilt end-to-end; it does not depend on committed binary artifacts.
+2. `docker build -f infra/identity/Dockerfile.keycloak-source -t nikway-keycloak-custom:26.8.2-guava33.7.2 infra/identity`: self-contained multistage recipe with source checksum and pinned builder/runtime. This consolidated recipe subsequently built and started successfully from a clean GitHub runner in run45614064547 at sourcebe32915; that whole workflow failed later on separate frontend test discovery. Final full workflow status belongs to PR16 checks. It does not depend on committed binary artifacts.
 
 The original official image plus patchedJRE-only experiment is recorded separately:1High/0Critical, Guava still affected, and byte-equivalence proof for entire`/opt/keycloak`. Its three-user signed-token/PKCE probe passed. It must not be substituted for the fully rebuilt image.
 

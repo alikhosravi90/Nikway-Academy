@@ -24,5 +24,14 @@
     "backend/tests/test_content_integration.py": "f8518425c030d86ed606e32fa9524cf6a91d1c1f825d2e5aa2cbe8d328ccc42a",
     "backend/tests/test_integration.py": "a0a55363c9a0c5e027c0793fbe648b5deea003d74d19a0324bc53505c675f963",
     "content/validate_package.py": "36e15a71e63471b8792118e31c123c136d8fb744d50852d67eb0fe9982909ac3"
+  },
+  "frontend_all_unit_tests": {
+    "passed": 28,
+    "failed": 0,
+    "skipped": 0,
+    "operational": 4,
+    "preserved_prototype": 24,
+    "discovery_config": "frontend/vitest.config.ts",
+    "typecheck": "PASS"
   }
 }
