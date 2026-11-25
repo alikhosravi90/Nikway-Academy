@@ -1,5 +1,11 @@
 # NIKWAY Academy Technology Stack v1.0
 
+**Document ID:** ARC-23  
+**Document revision:** 0.2-draft  
+**Review status:** Proposed  
+**Owner role:** Architecture lead (assignment pending)  
+**Dependencies:** [Architecture index](README.md) and [documentation standard](../../governance/documentation-standard.md).
+
 Status: selected design baseline, pending feasibility, licensing, cost and capacity validation. Not an installation manifest.
 
 | Responsibility | Selection |
