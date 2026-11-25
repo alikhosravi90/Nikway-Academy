@@ -1,0 +1,23 @@
+# Locally maintained security candidate; upstream integration tests NOT run here.
+# Build context: infra/identity. No prebuilt binary or vendor-JAR substitution.
+FROM maven@sha256:308cba8b638ed7e4658cea3f8399066219466211c805f6d5728c3c9c7614661b AS build
+WORKDIR /src
+ADD --checksum=sha256:686c4cf4d9cf5fe0b516fd5c7b8f74cdb980990ee5181e944560df4296e3037f https://github.com/keycloak/keycloak/archive/refs/tags/26.8.2.tar.gz /tmp/keycloak-source.tar.gz
+RUN tar -xzf /tmp/keycloak-source.tar.gz --strip-components=1 -C /src \
+ && awk '/<dependencyManagement>/{managed=1} managed && /<dependencies>/{print; print "            <dependency><groupId>com.google.guava</groupId><artifactId>guava</artifactId><version>33.7.2-jre</version></dependency>"; managed=0; next} {print}' pom.xml > pom.fixed.xml \
+ && mv pom.fixed.xml pom.xml
+RUN --mount=type=cache,target=/root/.m2 \
+ mvn -B -ntp -pl quarkus/server,quarkus/dist -DskipTests -Dmaven.test.skip=true package \
+ && mkdir /out \
+ && tar -xzf quarkus/dist/target/keycloak-26.8.2.tar.gz -C /out --strip-components=1
+FROM eclipse-temurin@sha256:5d7689f47d670aca766b9503a70bccc2d73b4eb9221ae8f714ae958313c4ce70
+RUN apk add --no-cache bash=5.3.9-r1 \
+ && addgroup -g 1000 keycloak \
+ && adduser -D -u 1000 -G keycloak -h /opt/keycloak keycloak
+COPY --from=build --chown=1000:1000 /out/ /opt/keycloak/
+RUN mkdir -p /opt/keycloak/data/import && chown -R 1000:1000 /opt/keycloak/data
+ENV KC_RUN_IN_CONTAINER=true
+USER 1000
+WORKDIR /opt/keycloak
+EXPOSE 8080 9000
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]

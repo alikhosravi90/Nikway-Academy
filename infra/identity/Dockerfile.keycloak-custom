@@ -1,0 +1,13 @@
+# Experimental maintained-by-us build. Distribution MUST come from the source
+# build script, not an in-place JAR replacement in the vendor image.
+FROM eclipse-temurin@sha256:5d7689f47d670aca766b9503a70bccc2d73b4eb9221ae8f714ae958313c4ce70
+RUN apk add --no-cache bash=5.3.9-r1 \
+    && addgroup -g 1000 keycloak \
+    && adduser -D -u 1000 -G keycloak -h /opt/keycloak keycloak
+COPY --chown=1000:1000 keycloak/ /opt/keycloak/
+RUN mkdir -p /opt/keycloak/data/import && chown -R 1000:1000 /opt/keycloak/data
+ENV KC_RUN_IN_CONTAINER=true
+USER 1000
+WORKDIR /opt/keycloak
+EXPOSE 8080 9000
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
