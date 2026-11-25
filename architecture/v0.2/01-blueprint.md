@@ -41,3 +41,6 @@ The six-module React/TypeScript + Vite application is implemented and locally te
 [Implementation package and decision reconciliation](implementation/phase-1-2/README.md) · [Acceptance evidence](implementation/phase-1-2/ACCEPTANCE.md).
 
 Frontend reconciliation: [ADR-001](../../decisions/ADR-001-frontend-baseline.md), proposed for review.
+
+## Related architecture authority
+[ARC-23 — specialized design](./technology-stack.md) refines this document within its scope. Both remain proposed; unresolved conflicts require an ADR and review. Historical implementation evidence is not superseded by target design.
