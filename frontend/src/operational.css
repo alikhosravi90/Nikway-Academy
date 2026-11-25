@@ -205,3 +205,41 @@ header {
     width: 240px;
   }
 }
+
+.learning-guidance {
+  margin-block: 20px;
+  padding: 18px;
+  border: 1px solid #dbe9e4;
+  border-radius: 12px;
+  background: #f5faf7;
+  overflow-wrap: anywhere;
+}
+.learning-guidance ul {
+  padding-inline-start: 24px;
+}
+.learning-guidance li {
+  margin-block: 10px;
+  line-height: 1.9;
+}
+.learning-guidance h4 {
+  font-size: 14px;
+  margin-block: 12px 6px;
+}
+.learning-guidance summary {
+  cursor: pointer;
+  color: #0c6f65;
+  font-weight: bold;
+  padding-block: 8px;
+}
+.learning-guidance summary:focus-visible {
+  outline: 3px solid #e8b84c;
+  outline-offset: 3px;
+}
+.muted {
+  color: #536b68;
+  font-size: 13px;
+}
+.rubric-criterion {
+  border-block-start: 1px solid #dbe9e4;
+  padding-block: 10px;
+}
