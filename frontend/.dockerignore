@@ -1,0 +1,5 @@
+node_modules
+dist
+prototype
+test-results
+playwright-report

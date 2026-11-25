@@ -1,0 +1,29 @@
+{
+  "api": {
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "version": "0.3.0"
+    }
+  },
+  "ui": {
+    "status": 200
+  },
+  "oidc": {
+    "status": 200,
+    "issuer": "http://localhost:18490/realms/academy"
+  },
+  "roles": "academy_app|f|f\nacademy_owner|f|f\nkeycloak|f|f\n",
+  "migration_exit": "0",
+  "initial_health_probe": "Wrong /health path returned404; corrected to documented /api/health after independent stack restart.",
+  "ui_proxy": {
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "version": "0.3.0"
+    }
+  },
+  "status": "PASS_LIMITED",
+  "limits": "Fresh database+realm initialization and restart verified with existing built images. Not a fresh network download/build or browser login test.",
+  "network_remediation": "Docker default pools exhausted; used10.253.245.0/28 after overlap check, only for isolated repro project."
+}

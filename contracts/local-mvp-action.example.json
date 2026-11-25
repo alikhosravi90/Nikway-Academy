@@ -1,0 +1,23 @@
+{
+  "inputs": [],
+  "outputs": [],
+  "dependencies": [],
+  "tools": [],
+  "permissions": [],
+  "evidence_refs": [],
+  "action_id": "M03-A01",
+  "parent_issue": "https://github.com/alikhosravi90/Nikway-Academy/issues/4",
+  "objective": "Validate mission bootstrap",
+  "owner": "architect",
+  "correlation_id": "local-mvp-governance-001",
+  "status": "verification",
+  "timeout": 300,
+  "cost_limit": 0,
+  "attempt_count": 1,
+  "independent_reviewer": null,
+  "acceptance_criteria": [
+    "Manifest and action validators pass positive and negative fixtures"
+  ],
+  "created_at": "2026-11-25T11:00:00Z",
+  "updated_at": "2026-11-25T11:00:00Z"
+}

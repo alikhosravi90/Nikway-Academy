@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "scope": "Both application and identity database encrypted archive data restored into disposable databases; per-table sorted COPY SHA256 and row counts match. Source databases not overwritten.",
+  "first_failure": "First table-list verification failed because SQL literals lost shell quotes; fixed by baeefa3; restoration itself succeeded and disposable database cleanup ran.",
+  "databases": {
+    "academy": {
+      "status": "PASS",
+      "method": "Encrypted archive COPY rows vs restored database COPY rows; each table rows sorted before SHA256",
+      "tables": 11,
+      "total_rows": 81
+    },
+    "keycloak": {
+      "status": "PASS",
+      "method": "Encrypted archive COPY rows vs restored database COPY rows; each table rows sorted before SHA256",
+      "tables": 101,
+      "total_rows": 1644
+    }
+  },
+  "limits": "Archives and passphrase retained only ignored local runtime. No passwords, backup plaintext, session rows or identity password hashes are committed. Full-system restore/login not established by database-only drill."
+}

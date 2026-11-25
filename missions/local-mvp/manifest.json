@@ -1,0 +1,508 @@
+{
+  "schema_version": "1",
+  "roles": {
+    "slot_1": [
+      "commander",
+      "researcher_1",
+      "integrator_2",
+      "infrastructure_2"
+    ],
+    "slot_2": [
+      "architect",
+      "researcher_2",
+      "validator_1",
+      "security"
+    ],
+    "slot_3": [
+      "developer_1",
+      "developer_3",
+      "integrator_1",
+      "validator_2"
+    ],
+    "slot_4": [
+      "developer_2",
+      "developer_4",
+      "infrastructure_1",
+      "validator_3"
+    ]
+  },
+  "independence_rule": "A slot cannot accept its own implementation; route its validation to another slot. Logical roles are sequential hats, not sixteen live agents.",
+  "missions": [
+    {
+      "mission_id": "M01",
+      "version": "0.1",
+      "name": "Discovery",
+      "objective": "Inventory existing source, provenance, ports and resources read-only; recover verified prototype.",
+      "dependencies": [],
+      "owner_role": "commander",
+      "status": "planned",
+      "issue_url": "https://github.com/alikhosravi90/Nikway-Academy/issues/2",
+      "scope": [
+        "Inventory existing source, provenance, ports and resources read-only; recover verified prototype."
+      ],
+      "exclusions": [
+        "public deployment",
+        "spend",
+        "production data",
+        "destructive operations"
+      ],
+      "acceptance_criteria": [
+        "Source digest and actual repository SHA recorded",
+        "Existing services and user data preserved"
+      ],
+      "evidence": [],
+      "independent_review": null,
+      "tasks": [
+        {
+          "id": "M01-T01",
+          "description": "Inventory existing source, provenance, ports and resources read-only; recover verified prototype.",
+          "status": "pending"
+        },
+        {
+          "id": "M01-T02",
+          "description": "Verify acceptance and record evidence; obtain independent review",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "mission_id": "M02",
+      "version": "0.1",
+      "name": "Architecture",
+      "objective": "Review Vite baseline, minimum-service ADR and server contracts.",
+      "dependencies": [
+        "M01"
+      ],
+      "owner_role": "architect",
+      "status": "planned",
+      "issue_url": "https://github.com/alikhosravi90/Nikway-Academy/issues/3",
+      "scope": [
+        "Review Vite baseline, minimum-service ADR and server contracts."
+      ],
+      "exclusions": [
+        "public deployment",
+        "spend",
+        "production data",
+        "destructive operations"
+      ],
+      "acceptance_criteria": [
+        "Local service scope and deferred services explicit",
+        "Tenant, identity and API contracts reviewed"
+      ],
+      "evidence": [],
+      "independent_review": null,
+      "tasks": [
+        {
+          "id": "M02-T01",
+          "description": "Review Vite baseline, minimum-service ADR and server contracts.",
+          "status": "pending"
+        },
+        {
+          "id": "M02-T02",
+          "description": "Verify acceptance and record evidence; obtain independent review",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "mission_id": "M03",
+      "version": "0.1",
+      "name": "Governance",
+      "objective": "Bootstrap constitution, Spec Kit, action contracts and issue traceability.",
+      "dependencies": [
+        "M01"
+      ],
+      "owner_role": "architect",
+      "status": "planned",
+      "issue_url": "https://github.com/alikhosravi90/Nikway-Academy/issues/4",
+      "scope": [
+        "Bootstrap constitution, Spec Kit, action contracts and issue traceability."
+      ],
+      "exclusions": [
+        "public deployment",
+        "spend",
+        "production data",
+        "destructive operations"
+      ],
+      "acceptance_criteria": [
+        "Twelve real issues linked",
+        "Dependency and action validators pass positive and negative fixtures"
+      ],
+      "evidence": [],
+      "independent_review": null,
+      "tasks": [
+        {
+          "id": "M03-T01",
+          "description": "Bootstrap constitution, Spec Kit, action contracts and issue traceability.",
+          "status": "pending"
+        },
+        {
+          "id": "M03-T02",
+          "description": "Verify acceptance and record evidence; obtain independent review",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "mission_id": "M04",
+      "version": "0.1",
+      "name": "Infrastructure",
+      "objective": "Install isolated loopback Compose stack with PostgreSQL and Keycloak.",
+      "dependencies": [
+        "M01",
+        "M03"
+      ],
+      "owner_role": "infrastructure_1",
+      "status": "planned",
+      "issue_url": "https://github.com/alikhosravi90/Nikway-Academy/issues/5",
+      "scope": [
+        "Install isolated loopback Compose stack with PostgreSQL and Keycloak."
+      ],
+      "exclusions": [
+        "public deployment",
+        "spend",
+        "production data",
+        "destructive operations"
+      ],
+      "acceptance_criteria": [
+        "No existing services modified",
+        "Pinned inventory, health and resource evidence captured"
+      ],
+      "evidence": [],
+      "independent_review": null,
+      "tasks": [
+        {
+          "id": "M04-T01",
+          "description": "Install isolated loopback Compose stack with PostgreSQL and Keycloak.",
+          "status": "pending"
+        },
+        {
+          "id": "M04-T02",
+          "description": "Verify acceptance and record evidence; obtain independent review",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "mission_id": "M05",
+      "version": "0.1",
+      "name": "Frontend",
+      "objective": "Reuse React/Vite portal and connect authenticated learning journey.",
+      "dependencies": [
+        "M02",
+        "M03"
+      ],
+      "owner_role": "developer_1",
+      "status": "planned",
+      "issue_url": "https://github.com/alikhosravi90/Nikway-Academy/issues/6",
+      "scope": [
+        "Reuse React/Vite portal and connect authenticated learning journey."
+      ],
+      "exclusions": [
+        "public deployment",
+        "spend",
+        "production data",
+        "destructive operations"
+      ],
+      "acceptance_criteria": [
+        "Login, course, progress, submission and review flows work",
+        "RTL responsive baseline and legacy sample mode preserved"
+      ],
+      "evidence": [],
+      "independent_review": null,
+      "tasks": [
+        {
+          "id": "M05-T01",
+          "description": "Reuse React/Vite portal and connect authenticated learning journey.",
+          "status": "pending"
+        },
+        {
+          "id": "M05-T02",
+          "description": "Verify acceptance and record evidence; obtain independent review",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "mission_id": "M06",
+      "version": "0.1",
+      "name": "Backend",
+      "objective": "Implement FastAPI, migrations and authoritative tenant data.",
+      "dependencies": [
+        "M02",
+        "M03",
+        "M04"
+      ],
+      "owner_role": "developer_2",
+      "status": "planned",
+      "issue_url": "https://github.com/alikhosravi90/Nikway-Academy/issues/7",
+      "scope": [
+        "Implement FastAPI, migrations and authoritative tenant data."
+      ],
+      "exclusions": [
+        "public deployment",
+        "spend",
+        "production data",
+        "destructive operations"
+      ],
+      "acceptance_criteria": [
+        "Persisted state survives restart",
+        "Invalid input, transitions and duplicate writes tested"
+      ],
+      "evidence": [],
+      "independent_review": null,
+      "tasks": [
+        {
+          "id": "M06-T01",
+          "description": "Implement FastAPI, migrations and authoritative tenant data.",
+          "status": "pending"
+        },
+        {
+          "id": "M06-T02",
+          "description": "Verify acceptance and record evidence; obtain independent review",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "mission_id": "M07",
+      "version": "0.1",
+      "name": "Identity",
+      "objective": "Verify Keycloak identity, active membership and PostgreSQL RLS.",
+      "dependencies": [
+        "M06"
+      ],
+      "owner_role": "security",
+      "status": "planned",
+      "issue_url": "https://github.com/alikhosravi90/Nikway-Academy/issues/8",
+      "scope": [
+        "Verify Keycloak identity, active membership and PostgreSQL RLS."
+      ],
+      "exclusions": [
+        "public deployment",
+        "spend",
+        "production data",
+        "destructive operations"
+      ],
+      "acceptance_criteria": [
+        "Forged, expired and wrong audience tokens denied",
+        "Cross-tenant API and direct DB access denied with non-bypass role"
+      ],
+      "evidence": [],
+      "independent_review": null,
+      "tasks": [
+        {
+          "id": "M07-T01",
+          "description": "Verify Keycloak identity, active membership and PostgreSQL RLS.",
+          "status": "pending"
+        },
+        {
+          "id": "M07-T02",
+          "description": "Verify acceptance and record evidence; obtain independent review",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "mission_id": "M08",
+      "version": "0.1",
+      "name": "Learning",
+      "objective": "Complete learner enrollment, ordered lessons, evidence and human feedback.",
+      "dependencies": [
+        "M05",
+        "M06",
+        "M07"
+      ],
+      "owner_role": "developer_3",
+      "status": "planned",
+      "issue_url": "https://github.com/alikhosravi90/Nikway-Academy/issues/9",
+      "scope": [
+        "Complete learner enrollment, ordered lessons, evidence and human feedback."
+      ],
+      "exclusions": [
+        "public deployment",
+        "spend",
+        "production data",
+        "destructive operations"
+      ],
+      "acceptance_criteria": [
+        "Learner-to-reviewer round trip persists",
+        "Self review denied; rubric and submission revisions retained"
+      ],
+      "evidence": [],
+      "independent_review": null,
+      "tasks": [
+        {
+          "id": "M08-T01",
+          "description": "Complete learner enrollment, ordered lessons, evidence and human feedback.",
+          "status": "pending"
+        },
+        {
+          "id": "M08-T02",
+          "description": "Verify acceptance and record evidence; obtain independent review",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "mission_id": "M09",
+      "version": "0.1",
+      "name": "Integration",
+      "objective": "Provide seeded scheduled workshops and atomic capacity-controlled registration; authoring and live engine deferred.",
+      "dependencies": [
+        "M04",
+        "M07"
+      ],
+      "owner_role": "integrator_1",
+      "status": "planned",
+      "issue_url": "https://github.com/alikhosravi90/Nikway-Academy/issues/10",
+      "scope": [
+        "Provide seeded scheduled workshops and atomic capacity-controlled registration; authoring and live engine deferred."
+      ],
+      "exclusions": [
+        "public deployment",
+        "spend",
+        "production data",
+        "destructive operations"
+      ],
+      "acceptance_criteria": [
+        "Overbooking and duplicate registration tests pass",
+        "Live meeting engine explicitly unavailable"
+      ],
+      "evidence": [],
+      "independent_review": null,
+      "tasks": [
+        {
+          "id": "M09-T01",
+          "description": "Provide seeded scheduled workshops and atomic capacity-controlled registration; authoring and live engine deferred.",
+          "status": "pending"
+        },
+        {
+          "id": "M09-T02",
+          "description": "Verify acceptance and record evidence; obtain independent review",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "mission_id": "M10",
+      "version": "0.1",
+      "name": "AI",
+      "objective": "Expose bounded authenticated read-only tool invocation and capability status.",
+      "dependencies": [
+        "M07"
+      ],
+      "owner_role": "developer_4",
+      "status": "planned",
+      "issue_url": "https://github.com/alikhosravi90/Nikway-Academy/issues/11",
+      "scope": [
+        "Expose bounded authenticated read-only tool invocation and capability status."
+      ],
+      "exclusions": [
+        "public deployment",
+        "spend",
+        "production data",
+        "destructive operations"
+      ],
+      "acceptance_criteria": [
+        "Unknown tools, malformed input and unauthorized tenant denied",
+        "Budgets and kill switch enforced; provider and MCP availability reported honestly"
+      ],
+      "evidence": [],
+      "independent_review": null,
+      "tasks": [
+        {
+          "id": "M10-T01",
+          "description": "Expose bounded authenticated read-only tool invocation and capability status.",
+          "status": "pending"
+        },
+        {
+          "id": "M10-T02",
+          "description": "Verify acceptance and record evidence; obtain independent review",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "mission_id": "M11",
+      "version": "0.1",
+      "name": "Validation",
+      "objective": "Independently test integrated journey, tenant security and failure recovery.",
+      "dependencies": [
+        "M03",
+        "M08",
+        "M09",
+        "M10"
+      ],
+      "owner_role": "validator_1",
+      "status": "planned",
+      "issue_url": "https://github.com/alikhosravi90/Nikway-Academy/issues/12",
+      "scope": [
+        "Independently test integrated journey, tenant security and failure recovery."
+      ],
+      "exclusions": [
+        "public deployment",
+        "spend",
+        "production data",
+        "destructive operations"
+      ],
+      "acceptance_criteria": [
+        "Exact SHA and test commands captured",
+        "Security negatives and recovery evidence independently reviewed"
+      ],
+      "evidence": [],
+      "independent_review": null,
+      "tasks": [
+        {
+          "id": "M11-T01",
+          "description": "Independently test integrated journey, tenant security and failure recovery.",
+          "status": "pending"
+        },
+        {
+          "id": "M11-T02",
+          "description": "Verify acceptance and record evidence; obtain independent review",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "mission_id": "M12",
+      "version": "0.1",
+      "name": "Installation",
+      "objective": "Verify fresh local install, restart, backup/restore and operator runbook.",
+      "dependencies": [
+        "M11"
+      ],
+      "owner_role": "infrastructure_2",
+      "status": "planned",
+      "issue_url": "https://github.com/alikhosravi90/Nikway-Academy/issues/13",
+      "scope": [
+        "Verify fresh local install, restart, backup/restore and operator runbook."
+      ],
+      "exclusions": [
+        "public deployment",
+        "spend",
+        "production data",
+        "destructive operations"
+      ],
+      "acceptance_criteria": [
+        "Loopback local installation works",
+        "Known limitations, rollback and installation receipts recorded"
+      ],
+      "evidence": [],
+      "independent_review": null,
+      "tasks": [
+        {
+          "id": "M12-T01",
+          "description": "Verify fresh local install, restart, backup/restore and operator runbook.",
+          "status": "pending"
+        },
+        {
+          "id": "M12-T02",
+          "description": "Verify acceptance and record evidence; obtain independent review",
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}

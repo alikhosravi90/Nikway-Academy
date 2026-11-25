@@ -1,0 +1,293 @@
+{
+  "result": "FAIL_REPRODUCED",
+  "iterations": 12,
+  "immediate_404_count": 3,
+  "post_sql_409_count": 12,
+  "cases": [
+    {
+      "iteration": 0,
+      "submit": 200,
+      "immediate": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "5b8d84e4-caa9-4855-81b1-9aa3db02195e"
+        }
+      ],
+      "database_before_second": "0b658aa1-f01a-4eda-b4d3-336331519dcf|00000000-0000-4000-8000-000000000003|10000000-0000-4000-8000-000000000001|submitted",
+      "after_sql": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "412c8184-7a4a-4f33-a4b3-5bd38061a539"
+        }
+      ]
+    },
+    {
+      "iteration": 1,
+      "submit": 200,
+      "immediate": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "e7479bc4-78d5-4420-8b81-aaa9671a36df"
+        }
+      ],
+      "database_before_second": "94b52a61-2f5f-499a-98e0-25fd4c6412bd|00000000-0000-4000-8000-000000000003|10000000-0000-4000-8000-000000000001|submitted",
+      "after_sql": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "e2897b45-4170-4f9e-85d8-834000e96291"
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "submit": 200,
+      "immediate": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "1def959b-9b59-409a-9d61-ba3c3dd1c2ba"
+        }
+      ],
+      "database_before_second": "c727e550-d717-4fb2-b650-08d484e49c11|00000000-0000-4000-8000-000000000003|10000000-0000-4000-8000-000000000001|submitted",
+      "after_sql": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "2f097e65-d016-442c-bfed-76e53a84e00c"
+        }
+      ]
+    },
+    {
+      "iteration": 3,
+      "submit": 200,
+      "immediate": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "72edbede-e0ac-4758-91bc-aca3c2330980"
+        }
+      ],
+      "database_before_second": "03155ebe-47c1-43e5-a9d2-b6182599b5bd|00000000-0000-4000-8000-000000000003|10000000-0000-4000-8000-000000000001|submitted",
+      "after_sql": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "de2225dd-42ee-4fe9-a8e9-91ce1a53a2e6"
+        }
+      ]
+    },
+    {
+      "iteration": 4,
+      "submit": 200,
+      "immediate": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "5940fb44-2879-416b-a2a3-33e572c9ca90"
+        }
+      ],
+      "database_before_second": "b04cc8c6-4a70-43bf-b604-5a29ec14c301|00000000-0000-4000-8000-000000000003|10000000-0000-4000-8000-000000000001|submitted",
+      "after_sql": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "b1e0456f-facb-438b-8ecb-0ae6572ce14f"
+        }
+      ]
+    },
+    {
+      "iteration": 5,
+      "submit": 200,
+      "immediate": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "6c1aafb7-a0f4-4e51-a0b7-1e0f82fbf43a"
+        }
+      ],
+      "database_before_second": "a16d5760-897d-44df-92b4-f06efbe4fc56|00000000-0000-4000-8000-000000000003|10000000-0000-4000-8000-000000000001|submitted",
+      "after_sql": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "72f030c4-bfab-4e63-b6bc-0f9b63d312c2"
+        }
+      ]
+    },
+    {
+      "iteration": 6,
+      "submit": 200,
+      "immediate": [
+        404,
+        {
+          "code": "404",
+          "message": "Submission not found",
+          "detail": "Submission not found",
+          "correlation_id": "10110749-60fa-478c-bfe6-74d7d64f1760"
+        }
+      ],
+      "database_before_second": "b3b680bc-58d1-40b5-ae32-23e38b6a2a61|00000000-0000-4000-8000-000000000003|10000000-0000-4000-8000-000000000001|submitted",
+      "after_sql": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "cce3d937-0b02-4e8d-a2ba-497b88549383"
+        }
+      ]
+    },
+    {
+      "iteration": 7,
+      "submit": 200,
+      "immediate": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "19a880ce-5783-4b1d-84a2-246110d090b0"
+        }
+      ],
+      "database_before_second": "17bb232a-2e86-4052-b569-0a4fc4b88233|00000000-0000-4000-8000-000000000003|10000000-0000-4000-8000-000000000001|submitted",
+      "after_sql": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "a9b5b297-f6ed-4f94-8cc1-cdecd4e8a9da"
+        }
+      ]
+    },
+    {
+      "iteration": 8,
+      "submit": 200,
+      "immediate": [
+        404,
+        {
+          "code": "404",
+          "message": "Submission not found",
+          "detail": "Submission not found",
+          "correlation_id": "290291f3-c114-4710-8fc7-8366c82d3548"
+        }
+      ],
+      "database_before_second": "6d68a446-678d-498f-82eb-ed677a809390|00000000-0000-4000-8000-000000000003|10000000-0000-4000-8000-000000000001|submitted",
+      "after_sql": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "3b37abb8-9c48-468d-b6dc-39536a45684c"
+        }
+      ]
+    },
+    {
+      "iteration": 9,
+      "submit": 200,
+      "immediate": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "ac0361b7-f579-4d29-9a92-fdaf14b5c46d"
+        }
+      ],
+      "database_before_second": "8b79a5e0-7a95-4de8-816a-65d994c882a3|00000000-0000-4000-8000-000000000003|10000000-0000-4000-8000-000000000001|submitted",
+      "after_sql": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "f7953486-a388-4eec-8f7f-d4ecef28a936"
+        }
+      ]
+    },
+    {
+      "iteration": 10,
+      "submit": 200,
+      "immediate": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "6d10bf1b-ef92-45dc-a45a-587907e17079"
+        }
+      ],
+      "database_before_second": "59f9e5de-10bd-4f08-9f34-5e5d5775c806|00000000-0000-4000-8000-000000000003|10000000-0000-4000-8000-000000000001|submitted",
+      "after_sql": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "b984c33f-d05b-4abe-94d3-9ff559fcc1e4"
+        }
+      ]
+    },
+    {
+      "iteration": 11,
+      "submit": 200,
+      "immediate": [
+        404,
+        {
+          "code": "404",
+          "message": "Submission not found",
+          "detail": "Submission not found",
+          "correlation_id": "e063970c-c4b7-4b05-893a-cdfa1ce4c33d"
+        }
+      ],
+      "database_before_second": "7b47509d-074d-4e17-90b5-ed22604a6065|00000000-0000-4000-8000-000000000003|10000000-0000-4000-8000-000000000001|submitted",
+      "after_sql": [
+        409,
+        {
+          "code": "409",
+          "message": "Self review is not permitted",
+          "detail": "Self review is not permitted",
+          "correlation_id": "9e703051-6798-412b-a967-a9bbabc33e52"
+        }
+      ]
+    }
+  ],
+  "interpretation": "Consistent with transaction commit after response delivery in request-scoped FastAPI yield dependency; dependency lifetime fix and real rerun required.",
+  "fixtures": "Exact diagnostic run fixtures removed by teardown; audit retained.",
+  "upstream_evidence": {
+    "installed_fastapi": "0.165.0",
+    "documentation": "https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-with-yield/",
+    "verified_semantics": "Yield dependency defaults to request scope, exiting after response. Function scope exits before response.",
+    "version_history": "https://fastapi.tiangolo.com/advanced/advanced-dependencies/",
+    "introduced": "0.121.0"
+  }
+}

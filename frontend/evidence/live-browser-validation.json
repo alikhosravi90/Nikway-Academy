@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-25",
+  "scope": "Local synthetic seeded tenants; real Keycloak PKCE, API and PostgreSQL",
+  "browser": "Playwright Chromium",
+  "tests": {
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "duration_seconds": 3.8
+  },
+  "journeys": [
+    "learner login, sequential completion, reload persistence, submission and logout",
+    "reviewer login, feedback and revision request",
+    "anonymous and forged token rejection, learner own-record visibility, tenant isolation and unauthorized review denial"
+  ],
+  "visual": {
+    "desktop_width": 1440,
+    "mobile_width": 320,
+    "horizontal_overflow": false,
+    "page_errors": [],
+    "screenshots": "Ignored local runtime files; not included in Git",
+    "console_errors": [],
+    "csp_violations": [],
+    "font_family": "n, Arial",
+    "tenant_identifier_direction": "ltr"
+  },
+  "limits": "Local Chromium only; no public deployment, external integrations, full accessibility audit or production readiness claim",
+  "runtime": "Final frontend with current nginx digest, CSP and dynamic Docker DNS; API explicit commit-before-response patch active"
+}
