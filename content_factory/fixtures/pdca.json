@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0", "id": "pdca-introduction", "semanticVersion": "1.0.0", "locale": "fa-IR", "type": "lesson", "title": "چرخه PDCA: بهبود با آزمایش کوچک",
+  "learningOutcomeIds": ["outcome:pdca:apply:v1"], "competencyIds": ["competency:continuous-improvement:v1"], "prerequisiteIds": [],
+  "sourceEvidenceIds": ["source:pdca-original"], "license": "LicenseRef-Internal-Synthetic", "rightsStatus": "internal_trial_only",
+  "accessibility": {"textAlternative": true, "readingOrder": true, "languageDeclared": true},
+  "provenance": [{"id":"source:pdca-original", "locator":"fixture:pdca-original", "rights":"original_synthetic", "note":"Original AI-assisted Persian teaching fixture; factual orientation: https://asq.org/quality-resources/pdca-cycle ; no third-party text copied. Human editorial approval pending."}],
+  "audience":"فراگیر مقدماتی بهبود مستمر", "durationMinutes":15, "derivedFrom": [],
+  "body": {
+    "summary":"PDCA روشی تکرارشونده برای آزمودن تغییر و یادگیری از نتیجه است. ابتدا مسئله و معیار را مشخص می‌کنیم، سپس تغییر را در مقیاس کوچک می‌آزماییم، نتیجه را بررسی می‌کنیم و درباره ادامه یا اصلاح تصمیم می‌گیریم.",
+    "sections":[
+      {"title":"برنامه‌ریزی — Plan", "text":"فرض کنید در یک تیم خیالی، زمان پاسخ به درخواست‌ها طولانی است. هدف آزمایشی کاهش میانگین زمان از ۱۰ به ۸ دقیقه است. تعداد درخواست‌ها و کیفیت پاسخ را هم ثبت کنید تا سرعت به قیمت کیفیت تمام نشود."},
+      {"title":"اجرا — Do", "text":"یک الگوی پاسخ را برای گروه کوچکی از درخواست‌های مشابه امتحان کنید. زمان، شرایط اجرا و خطاها را ثبت کنید. اعداد این مثال ساختگی‌اند و داده واقعی سازمان نیستند."},
+      {"title":"بررسی — Check", "text":"نتایج آزمایش را با خط مبنا مقایسه کنید. اگر زمان کمتر شد اما خطا افزایش یافت، هدف کامل محقق نشده است. تفاوت حجم و نوع درخواست‌ها می‌تواند نتیجه را منحرف کند."},
+      {"title":"اقدام — Act", "text":"اگر شواهد کافی بود، روش را با تأیید مسئول گسترش دهید؛ اگر نبود، فرضیه را اصلاح کنید و چرخه را تکرار کنید. یک آزمایش کوچک به‌تنهایی اثبات قطعی اثر نیست."}
+    ],
+    "exercise":"برای فرایندی خیالی، مسئله، معیار، تغییر کوچک و شرط توقف را بنویسید. توضیح دهید در صورت افزایش خطا چه تصمیمی می‌گیرید.",
+    "rubric":{"id":"rubric:pdca:v1","criteria":["مسئله و خط مبنا روشن است", "آزمایش محدود و قابل اندازه‌گیری است", "کیفیت و پیامد ناخواسته بررسی شده", "تصمیم بعدی به شواهد وابسته است"]},
+    "questions":[
+      {"id":"q1","prompt":"مقایسه نتیجه آزمایش با خط مبنا در کدام مرحله است؟","options":["Plan","Do","Check","Act"],"answer":2,"explanation":"در Check داده‌های آزمایش بررسی و با معیار مقایسه می‌شوند.","outcomeId":"outcome:pdca:apply:v1"},
+      {"id":"q2","prompt":"زمان پاسخ کمتر شده ولی خطا افزایش یافته است. اقدام مناسب چیست؟","options":["گسترش فوری تغییر", "بررسی علت و اصلاح آزمایش", "حذف شاخص کیفیت"],"answer":1,"explanation":"باید پیامد ناخواسته را بررسی کرد و بر اساس هر دو معیار تصمیم گرفت.","outcomeId":"outcome:pdca:apply:v1"}
+    ]
+  }
+}
