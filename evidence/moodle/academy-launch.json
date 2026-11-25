@@ -1,0 +1,18 @@
+{
+  "anonymous_denied": 401,
+  "learner-a": {
+    "enabled": true,
+    "url": "http://localhost:18701/",
+    "scope": "single-organization local pilot",
+    "progress_sync": false
+  },
+  "reviewer-a": {
+    "enabled": true,
+    "url": "http://localhost:18701/",
+    "scope": "single-organization local pilot",
+    "progress_sync": false
+  },
+  "learner-b": {
+    "enabled": false
+  }
+}

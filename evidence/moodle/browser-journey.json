@@ -1,0 +1,22 @@
+{
+  "observed_at": "2026-11-25T13:41:15.206984+00:00",
+  "tool": "Codex in-app browser via CUA",
+  "moodle_url": "http://localhost:18701",
+  "academy_url": "http://localhost:18501",
+  "subject": "00000000-0000-4000-8000-000000000001",
+  "checks": {
+    "real_oidc_login": true,
+    "academy_launch_link_opened_moodle_dashboard": true,
+    "three_lesson_texts_rendered": true,
+    "three_manual_completions": true,
+    "online_text_draft_saved": true,
+    "submission_confirmed": true,
+    "submitted_for_grading": true,
+    "native_grade_4_of_12_visible": true,
+    "synthetic_feedback_visible": true,
+    "four_rubric_breakdowns_visible": true
+  },
+  "assessment_scope": "Synthetic integration fixture; not human educational evaluation",
+  "dashboard_percentage_scope": "Tracked manual lesson activities only; not assessment pass",
+  "screenshot_external": "../moodle-submission.png"
+}

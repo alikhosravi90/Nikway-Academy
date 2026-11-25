@@ -1,0 +1,16 @@
+{
+  "status": "PASS_SYNTHETIC_CORE_API",
+  "course_id": 6,
+  "cm_id": 25,
+  "learner_cannot_grade": true,
+  "reviewer_can_grade": true,
+  "rubric_criteria_selected": 4,
+  "synthetic_grade": 4,
+  "maximum_grade": 12,
+  "feedback": "Synthetic integration test, not educational assessment",
+  "persisted_grader": "allowlisted reviewer subject ending003",
+  "original_submission_preserved": true,
+  "api": "assign::save_grade; native rubric submit_and_get_grade; native feedback plugin",
+  "human_review_claim": false,
+  "learner_browser_feedback_verification": "pending root independent browser observation"
+}

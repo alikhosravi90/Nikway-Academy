@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-11-25T13:31:58.559164+00:00",
+  "scanner": "Trivy0.76.2",
+  "scope": "OS and detected language dependencies; no suppressions; cached DB from2026-11-25",
+  "images": [
+    {
+      "service": "postgres",
+      "runtime_image": "sha256:b4b18a252c7f3908e177ef4eb1d701b6a475dfe46ab30b8c277a856ac6c196f1",
+      "scanner_artifact": "nikway-moodle-postgres:17-hardened",
+      "high": 0,
+      "critical": 0,
+      "raw_scan_sha256": "7fee5e955cdf601124b26be5eeb2f5b426b67c896f2d85c3a9705149001a3106",
+      "result_classes": [
+        {
+          "target": "nikway-moodle-postgres:17-hardened (alpine 3.24.4)",
+          "type": "alpine",
+          "class": "os-pkgs"
+        }
+      ],
+      "scanner_image_id": "sha256:b4b18a252c7f3908e177ef4eb1d701b6a475dfe46ab30b8c277a856ac6c196f1",
+      "exact_runtime_match": true
+    },
+    {
+      "service": "moodle",
+      "runtime_image": "sha256:7a34d5d3facaa28d3b658ee5205d0fcdc167f5a07af2d67d5cf9ded62742cb7c",
+      "scanner_artifact": "sha256:7a34d5d3facaa28d3b658ee5205d0fcdc167f5a07af2d67d5cf9ded62742cb7c",
+      "high": 0,
+      "critical": 0,
+      "raw_scan_sha256": "2ba8cf337bb562bcde1b4c040ec001a366d863f45e1d293023f234626025993a",
+      "result_classes": [
+        {
+          "target": "sha256:7a34d5d3facaa28d3b658ee5205d0fcdc167f5a07af2d67d5cf9ded62742cb7c (alpine 3.24.4)",
+          "type": "alpine",
+          "class": "os-pkgs"
+        },
+        {
+          "target": "Node.js",
+          "type": "node-pkg",
+          "class": "lang-pkgs"
+        }
+      ],
+      "scanner_image_id": "sha256:7a34d5d3facaa28d3b658ee5205d0fcdc167f5a07af2d67d5cf9ded62742cb7c",
+      "exact_runtime_match": true
+    }
+  ],
+  "coverage_limit": "No PHP Composer lock target detected in release archive. Zero detected High/Critical is bounded package-scanner evidence, not a complete Moodle/plugin advisory audit or absence of application vulnerabilities."
+}

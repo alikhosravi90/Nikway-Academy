@@ -1,0 +1,13 @@
+{
+  "status": "PASS_LIMITED_LOCAL_SYNTHETIC",
+  "scope": "Provider binding guard; no live identity mutations",
+  "pure_fixture": {"valid_passed": 1, "negative_rejected": 6, "fields": ["username", "auth", "mnethostid", "idnumber", "suspended", "deleted"]},
+  "live_read_only": {"configured_subject_bindings_passed": 2},
+  "python_admission_tests": {"passed": 4},
+  "review_findings": {
+    "content_provider_binding": "RESOLVED: guard before enrol_user; local-host lookup plus exact OIDC identity anchor and active state",
+    "backup_trap_state": "Delegated to infrastructure; not re-reviewed here",
+    "interrupted_init_secret_overwrite": "Delegated to infrastructure; not re-reviewed here"
+  },
+  "runtime_changes": "Only temporary CLI guard/test files copied; no user, role, enrolment or course writes"
+}

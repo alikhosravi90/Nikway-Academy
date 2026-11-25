@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-11-25T13:21:44.194221+00:00",
+  "containers": [
+    {
+      "name": "/nikway-academy-local-api-1",
+      "id": "d0316af4984baa2f964790710ae6f316c82e348a437a70740ff8118479ae0b1a",
+      "image": "sha256:f137537717f0949a5e64b55d5ed9432f83143703b1cd7bb53ed8818f65b26d52",
+      "started": "2026-11-25T11:40:42.700074205Z"
+    },
+    {
+      "name": "/nikway-academy-local-frontend-1",
+      "id": "69c533bb77ca213572ccf4872581954b31a38037d82d204da0d06d80bf1be5e3",
+      "image": "sha256:769f40a9729dcdc6beb409b55ec0203dd7cc7210b409db302f636937263978f1",
+      "started": "2026-11-25T11:40:42.361408805Z"
+    },
+    {
+      "name": "/nikway-academy-local-keycloak-1",
+      "id": "d89436aa86ea4106b66b7e5ed8a2bf4a39530e19480518d91069ef40b5ee79a6",
+      "image": "sha256:7e66a96e4739239070aeaf72e4c5decf0f7f682cfc725b9f7ea2b336eaba38b3",
+      "started": "2026-11-25T11:40:43.402836771Z"
+    },
+    {
+      "name": "/nikway-academy-local-postgres-1",
+      "id": "39eb2adbdc0d270b413b1044e151fbc0503ce8a29e08e2b97607c7b3565b50e4",
+      "image": "sha256:dd44c4c2bfcb4cbcb4dccbc86070687701c5990d152f5a7a947b286bccef49a5",
+      "started": "2026-11-25T11:40:42.374168251Z"
+    },
+    {
+      "name": "/nikway-academy-content-api-1",
+      "id": "366d7e618069dead3dc804ec4260c175914a27277670eb300503fdb2e5acd607",
+      "image": "sha256:cbd16a202d4c600e7dc086b120a7e779af48189b7ad3e20d5f3d07cb1fabb59b",
+      "started": "2026-11-25T12:26:13.137884141Z"
+    },
+    {
+      "name": "/nikway-academy-content-frontend-1",
+      "id": "3622df843a7f4b1c52d3cccd09d8bf66326f1ebd8b7d061e6c7975f3f7bbbf7c",
+      "image": "sha256:45fd84fa320ed95a00166bb043be02a70fce874e38e2f01cd5738ada4b709b5d",
+      "started": "2026-11-25T12:26:12.856331695Z"
+    },
+    {
+      "name": "/nikway-academy-content-keycloak-1",
+      "id": "ee692fd6944b57d6b73527008938e50eb01278018b92a232a32aea46b51ffd97",
+      "image": "sha256:c03a8747a16c11dcba0ecdc04ecd8c87e1ae5a7342b1ee4e10f8db70292182da",
+      "started": "2026-11-25T12:26:13.8971504Z"
+    },
+    {
+      "name": "/nikway-academy-content-postgres-1",
+      "id": "6b4f04d5d8c6148a60a497fbeb59e9cf4032d1b5484c8a74955a71fe0ee30bb0",
+      "image": "sha256:38134cd212d8362cc8475d26447d59ff0a0b6240245954ca8bb0328d870ff332",
+      "started": "2026-11-25T12:26:12.868281131Z"
+    }
+  ]
+}

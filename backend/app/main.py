@@ -170,6 +170,11 @@ def register(workshop_id:UUID,request:Request,ctx:Context=Depends(authenticated,
 def capabilities(ctx:Context=Depends(authenticated, scope='function')):
     return {'authentication':'operational','learning':'operational','workshops':'registration_only','videoconferencing':'not_integrated','ai_provider':'disabled','mcp':'not_integrated','tools':'read_only_progress','credentials':'not_issued'}
 
+@app.get('/api/integrations/moodle')
+def moodle_integration(ctx:Context=Depends(authenticated, scope='function')):
+    from .integrations import moodle_link
+    return moodle_link(ctx.tenant_id)
+
 @app.post('/api/tools/invoke')
 def invoke(body:ToolRequest,request:Request,ctx:Context=Depends(authenticated, scope='function')):
     # Control: no model-selected context, writes, network access or unlimited executions.

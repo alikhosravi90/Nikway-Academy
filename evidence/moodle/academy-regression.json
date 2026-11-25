@@ -1,0 +1,33 @@
+{
+  "observed_at": "2026-11-25T13:41:15.206859+00:00",
+  "unit_tests": 34,
+  "frontend_tests": 28,
+  "frontend_typecheck": "PASS",
+  "real_oidc_tenant_content_tests": 11,
+  "portable_import_offline_tests": 4,
+  "governance_documents": 24,
+  "missions": 12,
+  "security": [
+    {
+      "component": "academy-api-scan",
+      "image": "sha256:30221034ee4db4e75ac705b3d613be4333744b45367ac7b13e65c3727a12a196",
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 6,
+        "LOW": 1
+      }
+    },
+    {
+      "component": "academy-frontend-scan",
+      "image": "sha256:2d9722f1a56dd2242d225973ff49abc8f192c4e5bd9b99e4772ac3b2b88aed0f",
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 1,
+        "LOW": 0
+      }
+    }
+  ],
+  "scope": "Academy bridge changes and regressions; Moodle covered separately"
+}

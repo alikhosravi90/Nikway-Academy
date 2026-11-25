@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "name": "/nikway-academy-local-api-1",
+      "container_image_started_unchanged": true
+    },
+    {
+      "name": "/nikway-academy-local-frontend-1",
+      "container_image_started_unchanged": true
+    },
+    {
+      "name": "/nikway-academy-local-keycloak-1",
+      "container_image_started_unchanged": true
+    },
+    {
+      "name": "/nikway-academy-local-postgres-1",
+      "container_image_started_unchanged": true
+    },
+    {
+      "name": "/nikway-academy-content-keycloak-1",
+      "container_image_started_unchanged": true
+    },
+    {
+      "name": "/nikway-academy-content-postgres-1",
+      "container_image_started_unchanged": true
+    }
+  ],
+  "academy_api_frontend": "Recreated only to install authorized Moodle launch bridge",
+  "existing_identity_changes": "One dedicated client added; existing accounts/clients unchanged by setup script"
+}

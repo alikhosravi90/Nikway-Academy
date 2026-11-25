@@ -1,0 +1,104 @@
+{
+  "observed_at": "2026-11-25T13:44:55.472585+00:00",
+  "status": "COMPLETE_LOCAL_PILOT",
+  "decision": "GO_LOCAL_SYNTHETIC_ONLY",
+  "local_acceptance": {
+    "completed": 8,
+    "total": 8,
+    "percent": 100,
+    "gates": [
+      "running isolated persistent Moodle",
+      "subject-bound SSO and tenant-B denial",
+      "authenticated Academy launch",
+      "portable sample import and replay rejection",
+      "browser submission and native synthetic rubric feedback",
+      "encrypted fresh-volume restore",
+      "stop-start-restart persistence",
+      "independent review fixes and bounded scans"
+    ]
+  },
+  "urls": {
+    "academy": "http://localhost:18501/",
+    "moodle": "http://localhost:18701/",
+    "sample": "http://localhost:18701/course/view.php?id=6"
+  },
+  "versions": {
+    "moodle": "5.3.1",
+    "php": "8.4.28",
+    "postgres": "17",
+    "auth_oidc": "5.3.0"
+  },
+  "containers": [
+    {
+      "name": "nikway-academy-moodle-moodle-1",
+      "image": "sha256:7a34d5d3facaa28d3b658ee5205d0fcdc167f5a07af2d67d5cf9ded62742cb7c",
+      "running": true,
+      "health": "healthy",
+      "mounts": [
+        {
+          "type": "volume",
+          "destination": "/var/moodledata",
+          "name": "nikway-academy-moodle_moodle-data"
+        }
+      ]
+    },
+    {
+      "name": "nikway-academy-moodle-db-1",
+      "image": "sha256:b4b18a252c7f3908e177ef4eb1d701b6a475dfe46ab30b8c277a856ac6c196f1",
+      "running": true,
+      "health": "healthy",
+      "mounts": [
+        {
+          "type": "volume",
+          "destination": "/var/lib/postgresql/data",
+          "name": "nikway-academy-moodle_moodle-db"
+        }
+      ]
+    },
+    {
+      "name": "nikway-academy-moodle-cron-1",
+      "image": "sha256:7a34d5d3facaa28d3b658ee5205d0fcdc167f5a07af2d67d5cf9ded62742cb7c",
+      "running": true,
+      "health": null,
+      "mounts": [
+        {
+          "type": "volume",
+          "destination": "/var/moodledata",
+          "name": "nikway-academy-moodle_moodle-data"
+        }
+      ]
+    },
+    {
+      "name": "nikway-academy-content-api-1",
+      "image": "sha256:30221034ee4db4e75ac705b3d613be4333744b45367ac7b13e65c3727a12a196",
+      "running": true,
+      "health": null,
+      "mounts": []
+    },
+    {
+      "name": "nikway-academy-content-frontend-1",
+      "image": "sha256:2d9722f1a56dd2242d225973ff49abc8f192c4e5bd9b99e4772ac3b2b88aed0f",
+      "running": true,
+      "health": null,
+      "mounts": []
+    }
+  ],
+  "traceability": {
+    "issue": 17,
+    "branch": "mission/moodle-integration",
+    "base": "mission/secure-content-mvp",
+    "merge": false,
+    "release": false,
+    "hosted_ci": "Recorded outside repository after final commit; not implied by local acceptance"
+  },
+  "limitations": [
+    "Loopback/trusted Docker synthetic pilot only; no production/public GO",
+    "OIDC plugin independent signature/issuer/audience validation gap remains a production gate",
+    "No Academy grade/progress/revocation synchronization",
+    "Moodle instance belongs only to explicitly mapped tenant A, not shared tenant isolation",
+    "Package scanner does not cover complete Moodle/PHP/plugin advisory surface",
+    "Manual tracked-lesson percentage does not prove assessment pass; sample grade is synthetic",
+    "Backup probe verifies restored app/DB/files but does not log in through restored OIDC",
+    "Fresh build procedure is pinned at source/base image level, not bit-identical Alpine package resolution"
+  ]
+}

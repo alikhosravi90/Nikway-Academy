@@ -1,0 +1,39 @@
+{
+  "status": "PASS_LIMITED_LOCAL",
+  "independent_reviewers": [
+    "architecture",
+    "recovery"
+  ],
+  "resolved": [
+    {
+      "finding": "backup cleanup registered after state mutation",
+      "resolution": "Trap registered before mutation; preserves maintenance/cron state",
+      "evidence": "backup-failure-cleanup.json"
+    },
+    {
+      "finding": "interrupted init could overwrite secrets",
+      "resolution": "All generated paths guarded; exclusive creation",
+      "evidence": "infrastructure-validation.md"
+    },
+    {
+      "finding": "enrolment only checked allowed username",
+      "resolution": "OIDC provider/local host/anchored subject/deletion/suspension guard",
+      "evidence": "../../infra/moodle/content-binding-evidence.json"
+    },
+    {
+      "finding": "existing client auth method/scopes drift not compared",
+      "resolution": "Exact authenticator and sorted scope lists checked",
+      "tests": "3 mocked HTTP negative regressions PASS; actual existing-client check PASS"
+    },
+    {
+      "finding": "runtime build context could include secrets",
+      "resolution": "Dedicated Moodle and PG .dockerignore runtime exclusions"
+    },
+    {
+      "finding": "nginx external port canonical redirect loop",
+      "resolution": "External host-port mapping; health check follows redirects and fails on loop"
+    }
+  ],
+  "operator_connect_replay": "PASS after lifecycle; authenticated configuration unchanged and temp secret removed",
+  "unresolved_production_limits": "See acceptance.json and docs/moodle-auth-decision.md"
+}

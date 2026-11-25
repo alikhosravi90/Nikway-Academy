@@ -1,0 +1,1 @@
+{"status": "PASS", "tables": 503, "rows": 12321, "data_archive_members": 23, "data_files_restored_verified": 9, "data_scope": "temporary directory restoration and per-file SHA256; no live volume overwrite", "config_decryptable": true}

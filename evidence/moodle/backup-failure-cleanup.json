@@ -1,0 +1,1 @@
+{"status": "PASS", "injected_failure": "gpg command exits73 before encryption", "backup_returncode": 73, "original_maintenance_config_and_file_restored": true, "original_cron_running_state_restored": true}

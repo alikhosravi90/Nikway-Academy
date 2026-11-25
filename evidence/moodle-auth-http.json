@@ -1,0 +1,62 @@
+{
+  "result": "PASS",
+  "scope": "real local HTTP OIDC; no browser rendering or JWT verification certification",
+  "checks": [
+    "tenant B absent before",
+    "learner-a authorization S256",
+    "learner-a real identity form",
+    "learner-a form_post callback exact",
+    "learner-a authenticated dashboard",
+    "learner-a own profile identity",
+    "learner-a not site administrator",
+    "learner-a logout available",
+    "learner-a logout invalidates Moodle session",
+    "reviewer-a authorization S256",
+    "reviewer-a real identity form",
+    "reviewer-a form_post callback exact",
+    "reviewer-a authenticated dashboard",
+    "reviewer-a own profile identity",
+    "reviewer-a not site administrator",
+    "reviewer-a logout available",
+    "reviewer-a logout invalidates Moodle session",
+    "learner-b authorization S256",
+    "learner-b real identity form",
+    "learner-b form_post callback exact",
+    "tenant B explicitly denied",
+    "tenant B has no Moodle session",
+    "tenant B absent after",
+    "no account auto-creation",
+    "unknown callback state rejected",
+    "invalid callback no session"
+  ],
+  "count": 26,
+  "subject_account_snapshot_unchanged": true,
+  "secrets_logged": false,
+  "tested_on": "2026-11-25",
+  "moodle_image": "sha256:7a34d5d3facaa28d3b658ee5205d0fcdc167f5a07af2d67d5cf9ded62742cb7c",
+  "plugin": {
+    "name": "auth_oidc",
+    "version": 2026100500,
+    "commit": "5866154d55fa56ea5a112386fac9722c3a58ac7b"
+  },
+  "network_policy": {
+    "private_exception": "10.253.244.3/32",
+    "added_allowed_port": 8080,
+    "other_private_ranges_checked_blocked": true,
+    "idempotent_repeat_passed": true,
+    "scope": "IP plus globally allowed port, not URL-specific; trusted local network only"
+  },
+  "source_hashes": {
+    "infra/moodle/auth-keycloak.py": "e8b01df2fdab76e1851ae7aa7e796ca3fe4fa5f684bc458d6cd8460e90261f88",
+    "infra/moodle/auth-configure.php": "b1a95ff00a1063b030c911dacd9898b7227fe7bd7200f00f9973770c4cce7c13",
+    "infra/moodle/auth-network.py": "2fea27ec7763fb7b8375552b6d527ccc90b9575f172a80c84b5b229e50eedaaa",
+    "infra/moodle/auth-test.py": "0317f98073df2b2e420d3cd62163a767eec534379bc2455227b883bba8870b50"
+  },
+  "limitations": [
+    "No independent JWKS signature/issuer/audience validation claimed for plugin ID token path",
+    "Academy membership revocation is not synchronized into Moodle",
+    "Course-role authorization tested separately; this test checks no site administrator role",
+    "Browser rendering and complete assignment workflow are separate tests",
+    "Wrong verifier and authorization-code replay not executed by this runner"
+  ]
+}

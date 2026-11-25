@@ -83,6 +83,7 @@ function App() {
     [submissions, setSubmissions] = useState<Submission[]>([]),
     [workshops, setWorkshops] = useState<Workshop[]>([]),
     [capabilities, setCapabilities] = useState<Record<string, string>>({});
+  const [moodle, setMoodle] = useState<{enabled: boolean; url?: string}>({enabled: false});
   const [selected, setSelected] = useState<string | null>(null),
     [content, setContent] = useState(""),
     [feedback, setFeedback] = useState<Record<string, string>>({}),
@@ -90,15 +91,17 @@ function App() {
   const refresh = async () => {
     const identity = await api<typeof me>("/me");
     setMe(identity);
-    const [c, p, w, cap] = await Promise.all([
+    const [c, p, w, cap, lms] = await Promise.all([
       api<Course[]>("/courses"),
       api<{ submissions: Submission[] }>("/progress"),
       api<Workshop[]>("/workshops"),
       api<Record<string, string>>("/capabilities"),
+      api<{enabled: boolean; url?: string}>("/integrations/moodle"),
     ]);
     setCourses(c);
     setWorkshops(w);
     setCapabilities(cap);
+    setMoodle(lms);
     setSubmissions(
       identity?.role === "reviewer" || identity?.role === "admin"
         ? await api<Submission[]>("/submissions")
@@ -186,6 +189,7 @@ function App() {
               {label}
             </button>
           ))}
+          {moodle.enabled && moodle.url && <a className="moodle-launch" href={moodle.url} target="_blank" rel="noopener noreferrer">ورود به Moodle ↗</a>}
         </nav>
         <div className="identity">
           <p>

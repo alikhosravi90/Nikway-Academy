@@ -65,6 +65,8 @@ services:
       OIDC_JWKS_URL: http://keycloak:8080/realms/academy/protocol/openid-connect/certs
       OIDC_AUDIENCE: academy-api
       TOOLS_ENABLED: "true"
+      MOODLE_URL: ${MOODLE_URL:-}
+      MOODLE_TENANT_ID: ${MOODLE_TENANT_ID:-}
       CORS_ORIGINS: http://localhost:${ACADEMY_UI_PORT:-18401},http://127.0.0.1:${ACADEMY_UI_PORT:-18401}
     ports: ['127.0.0.1:${ACADEMY_API_PORT:-18400}:8000']
     depends_on:

@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-11-25T13:43:01.827272+00:00",
+  "status": "PASS",
+  "table_count": 503,
+  "compared_persistent_tables": 502,
+  "session_exclusion_reason": "Health/readiness login requests intentionally create anonymous sessions; initial strict all-table comparison detected only this expected table change",
+  "rows": 12401,
+  "lifecycle": [
+    {
+      "operation": "stop-start",
+      "elapsed_seconds": 8.369,
+      "all_non_session_table_digests_equal": true,
+      "excluded_table": "mdl_sessions: readiness HTTP requests create anonymous sessions"
+    },
+    {
+      "operation": "restart",
+      "elapsed_seconds": 2.509,
+      "all_non_session_table_digests_equal": true,
+      "excluded_table": "mdl_sessions: readiness HTTP requests create anonymous sessions"
+    }
+  ],
+  "unrelated_project_identity_unchanged": true,
+  "login_page_sample": {
+    "requests": 20,
+    "concurrency": 1,
+    "median_ms": 36.443,
+    "p95_ms": 38.22,
+    "max_ms": 53.582,
+    "scope": "Unauthenticated login page only; not learning throughput"
+  },
+  "table_digest_map_sha256": "e79ff12c1febc32350a98a960e2b2c62463547db2358c5d60e9e0a8de4a0a1b1",
+  "key_learning_tables": {
+    "mdl_assign_grades": {
+      "rows": 1,
+      "sha256": "1495aabf646ed207fc8582b3a2ad24996d363a9bb2747818131b28e7fb1df61c"
+    },
+    "mdl_assign_submission": {
+      "rows": 1,
+      "sha256": "77be4a9ec340346d72efd9e93515fa9e8fa5b01ac1e490962a21e23f69ed3266"
+    },
+    "mdl_assignfeedback_comments": {
+      "rows": 1,
+      "sha256": "cfb9d6cf9d8e2591528f4f6664cb28bc522f71b046cadb33ae549e6d072fac77"
+    },
+    "mdl_course": {
+      "rows": 2,
+      "sha256": "e82382791997efa310897fe0b393c0ee9cf0aac0c2b057a77710cb36412afb40"
+    },
+    "mdl_course_modules": {
+      "rows": 5,
+      "sha256": "3e81429b6ac97c6706482d6d2e8509a8e247cc2ad833c35a9ab4b7a890bb7d56"
+    },
+    "mdl_course_modules_completion": {
+      "rows": 3,
+      "sha256": "3cfb7b781d909e0feccb4754f1180c45042a774e01e77dc85d1646359d2730f7"
+    },
+    "mdl_grade_grades": {
+      "rows": 2,
+      "sha256": "59f091e922475fa7f60e21296de247d603af43cd10b3f5f3c464c62f46236f6a"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+services:
+  moodle:
+    networks: [private, academy]
+networks:
+  academy:
+    external: true
+    name: nikway-academy-content_default
