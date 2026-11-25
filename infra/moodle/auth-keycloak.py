@@ -19,8 +19,10 @@ try:
   desired['secret']=secrets.token_urlsafe(48);call('/clients',desired);found=call('/clients?clientId='+name)
  if len(found)!=1:raise RuntimeError('Dedicated client identity ambiguous')
  c=call('/clients/'+found[0]['id'])
- for k in ('clientId','enabled','protocol','publicClient','standardFlowEnabled','implicitFlowEnabled','directAccessGrantsEnabled','serviceAccountsEnabled','fullScopeAllowed','redirectUris','webOrigins'):
+ for k in ('clientId','enabled','protocol','publicClient','clientAuthenticatorType','standardFlowEnabled','implicitFlowEnabled','directAccessGrantsEnabled','serviceAccountsEnabled','fullScopeAllowed','redirectUris','webOrigins'):
   if c.get(k)!=desired[k]:raise RuntimeError('Unexpected existing dedicated client configuration: '+k)
+ for k in ('defaultClientScopes','optionalClientScopes'):
+  if sorted(c.get(k,[]))!=sorted(desired[k]):raise RuntimeError('Unexpected existing dedicated client scopes: '+k)
  if c.get('attributes',{}).get('pkce.code.challenge.method')!='S256':raise RuntimeError('PKCE policy mismatch')
  if c.get('attributes',{}).get('nikway.owner')!='moodle-local-pilot-v1':raise RuntimeError('Unowned existing client; refuse change')
  secret=call('/clients/'+c['id']+'/client-secret')['value']
