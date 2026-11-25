@@ -1,0 +1,16 @@
+{
+  "manifests": [
+    {
+      "image": "quay.io/keycloak/keycloak@sha256:7e66a96e4739239070aeaf72e4c5decf0f7f682cfc725b9f7ea2b336eaba38b3",
+      "tree_file_manifest_sha256": "3c30ad16b070c70a3960be1a331d789231b0c961f307b3b490543cce8ebb10cd",
+      "file_count": 502
+    },
+    {
+      "image": "nikway-keycloak-temurin-eval:26.8.2",
+      "tree_file_manifest_sha256": "3c30ad16b070c70a3960be1a331d789231b0c961f307b3b490543cce8ebb10cd",
+      "file_count": 502
+    }
+  ],
+  "equal": true,
+  "scope": "Image filesystem before runtime augmentation; bytes and paths, not ownership/mtime"
+}

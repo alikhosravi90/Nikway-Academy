@@ -1,0 +1,12 @@
+# Baseline application unchanged; evaluate maintained JRE base independently.
+# Guava remains vulnerable here. This image MUST NOT be marked release-ready.
+FROM quay.io/keycloak/keycloak@sha256:7e66a96e4739239070aeaf72e4c5decf0f7f682cfc725b9f7ea2b336eaba38b3 AS distribution
+FROM eclipse-temurin@sha256:5d7689f47d670aca766b9503a70bccc2d73b4eb9221ae8f714ae958313c4ce70
+RUN apk add --no-cache bash=5.3.9-r1 \
+    && addgroup -g 1000 keycloak \
+    && adduser -D -u 1000 -G keycloak -h /opt/keycloak keycloak
+COPY --from=distribution --chown=1000:1000 /opt/keycloak /opt/keycloak
+ENV KC_RUN_IN_CONTAINER=true
+USER 1000
+WORKDIR /opt/keycloak
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]

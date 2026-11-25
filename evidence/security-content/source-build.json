@@ -1,0 +1,15 @@
+{
+  "result": "BUILD SUCCESS",
+  "maven_total_time": "07:57 min",
+  "source_archive_sha256": "686c4cf4d9cf5fe0b516fd5c7b8f74cdb980990ee5181e944560df4296e3037f",
+  "built_distribution_sha256": "13d32a74fc8bb98b8e28791f289ea4595d3d4d767eaf8f040c73ab093c8f42bf",
+  "build_log_sha256": "27af454681e1477ad6ce913185b29280b1645de41dfcdf7bfc048df392c383b6",
+  "upstream_tests": "SKIPPED",
+  "runtime_guava": "33.7.2-jre",
+  "compilation_scope": [
+    "quarkus/server",
+    "quarkus/dist"
+  ],
+  "other_keycloak_dependencies": "Released26.8.2 Maven artifacts; not rebuilt all upstream modules",
+  "committed_log_normalization": "Trailing whitespace removed; build_log_sha256 refers to raw ignored runtime log"
+}

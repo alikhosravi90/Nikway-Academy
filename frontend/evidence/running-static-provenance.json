@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-11-25T12:34:26.061873+00:00",
+  "scope": "Read-only static build artifact equivalence; does not reconstruct missing Docker image metadata",
+  "running_container_id": "3622df843a7f4b1c52d3cccd09d8bf66326f1ebd8b7d061e6c7975f3f7bbbf7c",
+  "running_image_id": "sha256:45fd84fa320ed95a00166bb043be02a70fce874e38e2f01cd5738ada4b709b5d",
+  "running_created_at": "2026-11-25T12:06:28.198744636Z",
+  "authored_build_source_commit": "5839cf3",
+  "build_environment": "VITE_OIDC_URL=http://localhost:18580 npm run build, local existing lockfile dependencies",
+  "static_assets": {
+    "assets/index-7QVEvSAg.js": {
+      "local_sha256": "e1d091d6cbeabeb380a0205a964b7dbf4b34fac35343fa6ac133dffed78189e9",
+      "running_sha256": "e1d091d6cbeabeb380a0205a964b7dbf4b34fac35343fa6ac133dffed78189e9",
+      "match": true
+    },
+    "assets/index-aCAeK7ML.css": {
+      "local_sha256": "b81bd121c13d69127f680757281df5a647ad6bd893eaf999bf2fb30c6dbcbcd4",
+      "running_sha256": "b81bd121c13d69127f680757281df5a647ad6bd893eaf999bf2fb30c6dbcbcd4",
+      "match": true
+    },
+    "assets/keycloak-dpop-Cwc5jXhp.js": {
+      "local_sha256": "6f2209168531f367ec4225b4e1983b4fa0df6a57d69cf53213bc6148afebdc29",
+      "running_sha256": "6f2209168531f367ec4225b4e1983b4fa0df6a57d69cf53213bc6148afebdc29",
+      "match": true
+    },
+    "font.ttf": {
+      "local_sha256": "504d7407d86875acf7d04dfaa0fd7524d0b8797723bc4aa18022f29db25b0b6e",
+      "running_sha256": "504d7407d86875acf7d04dfaa0fd7524d0b8797723bc4aa18022f29db25b0b6e",
+      "match": true
+    },
+    "index.html": {
+      "local_sha256": "22b68565a195e8a6d43360ef4c0b744c665b0f41232abcbe403d7cfba2c534db",
+      "running_sha256": "22b68565a195e8a6d43360ef4c0b744c665b0f41232abcbe403d7cfba2c534db",
+      "match": true
+    }
+  },
+  "passed": 5,
+  "total": 5,
+  "authored_source_sha256": {
+    "frontend/src/course-content.tsx": "2bcb2177eeb2fc8d2f0432bdaf2cd12d0ea46d1fea970eb95a9515edfddf2db4",
+    "frontend/src/legacy.css": "3ed1898b75827e08b83efe1f84e7b7c7219bb986aef904695085ee5af6f3aa77",
+    "frontend/src/main.tsx": "872651a38e52d947db7d7d0959e421af5afaf335a311bf54b020bbc479d817e2",
+    "frontend/src/operational.css": "15067a88b8223146206a1be3d65769123b87e4d09db6790bdb7b59f67a123dff",
+    "frontend/package.json": "87b635de4cce34db9d337c532542d2482eeef425d034fbed0d2054bdc6d8134c",
+    "frontend/package-lock.json": "99e728462d2f5d9b8add02c5b3ded0227543a56ce6f6437e00f89c8cc4f10dd7",
+    "frontend/vite.config.ts": "1410a049c674a22c990e0f3f63dda7180dd66f4522c197ce2037be3c4d46774f",
+    "frontend/index.html": "aabf51c7dbbd38c0a0cfccaac28bf2b73a589274c50e22345ccd95b1b4f457ef",
+    "frontend/public/font.ttf": "504d7407d86875acf7d04dfaa0fd7524d0b8797723bc4aa18022f29db25b0b6e"
+  },
+  "runtime_only_file": "50x.html is nginx base stock file, outside authored Vite dist",
+  "limits": [
+    "Exact5file byte equality supports running frontend code/assets provenance only",
+    "Missing Docker image object/tag discrepancy cause remains UNKNOWN",
+    "UI worker performed no Docker build/tag/export/delete/prune; only local npm builds and ephemeral nginx config checks"
+  ]
+}

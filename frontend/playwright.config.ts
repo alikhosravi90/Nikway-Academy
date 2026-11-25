@@ -3,7 +3,9 @@ export default defineConfig({
   testDir: "./tests/e2e",
   workers: 1,
   use: {
-    baseURL: process.env.BASE_URL || "http://localhost:18401",
+    baseURL:
+      process.env.BASE_URL ||
+      `http://localhost:${process.env.ACADEMY_UI_PORT || "18401"}`,
     headless: true,
   },
   reporter: "list",

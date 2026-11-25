@@ -1,0 +1,89 @@
+{
+  "receipt_status": "FINAL_CANDIDATE_BROWSER: custom-built Keycloak and bounded progress v2",
+  "scope": "Isolated content candidate localhost18501 only; baseline184xx untouched",
+  "browser": "Playwright Chromium",
+  "tests": {
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "duration_seconds": 6.6
+  },
+  "journeys": [
+    "Imported Persian course objectives/practice/rubric and assessment length, ordered3lesson completion, learner submission, reviewer acceptance, learner feedback, tenantB invisibility",
+    "Baseline learner progress and logout",
+    "Baseline reviewer revision request",
+    "API anonymous/forged rejection, learner review denial and tenant isolation"
+  ],
+  "runtime_window": {
+    "started_at": "2026-11-25T12:24:02.697178+00:00",
+    "completed_at": "2026-11-25T12:24:10.496174+00:00",
+    "before": {
+      "frontend": {
+        "image": "sha256:45fd84fa320ed95a00166bb043be02a70fce874e38e2f01cd5738ada4b709b5d",
+        "container_id": "3622df843a7f4b1c52d3cccd09d8bf66326f1ebd8b7d061e6c7975f3f7bbbf7c",
+        "created_at": "2026-11-25T12:06:28.198744636Z",
+        "started_at": "2026-11-25T12:08:20.524520177Z"
+      },
+      "api": {
+        "image": "sha256:cbd16a202d4c600e7dc086b120a7e779af48189b7ad3e20d5f3d07cb1fabb59b",
+        "container_id": "366d7e618069dead3dc804ec4260c175914a27277670eb300503fdb2e5acd607",
+        "created_at": "2026-11-25T12:16:16.824553959Z",
+        "started_at": "2026-11-25T12:16:17.535038172Z"
+      },
+      "postgres": {
+        "image": "sha256:38134cd212d8362cc8475d26447d59ff0a0b6240245954ca8bb0328d870ff332",
+        "container_id": "6b4f04d5d8c6148a60a497fbeb59e9cf4032d1b5484c8a74955a71fe0ee30bb0",
+        "created_at": "2026-11-25T12:06:27.899826368Z",
+        "started_at": "2026-11-25T12:06:28.304674477Z"
+      },
+      "keycloak": {
+        "image": "sha256:c03a8747a16c11dcba0ecdc04ecd8c87e1ae5a7342b1ee4e10f8db70292182da",
+        "container_id": "ee692fd6944b57d6b73527008938e50eb01278018b92a232a32aea46b51ffd97",
+        "created_at": "2026-11-25T12:22:22.826209908Z",
+        "started_at": "2026-11-25T12:22:24.274588129Z"
+      }
+    },
+    "after": {
+      "frontend": {
+        "image": "sha256:45fd84fa320ed95a00166bb043be02a70fce874e38e2f01cd5738ada4b709b5d",
+        "container_id": "3622df843a7f4b1c52d3cccd09d8bf66326f1ebd8b7d061e6c7975f3f7bbbf7c",
+        "created_at": "2026-11-25T12:06:28.198744636Z",
+        "started_at": "2026-11-25T12:08:20.524520177Z"
+      },
+      "api": {
+        "image": "sha256:cbd16a202d4c600e7dc086b120a7e779af48189b7ad3e20d5f3d07cb1fabb59b",
+        "container_id": "366d7e618069dead3dc804ec4260c175914a27277670eb300503fdb2e5acd607",
+        "created_at": "2026-11-25T12:16:16.824553959Z",
+        "started_at": "2026-11-25T12:16:17.535038172Z"
+      },
+      "postgres": {
+        "image": "sha256:38134cd212d8362cc8475d26447d59ff0a0b6240245954ca8bb0328d870ff332",
+        "container_id": "6b4f04d5d8c6148a60a497fbeb59e9cf4032d1b5484c8a74955a71fe0ee30bb0",
+        "created_at": "2026-11-25T12:06:27.899826368Z",
+        "started_at": "2026-11-25T12:06:28.304674477Z"
+      },
+      "keycloak": {
+        "image": "sha256:c03a8747a16c11dcba0ecdc04ecd8c87e1ae5a7342b1ee4e10f8db70292182da",
+        "container_id": "ee692fd6944b57d6b73527008938e50eb01278018b92a232a32aea46b51ffd97",
+        "created_at": "2026-11-25T12:22:22.826209908Z",
+        "started_at": "2026-11-25T12:22:24.274588129Z"
+      }
+    },
+    "runtime_unchanged": true,
+    "exit_code": 0
+  },
+  "checks": [
+    "Real PKCE learner and reviewer authentication",
+    "Imported course objectives, practice, rubric, min/max submission constraints",
+    "Three ordered lessons, submission, human acceptance and learner-visible feedback",
+    "Imported course invisible to tenant B",
+    "Baseline persistence, logout, reviewer revision and unauthorized API denial",
+    "Imported journey page errors and CSP violations absent, mobile320 no horizontal overflow"
+  ],
+  "historical_visual_evidence": "imported-content-browser.json: visual inspection and warm timing observation occurred before custom identity rebuild; no new timing claim from this receipt",
+  "limits": [
+    "Local synthetic Chromium only",
+    "No public release, numeric grading or production readiness claim",
+    "Four services retained identical image and container identities across the full test window"
+  ]
+}

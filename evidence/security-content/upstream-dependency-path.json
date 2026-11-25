@@ -1,0 +1,16 @@
+{
+  "retrieved": "2026-11-25",
+  "observation": "Keycloak26.8.2 imports QuarkusBOM3.40.1.1; fetched release/26.8 and main both declare3.40.1.2. Both BOMs still manage Guava33.6.0-jre. No Guava fix found via this upstream dependency path. Branch observations are mutable snapshots, not pinned source-build inputs.",
+  "receipts": {
+    "pom-26.8.2.xml": "c547dbbab3c84dd12747b98f04241879d1bbc36a2ea8f76b8369ab6e5f3e00ef",
+    "pom-release-26.8.xml": "1a0382f1beed8b9cf9c32bf9deebbd599451617f6dba29db7a3579733531433c",
+    "pom-main.xml": "ba1bc76bbbca4796c83977df149c97beac2d43496bd29f93489f2982e08784e6",
+    "quarkus-bom-3.40.1.2.pom": "a0c4bb9a4e254a1403ebfc992c3b47b66b27c3f964b58839a22fa2c624e06e2c"
+  },
+  "primary_urls": [
+    "https://raw.githubusercontent.com/keycloak/keycloak/26.8.2/pom.xml",
+    "https://raw.githubusercontent.com/keycloak/keycloak/release/26.8/pom.xml",
+    "https://raw.githubusercontent.com/keycloak/keycloak/main/pom.xml",
+    "https://repo.maven.apache.org/maven2/io/quarkus/platform/quarkus-bom/3.40.1.2/quarkus-bom-3.40.1.2.pom"
+  ]
+}

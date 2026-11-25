@@ -1,0 +1,10 @@
+{
+  "check": "real_disabled_tool_boundary",
+  "result": "PASS",
+  "public_deployment": false,
+  "http_status": 403,
+  "reason": "Tool execution disabled",
+  "real_oidc": true,
+  "image_id": "sha256:cbd16a202d4c600e7dc086b120a7e779af48189b7ad3e20d5f3d07cb1fabb59b",
+  "test_container_removed": true
+}

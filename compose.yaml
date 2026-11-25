@@ -1,4 +1,4 @@
-name: nikway-academy-local
+name: ${ACADEMY_PROJECT:-nikway-academy-local}
 services:
   postgres:
     image: nikway-academy-postgres:16-hardened
@@ -16,7 +16,10 @@ services:
     mem_limit: 512m
     cpus: 1.0
   keycloak:
-    image: quay.io/keycloak/keycloak:26.8.2@sha256:7e66a96e4739239070aeaf72e4c5decf0f7f682cfc725b9f7ea2b336eaba38b3
+    image: nikway-keycloak-custom:26.8.2-guava33.7.2
+    build:
+      context: ./infra/identity
+      dockerfile: Dockerfile.keycloak-source
     command: [start-dev, --import-realm]
     environment:
       KC_DB: postgres
@@ -25,11 +28,11 @@ services:
       KC_DB_PASSWORD: ${KEYCLOAK_DB_PASSWORD}
       KC_BOOTSTRAP_ADMIN_USERNAME: local-admin
       KC_BOOTSTRAP_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
-      KC_HOSTNAME: http://localhost:18480
+      KC_HOSTNAME: http://localhost:${ACADEMY_IDP_PORT:-18480}
       KC_HEALTH_ENABLED: 'true'
     volumes:
       - ./infra/runtime/academy-realm.json:/opt/keycloak/data/import/academy-realm.json:ro
-    ports: ['127.0.0.1:18480:8080']
+    ports: ['127.0.0.1:${ACADEMY_IDP_PORT:-18480}:8080']
     depends_on:
       postgres: {condition: service_healthy}
     healthcheck:
@@ -41,7 +44,9 @@ services:
     mem_limit: 1g
     cpus: 1.0
   migrate:
-    build: ./backend
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
     command: [python, -m, app.migrate]
     environment:
       MIGRATION_DATABASE_URL: postgresql+psycopg://academy_owner:${ACADEMY_OWNER_PASSWORD}@postgres:5432/academy
@@ -51,15 +56,17 @@ services:
     cpus: 1.0
     restart: 'no'
   api:
-    build: ./backend
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
     environment:
       DATABASE_URL: postgresql+psycopg://academy_app:${ACADEMY_APP_PASSWORD}@postgres:5432/academy
-      OIDC_ISSUER: http://localhost:18480/realms/academy
+      OIDC_ISSUER: http://localhost:${ACADEMY_IDP_PORT:-18480}/realms/academy
       OIDC_JWKS_URL: http://keycloak:8080/realms/academy/protocol/openid-connect/certs
       OIDC_AUDIENCE: academy-api
       TOOLS_ENABLED: "true"
-      CORS_ORIGINS: http://localhost:18401,http://127.0.0.1:18401
-    ports: ['127.0.0.1:18400:8000']
+      CORS_ORIGINS: http://localhost:${ACADEMY_UI_PORT:-18401},http://127.0.0.1:${ACADEMY_UI_PORT:-18401}
+    ports: ['127.0.0.1:${ACADEMY_API_PORT:-18400}:8000']
     depends_on:
       postgres: {condition: service_healthy}
       keycloak: {condition: service_healthy}
@@ -67,8 +74,12 @@ services:
     mem_limit: 512m
     cpus: 1.0
   frontend:
-    build: ./frontend
-    ports: ['127.0.0.1:18401:80']
+    build:
+      context: ./frontend
+      args:
+        VITE_OIDC_URL: http://localhost:${ACADEMY_IDP_PORT:-18480}
+        NGINX_OIDC_ORIGIN: http://localhost:${ACADEMY_IDP_PORT:-18480}
+    ports: ['127.0.0.1:${ACADEMY_UI_PORT:-18401}:80']
     depends_on: [api]
     mem_limit: 256m
     cpus: 0.5

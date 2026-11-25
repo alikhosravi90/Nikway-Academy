@@ -1,0 +1,29 @@
+{
+  "scope": "Isolated Keycloak custom variant; H2 disposable database, no Academy API regression or production claim",
+  "users": [
+    {
+      "user": "learner-a",
+      "verified_access_token_contract": true,
+      "login_ms": 1936.94
+    },
+    {
+      "user": "learner-b",
+      "verified_access_token_contract": true,
+      "login_ms": 209.12
+    },
+    {
+      "user": "reviewer-a",
+      "verified_access_token_contract": true,
+      "login_ms": 200.43
+    }
+  ],
+  "wrong_verifier_rejected": true,
+  "missing_PKCE_rejected": true,
+  "gate": "PKCE subset passes; consult exact image scan and full regression gate",
+  "image_id": "sha256:c03a8747a16c11dcba0ecdc04ecd8c87e1ae5a7342b1ee4e10f8db70292182da",
+  "uid": 1000,
+  "data_directory_writable": true,
+  "compose_bash_tcp_9000_health_probe": "PASS",
+  "idle_memory_MiB": 547.6,
+  "memory_limit_MiB": 1536
+}

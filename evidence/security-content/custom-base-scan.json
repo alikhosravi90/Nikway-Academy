@@ -1,0 +1,8 @@
+{
+  "artifact": "eclipse-temurin@sha256:5d7689f47d670aca766b9503a70bccc2d73b4eb9221ae8f714ae958313c4ce70",
+  "raw_report_sha256": "25814801060e93d3c95b85743f354d33b11d6e15d5083fd0f491b03b5a2c961a",
+  "scanner": "Trivy0.76.2 full OS/language",
+  "High_Critical_count": 0,
+  "scope": "Base image only; not the unbuilt custom Keycloak distribution",
+  "java_version": "Temurin21.0.13.1+2"
+}

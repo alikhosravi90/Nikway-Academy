@@ -1,0 +1,411 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "packageId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$",
+      "maxLength": 64
+    },
+    "lifecycle": {
+      "const": "draft"
+    },
+    "course": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 3000
+        },
+        "language": {
+          "enum": [
+            "fa-IR",
+            "en-US"
+          ]
+        },
+        "objectives": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]{0,63}$"
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1000
+              },
+              "bloom": {
+                "enum": [
+                  "remember",
+                  "understand",
+                  "apply",
+                  "analyze",
+                  "evaluate",
+                  "create"
+                ]
+              },
+              "evidence": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1000
+              }
+            },
+            "required": [
+              "id",
+              "description",
+              "bloom",
+              "evidence"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 20
+        },
+        "lessons": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "position": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 20
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200
+              },
+              "content": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 10000
+              },
+              "objectiveIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z][a-z0-9-]{0,63}$"
+                },
+                "minItems": 1,
+                "maxItems": 20
+              },
+              "practice": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "prompt": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 2000
+                  },
+                  "deliverable": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1000
+                  }
+                },
+                "required": [
+                  "prompt",
+                  "deliverable"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "position",
+              "title",
+              "content",
+              "objectiveIds",
+              "practice"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 20
+        },
+        "assessment": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "mode": {
+              "const": "human_review"
+            },
+            "prompt": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 5000
+            },
+            "minCharacters": {
+              "type": "integer",
+              "minimum": 20,
+              "maximum": 10000
+            },
+            "maxCharacters": {
+              "type": "integer",
+              "minimum": 20,
+              "maximum": 10000
+            },
+            "rubricId": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]{0,63}$"
+            }
+          },
+          "required": [
+            "mode",
+            "prompt",
+            "minCharacters",
+            "maxCharacters",
+            "rubricId"
+          ]
+        },
+        "rubric": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]{0,63}$"
+            },
+            "version": {
+              "type": "string",
+              "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$",
+              "maxLength": 64
+            },
+            "criteria": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9-]{0,63}$"
+                  },
+                  "description": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1000
+                  },
+                  "objectiveIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[a-z][a-z0-9-]{0,63}$"
+                    },
+                    "minItems": 1,
+                    "maxItems": 20
+                  },
+                  "maxScore": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 10
+                  },
+                  "anchors": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "score": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 10
+                        },
+                        "description": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 1000
+                        }
+                      },
+                      "required": [
+                        "score",
+                        "description"
+                      ]
+                    },
+                    "minItems": 2,
+                    "maxItems": 11
+                  }
+                },
+                "required": [
+                  "id",
+                  "description",
+                  "objectiveIds",
+                  "maxScore",
+                  "anchors"
+                ]
+              },
+              "minItems": 1,
+              "maxItems": 20
+            },
+            "passScore": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 200
+            },
+            "requiresHumanReview": {
+              "const": true
+            }
+          },
+          "required": [
+            "id",
+            "version",
+            "criteria",
+            "passScore",
+            "requiresHumanReview"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "language",
+        "objectives",
+        "lessons",
+        "assessment",
+        "rubric"
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "producer": {
+          "const": "offline-authoring"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300
+              },
+              "reference": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "rights": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1000
+              }
+            },
+            "required": [
+              "title",
+              "reference",
+              "rights"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 20
+        }
+      },
+      "required": [
+        "producer",
+        "createdAt",
+        "author",
+        "sources"
+      ]
+    },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "license": {
+          "const": "LicenseRef-NIKWAY-Local-Review"
+        },
+        "attribution": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "redistribution": {
+          "const": "local-review-only"
+        },
+        "containsThirdPartyMaterial": {
+          "const": false
+        }
+      },
+      "required": [
+        "license",
+        "attribution",
+        "redistribution",
+        "containsThirdPartyMaterial"
+      ]
+    },
+    "integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "const": "sha256"
+        },
+        "canonicalization": {
+          "const": "nikway-json-v1"
+        },
+        "digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "algorithm",
+        "canonicalization",
+        "digest"
+      ]
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "packageId",
+    "version",
+    "lifecycle",
+    "course",
+    "provenance",
+    "rights",
+    "integrity"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nikway.example/contracts/content-package/1.0.0",
+  "title": "Bounded offline learning package 1.0.0"
+}

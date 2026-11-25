@@ -1,0 +1,94 @@
+{
+  "scope": "Isolated content candidate only at localhost18501; baseline184xx untouched",
+  "unit_tests": {
+    "passed": 4,
+    "failed": 0,
+    "scope": "Escaped imported content, no embeds, legacy metadata absence, human-review wording"
+  },
+  "browser_tests": {
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "duration_seconds": 7.3,
+    "journeys": [
+      "Imported Persian course objectives/practice/rubric and assessment length, ordered3lesson completion, learner submission, reviewer acceptance, learner feedback, tenantB invisibility",
+      "Baseline learner progress and logout",
+      "Baseline reviewer revision request",
+      "API anonymous/forged rejection, learner review denial and tenant isolation"
+    ]
+  },
+  "runtime_window": {
+    "started_at": "2026-11-25T12:11:55.647729+00:00",
+    "completed_at": "2026-11-25T12:12:04.399392+00:00",
+    "before": {
+      "frontend": {
+        "image": "sha256:45fd84fa320ed95a00166bb043be02a70fce874e38e2f01cd5738ada4b709b5d",
+        "container_id": "3622df843a7f4b1c52d3cccd09d8bf66326f1ebd8b7d061e6c7975f3f7bbbf7c",
+        "created_at": "2026-11-25T12:06:28.198744636Z",
+        "started_at": "2026-11-25T12:08:20.524520177Z"
+      },
+      "api": {
+        "image": "sha256:bdce6a8d472eec14b91139148d2115c640d57ffa06eebf79e056fbbd315285bb",
+        "container_id": "d022f39e83f078671f6e178691111620a537b17a14d525406a9a888a82702cdb",
+        "created_at": "2026-11-25T12:10:49.957764365Z",
+        "started_at": "2026-11-25T12:10:50.61503913Z"
+      },
+      "postgres": {
+        "image": "sha256:38134cd212d8362cc8475d26447d59ff0a0b6240245954ca8bb0328d870ff332",
+        "container_id": "6b4f04d5d8c6148a60a497fbeb59e9cf4032d1b5484c8a74955a71fe0ee30bb0",
+        "created_at": "2026-11-25T12:06:27.899826368Z",
+        "started_at": "2026-11-25T12:06:28.304674477Z"
+      },
+      "keycloak": {
+        "image": "sha256:7e66a96e4739239070aeaf72e4c5decf0f7f682cfc725b9f7ea2b336eaba38b3",
+        "container_id": "a8f312bdbc868c6b3eeda1ff9b4e61cb70a55334f2f1d02959dded266888723a",
+        "created_at": "2026-11-25T12:06:27.98540945Z",
+        "started_at": "2026-11-25T12:06:34.135725776Z"
+      }
+    },
+    "after": {
+      "frontend": {
+        "image": "sha256:45fd84fa320ed95a00166bb043be02a70fce874e38e2f01cd5738ada4b709b5d",
+        "container_id": "3622df843a7f4b1c52d3cccd09d8bf66326f1ebd8b7d061e6c7975f3f7bbbf7c",
+        "created_at": "2026-11-25T12:06:28.198744636Z",
+        "started_at": "2026-11-25T12:08:20.524520177Z"
+      },
+      "api": {
+        "image": "sha256:bdce6a8d472eec14b91139148d2115c640d57ffa06eebf79e056fbbd315285bb",
+        "container_id": "d022f39e83f078671f6e178691111620a537b17a14d525406a9a888a82702cdb",
+        "created_at": "2026-11-25T12:10:49.957764365Z",
+        "started_at": "2026-11-25T12:10:50.61503913Z"
+      },
+      "postgres": {
+        "image": "sha256:38134cd212d8362cc8475d26447d59ff0a0b6240245954ca8bb0328d870ff332",
+        "container_id": "6b4f04d5d8c6148a60a497fbeb59e9cf4032d1b5484c8a74955a71fe0ee30bb0",
+        "created_at": "2026-11-25T12:06:27.899826368Z",
+        "started_at": "2026-11-25T12:06:28.304674477Z"
+      },
+      "keycloak": {
+        "image": "sha256:7e66a96e4739239070aeaf72e4c5decf0f7f682cfc725b9f7ea2b336eaba38b3",
+        "container_id": "a8f312bdbc868c6b3eeda1ff9b4e61cb70a55334f2f1d02959dded266888723a",
+        "created_at": "2026-11-25T12:06:27.98540945Z",
+        "started_at": "2026-11-25T12:06:34.135725776Z"
+      }
+    },
+    "runtime_unchanged": true,
+    "exit_code": 0
+  },
+  "visual_and_observation": {
+    "errors": [],
+    "cspViolations": [],
+    "mobileOverflow": false,
+    "courseOpenMs": 253,
+    "resourceCount": 9,
+    "scope": "Single warm local Chromium observation, not load or SLO proof"
+  },
+  "limits": [
+    "Local synthetic Chromium only",
+    "Warm course-open253ms is a single observation, not load-test or SLO proof",
+    "Candidate uses currently running official Keycloak; if identity image changes auth browser rerun required",
+    "No numeric grading, authoring UI, external publication or production-readiness claim"
+  ],
+  "screenshots": "Ignored local test-results/screenshots; synthetic learner only",
+  "receipt_status": "INTERMEDIATE: official Keycloak runtime before custom identity rebuild; retained as historical evidence"
+}

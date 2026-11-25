@@ -10,7 +10,7 @@ concurrency:
 jobs:
   operational-mvp:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - name: Governance contracts
@@ -34,13 +34,17 @@ jobs:
         run: |
           python3 -m venv /tmp/academy-tests
           /tmp/academy-tests/bin/pip install -r backend/requirements.txt pytest==9.2.0
-          cd backend
-          /tmp/academy-tests/bin/python -m pytest tests/test_rules.py tests/test_auth.py -q
+          PYTHONPATH=backend:. /tmp/academy-tests/bin/python -m pytest backend/tests/test_rules.py backend/tests/test_auth.py content/test_validate_package.py -q
+      - name: Portable content admission and learning cycle
+        run: |
+          /tmp/academy-tests/bin/python -m unittest discover -s backend/tests -p test_content_integration.py -v
+          /tmp/academy-tests/bin/python scripts/content-local.py import content/examples/agent-engineering-basics.fa.json --publish
       - name: Browser journey
         working-directory: frontend
         run: |
           python3 -c "import json; c=json.load(open('../infra/runtime/credentials.json')); assert all(c[n]['password'] and c[n]['username'] for n in ('learner-a','learner-b','reviewer-a'))"
           npm ci
+          npm test
           npx playwright install --with-deps chromium
           npm run test:e2e
       - name: Stop only test project

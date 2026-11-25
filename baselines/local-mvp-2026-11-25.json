@@ -1,0 +1,41 @@
+{
+  "name": "Local MVP Baseline",
+  "registered_at_utc": "2026-11-25T11:57:48.462428+00:00",
+  "source_commit": "7be59d794a7e73cdb32b7fd222f63473e83d815c",
+  "local_branch": "baseline/local-mvp-2026-11-25",
+  "release": false,
+  "merge_authorized": false,
+  "source_archive_sha256": "38071a25d10b54a25648d2da960cc10a4ddcadafdda6824f150e8cec3e904b27",
+  "runtime_project": "nikway-academy-local",
+  "runtime_url": "http://localhost:18401",
+  "database_volume": "nikway-academy-local_academy-db-v2",
+  "source_worktree_preserved": true,
+  "security_status": "NO-GO:6 HIGH Keycloak findings at baseline",
+  "ci": "https://github.com/alikhosravi90/Nikway-Academy/actions/runs/45607426810",
+  "images": [
+    {
+      "service": "api",
+      "running_image_id": "sha256:f137537717f0949a5e64b55d5ed9432f83143703b1cd7bb53ed8818f65b26d52",
+      "HIGH": 0,
+      "CRITICAL": 0
+    },
+    {
+      "service": "frontend",
+      "running_image_id": "sha256:769f40a9729dcdc6beb409b55ec0203dd7cc7210b409db302f636937263978f1",
+      "HIGH": 0,
+      "CRITICAL": 0
+    },
+    {
+      "service": "postgres",
+      "running_image_id": "sha256:dd44c4c2bfcb4cbcb4dccbc86070687701c5990d152f5a7a947b286bccef49a5",
+      "HIGH": 0,
+      "CRITICAL": 0
+    },
+    {
+      "service": "keycloak",
+      "running_image_id": "sha256:7e66a96e4739239070aeaf72e4c5decf0f7f682cfc725b9f7ea2b336eaba38b3",
+      "HIGH": 6,
+      "CRITICAL": 0
+    }
+  ]
+}

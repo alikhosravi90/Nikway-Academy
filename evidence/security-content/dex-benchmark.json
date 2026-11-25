@@ -1,0 +1,16 @@
+{
+  "scope": "Synthetic isolated Dex compatibility benchmark; ID token payload inspected, not accepted by Academy as access token.",
+  "image": "ghcr.io/dexidp/dex@sha256:65b72ca0f4b0bf6d4ada84ec21da8851782563404ac7b8f926923d27ceced9ab",
+  "pkce_S256_success": true,
+  "wrong_verifier_rejected": true,
+  "missing_pkce_rejected": true,
+  "one_login_ms": 414.16,
+  "access_token_is_JWT": true,
+  "id_token_subject_is_UUID": false,
+  "id_token_audience": "academy-web",
+  "access_token_audience": "academy-web",
+  "access_token_subject_is_UUID": false,
+  "baseline_api_requires": "RS256 JWT access token, UUID subject, academy-api audience",
+  "persistent_storage_tested": false,
+  "release_gate": "NO-GO: scanner findings and incompatible baseline token contract"
+}

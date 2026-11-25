@@ -1,0 +1,72 @@
+[INFO] Loading cache configuration from /src/.mvn/maven-build-cache-config.xml
+[INFO] Scanning for projects...
+[WARNING] Quarkus Maven extension: an explicit 'argLine' is defined in maven-surefire-plugin config, but does not contain '@{argLine}': we will not be able to inject JVM parameters automatically. Please add '@{argLine}' to the argLine configuration you have defined.
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO]
+[INFO] Keycloak Quarkus Server App                                        [jar]
+[INFO] Keycloak Quarkus Server Distribution                               [pom]
+[INFO]
+[INFO] --------------< org.keycloak:keycloak-quarkus-server-app >--------------
+[INFO] Building Keycloak Quarkus Server App 26.8.2                        [1/2]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ keycloak-quarkus-server-app ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO]
+[INFO] --- compiler:3.13.0:compile (default-compile) @ keycloak-quarkus-server-app ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ keycloak-quarkus-server-app ---
+[INFO] Not copying test resources
+[INFO]
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ keycloak-quarkus-server-app ---
+[INFO] Not compiling test sources
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ keycloak-quarkus-server-app ---
+[WARNING]  Parameter 'systemProperties' is deprecated: use systemPropertyVariables instead
+[INFO] Tests are skipped.
+[INFO]
+[INFO] --- jar:3.5.0:jar (default-jar) @ keycloak-quarkus-server-app ---
+[INFO] Building jar: /src/quarkus/server/target/keycloak.jar
+[INFO]
+[INFO] --- quarkus:3.40.1.1:build (default) @ keycloak-quarkus-server-app ---
+[WARNING] [org.keycloak.common.Profile] Deprecated features identity-brokering-api:v1, twitter-broker:v1 enabled by default. Check the upgrading guide for steps to use later versions if available.
+[INFO] [io.quarkus.deployment.QuarkusAugmentor] Quarkus augmentation completed in 11261ms
+[INFO]
+[INFO] -----------------< org.keycloak:keycloak-quarkus-dist >-----------------
+[INFO] Building Keycloak Quarkus Server Distribution 26.8.2               [2/2]
+[INFO]   from /src/quarkus/dist/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO]
+[INFO] --- dependency:3.1.2:unpack (unpack-cli) @ keycloak-quarkus-dist ---
+[INFO] Configured Artifact: org.keycloak:keycloak-client-cli-dist:?:zip
+[INFO] Configured Artifact: org.keycloak:keycloak-quarkus-server:?:jar
+[INFO] Configured Artifact: org.keycloak:keycloak-quarkus-server-app:?:jar
+[INFO] Unpacking /root/.m2/repository/org/keycloak/keycloak-client-cli-dist/26.8.2/keycloak-client-cli-dist-26.8.2.zip to /src/quarkus/dist/target with includes "" and excludes ""
+[INFO] Unpacking /root/.m2/repository/org/keycloak/keycloak-quarkus-server/26.8.2/keycloak-quarkus-server-26.8.2.jar to /src/quarkus/dist/target/keycloak-quarkus-server with includes "" and excludes ""
+[INFO] Unpacking /src/quarkus/server/target/keycloak.jar to /src/quarkus/dist/target/keycloak-quarkus-server-app with includes "" and excludes ""
+[INFO]
+[INFO] --- exec:3.0.0:exec (warn-on-dev-dependencies) @ keycloak-quarkus-dist ---
+[INFO] |  |  +- io.quarkus:quarkus-smallrye-health-dev:jar:3.40.1.1:compile
+[INFO] |  |  +- io.quarkus:quarkus-smallrye-openapi-dev:jar:3.40.1.1:compile
+[INFO] |  |  |  \- io.quarkus:quarkus-assistant-dev:jar:3.40.1.1:compile
+[WARNING] Detected development dependencies in the build tree.
+[INFO]
+[INFO] --- assembly:3.1.1:single (assemble) @ keycloak-quarkus-dist ---
+[WARNING]  Parameter 'finalName' is read-only, must not be used in configuration
+[INFO] Reading assembly descriptor: assembly.xml
+[INFO] Building zip: /src/quarkus/dist/target/keycloak-26.8.2.zip
+[INFO] Building tar: /src/quarkus/dist/target/keycloak-26.8.2.tar.gz
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Keycloak Quarkus Server App 26.8.2:
+[INFO]
+[INFO] Keycloak Quarkus Server App ........................ SUCCESS [04:23 min]
+[INFO] Keycloak Quarkus Server Distribution ............... SUCCESS [01:30 min]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  07:57 min
+[INFO] Finished at: 2026-11-25T12:15:13Z
+[INFO] ------------------------------------------------------------------------

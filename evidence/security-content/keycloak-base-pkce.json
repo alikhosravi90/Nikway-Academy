@@ -1,0 +1,27 @@
+{
+  "scope": "Patched JRE base with unchanged official Keycloak distribution; H2 disposable database, no Academy API regression or production claim",
+  "users": [
+    {
+      "user": "learner-a",
+      "verified_access_token_contract": true,
+      "login_ms": 1919.62
+    },
+    {
+      "user": "learner-b",
+      "verified_access_token_contract": true,
+      "login_ms": 260.65
+    },
+    {
+      "user": "reviewer-a",
+      "verified_access_token_contract": true,
+      "login_ms": 207.94
+    }
+  ],
+  "wrong_verifier_rejected": true,
+  "missing_PKCE_rejected": true,
+  "guava_fixed": false,
+  "gate": "NO-GO pending rebuilt Guava and full regression",
+  "idle_memory_MiB": 550.1,
+  "memory_limit_MiB": 1536,
+  "cleanup": "Disposable H2 container removed after successful probe; baseline untouched"
+}

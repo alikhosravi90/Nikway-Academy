@@ -16,12 +16,21 @@ app = FastAPI(title='NIKWAY Academy Local API',version='0.3.0', docs_url='/api/d
 @app.middleware('http')
 async def boundary(request: Request, call_next):
     request.state.correlation_id = str(uuid4())
+    limit = 131072 if request.url.path == '/api/content-packages' else (65536 if request.url.path.endswith('/submissions') else 20000)
     length = request.headers.get('content-length','0')
     try:
-        if int(length) > 20000:
+        if int(length) < 0: raise ValueError('negative length')
+        if int(length) > limit:
             return JSONResponse({'code':'payload_too_large','message':'Request too large'},status_code=413)
     except ValueError:
         return JSONResponse({'code':'invalid_length','message':'Invalid request'},status_code=400)
+    # Bound the actual stream as well as the declared length, including chunked bodies.
+    payload = bytearray()
+    async for chunk in request.stream():
+        payload.extend(chunk)
+        if len(payload) > limit:
+            return JSONResponse({'code':'payload_too_large','message':'Request too large'},status_code=413)
+    request._body = bytes(payload)
     response = await call_next(request)
     response.headers['X-Correlation-ID'] = request.state.correlation_id
     response.headers['Cache-Control'] = 'no-store'
@@ -63,9 +72,9 @@ def enrollment(ctx, course_id, lock=False):
     return item
 
 def course_list(ctx):
-    result=rows(ctx.conn,'SELECT id,title,description FROM courses ORDER BY title')
+    result=rows(ctx.conn,'SELECT id,title,description,metadata FROM courses ORDER BY title')
     for c in result:
-        c['lessons']=rows(ctx.conn,'SELECT id,title,content,position FROM lessons WHERE course_id=:id ORDER BY position',id=c['id'])
+        c['lessons']=rows(ctx.conn,'SELECT id,title,content,position,metadata FROM lessons WHERE course_id=:id ORDER BY position',id=c['id'])
         e=one(ctx.conn,'SELECT id FROM enrollments WHERE course_id=:id AND subject=:s',id=c['id'],s=ctx.sub)
         c['enrolled']=bool(e)
         c['completed_lessons']=[str(r['lesson_id']) for r in rows(ctx.conn,'SELECT lesson_id FROM completions WHERE enrollment_id=:e',e=e['id'])] if e else []
@@ -104,7 +113,10 @@ def complete(course_id:UUID, lesson_id:UUID, request:Request, ctx:Context=Depend
 
 @app.post('/api/courses/{course_id}/submissions')
 def submit(course_id:UUID, body:Submission, request:Request, ctx:Context=Depends(authenticated, scope='function')):
-    course(ctx,course_id); e=enrollment(ctx,course_id,True)
+    current=course(ctx,course_id); e=enrollment(ctx,course_id,True)
+    assessment=current.get('metadata',{}).get('assessment',{})
+    if not assessment.get('minCharacters',20) <= len(body.content) <= assessment.get('maxCharacters',10000):
+        raise HTTPException(422,'Evidence length does not satisfy this course assessment')
     total=one(ctx.conn,'SELECT count(*) AS n FROM lessons WHERE course_id=:c',c=course_id)['n']
     done=one(ctx.conn,'SELECT count(*) AS n FROM completions WHERE enrollment_id=:e',e=e['id'])['n']
     if done != total: raise HTTPException(409,'Complete all lessons before submitting evidence')
@@ -173,9 +185,19 @@ def invoke(body:ToolRequest,request:Request,ctx:Context=Depends(authenticated, s
     if reason:
         audit(ctx,request,'tool_denied')
         return JSONResponse({'code':'tool_denied','message':reason},status_code=403)
-    result = jsonable_encoder({'tool':'learning.progress','version':'1','result':progress(ctx)})
-    if len(json.dumps(result).encode()) > 32768:
+    # Tool context needs bounded progress facts, not entire authored lessons or learner evidence.
+    summary = {
+        'enrolled_courses': one(ctx.conn,'SELECT count(*) AS n FROM enrollments WHERE subject=:s',s=ctx.sub)['n'],
+        'completed_lessons': one(ctx.conn,'SELECT count(*) AS n FROM completions c JOIN enrollments e ON c.enrollment_id=e.id WHERE e.subject=:s',s=ctx.sub)['n'],
+        'submission_records_by_status': {r['status']:r['n'] for r in rows(ctx.conn,'SELECT status,count(*) AS n FROM submissions WHERE subject=:s GROUP BY status',s=ctx.sub)},
+        'scope': 'own tenant-bound participation records; not competency certification',
+    }
+    result = jsonable_encoder({'tool':'learning.progress','version':'2','result':summary})
+    if len(json.dumps(result,ensure_ascii=False).encode()) > 32768:
         audit(ctx,request,'tool_result_limit')
         return JSONResponse({'code':'result_limit','message':'Tool result limit exceeded'},status_code=413)
     audit(ctx,request,'tool_learning_progress')
     return result
+
+from .content_api import router as content_router
+app.include_router(content_router)

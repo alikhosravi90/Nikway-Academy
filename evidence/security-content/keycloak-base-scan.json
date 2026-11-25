@@ -1,0 +1,21 @@
+{
+  "image": "nikway-keycloak-temurin-eval:26.8.2",
+  "image_id": "sha256:413d15df9a8cb52a66f318c537a42de2420a2f3a3227de9bdde26873ffcde91b",
+  "raw_report_sha256": "5ebb5d86810a7bd45d6e18b57e3787338e35ebe35766afab4a6a18f6f8099473",
+  "scanner": "Trivy0.76.2 full OS/language; no exclusions",
+  "counts": {
+    "HIGH": 1
+  },
+  "findings": [
+    {
+      "target": "Java",
+      "VulnerabilityID": "CVE-2026-102554",
+      "PkgName": "com.google.guava:guava",
+      "InstalledVersion": "33.6.0-jre",
+      "FixedVersion": "33.7.2",
+      "Severity": "HIGH",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-102554"
+    }
+  ],
+  "gate": "NO-GO"
+}

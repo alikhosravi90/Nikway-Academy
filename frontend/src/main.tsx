@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import Keycloak from "keycloak-js";
+import {
+  Objectives,
+  Practice,
+  AssessmentGuidance,
+  type CourseMetadata,
+  type LessonMetadata,
+} from "./course-content";
 import "./legacy.css";
 import "./operational.css";
 const auth = new Keycloak({
-  url: import.meta.env.VITE_AUTH_URL || "http://localhost:18480",
+  url: import.meta.env.VITE_OIDC_URL || "http://localhost:18480",
   realm: "academy",
   clientId: "academy-web",
 });
@@ -12,7 +19,14 @@ type Course = {
   id: string;
   title: string;
   description: string;
-  lessons: { id: string; title: string; content: string; position: number }[];
+  metadata?: CourseMetadata;
+  lessons: {
+    id: string;
+    title: string;
+    content: string;
+    position: number;
+    metadata?: LessonMetadata;
+  }[];
   completed_lessons: string[];
   enrolled: boolean;
 };
@@ -216,6 +230,7 @@ function App() {
                   </button>
                   <h2 dir="auto">{course.title}</h2>
                   <p dir="auto">{course.description}</p>
+                  <Objectives metadata={course.metadata} />
                   {!course.enrolled ? (
                     <button
                       disabled={busy}
@@ -233,6 +248,10 @@ function App() {
                           <p className="text-content" dir="auto">
                             {lesson.content}
                           </p>
+                          <Practice
+                            metadata={lesson.metadata}
+                            objectives={course.metadata?.objectives}
+                          />
                           <button
                             disabled={
                               busy ||
@@ -265,6 +284,7 @@ function App() {
                           });
                         }}
                       >
+                        <AssessmentGuidance metadata={course.metadata} />
                         <h3>ارسال تکلیف</h3>
                         <label htmlFor="submission">
                           متن پاسخ و شواهد تمرین
@@ -272,8 +292,12 @@ function App() {
                         <textarea
                           id="submission"
                           required
-                          minLength={20}
-                          maxLength={10000}
+                          minLength={
+                            course.metadata?.assessment?.minCharacters ?? 20
+                          }
+                          maxLength={
+                            course.metadata?.assessment?.maxCharacters ?? 10000
+                          }
                           value={content}
                           onChange={(e) => setContent(e.target.value)}
                         />
@@ -286,7 +310,12 @@ function App() {
                         <button
                           disabled={
                             busy ||
-                            content.trim().length < 20 ||
+                            content.trim().length <
+                              (course.metadata?.assessment?.minCharacters ??
+                                20) ||
+                            content.trim().length >
+                              (course.metadata?.assessment?.maxCharacters ??
+                                10000) ||
                             course.completed_lessons.length <
                               course.lessons.length
                           }
@@ -340,6 +369,10 @@ function App() {
               {submissions.length === 0 && <p>تکلیفی برای نمایش وجود ندارد.</p>}
               {submissions.map((s) => (
                 <article className="card" key={s.id}>
+                  <h2 dir="auto">
+                    {courses.find((c) => c.id === s.course_id)?.title ||
+                      "تکلیف یادگیری"}
+                  </h2>
                   <p>
                     وضعیت: <strong>{s.status}</strong>
                   </p>
@@ -349,6 +382,11 @@ function App() {
                   {s.feedback && <p>بازخورد: {s.feedback}</p>}
                   {page === "review" && reviewer && (
                     <>
+                      <AssessmentGuidance
+                        metadata={
+                          courses.find((c) => c.id === s.course_id)?.metadata
+                        }
+                      />
                       <label htmlFor={"feedback-" + s.id}>بازخورد بازبین</label>
                       <textarea
                         id={"feedback-" + s.id}

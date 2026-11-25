@@ -1,0 +1,10 @@
+{
+  "image": "nikway-keycloak-custom:26.8.2-guava33.7.2",
+  "image_id": "sha256:c03a8747a16c11dcba0ecdc04ecd8c87e1ae5a7342b1ee4e10f8db70292182da",
+  "raw_report_sha256": "caa8cd8de715637e637aeee2bc822aa20a50712ca8c7446adb54c9409532af55",
+  "scanner": "Trivy0.76.2 full OS/language; no exclusions",
+  "High": 0,
+  "Critical": 0,
+  "findings": [],
+  "scope": "Final corrected UID1000 data-path image; locally maintained source/dependency build; upstream integration tests skipped; baseline untouched"
+}

@@ -1,0 +1,8 @@
+.git
+**/.venv
+**/node_modules
+infra/runtime
+**/__pycache__
+frontend
+evidence
+architecture
