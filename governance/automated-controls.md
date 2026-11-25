@@ -31,7 +31,9 @@ Status: proposed control catalog; no tools installed or checks executed by this 
 | CTL-25 | Governance | Merge gate | GitHub Rulesets | Checks configured and owner approved |
 
 ## Methods
+
 Static, semantic, contract, policy-as-code, architecture fitness functions, traceability and AI-assisted review with human oversight.
 
 ## Rollout
+
 Start with documentation, IDs, links, diagrams, secrets and traceability. Pin tool versions, review licenses, use least-privilege CI and test each control against positive and negative fixtures. Record PASS/FAIL/NOT_APPLICABLE/NOT_RUN separately; missing artifacts never count as PASS. Existing historical evidence must not be rewritten to satisfy lint rules. External link failures may require manual review. Activate source and contract checks when artifacts exist. Enforce merge gates only after checks are proven and approved. No merge or installation authorized.
