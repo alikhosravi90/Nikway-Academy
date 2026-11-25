@@ -30,7 +30,7 @@ services:
     depends_on:
       db: {condition: service_healthy}
     healthcheck:
-      test: [CMD, curl, -fsS, http://localhost/login/index.php]
+      test: [CMD, curl, -fsSL, --max-redirs, "5", -H, "Host: localhost:18701", http://localhost/login/index.php]
       interval: 10s
       timeout: 5s
       retries: 20
