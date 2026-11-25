@@ -1,0 +1,40 @@
+{
+  "status": "PASS_LIMITED_LOCAL_SYNTHETIC",
+  "observed_at": "2026-11-25T13:31:41.359978+00:00",
+  "first_creation": {
+    "course_id": 6,
+    "status": "created",
+    "initial_failure": "Missing Moodle 5.3 gradingduedate default; transaction rolled back before corrected import"
+  },
+  "replay_status": "existing",
+  "before": {
+    "course_count": 1,
+    "courses": [
+      {
+        "id": 6,
+        "pages": 3,
+        "assignments": 1,
+        "rubric_criteria": 4,
+        "rubric_levels": 16,
+        "enrolments": 2
+      }
+    ]
+  },
+  "after": {
+    "course_count": 1,
+    "courses": [
+      {
+        "id": 6,
+        "pages": 3,
+        "assignments": 1,
+        "rubric_criteria": 4,
+        "rubric_levels": 16,
+        "enrolments": 2
+      }
+    ]
+  },
+  "malformed_digest_rejected_no_effect": true,
+  "source_sha256": "50c46cd097ce8f6fe9714448cb5fbe0f065bfd2782f812956829f84a87256440",
+  "container": "sha256:7a34d5d3facaa28d3b658ee5205d0fcdc167f5a07af2d67d5cf9ded62742cb7c",
+  "boundary": "Native import and idempotency only; browser SSO/submission/grading tested separately; no Academy status sync"
+}

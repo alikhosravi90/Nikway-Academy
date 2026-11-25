@@ -77,7 +77,7 @@ try {
                 'intro' => plain($assessment['prompt']) . plain('حد متن راهنما: ' . $assessment['minCharacters'] . ' تا ' . $assessment['maxCharacters'] . ' نویسه. کنترل این حد به صورت خودکار در Moodle فعال نیست.'),
                 'grade' => $maxscore, 'submissiondrafts' => 1, 'requiresubmissionstatement' => 0,
                 'sendnotifications' => 0, 'sendlatenotifications' => 0, 'sendstudentnotifications' => 0,
-                'duedate' => 0, 'cutoffdate' => 0, 'allowsubmissionsfromdate' => 0,
+                'duedate' => 0, 'cutoffdate' => 0, 'gradingduedate' => 0, 'allowsubmissionsfromdate' => 0,
                 'teamsubmission' => 0, 'requireallteammemberssubmit' => 0, 'teamsubmissiongroupingid' => 0,
                 'blindmarking' => 0, 'markingworkflow' => 0, 'markingallocation' => 0,
                 'attemptreopenmethod' => 'manual', 'maxattempts' => -1,
