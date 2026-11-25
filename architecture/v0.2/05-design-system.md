@@ -1,5 +1,11 @@
 # Design System
 
+**Document ID:** ARC-05  
+**Document revision:** 0.2-draft  
+**Review status:** Proposed  
+**Owner role:** Learning and UX leads (assignment pending)  
+**Dependencies:** [Architecture index](README.md) and [documentation standard](../../governance/documentation-standard.md).
+
 Version: 0.2.0-draft | Target architecture proposed | Local prototype evidence appended; target not fully implemented or verified
 
 ## Foundations
