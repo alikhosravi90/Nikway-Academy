@@ -1,5 +1,11 @@
 # Distributed Federated Cell Architecture
 
+**Document ID:** ARC-16  
+**Document revision:** 0.2-draft  
+**Review status:** Proposed  
+**Owner role:** Architecture lead (assignment pending)  
+**Dependencies:** [Architecture index](README.md) and [documentation standard](../../governance/documentation-standard.md).
+
 Status: conceptual proposal; no capacity, provider availability or runtime validation.
 
 ## Topology
