@@ -10,10 +10,11 @@ After infrastructure installation and explicit coordination:
 python3 infra/moodle/content-import.py content/examples/agent-engineering-basics.fa.json \
   --archive infra/runtime/moodle-content-originals \
   --container EXPLICIT_ISOLATED_MOODLE_CONTAINER \
-  --learner learner-a --reviewer reviewer-a
+  --learner 00000000-0000-4000-8000-000000000001 \
+  --reviewer 00000000-0000-4000-8000-000000000003
 ```
 
-The synthetic accounts must already exist through the coordinated identity bootstrap/login. The adapter does not create accounts or grant site administration. Explicit learner enrolment uses the core student role; reviewer uses non-editing teacher. The three allowed synthetic usernames are a bounded pilot allowlist, not a mapping from arbitrary federated identities.
+The synthetic accounts must already exist through the coordinated identity bootstrap/login. The adapter does not create accounts or grant site administration. Explicit learner enrolment uses the core student role; reviewer uses non-editing teacher. Moodle usernames are the immutable OIDC subject UUIDs. Only tenant-A learner subject `00000000-0000-4000-8000-000000000001` can receive student enrolment and only tenant-A reviewer subject `00000000-0000-4000-8000-000000000003` can receive teacher enrolment. Cross-role assignment, old display usernames, and tenant-B subject ending `002` are rejected in both wrapper and PHP before course mutation. This is a bounded pilot identity mapping, not an arbitrary federated identity policy.
 
 A package/version gets one course idnumber. An advisory lock and delegated DB transaction guard concurrent imports. Matching original bytes reuse the course and idempotently enrol requested identities. Different bytes under the same package/version fail closed; existing activity/grading changes are never overwritten. Operators must inspect a drifted Moodle course separately; matching import receipts do not claim ongoing content reconciliation.
 

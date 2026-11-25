@@ -9,6 +9,21 @@ require_once($CFG->dirroot . '/grade/grading/form/rubric/lib.php');
 require_once($CFG->libdir . '/enrollib.php');
 \core\session\manager::set_user(get_admin());
 $input = json_decode(stream_get_contents(STDIN), true, 30, JSON_THROW_ON_ERROR);
+// Validate all requested subjects before locking or mutating any course state.
+$allowedsubjects = [
+    'learners' => '00000000-0000-4000-8000-000000000001',
+    'reviewers' => '00000000-0000-4000-8000-000000000003',
+];
+foreach ($allowedsubjects as $group => $allowed) {
+    if (!isset($input[$group]) || !is_array($input[$group])) {
+        throw new RuntimeException('Explicit enrolment arrays required');
+    }
+    foreach ($input[$group] as $subject) {
+        if ($subject !== $allowed) {
+            throw new RuntimeException('Unauthorized synthetic subject for requested role');
+        }
+    }
+}
 $p = $input['package'];
 $c = $p['course'];
 $key = 'nikway:' . $p['packageId'] . ':' . $p['version'];
@@ -95,9 +110,6 @@ try {
     foreach (['learners' => 'student', 'reviewers' => 'teacher'] as $group => $role) {
         $roleid = $DB->get_field('role', 'id', ['shortname' => $role], MUST_EXIST);
         foreach ($input[$group] as $username) {
-            if (!in_array($username, ['learner-a', 'learner-b', 'reviewer-a'], true)) {
-                throw new RuntimeException('Only explicitly listed synthetic pilot identities may be enrolled');
-            }
             $user = $DB->get_record('user', ['username' => $username, 'deleted' => 0], '*', MUST_EXIST);
             $plugin->enrol_user($manual, $user->id, $roleid);
         }

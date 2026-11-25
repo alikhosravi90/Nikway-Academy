@@ -12,6 +12,18 @@ sys.path.insert(0, str(ROOT))
 from content.validate_package import load_package
 
 
+ROLE_SUBJECTS = {
+    'learner': '00000000-0000-4000-8000-000000000001',
+    'reviewer': '00000000-0000-4000-8000-000000000003',
+}
+
+
+def validate_enrolments(learners, reviewers):
+    for role, subjects in [('learner', learners), ('reviewer', reviewers)]:
+        if any(subject != ROLE_SUBJECTS[role] for subject in subjects):
+            raise ValueError(f'Unauthorized synthetic {role} subject')
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('package', type=Path)
@@ -23,8 +35,7 @@ def main():
     args = parser.parse_args()
     raw = args.package.read_bytes()
     package = load_package(raw)  # No Docker calls or writes before strict admission succeeds.
-    if set(args.learner) & set(args.reviewer):
-        raise ValueError('A synthetic identity cannot be both learner and reviewer')
+    validate_enrolments(args.learner, args.reviewer)
     archive = args.archive.resolve()
     archive.mkdir(parents=True, exist_ok=True, mode=0o700)
     sha = hashlib.sha256(raw).hexdigest()
