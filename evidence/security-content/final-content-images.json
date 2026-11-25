@@ -1,0 +1,80 @@
+{
+  "checked_at": "2026-11-25T12:29:41.018842+00:00",
+  "scanner": "Trivy0.76.2",
+  "scope": "Full selected runtime OS/language vulnerability scans; no suppressions; only High/Critical summarized; does not prove absence of unknown/application defects",
+  "database": {
+    "Version": 2,
+    "NextUpdate": "2026-11-26T07:11:44.18325381Z",
+    "UpdatedAt": "2026-11-25T07:11:44.18325427Z",
+    "DownloadedAt": "2026-11-25T11:17:28.639580993Z"
+  },
+  "java_database": {
+    "Version": 1,
+    "NextUpdate": "2026-11-28T00:58:20.123767444Z",
+    "UpdatedAt": "2026-11-25T00:58:20.123767945Z",
+    "DownloadedAt": "2026-11-25T11:25:11.040123824Z"
+  },
+  "images": [
+    {
+      "container": "/nikway-academy-content-keycloak-1",
+      "container_id": "ee692fd6944b57d6b73527008938e50eb01278018b92a232a32aea46b51ffd97",
+      "image_id": "sha256:c03a8747a16c11dcba0ecdc04ecd8c87e1ae5a7342b1ee4e10f8db70292182da",
+      "service": "keycloak",
+      "scan_status": "PASS",
+      "High": 0,
+      "Critical": 0,
+      "raw_report_sha256": "59209342c998ec8475c622d2b8283848108f179b577f87c3aa6f83d7f86640dc",
+      "targets": [
+        {
+          "target": "sha256:c03a8747a16c11dcba0ecdc04ecd8c87e1ae5a7342b1ee4e10f8db70292182da (alpine 3.24.4)",
+          "type": "alpine"
+        },
+        {
+          "target": "Java",
+          "type": "jar"
+        }
+      ]
+    },
+    {
+      "container": "/nikway-academy-content-api-1",
+      "container_id": "366d7e618069dead3dc804ec4260c175914a27277670eb300503fdb2e5acd607",
+      "image_id": "sha256:cbd16a202d4c600e7dc086b120a7e779af48189b7ad3e20d5f3d07cb1fabb59b",
+      "service": "api",
+      "scan_status": "PASS",
+      "High": 0,
+      "Critical": 0,
+      "raw_report_sha256": "332bd17108aa49a77f5d3c179b36517efa34597feb5f232795a3864ea75ec72b",
+      "targets": [
+        {
+          "target": "sha256:cbd16a202d4c600e7dc086b120a7e779af48189b7ad3e20d5f3d07cb1fabb59b (alpine 3.24.4)",
+          "type": "alpine"
+        },
+        {
+          "target": "Python",
+          "type": "python-pkg"
+        }
+      ]
+    },
+    {
+      "container": "/nikway-academy-content-frontend-1",
+      "container_id": "3622df843a7f4b1c52d3cccd09d8bf66326f1ebd8b7d061e6c7975f3f7bbbf7c",
+      "image_id": "sha256:45fd84fa320ed95a00166bb043be02a70fce874e38e2f01cd5738ada4b709b5d",
+      "service": "frontend",
+      "scan_status": "IMAGE_UNAVAILABLE",
+      "scope": "Cannot inspect historical container image; separate runtime-rootfs receipt required",
+      "High": null,
+      "Critical": null
+    },
+    {
+      "container": "/nikway-academy-content-postgres-1",
+      "container_id": "6b4f04d5d8c6148a60a497fbeb59e9cf4032d1b5484c8a74955a71fe0ee30bb0",
+      "image_id": "sha256:38134cd212d8362cc8475d26447d59ff0a0b6240245954ca8bb0328d870ff332",
+      "service": "postgres",
+      "scan_status": "IMAGE_UNAVAILABLE",
+      "scope": "Cannot inspect historical container image; separate runtime-rootfs receipt required",
+      "High": null,
+      "Critical": null
+    }
+  ],
+  "custom_maintenance": "Keycloak is locally maintained source/dependency build, not vendor-supported. Upstream tests skipped; local tests separate."
+}

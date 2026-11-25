@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-11-25T12:29:18.460312+00:00",
+  "scope": "Running container filesystem scans; inaccessible historical OCI manifests NOT scanned. docker export excludes mounted volumes. Regular files and directories extracted; symlinks/devices not followed. OS/language vulnerability analysis, no suppressions. Does not scan database contents or application logic.",
+  "scanner": "Trivy0.76.2 using recorded2026-11-25 DB snapshot",
+  "containers": [
+    {
+      "service": "frontend",
+      "container_id": "3622df843a7f4b1c52d3cccd09d8bf66326f1ebd8b7d061e6c7975f3f7bbbf7c",
+      "image_id": "sha256:45fd84fa320ed95a00166bb043be02a70fce874e38e2f01cd5738ada4b709b5d",
+      "started": "2026-11-25T12:26:12.856331695Z",
+      "High": 0,
+      "Critical": 0,
+      "regular_files": 983,
+      "skipped_nonregular_entries": 923,
+      "export_sha256": "9b91da3da9452419bbc572af003a225c1fac987f10720ee1651c03d056cdece5",
+      "scan_sha256": "c1d22256d7ba60eac6b5fcbdcc991852ec959f199e4ccb7034382c27aba40375",
+      "targets": [
+        {
+          "target": "ROOTFS (alpine 3.24.4)",
+          "type": "alpine"
+        }
+      ]
+    },
+    {
+      "service": "postgres",
+      "container_id": "6b4f04d5d8c6148a60a497fbeb59e9cf4032d1b5484c8a74955a71fe0ee30bb0",
+      "image_id": "sha256:38134cd212d8362cc8475d26447d59ff0a0b6240245954ca8bb0328d870ff332",
+      "started": "2026-11-25T12:26:12.868281131Z",
+      "High": 0,
+      "Critical": 0,
+      "regular_files": 2878,
+      "skipped_nonregular_entries": 646,
+      "export_sha256": "3dde5194006c9d9f4b17848ac2ddf017685ee60a93d25a7d86f3184ae4ca3253",
+      "scan_sha256": "d765e7eb322f20f3adb1a711568324961365c5eb7dd8b61fe10325898e2b7652",
+      "targets": [
+        {
+          "target": "ROOTFS (alpine 3.24.4)",
+          "type": "alpine"
+        }
+      ]
+    }
+  ]
+}

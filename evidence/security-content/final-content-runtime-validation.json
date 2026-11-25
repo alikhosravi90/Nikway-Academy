@@ -1,0 +1,668 @@
+{
+  "started_at": "2026-11-25T12:25:45.375712+00:00",
+  "project": "nikway-academy-content",
+  "scope": "Synthetic candidate only; baseline preserved",
+  "initial_persistence": {
+    "academy": {
+      "COPY public.alembic_version (version_num) FROM stdin;": {
+        "rows": 1,
+        "sha256": "a822703962d6232b8ccca2ae1c7f07962e9f92d0e5589def81a8f85e19ce3fea"
+      },
+      "COPY public.audit_events (id, tenant_id, subject, action, resource_id, correlation_id, created_at) FROM stdin;": {
+        "rows": 203,
+        "sha256": "abafecf4584fc96c3c57ccffcf4022f27d7e45b201499b63c0127e43b5bff62c"
+      },
+      "COPY public.tenants (id, name) FROM stdin;": {
+        "rows": 2,
+        "sha256": "02edd8ad05d3222d835302c6feb8da796084938dd7571ef653c960ac950eb0da"
+      },
+      "COPY public.courses (id, tenant_id, title, description, metadata) FROM stdin;": {
+        "rows": 3,
+        "sha256": "177ff33168beef75179e5a81b082a3e89fe1080db57d2302332850fa14e421bc"
+      },
+      "COPY public.enrollments (id, tenant_id, course_id, subject, created_at) FROM stdin;": {
+        "rows": 2,
+        "sha256": "b9c186fdb49145b9c52e8bb1f9996e38b12a66517fe303033bae667ccbe5d6a6"
+      },
+      "COPY public.lessons (id, tenant_id, course_id, \"position\", title, content, metadata) FROM stdin;": {
+        "rows": 7,
+        "sha256": "49ad457cc273ce7d14520543a060ebf8ed9bcc684b9a3de16829dbd3dd190fed"
+      },
+      "COPY public.completions (tenant_id, enrollment_id, lesson_id, created_at) FROM stdin;": {
+        "rows": 5,
+        "sha256": "d59a703cf9a2ec3b079b4ade65eaf3721c71197a04b8a014c38daae1936460d9"
+      },
+      "COPY public.content_packages (id, tenant_id, package_id, version, digest, document, status, revision, imported_by, imported_at, published_at, course_id) FROM stdin;": {
+        "rows": 1,
+        "sha256": "9a8af51246fcac65edd0f7a15b93596944a036e62284a9ed021af4ec31d33f32"
+      },
+      "COPY public.memberships (subject, tenant_id, role, active) FROM stdin;": {
+        "rows": 3,
+        "sha256": "53696669f614d14bb8cb7f20c388072e776bcd1411516fdbff7b0e13dac7e14b"
+      },
+      "COPY public.workshops (id, tenant_id, title, description, capacity, starts_at) FROM stdin;": {
+        "rows": 2,
+        "sha256": "26c0edca311e67f6077b58785bc77f7896c369f587a3aefe4eaefdb0a1248c5b"
+      },
+      "COPY public.registrations (tenant_id, workshop_id, subject, created_at) FROM stdin;": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "COPY public.submissions (id, tenant_id, course_id, subject, content, status, feedback, reviewer, revision, rubric_version, created_at) FROM stdin;": {
+        "rows": 5,
+        "sha256": "c4dbbe632747eb32b762eeb4324e924ad326c16be7863410ce4aeebb38d842a6"
+      }
+    },
+    "keycloak": {
+      "COPY public.client (id, enabled, full_scope_allowed, client_id, not_before, public_client, secret, base_url, bearer_only, management_url, surrogate_auth_required, realm_id, protocol, node_rereg_timeout, frontchannel_logout, consent_required, name, service_accounts_enabled, client_authenticator_type, root_url, description, registration_token, standard_flow_enabled, implicit_flow_enabled, direct_access_grants_enabled, always_display_in_console, created_timestamp, last_modified_timestamp) FROM stdin;": {
+        "rows": 14,
+        "sha256": "f62953bad6d1ab79e83d7c5ed1e5015a55fa5bb2154dc1d8a2a3429a82210c37"
+      },
+      "COPY public.user_entity (id, email, email_constraint, email_verified, enabled, federation_link, first_name, last_name, realm_id, username, created_timestamp, service_account_client_link, not_before, last_modified_timestamp) FROM stdin;": {
+        "rows": 4,
+        "sha256": "f4e83d5f2b8ae407a2d5b045d8495ec26bd7dc4ad3eef9b953843663d748bba9"
+      },
+      "COPY public.credential (id, salt, type, user_id, created_date, user_label, secret_data, credential_data, priority, version) FROM stdin;": {
+        "rows": 4,
+        "sha256": "4a5585730c87e9b8a88ecec7fd487e47f56d47226c397b4a15b14972bf9cdf2d"
+      },
+      "COPY public.realm (id, access_code_lifespan, user_action_lifespan, access_token_lifespan, account_theme, admin_theme, email_theme, enabled, events_enabled, events_expiration, login_theme, name, not_before, password_policy, registration_allowed, remember_me, reset_password_allowed, social, ssl_required, sso_idle_timeout, sso_max_lifespan, update_profile_on_soc_login, verify_email, master_admin_client, login_lifespan, internationalization_enabled, default_locale, reg_email_as_username, admin_events_enabled, admin_events_details_enabled, edit_username_allowed, otp_policy_counter, otp_policy_window, otp_policy_period, otp_policy_digits, otp_policy_alg, otp_policy_type, browser_flow, registration_flow, direct_grant_flow, reset_credentials_flow, client_auth_flow, offline_session_idle_timeout, revoke_refresh_token, access_token_life_implicit, login_with_email_allowed, duplicate_emails_allowed, docker_auth_flow, refresh_token_max_reuse, allow_user_managed_access, sso_max_lifespan_remember_me, sso_idle_timeout_remember_me, default_role, display_name) FROM stdin;": {
+        "rows": 2,
+        "sha256": "b34bd7a7a8cfa8b44a20a92aee1c2035f8e7e6ef74af7dd775e1d67fdbc17577"
+      },
+      "COPY public.keycloak_role (id, client_realm_constraint, client_role, description, name, realm_id, client, realm) FROM stdin;": {
+        "rows": 92,
+        "sha256": "ffdb66c0492bdc8e2fdd813fee1129bcfcf439f13008030e023e24a013a25e6d"
+      },
+      "COPY public.protocol_mapper (id, name, protocol, protocol_mapper_name, client_id, client_scope_id) FROM stdin;": {
+        "rows": 78,
+        "sha256": "30e226b5c3c60774953650b2befa08c5030a1f02ab58741181e94b9292b714d8"
+      },
+      "COPY public.protocol_mapper_config (protocol_mapper_id, value, name) FROM stdin;": {
+        "rows": 432,
+        "sha256": "773b37868340bdc8d9a3a7e3af3d89fc78af19a6c72aad31d5a408172cbe44c1"
+      },
+      "COPY public.user_attribute (name, value, user_id, id, long_value_hash, long_value_hash_lower_case, long_value) FROM stdin;": {
+        "rows": 4,
+        "sha256": "58b8643d7aa31dc20b8ce10c03d6f99dd6a0f200e3ccb1be9e8e08062fc7239e"
+      },
+      "COPY public.user_role_mapping (role_id, user_id) FROM stdin;": {
+        "rows": 5,
+        "sha256": "77ea869e5b2a95883c273e54697adeb6ed76678bffb5e0833f8d8a2f58dfaf29"
+      }
+    }
+  },
+  "stop_start_seconds": 26.284,
+  "stop_start_persistence": "PASS",
+  "restart_seconds": 17.793,
+  "restart_persistence": "PASS",
+  "persistence_scope": "Every Academy table; 9 stable identity/configuration tables. Keycloak session/lock tables excluded from lifecycle equality; every table covered by separate recovery.",
+  "recovery": {
+    "academy": {
+      "status": "PASS",
+      "tables": 12,
+      "total_rows": 234,
+      "method": "Encrypted archive COPY rows vs restored database COPY rows; each table rows sorted before SHA256",
+      "encrypted_backup_sha256": "d74911f8323000d5b1987c2c09683cd057dda96af87083fcabbf4f32e804d941",
+      "table_evidence": {
+        "COPY public.alembic_version (version_num) FROM stdin;": {
+          "rows": 1,
+          "sha256": "a822703962d6232b8ccca2ae1c7f07962e9f92d0e5589def81a8f85e19ce3fea"
+        },
+        "COPY public.audit_events (id, tenant_id, subject, action, resource_id, correlation_id, created_at) FROM stdin;": {
+          "rows": 203,
+          "sha256": "abafecf4584fc96c3c57ccffcf4022f27d7e45b201499b63c0127e43b5bff62c"
+        },
+        "COPY public.tenants (id, name) FROM stdin;": {
+          "rows": 2,
+          "sha256": "02edd8ad05d3222d835302c6feb8da796084938dd7571ef653c960ac950eb0da"
+        },
+        "COPY public.courses (id, tenant_id, title, description, metadata) FROM stdin;": {
+          "rows": 3,
+          "sha256": "177ff33168beef75179e5a81b082a3e89fe1080db57d2302332850fa14e421bc"
+        },
+        "COPY public.enrollments (id, tenant_id, course_id, subject, created_at) FROM stdin;": {
+          "rows": 2,
+          "sha256": "b9c186fdb49145b9c52e8bb1f9996e38b12a66517fe303033bae667ccbe5d6a6"
+        },
+        "COPY public.lessons (id, tenant_id, course_id, \"position\", title, content, metadata) FROM stdin;": {
+          "rows": 7,
+          "sha256": "49ad457cc273ce7d14520543a060ebf8ed9bcc684b9a3de16829dbd3dd190fed"
+        },
+        "COPY public.completions (tenant_id, enrollment_id, lesson_id, created_at) FROM stdin;": {
+          "rows": 5,
+          "sha256": "d59a703cf9a2ec3b079b4ade65eaf3721c71197a04b8a014c38daae1936460d9"
+        },
+        "COPY public.content_packages (id, tenant_id, package_id, version, digest, document, status, revision, imported_by, imported_at, published_at, course_id) FROM stdin;": {
+          "rows": 1,
+          "sha256": "9a8af51246fcac65edd0f7a15b93596944a036e62284a9ed021af4ec31d33f32"
+        },
+        "COPY public.memberships (subject, tenant_id, role, active) FROM stdin;": {
+          "rows": 3,
+          "sha256": "53696669f614d14bb8cb7f20c388072e776bcd1411516fdbff7b0e13dac7e14b"
+        },
+        "COPY public.workshops (id, tenant_id, title, description, capacity, starts_at) FROM stdin;": {
+          "rows": 2,
+          "sha256": "26c0edca311e67f6077b58785bc77f7896c369f587a3aefe4eaefdb0a1248c5b"
+        },
+        "COPY public.registrations (tenant_id, workshop_id, subject, created_at) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.submissions (id, tenant_id, course_id, subject, content, status, feedback, reviewer, revision, rubric_version, created_at) FROM stdin;": {
+          "rows": 5,
+          "sha256": "c4dbbe632747eb32b762eeb4324e924ad326c16be7863410ce4aeebb38d842a6"
+        }
+      }
+    },
+    "keycloak": {
+      "status": "PASS",
+      "tables": 101,
+      "total_rows": 1732,
+      "method": "Encrypted archive COPY rows vs restored database COPY rows; each table rows sorted before SHA256",
+      "encrypted_backup_sha256": "f048c72000709ada3128337eff9a5a17f931baaeaeb9272bc0017108adbf4f10",
+      "table_evidence": {
+        "COPY public.admin_event_entity (id, admin_event_time, realm_id, operation_type, auth_realm_id, auth_client_id, auth_user_id, ip_address, resource_path, representation, error, resource_type, details_json) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.resource_server (id, allow_rs_remote_mgmt, policy_enforce_mode, decision_strategy) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.resource_server_policy (id, name, description, type, decision_strategy, logic, resource_server_id, owner) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.associated_policy (policy_id, associated_policy_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.root_auth_session (id, realm_id, \"timestamp\", version, session_bucket, created_on, timestamp_coarse) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.auth_session (root_auth_session_id, tab_id, client_uuid, auth_user_id, \"timestamp\", version, redirect_uri, action, protocol, client_scopes, execution_status, client_notes, auth_notes, required_actions, user_session_notes) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.realm (id, access_code_lifespan, user_action_lifespan, access_token_lifespan, account_theme, admin_theme, email_theme, enabled, events_enabled, events_expiration, login_theme, name, not_before, password_policy, registration_allowed, remember_me, reset_password_allowed, social, ssl_required, sso_idle_timeout, sso_max_lifespan, update_profile_on_soc_login, verify_email, master_admin_client, login_lifespan, internationalization_enabled, default_locale, reg_email_as_username, admin_events_enabled, admin_events_details_enabled, edit_username_allowed, otp_policy_counter, otp_policy_window, otp_policy_period, otp_policy_digits, otp_policy_alg, otp_policy_type, browser_flow, registration_flow, direct_grant_flow, reset_credentials_flow, client_auth_flow, offline_session_idle_timeout, revoke_refresh_token, access_token_life_implicit, login_with_email_allowed, duplicate_emails_allowed, docker_auth_flow, refresh_token_max_reuse, allow_user_managed_access, sso_max_lifespan_remember_me, sso_idle_timeout_remember_me, default_role, display_name) FROM stdin;": {
+          "rows": 2,
+          "sha256": "b34bd7a7a8cfa8b44a20a92aee1c2035f8e7e6ef74af7dd775e1d67fdbc17577"
+        },
+        "COPY public.authentication_flow (id, alias, description, realm_id, provider_id, top_level, built_in) FROM stdin;": {
+          "rows": 39,
+          "sha256": "45057af749cc706dcb15446da0058f9c4f1ba1adc95f3d1e161d3db7a9469070"
+        },
+        "COPY public.authentication_execution (id, alias, authenticator, realm_id, flow_id, requirement, priority, authenticator_flow, auth_flow_id, auth_config) FROM stdin;": {
+          "rows": 105,
+          "sha256": "4f8f201e2df8b647bf5e5e276b4b8276629f086fd175d15c874c87313ab59354"
+        },
+        "COPY public.authenticator_config (id, alias, realm_id) FROM stdin;": {
+          "rows": 8,
+          "sha256": "a7a2c242192d3457e355c773ac3c94b222414eb9b2f6166bbe9fadd554d8c227"
+        },
+        "COPY public.authenticator_config_entry (authenticator_id, value, name) FROM stdin;": {
+          "rows": 8,
+          "sha256": "c307b732e55a5ed7adde34beb41f1979fb750c970dc4335fbbefe5011776adb6"
+        },
+        "COPY public.broker_link (identity_provider, storage_provider_id, realm_id, broker_user_id, broker_username, token, user_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.client (id, enabled, full_scope_allowed, client_id, not_before, public_client, secret, base_url, bearer_only, management_url, surrogate_auth_required, realm_id, protocol, node_rereg_timeout, frontchannel_logout, consent_required, name, service_accounts_enabled, client_authenticator_type, root_url, description, registration_token, standard_flow_enabled, implicit_flow_enabled, direct_access_grants_enabled, always_display_in_console, created_timestamp, last_modified_timestamp) FROM stdin;": {
+          "rows": 14,
+          "sha256": "f62953bad6d1ab79e83d7c5ed1e5015a55fa5bb2154dc1d8a2a3429a82210c37"
+        },
+        "COPY public.client_attributes (client_id, name, value) FROM stdin;": {
+          "rows": 16,
+          "sha256": "01b0b5be3252898985757f978cb7abea97ccb44e74e370b00d77cf14211cf578"
+        },
+        "COPY public.client_auth_flow_bindings (client_id, flow_id, binding_name) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.client_initial_access (id, realm_id, \"timestamp\", expiration, count, remaining_count) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.client_node_registrations (client_id, value, name) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.client_scope (id, name, realm_id, description, protocol) FROM stdin;": {
+          "rows": 32,
+          "sha256": "e045a6b8bfb713a3e4a616f769d98da316591d826f61e9fa9b960895337fe198"
+        },
+        "COPY public.client_scope_attributes (scope_id, value, name) FROM stdin;": {
+          "rows": 70,
+          "sha256": "1bf16ff1344eaaa490cfec57105d45f9941ab0f0e7d905af4108d14dee4ef40b"
+        },
+        "COPY public.client_scope_client (client_id, scope_id, default_scope) FROM stdin;": {
+          "rows": 147,
+          "sha256": "61a9379591ba711bded8c6d42202c5b736dca312cfc70ecc9e17f69589640b6b"
+        },
+        "COPY public.client_scope_role_mapping (scope_id, role_id) FROM stdin;": {
+          "rows": 2,
+          "sha256": "1bde33ac05f0787f28a0f2c65b400199bd5081cb19069777e9f265e96f9f15ea"
+        },
+        "COPY public.cluster_event (id, target_cluster, sender_cluster, event_data, created_at) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.component (id, name, parent_id, provider_id, provider_type, realm_id, sub_type) FROM stdin;": {
+          "rows": 35,
+          "sha256": "b67b9d883ef0f64400fcbd3128fa8916f13c7c76448b21b77e5316e03fb72284"
+        },
+        "COPY public.component_config (id, component_id, name, value) FROM stdin;": {
+          "rows": 75,
+          "sha256": "776b4722274ca448c1a3f409fa41c312fb2b7d7603a774baff79c5ea5ab34f75"
+        },
+        "COPY public.keycloak_role (id, client_realm_constraint, client_role, description, name, realm_id, client, realm) FROM stdin;": {
+          "rows": 92,
+          "sha256": "ffdb66c0492bdc8e2fdd813fee1129bcfcf439f13008030e023e24a013a25e6d"
+        },
+        "COPY public.composite_role (composite, child_role) FROM stdin;": {
+          "rows": 88,
+          "sha256": "409d18aaa6b8b6c38f8ad2844fd32326113cce341e28f2d7424058b47ca3cc48"
+        },
+        "COPY public.user_entity (id, email, email_constraint, email_verified, enabled, federation_link, first_name, last_name, realm_id, username, created_timestamp, service_account_client_link, not_before, last_modified_timestamp) FROM stdin;": {
+          "rows": 4,
+          "sha256": "f4e83d5f2b8ae407a2d5b045d8495ec26bd7dc4ad3eef9b953843663d748bba9"
+        },
+        "COPY public.credential (id, salt, type, user_id, created_date, user_label, secret_data, credential_data, priority, version) FROM stdin;": {
+          "rows": 4,
+          "sha256": "4a5585730c87e9b8a88ecec7fd487e47f56d47226c397b4a15b14972bf9cdf2d"
+        },
+        "COPY public.databasechangelog (id, author, filename, dateexecuted, orderexecuted, exectype, md5sum, description, comments, tag, liquibase, contexts, labels, deployment_id) FROM stdin;": {
+          "rows": 237,
+          "sha256": "f695926e4c474456773304a8589f3b75604411ed4659b9662e2949d39edf06f9"
+        },
+        "COPY public.databasechangeloglock (id, locked, lockgranted, lockedby) FROM stdin;": {
+          "rows": 2,
+          "sha256": "a4bd28801f7feb14626af4266c58d0862e6f471741fd09a3372a15340943d145"
+        },
+        "COPY public.default_client_scope (realm_id, scope_id, default_scope) FROM stdin;": {
+          "rows": 28,
+          "sha256": "bb6808527a834ea49a969d6e497dd7f3d1f5602753e0173d761c302c534abc2b"
+        },
+        "COPY public.event_entity (id, client_id, details_json, error, ip_address, realm_id, session_id, event_time, type, user_id, details_json_long_value) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.fed_user_ver_credential (id, user_id, realm_id, storage_provider_id, client_scope_id, revision, user_attributes, created_date, updated_date, version) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.fed_issued_ver_credential (id, user_id, realm_id, storage_provider_id, ver_credential_id, issued_at, expires_at, client_id, revision) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.fed_user_attribute (id, name, user_id, realm_id, storage_provider_id, value, long_value_hash, long_value_hash_lower_case, long_value) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.fed_user_consent (id, client_id, user_id, realm_id, storage_provider_id, created_date, last_updated_date, client_storage_provider, external_client_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.fed_user_consent_cl_scope (user_consent_id, scope_id, parameter) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.fed_user_credential (id, salt, type, created_date, user_id, realm_id, storage_provider_id, user_label, secret_data, credential_data, priority) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.fed_user_group_membership (group_id, user_id, realm_id, storage_provider_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.fed_user_required_action (required_action, user_id, realm_id, storage_provider_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.fed_user_role_mapping (role_id, user_id, realm_id, storage_provider_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.federated_identity (identity_provider, realm_id, federated_user_id, federated_username, token, user_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.federated_user (id, storage_provider_id, realm_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.org (id, enabled, realm_id, group_id, name, description, alias, redirect_url) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.keycloak_group (id, name, parent_group, realm_id, type, description, org_id, created_timestamp, last_modified_timestamp) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.group_attribute (id, name, value, group_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.group_role_mapping (role_id, group_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.identity_provider (internal_id, enabled, provider_alias, provider_id, store_token, authenticate_by_default, realm_id, add_token_role, trust_email, first_broker_login_flow_id, post_broker_login_flow_id, provider_display_name, link_only, hide_on_login) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.identity_provider_config (identity_provider_id, value, name) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.identity_provider_mapper (id, name, idp_alias, idp_mapper_name, realm_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.idp_mapper_config (idp_mapper_id, value, name) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.user_ver_credential (id, client_scope_id, user_id, revision, created_date, updated_date, user_attributes, version) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.issued_ver_credential (id, user_id, ver_credential_id, issued_at, expires_at, client_id, revision) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.jgroups_ping (address, name, cluster_name, ip, coord, last_update, coordinated_by) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.login_failure (realm_id, user_id, failed_login_not_before, num_failures, num_temporary_lockouts, last_failure, last_ip_failure, num_secondary_auth_failures) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.migration_model (id, version, update_time) FROM stdin;": {
+          "rows": 1,
+          "sha256": "4f3244e7056c81dd45dfc8a809cbdc281b3ab097c4ca260902c791b8680e922d"
+        },
+        "COPY public.offline_client_session (user_session_id, client_id, offline_flag, \"timestamp\", data, client_storage_provider, external_client_id, version, realm_id) FROM stdin;": {
+          "rows": 39,
+          "sha256": "ba5bfb583522c55d94db6c1f8f5c73ef0eb719129b0304fd7712de7e8a21687f"
+        },
+        "COPY public.offline_user_session (user_session_id, user_id, realm_id, created_on, offline_flag, data, last_session_refresh, broker_session_id, version, remember_me, session_bucket, last_session_refresh_coarse) FROM stdin;": {
+          "rows": 39,
+          "sha256": "1ad0f9c5b89a5d15c95ec0af9e316f9c38ed7bf50efe2eec543fcf09c3d4f124"
+        },
+        "COPY public.org_domain (id, name, verified, org_id, realm_id, idp_id, auto_redirect) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.org_identity_provider (organization_id, identity_provider_id, auto_membership, membership_type) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.org_invitation (id, organization_id, email, first_name, last_name, created_at, expires_at, invite_link) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.outbox_entry (id, entry_kind, realm_id, owner_id, container_id, correlation_id, entry_type, payload, metadata, status, attempts, next_attempt_at, last_error, created_at, delivered_at) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.policy_config (policy_id, name, value) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.protocol_mapper (id, name, protocol, protocol_mapper_name, client_id, client_scope_id) FROM stdin;": {
+          "rows": 78,
+          "sha256": "30e226b5c3c60774953650b2befa08c5030a1f02ab58741181e94b9292b714d8"
+        },
+        "COPY public.protocol_mapper_config (protocol_mapper_id, value, name) FROM stdin;": {
+          "rows": 432,
+          "sha256": "773b37868340bdc8d9a3a7e3af3d89fc78af19a6c72aad31d5a408172cbe44c1"
+        },
+        "COPY public.realm_attribute (name, realm_id, value) FROM stdin;": {
+          "rows": 76,
+          "sha256": "dc7540ee3bdb6c191e9f73fee74babd4447c68e5cba062013a6cd2e825999a46"
+        },
+        "COPY public.realm_default_groups (realm_id, group_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.realm_enabled_event_types (realm_id, value) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.realm_events_listeners (realm_id, value) FROM stdin;": {
+          "rows": 2,
+          "sha256": "8122496a5bc5ea9f429e430fbae733574268929eb90bef458c09b77a4c31f50b"
+        },
+        "COPY public.realm_localizations (realm_id, locale, texts) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.realm_required_credential (type, form_label, input, secret, realm_id) FROM stdin;": {
+          "rows": 2,
+          "sha256": "0dda2eb38a360b9c739f47c66edf1c9b6cfc5832e548e46c10bc8f581b070f5f"
+        },
+        "COPY public.realm_smtp_config (realm_id, value, name) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.realm_supported_locales (realm_id, value) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.redirect_uris (client_id, value) FROM stdin;": {
+          "rows": 8,
+          "sha256": "e9bf45d55e0d844c0a78f40775e654169547d161b7a2111efdccd0600181bfe7"
+        },
+        "COPY public.required_action_config (required_action_id, value, name) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.required_action_provider (id, alias, name, realm_id, enabled, default_action, provider_id, priority) FROM stdin;": {
+          "rows": 28,
+          "sha256": "8228f8eeaace745471f1572ce5687b6c49ab626cbf852f063b6881164ebd90fe"
+        },
+        "COPY public.resource_server_resource (id, name, type, icon_uri, owner, resource_server_id, owner_managed_access, display_name) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.resource_attribute (id, name, value, resource_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.resource_policy (resource_id, policy_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.resource_server_scope (id, name, icon_uri, resource_server_id, display_name) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.resource_scope (resource_id, scope_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.resource_server_perm_ticket (id, owner, requester, created_timestamp, granted_timestamp, resource_id, scope_id, resource_server_id, policy_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.resource_uris (resource_id, value) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.revoked_token (id, expire) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.role_attribute (id, role_id, name, value) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.scope_mapping (client_id, role_id) FROM stdin;": {
+          "rows": 4,
+          "sha256": "23471b3225d874a0682de63ffdd36c3987a0ccdf4f35afb1526da44239741516"
+        },
+        "COPY public.scope_policy (scope_id, policy_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.server_config (server_config_key, value, version) FROM stdin;": {
+          "rows": 2,
+          "sha256": "e1c2782495d7529122634bfcbaa8866fb321d5a67a0e01ef584c6cae0842ebce"
+        },
+        "COPY public.single_use_object (id, notes, expire) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.user_attribute (name, value, user_id, id, long_value_hash, long_value_hash_lower_case, long_value) FROM stdin;": {
+          "rows": 4,
+          "sha256": "58b8643d7aa31dc20b8ce10c03d6f99dd6a0f200e3ccb1be9e8e08062fc7239e"
+        },
+        "COPY public.user_consent (id, client_id, user_id, created_date, last_updated_date, client_storage_provider, external_client_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.user_consent_client_scope (user_consent_id, scope_id, parameter) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.user_federation_provider (id, changed_sync_period, display_name, full_sync_period, last_sync, priority, provider_name, realm_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.user_federation_config (user_federation_provider_id, value, name) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.user_federation_mapper (id, name, federation_provider_id, federation_mapper_type, realm_id) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.user_federation_mapper_config (user_federation_mapper_id, value, name) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.user_group_membership (group_id, user_id, membership_type) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.user_required_action (user_id, required_action) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "COPY public.user_role_mapping (role_id, user_id) FROM stdin;": {
+          "rows": 5,
+          "sha256": "77ea869e5b2a95883c273e54697adeb6ed76678bffb5e0833f8d8a2f58dfaf29"
+        },
+        "COPY public.web_origins (client_id, value) FROM stdin;": {
+          "rows": 4,
+          "sha256": "85e979a204f2ed52c0ffa14b085a0fbaefebeb1ff813de9e378aa29432c50aed"
+        },
+        "COPY public.workflow_state (execution_id, resource_id, workflow_id, resource_type, scheduled_step_id, scheduled_step_timestamp) FROM stdin;": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    }
+  },
+  "health_sample": {
+    "samples": 50,
+    "errors": 0,
+    "median_ms": 2.433,
+    "p95_ms": 3.265,
+    "max_ms": 8.654,
+    "scope": "Serial loopback read samples; no concurrency/throughput/capacity claim"
+  },
+  "authenticated_courses_sample": {
+    "samples": 50,
+    "errors": 0,
+    "median_ms": 7.125,
+    "p95_ms": 8.224,
+    "max_ms": 115.453,
+    "scope": "Serial loopback read samples; no concurrency/throughput/capacity claim"
+  },
+  "resources": [
+    {
+      "BlockIO": "0B / 0B",
+      "CPUPerc": "0.12%",
+      "Container": "366d7e618069dead3dc804ec4260c175914a27277670eb300503fdb2e5acd607",
+      "ID": "366d7e618069",
+      "MemPerc": "11.73%",
+      "MemUsage": "60.08MiB / 512MiB",
+      "Name": "nikway-academy-content-api-1",
+      "NetIO": "1.04MB / 954kB",
+      "PIDs": "2"
+    },
+    {
+      "BlockIO": "0B / 0B",
+      "CPUPerc": "0.00%",
+      "Container": "3622df843a7f4b1c52d3cccd09d8bf66326f1ebd8b7d061e6c7975f3f7bbbf7c",
+      "ID": "3622df843a7f",
+      "MemPerc": "4.19%",
+      "MemUsage": "10.73MiB / 256MiB",
+      "Name": "nikway-academy-content-frontend-1",
+      "NetIO": "958kB / 1.01MB",
+      "PIDs": "13"
+    },
+    {
+      "BlockIO": "0B / 0B",
+      "CPUPerc": "0.07%",
+      "Container": "ee692fd6944b57d6b73527008938e50eb01278018b92a232a32aea46b51ffd97",
+      "ID": "ee692fd6944b",
+      "MemPerc": "45.67%",
+      "MemUsage": "467.7MiB / 1GiB",
+      "Name": "nikway-academy-content-keycloak-1",
+      "NetIO": "270kB / 127kB",
+      "PIDs": "37"
+    },
+    {
+      "BlockIO": "6.19MB / 17.2MB",
+      "CPUPerc": "0.02%",
+      "Container": "6b4f04d5d8c6148a60a497fbeb59e9cf4032d1b5484c8a74955a71fe0ee30bb0",
+      "ID": "6b4f04d5d8c6",
+      "MemPerc": "11.61%",
+      "MemUsage": "59.47MiB / 512MiB",
+      "Name": "nikway-academy-content-postgres-1",
+      "NetIO": "227kB / 1.15MB",
+      "PIDs": "10"
+    }
+  ],
+  "final_images": [
+    {
+      "name": "/nikway-academy-content-keycloak-1",
+      "id": "ee692fd6944b57d6b73527008938e50eb01278018b92a232a32aea46b51ffd97",
+      "image": "sha256:c03a8747a16c11dcba0ecdc04ecd8c87e1ae5a7342b1ee4e10f8db70292182da",
+      "started": "2026-11-25T12:26:13.8971504Z"
+    },
+    {
+      "name": "/nikway-academy-content-api-1",
+      "id": "366d7e618069dead3dc804ec4260c175914a27277670eb300503fdb2e5acd607",
+      "image": "sha256:cbd16a202d4c600e7dc086b120a7e779af48189b7ad3e20d5f3d07cb1fabb59b",
+      "started": "2026-11-25T12:26:13.137884141Z"
+    },
+    {
+      "name": "/nikway-academy-content-migrate-1",
+      "id": "fa9138b69492ec4d552687cb6691b4574b4a511f21e9c282aead32ad8ab1ac78",
+      "image": "sha256:fb1d9d7b6781c14668f7c0ab04688c33040fdb115162f9bd2baaa3607d4fe762",
+      "started": "2026-11-25T12:25:53.965712387Z"
+    },
+    {
+      "name": "/nikway-academy-content-frontend-1",
+      "id": "3622df843a7f4b1c52d3cccd09d8bf66326f1ebd8b7d061e6c7975f3f7bbbf7c",
+      "image": "sha256:45fd84fa320ed95a00166bb043be02a70fce874e38e2f01cd5738ada4b709b5d",
+      "started": "2026-11-25T12:26:12.856331695Z"
+    },
+    {
+      "name": "/nikway-academy-content-postgres-1",
+      "id": "6b4f04d5d8c6148a60a497fbeb59e9cf4032d1b5484c8a74955a71fe0ee30bb0",
+      "image": "sha256:38134cd212d8362cc8475d26447d59ff0a0b6240245954ca8bb0328d870ff332",
+      "started": "2026-11-25T12:26:12.868281131Z"
+    }
+  ],
+  "baseline_identity_unchanged": true,
+  "finished_at": "2026-11-25T12:26:41.830115+00:00"
+}
