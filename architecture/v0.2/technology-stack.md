@@ -60,7 +60,9 @@ Status: selected design baseline, pending feasibility, licensing, cost and capac
 | Security | Trivy + CodeQL |
 
 ## Decisions
+
 Retain existing React/Vite/Dexie prototype rather than migrate to Next.js. Moodle preferred over Open edX. Modular monolith core, Docker Compose before Kubernetes, local-first and cloud-ready, replaceable model providers. Integrate via versioned APIs, OIDC and events. External services may require their own supported databases and deployment topology; shared PostgreSQL is not mandated for them.
 
 ## Adoption gates
+
 Pin versions, review licenses and dependencies, verify identity and API compatibility, measure resource and operating costs, run local smoke and recovery tests, then approve ADRs. Install incrementally, not all at once. No fork, merge or deployment authorized by this record.
