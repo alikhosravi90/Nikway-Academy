@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-11-25T13:49:43.162304+00:00",
+  "project": "nikway-moodle-fresh-89881196",
+  "image": "sha256:7a34d5d3facaa28d3b658ee5205d0fcdc167f5a07af2d67d5cf9ded62742cb7c",
+  "database_image": "sha256:b4b18a252c7f3908e177ef4eb1d701b6a475dfe46ab30b8c277a856ac6c196f1",
+  "scope": "Fresh empty DB/data volumes; final Alpine image; no restore or upgrade from Debian",
+  "initial_up_wait_returncode": 1,
+  "initial_public_tables": 0,
+  "installed": {
+    "tables": 503,
+    "moodle_version": "2026100501",
+    "oidc_version": "2026100500"
+  },
+  "login_http_status": 200,
+  "post_install_wait": "PASS",
+  "status": "PASS",
+  "elapsed_seconds": 106.534,
+  "disposable_project_removed": true
+}

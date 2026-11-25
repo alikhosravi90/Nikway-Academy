@@ -25,7 +25,7 @@ Prerequisites: Docker Compose, Python 3 with the repository backend dependencies
 ```sh
 python3 scripts/moodle-init.py
 scripts/moodle-compose.sh build
-scripts/moodle-compose.sh up -d --wait db moodle
+scripts/moodle-compose.sh up -d db moodle
 python3 scripts/moodle-install.py
 scripts/moodle-connect.sh
 scripts/moodle-compose.sh up -d cron
