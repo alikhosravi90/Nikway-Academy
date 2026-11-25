@@ -1,5 +1,11 @@
 # Service Blueprint
 
+**Document ID:** ARC-07  
+**Document revision:** 0.2-draft  
+**Review status:** Proposed  
+**Owner role:** Architecture lead (assignment pending)  
+**Dependencies:** [Architecture index](README.md) and [documentation standard](../../governance/documentation-standard.md).
+
 Version: 0.2.0-draft | Target architecture proposed | Local prototype evidence appended; target not fully implemented or verified
 
 | Stage | Frontstage | Backstage | Evidence |
