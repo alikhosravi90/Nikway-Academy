@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-11-25T12:13:26.749679+00:00",
+  "exact_roundtrip": true,
+  "portable_export_file": "content-artifacts/agent-engineering-basics.exported.fa.json (outside repository)",
+  "canonical_digest": "538d6dc15e8b729578a91661d2e0e5ec5d63009ffbdb92f66eb04877986e7c09",
+  "baseline_running_images_unchanged": {
+    "api": true,
+    "frontend": true,
+    "postgres": true,
+    "keycloak": true
+  },
+  "baseline_worktree_clean": true,
+  "scope": "Offline portable source -> authenticated draft -> explicit local publication -> authorized exact export -> independent validation. No real Content Factory service connector claimed."
+}

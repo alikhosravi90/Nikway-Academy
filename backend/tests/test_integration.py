@@ -20,8 +20,9 @@ import urllib.request
 from uuid import uuid4
 
 ROOT = Path(os.environ.get('ACADEMY_RUNTIME_ROOT', Path(__file__).resolve().parents[2]))
-API = 'http://localhost:18400'
-IDP = 'http://localhost:18480/realms/academy/protocol/openid-connect'
+settings=dict(line.split('=',1) for line in (ROOT/'infra/runtime/.env').read_text().splitlines() if '=' in line)
+API = 'http://localhost:'+settings.get('ACADEMY_API_PORT','18400')
+IDP = 'http://localhost:'+settings.get('ACADEMY_IDP_PORT','18480')+'/realms/academy/protocol/openid-connect'
 A = '10000000-0000-4000-8000-000000000001'
 B = '10000000-0000-4000-8000-000000000002'
 SA = '00000000-0000-4000-8000-000000000001'
@@ -43,7 +44,7 @@ def login(name):
     verifier = secrets.token_urlsafe(48)
     challenge = base64.urlsafe_b64encode(hashlib.sha256(verifier.encode()).digest()).decode().rstrip('=')
     state = secrets.token_urlsafe(16)
-    redirect = 'http://localhost:18401/'
+    redirect = 'http://localhost:'+settings.get('ACADEMY_UI_PORT','18401')+'/'
     query = urllib.parse.urlencode(dict(client_id='academy-web',redirect_uri=redirect,response_type='code',scope='openid',code_challenge=challenge,code_challenge_method='S256',state=state))
     opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar(policy=LocalCookiePolicy())),NoRedirect())
     response = opener.open(IDP+'/auth?'+query,timeout=15)

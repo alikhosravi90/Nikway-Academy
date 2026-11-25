@@ -1,0 +1,9 @@
+test_01_admission_authority_integrity_and_draft_visibility (test_content_integration.ContentIntegration.test_01_admission_authority_integrity_and_draft_visibility) ... ok
+test_02_concurrent_import_publish_and_conflict (test_content_integration.ContentIntegration.test_02_concurrent_import_publish_and_conflict) ... ok
+test_03_export_new_version_and_tenant_isolation (test_content_integration.ContentIntegration.test_03_export_new_version_and_tenant_isolation) ... ok
+test_04_full_learning_revision_and_human_acceptance (test_content_integration.ContentIntegration.test_04_full_learning_revision_and_human_acceptance) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.913s
+
+OK
