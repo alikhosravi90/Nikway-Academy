@@ -27,3 +27,6 @@ Pilot learners complete a full journey; measure completion, objective attainment
 Users can open a course, complete a sample lesson, inspect related knowledge, ask the mock tutor, choose a production-line intervention and see competency evidence update. This verifies interaction mechanics only. Learning efficacy, valid mastery assessment, facilitated workshops, real project submission, rubric review and credentials have not been validated or implemented.
 
 [Implementation package and decision reconciliation](implementation/phase-1-2/README.md) · [Acceptance evidence](implementation/phase-1-2/ACCEPTANCE.md).
+
+## Related architecture authority
+[ARC-24 — specialized design](./xapi-architecture.md) refines this document within its scope. Both remain proposed; unresolved conflicts require an ADR and review. Historical implementation evidence is not superseded by target design.
