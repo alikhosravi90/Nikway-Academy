@@ -83,6 +83,13 @@ try:
     check('configured assessment minimum',h.request('/api/courses/'+course+'/submissions',a,{'content':'x'*40})[0],422)
     check('assessment maximum exceeded',h.request('/api/courses/'+course+'/submissions',a,{'content':'ش'*10001})[0],422)
     check('valid maximum Persian assessment',h.request('/api/courses/'+course+'/submissions',a,{'content':'ش'*10000})[0],200)
+    status,tool=h.request('/api/tools/invoke',a,{'name':'learning.progress','arguments':{}})
+    check('bounded progress tool succeeds',status,200)
+    check('progress tool version',tool['version'],'2')
+    check('progress tool aggregate-only shape',set(tool['result']),{'enrolled_courses','completed_lessons','submission_records_by_status','scope'})
+    check('progress tool small result',len(json.dumps(tool).encode())<2048,True)
+    expected_count=int(h.sql(f"SELECT count(*) FROM completions c JOIN enrollments e ON c.enrollment_id=e.id WHERE e.subject='{h.SA}';").stdout.strip())
+    check('progress tool actual own count',tool['result']['completed_lessons'],expected_count)
     # Published rows are immutable under actual application role.
     result=h.sql(f"BEGIN; SET LOCAL ROLE academy_app; SET LOCAL app.subject='00000000-0000-4000-8000-000000000003'; SET LOCAL app.tenant_id='{h.A}'; UPDATE content_packages SET revision=999 WHERE id='{item['id']}'; ROLLBACK;")
     check('published update denied by RLS','UPDATE 0' in result.stdout,True)

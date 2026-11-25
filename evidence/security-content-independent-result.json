@@ -36,6 +36,11 @@
     "configured assessment minimum",
     "assessment maximum exceeded",
     "valid maximum Persian assessment",
+    "bounded progress tool succeeds",
+    "progress tool version",
+    "progress tool aggregate-only shape",
+    "progress tool small result",
+    "progress tool actual own count",
     "published update denied by RLS",
     "learner direct catalog insert denied",
     "new version import",
@@ -45,6 +50,6 @@
     "exact package cleanup",
     "exact package cleanup"
   ],
-  "check_count": 43,
+  "check_count": 48,
   "scope": "real loopback candidate API/Keycloak/Postgres; exact-owned fixtures removed; audit retained"
 }
