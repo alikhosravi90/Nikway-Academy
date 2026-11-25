@@ -16,9 +16,9 @@
     },
     {
       "tool": "Spec Kit",
-      "availability": "specify not in PATH",
-      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
-      "scope_note": "Deferred; no installation",
+      "availability": "Installed isolated specify1.4.4; not added to global PATH",
+      "compatibility": "PASS_LIMITED: initialized real pilot and imported pinned templates; evidence/local-mvp-governance.json",
+      "scope_note": "Necessary governance tooling installed in tools/spec-kit/venv",
       "license_detected": "MIT",
       "source": "https://github.com/github/spec-kit/blob/main/LICENSE",
       "license_blob_sha": "28a50fa22639e32febe14e4ffc7a732b0ba8c90a",
@@ -26,9 +26,9 @@
     },
     {
       "tool": "GitHub MCP",
-      "availability": "connector tools exposed",
-      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
-      "scope_note": "Connector implementation/version not proven to match upstream server; authenticated compatibility untested",
+      "availability": "Connector exposed and used",
+      "compatibility": "PASS_LIMITED: created mission issues and Draft PR14",
+      "scope_note": "Connector implementation license is not established solely by upstream GitHub MCP license",
       "license_detected": "MIT",
       "source": "https://github.com/github/github-mcp-server/blob/main/LICENSE",
       "license_blob_sha": "9a9cc50d37ea399f7ccc2f14b6c6d4cc4de02efc",
@@ -46,9 +46,9 @@
     },
     {
       "tool": "Playwright",
-      "availability": "CLI 1.64.1",
-      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
-      "scope_note": "Browser availability and end-to-end app compatibility require actual tests",
+      "availability": "Installed project dependency with Chromium",
+      "compatibility": "PASS_LIMITED: real PKCE browser journey3/3; frontend/evidence/live-browser-validation.json",
+      "scope_note": "Used for operational frontend validation",
       "license_detected": "Apache-2.0",
       "source": "https://github.com/microsoft/playwright/blob/main/LICENSE",
       "license_blob_sha": "df112373eb2e23e459bf93ec412be1764dc5a38b",
@@ -85,9 +85,9 @@
     },
     {
       "tool": "Docker",
-      "availability": "Engine 29.9.1; Compose 5.6.0",
-      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
-      "scope_note": "Engine available; Docker Desktop terms distinct; container notices separate",
+      "availability": "Local Engine/Compose available",
+      "compatibility": "PASS_LIMITED: four runtime services, one-shot migrations, isolated reproduction, persistence and restore",
+      "scope_note": "Existing unrelated services preserved",
       "license_detected": "Apache-2.0",
       "source": "https://github.com/moby/moby/blob/master/LICENSE",
       "license_blob_sha": "6d8d58fb676bbbcc9b4432da4951e4b438478306",
@@ -105,9 +105,9 @@
     },
     {
       "tool": "Trivy",
-      "availability": "0.76.2 installed only in ignored infra/runtime/tools; release archive SHA256 verified",
-      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
-      "scope_note": "Invoked vulnerability-only scanner for Academy selected images; reports in vulnerability-baseline.json and refresh evidence. No global installation.",
+      "availability": "Isolated verified v0.76.2 binary",
+      "compatibility": "PASS_LIMITED: exact runtime images scanned; final infrastructure evidence",
+      "scope_note": "Scanner findings are not blanket license/security approval",
       "license_detected": "Apache-2.0",
       "source": "https://github.com/aquasecurity/trivy/blob/main/LICENSE",
       "license_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
@@ -201,13 +201,14 @@
     },
     {
       "tool": "BuildKit",
-      "availability": "0.34.0 via buildx 0.38.0",
-      "compatibility": "UNVERIFIED unless specific execution evidence is linked separately",
-      "scope_note": "Running builder available; cache acceleration not benchmarked",
+      "availability": "0.34.0 via buildx0.38.0",
+      "compatibility": "PASS_LIMITED: pinned local image builds completed with cache hits",
+      "scope_note": "No controlled cache speedup benchmark",
       "license_detected": "Apache-2.0",
       "source": "https://github.com/moby/buildkit/blob/master/LICENSE",
       "license_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
       "license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     }
-  ]
+  ],
+  "final_reconciliation": "Availability below reconciled against actual mission execution; upstream license receipts remain scoped as originally stated."
 }

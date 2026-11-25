@@ -1,0 +1,20 @@
+{
+  "snapshot_at_utc": "2026-11-25T11:34:35.389214+00:00",
+  "source_preserved": true,
+  "new_volume": "nikway-academy-local_academy-db-v2",
+  "databases": {
+    "academy": {
+      "tables": 11,
+      "rows": 230,
+      "canonical_digest_match": true
+    },
+    "keycloak": {
+      "tables": 101,
+      "rows": 1680,
+      "canonical_digest_match": true
+    }
+  },
+  "clean_restart": "PASS",
+  "postgres_version": "16.16",
+  "candidate_stopped_for_handoff": true
+}

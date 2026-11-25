@@ -96,6 +96,8 @@ def main():
                 bad['missions'][0]['dependencies'] = ['M12']
             elif mutation == 'false_acceptance':
                 bad['missions'][0]['status'] = 'accepted'
+                bad['missions'][0]['evidence'] = []
+                bad['missions'][0]['independent_review'] = None
             elif mutation == 'missing_gate':
                 bad['missions'][3]['dependencies'] = ['M01']
             else:

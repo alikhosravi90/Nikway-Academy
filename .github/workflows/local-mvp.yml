@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: local-mvp-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 jobs:
   operational-mvp:
     runs-on: ubuntu-latest

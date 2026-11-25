@@ -30,3 +30,11 @@ GnuPG prompts for a passphrase. For automation, point `BACKUP_PASSPHRASE_FILE` a
 ## Validation boundary
 
 Compose syntax, shell syntax and generator idempotence can be checked without starting services. Image cache presence does not establish vulnerability status or license approval. No repository license is selected. Production TLS, operational backups, secret rotation, recovery objectives and deployment are outside this local runtime.
+
+## Pinned security refresh and data-volume boundary
+
+The selected PostgreSQL runtime is now built from pinned PostgreSQL 16 Alpine with `libxml2=2.13.9-r3` and `su-exec=0.3-r0`. The old Go-based gosu executable and alias are removed; the upstream entrypoint's single privilege-drop invocation uses `/sbin/su-exec` directly. Smoke validation must exercise initialization and shutdown/restart. Its TCP health check avoids marking the temporary socket-only initialization server ready.
+
+`academy-db-v2` is a **new** named volume. Existing Debian database files must never be mounted into the Alpine runtime. The original `nikway-academy-local_academy-db` volume is retained; migrate application and identity databases by logical encrypted dump/restore, with per-table canonical digest comparison. Record the snapshot boundary and stop application writes before final handoff. Root coordinates service replacement only after candidate verification. Source-volume retention is not an automatic rollback plan once new writes occur.
+
+Keycloak is pinned to 26.8.2. The measured security state is in `evidence/vulnerability-refresh.json`; do not interpret a functional local pass as release approval. The selected Keycloak image retains six HIGH findings, including Guava with an upstream fix version. Unsupported JAR replacement is not attempted. Release remains NO-GO until supported remediation or explicit reviewed exception, followed by rescan and identity regression tests.

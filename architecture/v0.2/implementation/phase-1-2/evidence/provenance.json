@@ -93,8 +93,18 @@
     {
       "file": "e2e-before-mobile-fix.log",
       "original_sha256": "43861c03e1e3192988c5827de366f53571f844ea75171832ed185c163ba2a636",
-      "published_sha256": "dc4b945358fb3d66507c4003e3ca0041a1832429bd745a6b9a6d893d550454ad",
-      "sanitization": "local paths and ANSI removed; numerical records are demo data only"
+      "published_sha256": "3e96a5021b7ed5f88835463babd75786f413f088a0871227afbc1f49a64309a7",
+      "sanitization": "local paths and ANSI removed; numerical records are demo data only; 2026-11-25 personal given-name source selector redacted and explicit notice added; test results unchanged",
+      "publication_redactions": [
+        {
+          "date": "2026-11-25",
+          "previous_published_sha256": "dc4b945358fb3d66507c4003e3ca0041a1832429bd745a6b9a6d893d550454ad",
+          "published_sha256": "3e96a5021b7ed5f88835463babd75786f413f088a0871227afbc1f49a64309a7",
+          "scope": "Personal given-name in one source selector; no test-result modification",
+          "original_artifact": "Original external ZIP preserved; original_sha256 and source manifest unchanged",
+          "history_boundary": "Latest snapshot redaction only; existing Git history was not cleaned"
+        }
+      ]
     },
     {
       "file": "playwright-results.json",

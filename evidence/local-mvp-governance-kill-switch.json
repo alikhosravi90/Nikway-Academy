@@ -5,6 +5,6 @@
   "http_status": 403,
   "reason": "Tool execution disabled",
   "real_oidc": true,
-  "image_id": "sha256:f36e0035ef8baba89cebc9828de60afb94fbbd5bdf8ee0c28ecd8f6a63dcf0f0",
+  "image_id": "sha256:f137537717f0949a5e64b55d5ed9432f83143703b1cd7bb53ed8818f65b26d52",
   "test_container_removed": true
 }

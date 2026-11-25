@@ -1,0 +1,20 @@
+{
+  "timestamp_utc": "2026-11-25T11:39:46.994318+00:00",
+  "reviewed_commit": "5fe550f43431a3523e6804396f7814cc7ed618c3",
+  "commands": [
+    {
+      "command": "python3 scripts/validate_missions.py --self-test",
+      "result": "PASS",
+      "missions": 12,
+      "roles": 16,
+      "slots": 4,
+      "negative_fixtures": 9
+    },
+    {
+      "command": "python3 scripts/validate_docs.py",
+      "result": "PASS",
+      "architecture_documents": 24
+    }
+  ],
+  "limits": "Structural/document validation only; does not accept implementation or release gates."
+}

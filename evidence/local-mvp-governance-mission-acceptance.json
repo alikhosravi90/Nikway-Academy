@@ -1,0 +1,81 @@
+{
+  "timestamp_utc": "2026-11-25T11:43:58.168121+00:00",
+  "reviewed_snapshot_commit": "d8068898addb33c62c5c8fc1bcaf9ea2917125a4",
+  "result": "PASS_BOUNDED_M04_M09",
+  "release_status": "NO-GO",
+  "missions": {
+    "M04": {
+      "result": "PASS_BOUNDED",
+      "reviewer_role": "architect",
+      "review_method": "Independent real API/DB execution and evidence/source review; browser and infrastructure receipts reviewed separately.",
+      "boundary": "Local isolated install, lifecycle/persistence and logical recovery verified. Identity image release findings remain blocked separately.",
+      "evidence_sha256": {
+        "evidence/final-lifecycle-performance.json": "d51667b4a83a5bd44954ba53ab9b47662710a591ad0178b0b73955d9c178ee49",
+        "evidence/final-recovery-drill.json": "ced6db1021161303e4440f4e5fab9877e435d89515cdfcf2288ccef098490d2c",
+        "evidence/postgres-volume-migration.json": "14589d179dcbbb3341343860981d25c1f4523f3986e624bfcf595283a5d7d09f",
+        "evidence/final-running-images.json": "60c409f251340674d5d35f58d9a8ef1f788455e6ed8bfdf0e51daa7f35efcf86"
+      }
+    },
+    "M05": {
+      "result": "PASS_BOUNDED",
+      "reviewer_role": "architect",
+      "review_method": "Independent real API/DB execution and evidence/source review; browser and infrastructure receipts reviewed separately.",
+      "boundary": "Reviewed actual three-test stable-window Chromium evidence and source preservation/redaction manifest; responsive320px and CSP checks bounded. Not a full accessibility or cross-browser audit.",
+      "evidence_sha256": {
+        "frontend/evidence/live-browser-validation.json": "400052746ad963e4dc40ab4a1463006be74917923913982d1b8e69d65b5fb317",
+        "frontend/evidence/recovery-verification.json": "d37d017fb55b9f4a037e7c1f7f35f6879ca4f1a213ffa79822866dcda32a34a4"
+      }
+    },
+    "M06": {
+      "result": "PASS_BOUNDED",
+      "reviewer_role": "architect",
+      "review_method": "Independent real API/DB execution and evidence/source review; browser and infrastructure receipts reviewed separately.",
+      "boundary": "Actual API/PostgreSQL transaction, persistence, input, transition and replay checks passed with running app source hashes matching reviewed source.",
+      "evidence_sha256": {
+        "evidence/local-mvp-governance-security-final-image.json": "5ca482395d6a86b1f7fda0c4e779601a1e6aa0b5d77b1728132e452549e9a5c2",
+        "evidence/final-lifecycle-performance.json": "d51667b4a83a5bd44954ba53ab9b47662710a591ad0178b0b73955d9c178ee49"
+      }
+    },
+    "M07": {
+      "result": "PASS_BOUNDED",
+      "reviewer_role": "integrator_2",
+      "review_method": "Independent real API/DB execution and evidence/source review; browser and infrastructure receipts reviewed separately.",
+      "boundary": "Authentication/membership/RLS behavior accepted only. Real PKCE, wrong audience, forged token, active-membership revocation and cross-tenant negatives passed. Keycloak vulnerabilities remain release blockers.",
+      "evidence_sha256": {
+        "evidence/local-mvp-governance-security-final-image.json": "5ca482395d6a86b1f7fda0c4e779601a1e6aa0b5d77b1728132e452549e9a5c2",
+        "evidence/final-running-images.json": "60c409f251340674d5d35f58d9a8ef1f788455e6ed8bfdf0e51daa7f35efcf86"
+      }
+    },
+    "M08": {
+      "result": "PASS_BOUNDED",
+      "reviewer_role": "architect",
+      "review_method": "Independent real API/DB execution and evidence/source review; browser and infrastructure receipts reviewed separately.",
+      "boundary": "Actual learner enrollment, ordered lessons, evidence submission and human reviewer round trip passed; immutable follow-up submissions, rubric1 and no credentials remain explicit limits.",
+      "evidence_sha256": {
+        "evidence/local-mvp-governance-security-final-image.json": "5ca482395d6a86b1f7fda0c4e779601a1e6aa0b5d77b1728132e452549e9a5c2",
+        "frontend/evidence/live-browser-validation.json": "400052746ad963e4dc40ab4a1463006be74917923913982d1b8e69d65b5fb317"
+      }
+    },
+    "M09": {
+      "result": "PASS_BOUNDED",
+      "reviewer_role": "architect",
+      "review_method": "Independent real API/DB execution and evidence/source review; browser and infrastructure receipts reviewed separately.",
+      "boundary": "Seeded workshop capacity concurrency and duplicate registration replay passed on actual API/DB; no authoring or videoconference integration claimed.",
+      "evidence_sha256": {
+        "evidence/local-mvp-governance-security-final-image.json": "5ca482395d6a86b1f7fda0c4e779601a1e6aa0b5d77b1728132e452549e9a5c2",
+        "evidence/local-mvp-governance-registration-replay.json": "0259ff0a488cf0394941eead8b8ea8310c88b6cd2296058ef685bec43bea42f2"
+      }
+    }
+  },
+  "runbook_review": {
+    "file": "LOCAL-MVP.md",
+    "result": "PASS_BOUNDED",
+    "checks": [
+      "Corrected dedicated kill-switch container wording and membership-revocation warning",
+      "Loopback synthetic scope, single membership, no MCP/provider/video and release NO-GO explicit",
+      "Current-image vulnerability inventory reconciled with exact running IDs",
+      "Original volume historical-only rollback boundary, no destructive commands, restore into disposable databases"
+    ],
+    "limitations": "No claim of production operations, completed licensing, public deployment or full history redaction."
+  }
+}

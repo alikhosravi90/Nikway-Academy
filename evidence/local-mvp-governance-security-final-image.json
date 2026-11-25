@@ -1,0 +1,64 @@
+{
+  "result": "PASS_LIMITED_FINAL_LOCAL_RUNTIME",
+  "timestamp_utc": "2026-11-25T11:39:46.991064+00:00",
+  "tests": 7,
+  "duration_seconds": 5.483,
+  "command": "ACADEMY_RUNTIME_ROOT=<integration checkout> python3 -m unittest discover -s backend/tests -p test_integration.py -v",
+  "runtime_head": "5fe550f43431a3523e6804396f7814cc7ed618c3",
+  "runtime_dirty": true,
+  "source_sha256": {
+    "backend/app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/auth.py": "51f443fe651dbd78f46a21ead526ae37003a64ade0e91e0f475d27df81c27a56",
+    "backend/app/db.py": "757f6de3c3842c3dc03748fd198b852f37b67e29f3fb03e4ef8b36e6a70311fa",
+    "backend/app/main.py": "7547d781767bd3218e20fe5dfd2fd384dadf00eb85277863d7aabee8727ea016",
+    "backend/app/migrate.py": "f0ce29fa3767fc6f7c4ab38024be48c8ed36cf49923560df69178acf1987dd64",
+    "backend/app/rules.py": "0ddd7b904fa672d3e9853f4e7327cc97ce5bc8fbaa7766cb2a03baf0bf2210f6",
+    "backend/migrations/env.py": "8fe00adedc26c6f29db1988ffa99f8c0c3a5a71e22f9118d35f98c6b81fea62b",
+    "backend/migrations/versions/001_core.py": "fd09f846569b7462c090172fe74f8331064657936fac86501dde1c6015c33c28",
+    "backend/migrations/versions/002_least_privilege.py": "9dcbbd5d34fdb529b818cb68e4038e8a2be97ca7c027e8d23456151ec0530bb5",
+    "backend/tests/test_auth.py": "d875d0eb0a3b759bf81c5f073093ed1b5a9ad753f6c73ddc5666a9ee63dd57ec",
+    "backend/tests/test_integration.py": "84151211e99f199eb3b180777213e2462b64a39be431ce091155aff2b3abc3d4",
+    "backend/tests/test_rules.py": "75322e1c5594f768b3a85359a6f359aca37d75804f67246b32a6b462a33af759"
+  },
+  "api_image_id": "sha256:f137537717f0949a5e64b55d5ed9432f83143703b1cd7bb53ed8818f65b26d52",
+  "scope": [
+    "real Keycloak authorization-code PKCE and active database membership",
+    "anonymous, forged token and genuine wrong-audience id_token rejection",
+    "cross-tenant enrollment, completion, submission, review, registration and tools denial",
+    "PostgreSQL non-superuser non-BYPASSRLS role; no-context and wrong-tenant RLS; immutable audit privileges",
+    "ordered lesson completion, enrollment and submission replay, human review stale revision and self-review denial",
+    "concurrent capacity registration prevents overbooking",
+    "concurrent tool budget <=20 successes from 25 requests",
+    "membership revoked before request denies and is restored in finally"
+  ],
+  "limitations": [
+    "local synthetic fixtures only",
+    "runtime working tree contained integration fixes; source hashes capture tested files instead of claiming clean-SHA CI",
+    "expired token covered by backend unit tests only, not live token expiration",
+    "no production readiness, compliance, external AI, MCP transport or live meeting claim",
+    "Image vulnerability triage is separate: no release security PASS implied.",
+    "Source hashes and running container source comparison establish tested app identity; documentation edits may make repository working tree dirty."
+  ],
+  "fixture_policy": "Current-run exact UUID fixtures deleted transactionally in teardown; parent fixture zero count verified. Audit rows preserved. Prior first-run UUIDs were not retained in evidence and remain untouched. Membership restored.",
+  "log": "evidence/local-mvp-governance-security-final-image.log",
+  "test_harness_sha256": "84151211e99f199eb3b180777213e2462b64a39be431ce091155aff2b3abc3d4",
+  "kill_switch_evidence": "evidence/local-mvp-governance-kill-switch.json",
+  "test_revision_note": "Final post-Alpine-switch strict test passed: twelve immediate submission-to-self-review attempts all409; all seven security scenarios passed; exact owned fixtures cleaned.",
+  "release_status": "NO-GO",
+  "release_reason": "Remaining Keycloak image vulnerabilities; runtime security test PASS is not release readiness.",
+  "all_runtime_images": {
+    "api": "sha256:f137537717f0949a5e64b55d5ed9432f83143703b1cd7bb53ed8818f65b26d52",
+    "postgres": "sha256:dd44c4c2bfcb4cbcb4dccbc86070687701c5990d152f5a7a947b286bccef49a5",
+    "keycloak": "sha256:7e66a96e4739239070aeaf72e4c5decf0f7f682cfc725b9f7ea2b336eaba38b3",
+    "frontend": "sha256:769f40a9729dcdc6beb409b55ec0203dd7cc7210b409db302f636937263978f1"
+  },
+  "container_app_source_matches_local": true,
+  "container_app_source_sha256": {
+    "app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/migrate.py": "f0ce29fa3767fc6f7c4ab38024be48c8ed36cf49923560df69178acf1987dd64",
+    "app/rules.py": "0ddd7b904fa672d3e9853f4e7327cc97ce5bc8fbaa7766cb2a03baf0bf2210f6",
+    "app/db.py": "757f6de3c3842c3dc03748fd198b852f37b67e29f3fb03e4ef8b36e6a70311fa",
+    "app/main.py": "7547d781767bd3218e20fe5dfd2fd384dadf00eb85277863d7aabee8727ea016",
+    "app/auth.py": "51f443fe651dbd78f46a21ead526ae37003a64ade0e91e0f475d27df81c27a56"
+  }
+}

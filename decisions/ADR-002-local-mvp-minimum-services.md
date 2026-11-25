@@ -1,6 +1,6 @@
 # ADR-002 — Minimum operational local MVP
 
-Status: proposed for independent review | Date: 2026-11-25
+Status: accepted for bounded local implementation | Date: 2026-11-25 | Independent reviewer: integrator_2 (root slot)
 
 Retain React/Vite and reuse verified prototype source. Add FastAPI modular monolith, PostgreSQL with tenant RLS and Keycloak OIDC in isolated local Compose. Local installation is authorized; public deployment and spending are excluded.
 
@@ -13,3 +13,5 @@ M03 gates apply before implementation. Historical phase-1/2 evidence is preserve
 Acceptance: source provenance, independent contract review, integrated journey, two-tenant negative API/DB tests, clean local installation and restore evidence.
 
 Current bounded contracts: each identity has one membership; catalog/workshops are seeded, with no authoring API. Rubric version 1 is pinned in evidence; requested revisions create new immutable submissions. Multi-membership tenant selection, publishing lifecycle, facilitator authoring and linked revision chains are deferred.
+
+Independent review disposition: root reviewed and accepted the minimum local scope on 2026-11-25 after architecture/security contract review. This does not accept M11/M12 or override the release NO-GO from outstanding image vulnerabilities.

@@ -1,3 +1,4 @@
+[Privacy redaction 2026-11-25: personal given-name in a source selector replaced with [learner]. Test results unchanged; original external artifact preserved. This is a redacted publication copy, not the original log.]
 
 > nikway-learning-os@2.0.0 test:e2e
 > playwright test
@@ -39,7 +40,7 @@ Running 11 tests using 1 worker
          |                                                                                                                                                                                                                                                         ^
       22 | });
       23 | test('offline reload and six modules work after first installation',async({page,context})=>{
-      24 |  await seed(page);await expect(page.getByTestId('offline-status')).toHaveText('آمادهٔ استفاده آفلاین');await page.evaluate(async()=>{await navigator.serviceWorker.ready});await context.setOffline(true);await page.reload();await expect(page.getByRole('heading',{name:/سلام محمدعلی/})).toBeVisible();for(const id of ['academy','library','tutor','competency','lab','dashboard'])await nav(page,id);await expect(page.getByTestId('simulation-count')).toHaveText('۷');await context.setOffline(false);
+      24 |  await seed(page);await expect(page.getByTestId('offline-status')).toHaveText('آمادهٔ استفاده آفلاین');await page.evaluate(async()=>{await navigator.serviceWorker.ready});await context.setOffline(true);await page.reload();await expect(page.getByRole('heading',{name:/سلام [learner]/})).toBeVisible();for(const id of ['academy','library','tutor','competency','lab','dashboard'])await nav(page,id);await expect(page.getByTestId('simulation-count')).toHaveText('۷');await context.setOffline(false);
         at <LOCAL_WORKSPACE>
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────

@@ -1,0 +1,21 @@
+{
+  "result": "PASS_REAL_DUPLICATE_REGISTRATION",
+  "timestamp_utc": "2026-11-25T11:42:49.126071+00:00",
+  "first_status": 200,
+  "first_body": {
+    "registered": true,
+    "replayed": false
+  },
+  "repeat_status": 200,
+  "repeat_body": {
+    "registered": true,
+    "replayed": true
+  },
+  "database_registration_count": 1,
+  "fixture_id": "1daeea1c-afbd-40f4-a157-6721b34524df",
+  "fixture_scope": "New exact-owned UUID workshop only, synthetic learner-a",
+  "api_image_id": "sha256:f137537717f0949a5e64b55d5ed9432f83143703b1cd7bb53ed8818f65b26d52",
+  "command": "Real Keycloak PKCE; INSERT exact-owned capacity1 workshop; POST register twice; SQL count; cleanup exact workshop UUID",
+  "fixture_removed": true,
+  "audit_preserved": true
+}

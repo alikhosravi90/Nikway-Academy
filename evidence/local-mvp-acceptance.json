@@ -1,0 +1,82 @@
+{
+  "status": "PARTIAL",
+  "generated_at_utc": "2026-11-25T11:41:11.043915+00:00",
+  "unit_tests": {
+    "passed": 9,
+    "skipped": 0,
+    "seconds": 0.44,
+    "command": "backend/.venv/bin/python -m pytest backend/tests/test_rules.py backend/tests/test_auth.py -q"
+  },
+  "security_integration": {
+    "passed": 7,
+    "strict_immediate_review_denials": 12,
+    "evidence": "evidence/local-mvp-governance-security-final-image.json"
+  },
+  "browser": {
+    "passed": 3,
+    "skipped": 0,
+    "seconds": 6.5,
+    "stable_image_window_verified": true,
+    "evidence": "frontend/evidence/live-browser-validation.json",
+    "supersedes": "Earlier timestamp-mismatched image association explicitly documented in browser receipt"
+  },
+  "control_loop": {
+    "workers": 4,
+    "roles": 16,
+    "scheduling": "Recovery/frontend; infrastructure; governance/security; root API/integration, then dependency-ordered security, browser, persistence and final publication gates.",
+    "source_window_start": "2026-11-25T14:40:52+03:30",
+    "source_window_note": "Earliest implementation commit timestamp only, not mission start or full lead time",
+    "lead_time_seconds": null,
+    "blocked_time_seconds": null,
+    "token_consumption": null,
+    "accepted_deliverables": 9,
+    "wip": "Local validation complete; exact publication-SHA CI reported by GitHub checks",
+    "rework": [
+      "Initial SQL file container readability corrected without deleting data",
+      "Database grants narrowed to minimum",
+      "Function-scoped transaction commit fixes immediate post-submit review race",
+      "Nginx dynamic DNS prevents stale API upstream after recreation",
+      "Current base governance markdown whitespace fixed",
+      "Pre-recreation browser receipt association identified and superseded by final rerun"
+    ],
+    "acceleration_claim": "No controlled baseline; no claimed speedup percentage. Parallel workers and build cache used."
+  },
+  "security_gate": "NO-GO: six HIGH Keycloak findings",
+  "runbook": "LOCAL-MVP.md",
+  "persistence_backup_restore": {
+    "status": "PASS_LIMITED_LOCAL",
+    "evidence": [
+      "evidence/final-lifecycle-performance.json",
+      "evidence/final-recovery-drill.json",
+      "evidence/postgres-volume-migration.json"
+    ]
+  },
+  "resource_performance": {
+    "idle_memory_mib": 541.38,
+    "authenticated_reads": 50,
+    "errors": 0,
+    "p95_ms": 7.578,
+    "scope": "Sequential local reads, no capacity or concurrent throughput claim",
+    "evidence": "evidence/final-lifecycle-performance.json"
+  },
+  "openapi_contract": {
+    "matches_running_container": true,
+    "paths": 13,
+    "file": "contracts/local-mvp-openapi.json",
+    "public_url": "http://localhost:18400/api/openapi.json"
+  },
+  "missions": {
+    "M01": "accepted",
+    "M02": "accepted",
+    "M03": "accepted",
+    "M04": "accepted",
+    "M05": "accepted",
+    "M06": "accepted",
+    "M07": "accepted",
+    "M08": "accepted",
+    "M09": "accepted",
+    "M10": "verification",
+    "M11": "blocked",
+    "M12": "verification"
+  }
+}
