@@ -1,5 +1,11 @@
 # NIKWAY Unified Schema Architecture
 
+**Document ID:** ARC-21  
+**Document revision:** 0.2-draft  
+**Review status:** Proposed  
+**Owner role:** Architecture lead (assignment pending)  
+**Dependencies:** [Architecture index](README.md) and [documentation standard](../../governance/documentation-standard.md).
+
 Proposed schema-first, ontology-first and contract-first design. References: https://schema.org/ ; https://github.com/openedx/edx-platform ; https://github.com/moodle/moodle ; https://github.com/frappe/frappe ; https://github.com/directus/directus ; https://github.com/backstage/backstage ; https://github.com/Apicurio/apicurio-registry ; https://www.1edtech.org/ ; https://www.w3.org/TR/shacl/ . Qualitative benchmark only.
 
 | Layer | Selection |
