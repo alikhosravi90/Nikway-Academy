@@ -1,3 +1,4 @@
+from contextlib import nullcontext
 import hashlib
 import json
 import os
@@ -47,10 +48,10 @@ class Repository:
         c.execute('INSERT INTO events VALUES(%s,%s,%s,now())',(ctx.tenant,eid,Jsonb(envelope)))
         return envelope
 
-    def create_revision(self,ctx,data:ComponentInput,expected_revision:int):
+    def create_revision(self,ctx,data:ComponentInput,expected_revision:int,connection=None):
         require(ctx,'author')
         payload=data.model_dump(); raw=canonical(payload)
-        with self.db.transaction(ctx) as c:
+        with (nullcontext(connection) if connection is not None else self.db.transaction(ctx)) as c:
             c.execute('INSERT INTO heads(tenant,component_id) VALUES(%s,%s) ON CONFLICT DO NOTHING',(ctx.tenant,data.id))
             head=c.execute('SELECT number FROM heads WHERE component_id=%s FOR UPDATE',(data.id,)).fetchone()
             if head['number']!=expected_revision: raise DomainError('stale revision')
@@ -74,7 +75,7 @@ class Repository:
         except FileNotFoundError: raise DomainError('object integrity failure: missing')
         if sha(raw)!=row['digest']: raise DomainError('object integrity failure: digest')
         data=json.loads(raw)
-        data.update(revisionId=rid,revisionNumber=row['number'],checksum=row['digest'],reviewStatus=row['state'],creator=row['creator'],publishedAt=None,deprecatedAt=None)
+        data.update(revisionId=rid,revisionNumber=row['number'],checksum=row['digest'],reviewStatus=row['state'],creator=row['creator'],publishedAt=None,deprecatedAt=None,mediaRefs=[])
         return data
 
     def get_revision(self,ctx,rid):
@@ -126,12 +127,12 @@ class Repository:
             pending.extend(data['derivedFrom']+data['prerequisiteIds'])
         return found
 
-    def prepare(self,ctx,course_id,rids,key):
+    def prepare(self,ctx,course_id,rids,key,connection=None):
         require(ctx,'reviewer')
         if not course_id.strip() or not key.strip() or not rids or len(rids)!=len(set(rids)) or len(rids)>30:
             raise DomainError('invalid candidate request')
         request_digest=sha(canonical({'course':course_id,'revisions':rids}))
-        with self.db.transaction(ctx) as c:
+        with (nullcontext(connection) if connection is not None else self.db.transaction(ctx)) as c:
             c.execute('SELECT pg_advisory_xact_lock(hashtextextended(%s,0))',(ctx.tenant+':'+key,))
             existing=c.execute('SELECT manifest,request_digest FROM candidates WHERE request_key=%s',(key,)).fetchone()
             if existing:
@@ -142,6 +143,11 @@ class Repository:
             cid=str(uuid4())
             ref=lambda r:{'id':r['id'],'revisionId':r['revisionId'],'semanticVersion':r['semanticVersion'],'checksum':r['checksum']}
             manifest={'schemaVersion':'1.0.0','id':cid,'courseId':course_id,'status':'candidate_local','publication':'NOT_RELEASED','components':[ref(deps[r]) for r in rids],'dependencies':[ref(deps[r]) for r in sorted(deps)],'recipeVersion':'1.0.0'}
+            from .render import build_package
+            manifest['renditions']={}
+            for audience in ('learner','instructor'):
+                parts=build_package(manifest,[deps[r] for r in rids],instructor=audience=='instructor')
+                manifest['renditions'][audience]={k:sha(v) for k,v in parts.items() if k!='manifest.json'}
             c.execute('INSERT INTO candidates(tenant,candidate_id,course_id,manifest,request_key,request_digest) VALUES(%s,%s,%s,%s,%s,%s)',(ctx.tenant,cid,course_id,Jsonb(manifest),key,request_digest))
             for rid in deps:
                 c.execute('INSERT INTO usages VALUES(%s,%s,%s)',(ctx.tenant,cid,rid))

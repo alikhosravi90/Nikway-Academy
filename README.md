@@ -27,3 +27,9 @@ Status: proposed, not validated or deployed. No license selected yet. No secrets
 - [Pending validation gates](architecture/content-factory/validation-gates.md)
 
 Design registration only; original conversation details remain partially unavailable. No implementation or conformance claim.
+
+## Runnable Content Factory MVP
+
+[Local execution guide](content_factory/README.md) · [Unified contract](content_factory/CONTRACT.md) · [GO/NO-GO report](content_factory/REPORT.fa.md)
+
+Independent implementation branch; local synthetic validation only. No merge or release.

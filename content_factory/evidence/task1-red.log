@@ -1,4 +1,4 @@
-ImportError while loading conftest '/home/mohammadali/Documents/Codex/2026-11-25/referenced-chatgpt-conversation-this-is-an-3/work/content-factory/content_factory/tests/conftest.py'.
+ImportError while loading conftest '<workspace>/content_factory/tests/conftest.py'.
 tests/conftest.py:6: in <module>
     from cf.db import Database
 E   ModuleNotFoundError: No module named 'cf.db'

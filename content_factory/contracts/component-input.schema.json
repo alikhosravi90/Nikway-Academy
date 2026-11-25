@@ -1,0 +1,358 @@
+{
+  "$defs": {
+    "Accessibility": {
+      "additionalProperties": false,
+      "properties": {
+        "textAlternative": {
+          "title": "Textalternative",
+          "type": "boolean"
+        },
+        "readingOrder": {
+          "title": "Readingorder",
+          "type": "boolean"
+        },
+        "languageDeclared": {
+          "title": "Languagedeclared",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "textAlternative",
+        "readingOrder",
+        "languageDeclared"
+      ],
+      "title": "Accessibility",
+      "type": "object"
+    },
+    "Body": {
+      "additionalProperties": false,
+      "properties": {
+        "summary": {
+          "maxLength": 12000,
+          "minLength": 1,
+          "title": "Summary",
+          "type": "string"
+        },
+        "sections": {
+          "items": {
+            "$ref": "#/$defs/Section"
+          },
+          "maxItems": 30,
+          "minItems": 1,
+          "title": "Sections",
+          "type": "array"
+        },
+        "exercise": {
+          "maxLength": 5000,
+          "minLength": 1,
+          "title": "Exercise",
+          "type": "string"
+        },
+        "rubric": {
+          "$ref": "#/$defs/Rubric"
+        },
+        "questions": {
+          "items": {
+            "$ref": "#/$defs/Question"
+          },
+          "maxItems": 30,
+          "minItems": 1,
+          "title": "Questions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "summary",
+        "sections",
+        "exercise",
+        "rubric",
+        "questions"
+      ],
+      "title": "Body",
+      "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 160,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "locator": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Locator",
+          "type": "string"
+        },
+        "rights": {
+          "enum": [
+            "original_synthetic",
+            "permission_verified",
+            "unknown"
+          ],
+          "title": "Rights",
+          "type": "string"
+        },
+        "note": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "locator",
+        "rights",
+        "note"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "Question": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "prompt": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Prompt",
+          "type": "string"
+        },
+        "options": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 2,
+          "title": "Options",
+          "type": "array"
+        },
+        "answer": {
+          "minimum": 0,
+          "title": "Answer",
+          "type": "integer"
+        },
+        "explanation": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Explanation",
+          "type": "string"
+        },
+        "outcomeId": {
+          "title": "Outcomeid",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "prompt",
+        "options",
+        "answer",
+        "explanation",
+        "outcomeId"
+      ],
+      "title": "Question",
+      "type": "object"
+    },
+    "Rubric": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "criteria": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 20,
+          "minItems": 1,
+          "title": "Criteria",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "criteria"
+      ],
+      "title": "Rubric",
+      "type": "object"
+    },
+    "Section": {
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 12000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "text"
+      ],
+      "title": "Section",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0",
+      "default": "1.0.0",
+      "title": "Schemaversion",
+      "type": "string"
+    },
+    "id": {
+      "pattern": "^[a-z0-9][a-z0-9-]{0,79}$",
+      "title": "Id",
+      "type": "string"
+    },
+    "semanticVersion": {
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$",
+      "title": "Semanticversion",
+      "type": "string"
+    },
+    "locale": {
+      "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$",
+      "title": "Locale",
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "lesson",
+        "explanation",
+        "assessment"
+      ],
+      "title": "Type",
+      "type": "string"
+    },
+    "title": {
+      "maxLength": 300,
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    },
+    "learningOutcomeIds": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 50,
+      "minItems": 1,
+      "title": "Learningoutcomeids",
+      "type": "array"
+    },
+    "competencyIds": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 50,
+      "minItems": 1,
+      "title": "Competencyids",
+      "type": "array"
+    },
+    "prerequisiteIds": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 50,
+      "title": "Prerequisiteids",
+      "type": "array"
+    },
+    "sourceEvidenceIds": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 50,
+      "minItems": 1,
+      "title": "Sourceevidenceids",
+      "type": "array"
+    },
+    "license": {
+      "maxLength": 120,
+      "minLength": 1,
+      "title": "License",
+      "type": "string"
+    },
+    "rightsStatus": {
+      "enum": [
+        "internal_trial_only",
+        "permission_verified",
+        "unknown"
+      ],
+      "title": "Rightsstatus",
+      "type": "string"
+    },
+    "accessibility": {
+      "$ref": "#/$defs/Accessibility"
+    },
+    "provenance": {
+      "items": {
+        "$ref": "#/$defs/Provenance"
+      },
+      "maxItems": 50,
+      "minItems": 1,
+      "title": "Provenance",
+      "type": "array"
+    },
+    "audience": {
+      "maxLength": 500,
+      "minLength": 1,
+      "title": "Audience",
+      "type": "string"
+    },
+    "durationMinutes": {
+      "maximum": 480,
+      "minimum": 1,
+      "title": "Durationminutes",
+      "type": "integer"
+    },
+    "derivedFrom": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 50,
+      "title": "Derivedfrom",
+      "type": "array"
+    },
+    "body": {
+      "$ref": "#/$defs/Body"
+    }
+  },
+  "required": [
+    "id",
+    "semanticVersion",
+    "locale",
+    "type",
+    "title",
+    "learningOutcomeIds",
+    "competencyIds",
+    "prerequisiteIds",
+    "sourceEvidenceIds",
+    "license",
+    "rightsStatus",
+    "accessibility",
+    "provenance",
+    "audience",
+    "durationMinutes",
+    "body"
+  ],
+  "title": "ComponentInput",
+  "type": "object"
+}

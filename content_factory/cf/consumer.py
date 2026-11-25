@@ -29,7 +29,7 @@ class LocalConsumer:
     def deliver(self,ctx,cid,fetch_manifest,fetch_package):
         require(ctx,'consumer')
         manifest=fetch_manifest(cid)  # Reauthorize every delivery; no offline fallback.
-        if manifest.get('schemaVersion')!='1.0.0' or manifest.get('status')!='candidate_local':
+        if manifest.get('schemaVersion')!='1.0.0' or manifest.get('status')!='candidate_local' or manifest.get('id')!=cid:
             raise DomainError('unsupported manifest')
         payload=fetch_package(cid)
         if len(payload)>2_000_000: raise DomainError('package too large')
@@ -40,6 +40,7 @@ class LocalConsumer:
                 m=json.loads(z.read('manifest.json'))
                 if {k:m.get(k) for k in manifest}!=manifest or m.get('audience')!='learner': raise DomainError('package manifest mismatch')
                 if set(m.get('files',{}))!={'text.md','lesson.html','quiz.json'}: raise DomainError('missing file checksums')
+                if m['files']!=manifest.get('renditions',{}).get('learner'): raise DomainError('rendition binding mismatch')
                 for name,digest in m['files'].items():
                     if sha(z.read(name))!=digest: raise DomainError('package integrity failure')
                 quiz=json.loads(z.read('quiz.json'))

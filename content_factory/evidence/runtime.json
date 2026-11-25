@@ -1,0 +1,21 @@
+{
+  "python": "3.12.15",
+  "packages": {
+    "fastapi": "0.165.0",
+    "pydantic": "2.14.4",
+    "psycopg": "3.3.9",
+    "pytest": "9.2.0",
+    "httpx": "0.28.1",
+    "uvicorn": "0.54.0"
+  },
+  "postgres": "16.16",
+  "applicationRole": {
+    "superuser": false,
+    "bypassRLS": false
+  },
+  "databaseContainer": "nikway-content-factory-mvp-db",
+  "databaseImageId": "sha256:f2f98726820d0342055351c6e9d36e705f5bfffb3dd53ff556325114b08afb6d",
+  "base": "c861651f0944e50b037804054184112b6fee9224",
+  "branch": "content-factory-mvp",
+  "scope": "local synthetic only"
+}

@@ -1,6 +1,6 @@
 # Content Factory MVP Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Run a local, versioned, tenant-isolated content factory producing a synthetic Persian PDCA learning package and evidence for all ten gates, without merge or release.
 
@@ -30,31 +30,33 @@
 
 Files: content_factory/cf/contracts.py, db.py, store.py, schema.sql; tests/test_repository.py; fixtures/pdca.json.
 Interfaces: ComponentInput (Learning Engineering camelCase fields); Repository.create_revision(ctx, data, expected_revision), get_revision, review, withdraw, search; trusted Context from database.
-- [ ] Write negative contract, stale edit, immutability, rights, tenant and object-integrity tests; run and observe missing behavior.
-- [ ] Implement versioned components, content-addressed objects, dependency/source validation, expiring opaque tokens and RLS with least-privilege role.
-- [ ] Run pytest tests/test_repository.py; expected all pass; commit.
+- [x] Write negative contract, stale edit, immutability, rights, tenant and object-integrity tests; run and observe missing behavior.
+- [x] Implement versioned components, content-addressed objects, dependency/source validation, expiring opaque tokens and RLS with least-privilege role.
+- [x] Run pytest tests/test_repository.py; expected all pass; commit.
 
 ## Task 2: PDCA production and reusable packages
 
 Files: cf/pipeline.py, render.py; tests/test_pipeline.py.
 Interfaces: Pipeline.plan/do/check/act; Repository.prepare(course_id, refs, idempotency_key); build_package(candidate) produces text.md, lesson.html, quiz.json, manifest.json, ZIP.
-- [ ] Write failing tests for PDCA order, failed checks, scoring, two-course pinned reuse, withdrawal, idempotency and escaped/answer-free learner HTML.
-- [ ] Implement persisted PDCA transitions, deterministic rendition generation, candidate manifests and outbox; no publication route.
-- [ ] Run pytest tests/test_pipeline.py; expected all pass; commit.
+- [x] Write failing tests for PDCA order, failed checks, scoring, two-course pinned reuse, withdrawal, idempotency and escaped/answer-free learner HTML.
+- [x] Implement persisted PDCA transitions, deterministic rendition generation, candidate manifests and outbox; no publication route.
+- [x] Run pytest tests/test_pipeline.py; expected all pass; commit.
 
 ## Task 3: Local API and Learning OS boundary
 
 Files: cf/api.py, consumer.py, cli.py; scripts/local.py; tests/test_api.py, test_consumer.py.
 Interfaces: /v1 components, reviews, pipelines, candidates, packages, events; server derives tenant/role from credential. Consumer verifies version/digests and current candidate/dependency status before every delivery.
-- [ ] Write failing authorization, revocation, replay, outage and unsupported-schema tests.
-- [ ] Implement API, local setup/run/demo commands and consumer adapter. Inspect running Academy health/OpenAPI read-only; report missing ingestion API honestly.
-- [ ] Run full pytest; expected all pass; commit.
+- [x] Write failing authorization, revocation, replay, outage and unsupported-schema tests.
+- [x] Implement API, local setup/run/demo commands and consumer adapter. Inspect running Academy health/OpenAPI read-only; report missing ingestion API honestly.
+- [x] Run full pytest; expected all pass; commit.
 
 ## Task 4: Recovery, ten gates and runnable handoff
 
 Files: scripts/validate.py, tests/test_recovery.py, evidence/*, README.md, CONTRACT.md, REPORT.fa.md.
 Interfaces: backup/restore to separate disposable DB + object root; gate report records PASS_LOCAL/PARTIAL/BLOCKED with evidence and remaining owner actions.
-- [ ] Write restore/tamper tests, run failing then implement backup/reconciliation.
-- [ ] Run full tests, real HTTP demo, recovery and live read-only probe; record exact results, hashes and runtime versions.
-- [ ] Inspect generated Persian HTML and downloadable ZIP; obtain fresh code review and fix consequential findings with regression tests.
-- [ ] Commit/push independent branch, verify remote/base and clean status. No merge/release. GO only for bounded local synthetic trial; broader GO requires open human/integration gates.
+- [x] Write restore/tamper tests, run failing then implement backup/reconciliation.
+- [x] Run full tests, real HTTP demo, recovery and live read-only probe; record exact results, hashes and runtime versions.
+- [x] Inspect generated Persian HTML and downloadable ZIP; obtain fresh code review and fix consequential findings with regression tests.
+- [x] Commit/push independent branch, verify remote/base and clean status. No merge/release. GO only for bounded local synthetic trial; broader GO requires open human/integration gates.
+
+Execution record: all four tasks implemented and locally verified. Fresh review found one consequential delivery-ID issue, fixed with RED→GREEN regression. Remaining human/standards/live-integration obligations are explicitly partial in content_factory/evidence/gates.json. Remote handoff verification is recorded in the final chat and outputs receipt.

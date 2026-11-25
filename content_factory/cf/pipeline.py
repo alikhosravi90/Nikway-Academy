@@ -32,7 +32,7 @@ class Pipeline:
         with self.repo.db.transaction(ctx) as c:
             data=self._load(c,run_id,'planned')
             if data['owner']!=ctx.subject: raise DomainError('pipeline owner required',403)
-            r=self.repo.create_revision(ctx,ComponentInput(**data['component']),0)
+            r=self.repo.create_revision(ctx,ComponentInput(**data['component']),0,connection=c)
             data['revisionId']=r['revisionId']
             return self._save(c,ctx,data,'produced')
 
@@ -50,6 +50,6 @@ class Pipeline:
         with self.repo.db.transaction(ctx) as c:
             data=self._load(c,run_id,'checked')
             if not data['checks']['passed']: raise DomainError('PDCA checks failed; revise plan')
-            m=self.repo.prepare(ctx,course_id,[data['revisionId']],key)
+            m=self.repo.prepare(ctx,course_id,[data['revisionId']],key,connection=c)
             data['candidateId']=m['id']; self._save(c,ctx,data,'acted')
             return m

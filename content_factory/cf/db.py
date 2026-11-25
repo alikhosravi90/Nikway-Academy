@@ -51,8 +51,11 @@ class Database:
             return Context(**row)
 
     @contextmanager
-    def transaction(self, ctx):
+    def transaction(self, ctx, snapshot=False):
         with psycopg.connect(self.dsn,row_factory=dict_row) as c:
+            if snapshot:
+                c.isolation_level=psycopg.IsolationLevel.REPEATABLE_READ
+                c.read_only=True
             c.execute("SELECT set_config('cf.tenant',%s,true)",(ctx.tenant,))
             c.execute("SET LOCAL statement_timeout='5s'")
             yield c

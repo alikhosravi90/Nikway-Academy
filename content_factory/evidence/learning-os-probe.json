@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-11-25T12:07:34.744229+00:00",
+  "target": "http://127.0.0.1:18400",
+  "mode": "READ_ONLY",
+  "mutations": 0,
+  "health": {
+    "status": "ok",
+    "version": "0.3.0"
+  },
+  "apiInfo": {
+    "title": "NIKWAY Academy Local API",
+    "version": "0.3.0"
+  },
+  "paths": [
+    "/api/capabilities",
+    "/api/courses",
+    "/api/courses/{course_id}/enroll",
+    "/api/courses/{course_id}/lessons/{lesson_id}/complete",
+    "/api/courses/{course_id}/submissions",
+    "/api/health",
+    "/api/me",
+    "/api/progress",
+    "/api/submissions",
+    "/api/submissions/{submission_id}/review",
+    "/api/tools/invoke",
+    "/api/workshops",
+    "/api/workshops/{workshop_id}/register"
+  ],
+  "unauthenticatedCourseStatus": 401,
+  "contentImportEndpointPresent": false,
+  "versionedCandidateEndpointPresent": false,
+  "result": "PARTIAL: live API reachable; versioned Content Factory ingestion/delivery contract absent"
+}

@@ -1,0 +1,20 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___________ test_delivery_rejects_wrong_candidate_from_routing_mixup ___________
+
+repo = <cf.store.Repository object at 0x79759836c710>
+identities = ({'author': Context(tenant='b0109968-6a48-4c3b-8a63-837603ccaaec', subject='40719776-2008-4949-b8a0-05e44d16cfd1', rol...c', 'consumer': '6pr_48Hm3DJ3kt7G9EouQoFCgkb9__VeWcskDp_jIEE', 'other': '8z0ArEeVI03kBZEfN7Tju3I7idY0w1RvPNxIkAy_r5Q'})
+content = {'schemaVersion': '1.0.0', 'id': 'pdca-introduction', 'semanticVersion': '1.0.0', 'locale': 'fa-IR', ...}
+
+    def test_delivery_rejects_wrong_candidate_from_routing_mixup(repo,identities,content):
+        ctx,_=identities
+        _,m,_=setup_candidate(repo,ctx,content)
+        consumer=LocalConsumer(repo.db)
+>       with pytest.raises(DomainError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE DomainError
+
+tests/test_consumer.py:42: Failed
+=========================== short test summary info ============================
+FAILED tests/test_consumer.py::test_delivery_rejects_wrong_candidate_from_routing_mixup
+1 failed in 0.23s

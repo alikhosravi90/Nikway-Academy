@@ -1,0 +1,125 @@
+{
+  "checkedAt": "2026-11-25T12:13:28.720059+00:00",
+  "tests": {
+    "total": 24,
+    "passed": 24,
+    "failed": []
+  },
+  "decision": "GO_LOCAL_SYNTHETIC",
+  "production": "NO_GO",
+  "merge": "NOT_PERFORMED",
+  "release": "NOT_PERFORMED",
+  "gates": [
+    {
+      "id": "CF-G0",
+      "status": "PARTIAL",
+      "testEvidence": [],
+      "missingOrFailed": [],
+      "remaining": "User approved architecture in current chat; full original assistant source remains unavailable. Source fidelity is not upgraded by approval."
+    },
+    {
+      "id": "CF-G1",
+      "status": "PARTIAL",
+      "testEvidence": [
+        "test_contract_rejects_unknown_fields_and_invalid_answer",
+        "test_broken_lineage_and_missing_source_rejected",
+        "test_package_has_four_outputs_safe_html_and_scoring"
+      ],
+      "missingOrFailed": [],
+      "remaining": "External outcome/competency authority and human pedagogy review pending."
+    },
+    {
+      "id": "CF-G2",
+      "status": "PARTIAL",
+      "testEvidence": [
+        "test_review_requires_independent_reviewer_and_rights",
+        "test_pipeline_unknown_rights_fails_check"
+      ],
+      "missingOrFailed": [],
+      "remaining": "Only synthetic internal-trial material; human rights/provenance review and real-corpus permissions pending."
+    },
+    {
+      "id": "CF-G3",
+      "status": "PASS_LOCAL",
+      "testEvidence": [
+        "test_restore_rehydrates_matching_metadata_objects_and_search",
+        "test_backup_rejects_missing_object_and_reports_orphan",
+        "test_pipeline_failure_rolls_back_revision"
+      ],
+      "missingOrFailed": [],
+      "remaining": "Local snapshot restore only; no production RPO/RTO agreement, S3 or durability certification. Dedicated backup-tamper negative tests deferred."
+    },
+    {
+      "id": "CF-G4",
+      "status": "PASS_LOCAL",
+      "testEvidence": [
+        "test_two_course_reuse_pins_revisions_and_withdrawal",
+        "test_concurrent_revision_writers_only_one_wins",
+        "test_transitive_dependency_withdrawal_blocks_candidate"
+      ],
+      "missingOrFailed": [],
+      "remaining": "Bounded local versioning/reuse demonstrated; broader localization and semantic review pending."
+    },
+    {
+      "id": "CF-G5",
+      "status": "PASS_LOCAL",
+      "testEvidence": [
+        "test_tenant_rls_and_search",
+        "test_api_auth_roles_and_forbidden_tenant",
+        "test_api_token_revocation_and_payload_bound",
+        "test_revoked_and_expired_credentials"
+      ],
+      "missingOrFailed": [],
+      "remaining": "Local-token and database boundary only; production OIDC, enrollment integration and penetration assessment pending."
+    },
+    {
+      "id": "CF-G6",
+      "status": "PARTIAL",
+      "testEvidence": [
+        "test_consumer_replay_and_withdrawal_at_delivery",
+        "test_consumer_rejects_schema_digest_foreign_tenant_and_outage",
+        "test_consumer_rejects_package_rehashed_by_attacker",
+        "test_delivery_rejects_wrong_candidate_from_routing_mixup"
+      ],
+      "missingOrFailed": [],
+      "remaining": "Custom local manifest/ZIP round trip only; QTI/CASE/CC/LTI adapters and event transport not implemented."
+    },
+    {
+      "id": "CF-G7",
+      "status": "PARTIAL",
+      "testEvidence": [
+        "test_consumer_replay_and_withdrawal_at_delivery"
+      ],
+      "missingOrFailed": [],
+      "remaining": "Local consumer passes; live Academy is reachable but has no Content Factory ingestion contract. No live end-to-end learning integration."
+    },
+    {
+      "id": "CF-G8",
+      "status": "PARTIAL",
+      "testEvidence": [
+        "test_package_has_four_outputs_safe_html_and_scoring"
+      ],
+      "missingOrFailed": [],
+      "remaining": "Agent browser inspection confirms Persian RTL/structure. Human editorial review, assistive-technology testing and accessibility certification pending."
+    },
+    {
+      "id": "CF-G9",
+      "status": "PARTIAL",
+      "testEvidence": [
+        "test_pdca_enforces_order_and_requires_review",
+        "test_no_release_endpoint"
+      ],
+      "missingOrFailed": [],
+      "remaining": "Local synthetic acceptance only. Real learner pilot, accountable human approval and release decision pending."
+    }
+  ],
+  "liveLearningOS": "PARTIAL: live API reachable; versioned Content Factory ingestion/delivery contract absent",
+  "evidence": [
+    "tests.xml",
+    "full-suite.log",
+    "local-http-demo.json",
+    "learning-os-probe.json",
+    "review.md",
+    "visual-check.json"
+  ]
+}

@@ -34,3 +34,10 @@ def test_consumer_rejects_schema_digest_foreign_tenant_and_outage(repo,identitie
     with pytest.raises(ConnectionError): consumer.accept(ctx['consumer'],event,outage)
     assert consumer.accept(ctx['consumer'],event,fetch)['replayed'] is False
     with pytest.raises(ConnectionError): consumer.deliver(ctx['consumer'],m['id'],outage,lambda cid:b'')
+
+def test_delivery_rejects_wrong_candidate_from_routing_mixup(repo,identities,content):
+    ctx,_=identities
+    _,m,_=setup_candidate(repo,ctx,content)
+    consumer=LocalConsumer(repo.db)
+    with pytest.raises(DomainError):
+        consumer.deliver(ctx['consumer'],'different-requested-id',lambda _:m,lambda _:repo.package(ctx['consumer'],m['id']))

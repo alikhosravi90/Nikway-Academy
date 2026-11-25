@@ -1,0 +1,48 @@
+.FF                                                                      [100%]
+=================================== FAILURES ===================================
+__________________ test_pipeline_failure_rolls_back_revision ___________________
+
+repo = <cf.store.Repository object at 0x74f47fa3d5b0>
+identities = ({'author': Context(tenant='4e80cbba-a184-4a0d-ba26-535671fdff12', subject='018d8f80-c8dc-4b33-a0d4-46ea65fc5218', rol...k', 'consumer': '57DZDZH7-WUvmdZLFTw9OOFYzxwewGR0_K134ybcCRg', 'other': 'Dr8SqNwaY-WU5_s8EMF5NNQN6I1O8jC5cIMVXC7K8Fk'})
+content = {'schemaVersion': '1.0.0', 'id': 'pdca-introduction', 'semanticVersion': '1.0.0', 'locale': 'fa-IR', ...}
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x74f47fa749b0>
+
+    def test_pipeline_failure_rolls_back_revision(repo,identities,content,monkeypatch):
+        ctx,_=identities; pipeline=Pipeline(repo)
+        run=pipeline.plan(ctx['author'],ComponentInput(**content),'failure injection')
+        original=pipeline._save
+        def fail(*args): raise RuntimeError('storage failed')
+        monkeypatch.setattr(pipeline,'_save',fail)
+        with pytest.raises(RuntimeError): pipeline.do(ctx['author'],run['id'])
+>       assert repo.search(ctx['author'],'PDCA')==[]
+E       AssertionError: assert [{'revision_i... 'number': 1}] == []
+E         
+E         Left contains one more item: {'revision_id': 'd268b3b4-f22e-40f3-b1e3-b448a1ff75f5', 'title': 'چرخه PDCA: بهبود با آزمایش کوچک', 'number': 1}
+E         Use -v to get more diff
+
+tests/test_hardening.py:30: AssertionError
+______________ test_consumer_rejects_package_rehashed_by_attacker ______________
+
+repo = <cf.store.Repository object at 0x74f47fa74530>
+identities = ({'author': Context(tenant='610a3449-8006-492d-8b9e-43c8eaa70e84', subject='39be42a5-7d81-419f-9eaf-c56b4a332300', rol...A', 'consumer': '3iLp3uYMBCnwJK0AZHYz566xYYk62oH6AJLHwbNjc2c', 'other': '9fvFKpLvginVx0kQH2Fg5Iu4i956krPYl8OBuVg1pPo'})
+content = {'schemaVersion': '1.0.0', 'id': 'pdca-introduction', 'semanticVersion': '1.0.0', 'locale': 'fa-IR', ...}
+
+    def test_consumer_rejects_package_rehashed_by_attacker(repo,identities,content):
+        ctx,_=identities
+        r=repo.create_revision(ctx['author'],ComponentInput(**content),0)
+        repo.review(ctx['reviewer'],r['revisionId'],'review')
+        m=repo.prepare(ctx['reviewer'],'course',[r['revisionId']],'key')
+        original=repo.package(ctx['consumer'],m['id'])
+        with zipfile.ZipFile(io.BytesIO(original)) as z: parts={n:z.read(n) for n in z.namelist()}
+        parts['lesson.html']=b'<html>changed without authority</html>'
+        pm=json.loads(parts['manifest.json']); pm['files']['lesson.html']=sha(parts['lesson.html'])
+        parts['manifest.json']=canonical(pm)
+>       with pytest.raises(DomainError): LocalConsumer(repo.db).deliver(ctx['consumer'],m['id'],lambda _:m,lambda _:zip_package(parts))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE DomainError
+
+tests/test_hardening.py:44: Failed
+=========================== short test summary info ============================
+FAILED tests/test_hardening.py::test_pipeline_failure_rolls_back_revision - A...
+FAILED tests/test_hardening.py::test_consumer_rejects_package_rehashed_by_attacker
+2 failed, 1 passed in 0.56s

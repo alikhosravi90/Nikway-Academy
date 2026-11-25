@@ -1,0 +1,112 @@
+{
+  "scope": "REAL_LOCAL_HTTP_SYNTHETIC_CONTENT",
+  "publication": "NOT_RELEASED",
+  "pipelineRun": "05b1e839-e3f8-45df-a5b0-721d21b1f4e8",
+  "pdcaCheck": {
+    "rights": true,
+    "accessibility": true,
+    "outcomes": true,
+    "integrity": true,
+    "passed": true,
+    "humanReview": "PENDING"
+  },
+  "revisionId": "d33bc2b7-05ac-404b-9584-af78cded2c34",
+  "newRevisionId": "1d0d7afe-d7fe-49ad-957f-3e6d8327db87",
+  "courses": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "40c0e282-f6a1-4091-bd76-498b29a44272",
+      "courseId": "continuous-improvement-foundations",
+      "status": "candidate_local",
+      "publication": "NOT_RELEASED",
+      "components": [
+        {
+          "id": "pdca-dfb72c2444",
+          "revisionId": "d33bc2b7-05ac-404b-9584-af78cded2c34",
+          "semanticVersion": "1.0.0",
+          "checksum": "62934be04b8fb5abf035071aab1193a3d03dcafb5d875e78910b1190722309e2"
+        }
+      ],
+      "dependencies": [
+        {
+          "id": "pdca-dfb72c2444",
+          "revisionId": "d33bc2b7-05ac-404b-9584-af78cded2c34",
+          "semanticVersion": "1.0.0",
+          "checksum": "62934be04b8fb5abf035071aab1193a3d03dcafb5d875e78910b1190722309e2"
+        }
+      ],
+      "recipeVersion": "1.0.0",
+      "renditions": {
+        "learner": {
+          "text.md": "c225989d76eaf710157b3a6ac8865fdac2e281ee65931d4adf419078f7a7a7ec",
+          "lesson.html": "845433ef817df2466b263410da8bb20d798e507264ac9316e91a89e199c1a139",
+          "quiz.json": "280715adc456be359f5683342ba5762064825c4fb217fcda9316364a4d7e1956"
+        },
+        "instructor": {
+          "text.md": "c225989d76eaf710157b3a6ac8865fdac2e281ee65931d4adf419078f7a7a7ec",
+          "lesson.html": "845433ef817df2466b263410da8bb20d798e507264ac9316e91a89e199c1a139",
+          "quiz.json": "49d06c2ed3203afa62c93081a8ce1bc89db1f3fc395ce19fbcd3d1f26f1e1804"
+        }
+      }
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "03758506-9865-46db-b093-8fc23386129b",
+      "courseId": "practical-process-improvement",
+      "status": "candidate_local",
+      "publication": "NOT_RELEASED",
+      "components": [
+        {
+          "id": "pdca-dfb72c2444",
+          "revisionId": "d33bc2b7-05ac-404b-9584-af78cded2c34",
+          "semanticVersion": "1.0.0",
+          "checksum": "62934be04b8fb5abf035071aab1193a3d03dcafb5d875e78910b1190722309e2"
+        }
+      ],
+      "dependencies": [
+        {
+          "id": "pdca-dfb72c2444",
+          "revisionId": "d33bc2b7-05ac-404b-9584-af78cded2c34",
+          "semanticVersion": "1.0.0",
+          "checksum": "62934be04b8fb5abf035071aab1193a3d03dcafb5d875e78910b1190722309e2"
+        }
+      ],
+      "recipeVersion": "1.0.0",
+      "renditions": {
+        "learner": {
+          "text.md": "c225989d76eaf710157b3a6ac8865fdac2e281ee65931d4adf419078f7a7a7ec",
+          "lesson.html": "845433ef817df2466b263410da8bb20d798e507264ac9316e91a89e199c1a139",
+          "quiz.json": "280715adc456be359f5683342ba5762064825c4fb217fcda9316364a4d7e1956"
+        },
+        "instructor": {
+          "text.md": "c225989d76eaf710157b3a6ac8865fdac2e281ee65931d4adf419078f7a7a7ec",
+          "lesson.html": "845433ef817df2466b263410da8bb20d798e507264ac9316e91a89e199c1a139",
+          "quiz.json": "49d06c2ed3203afa62c93081a8ce1bc89db1f3fc395ce19fbcd3d1f26f1e1804"
+        }
+      }
+    }
+  ],
+  "sameRevisionInTwoCourses": true,
+  "pinnedAfterUpdate": true,
+  "consumer": {
+    "kind": "LOCAL_CONTRACT_ADAPTER_NOT_RUNNING_LEARNING_OS",
+    "first": {
+      "replayed": false,
+      "candidateId": "40c0e282-f6a1-4091-bd76-498b29a44272"
+    },
+    "replay": {
+      "replayed": true,
+      "candidateId": "40c0e282-f6a1-4091-bd76-498b29a44272"
+    }
+  },
+  "files": {
+    "manifest.json": "24ee65c056642c5a8a775e4b1228a71fe4b577fa660f65e50efd224ea2b53c8f",
+    "lesson-preview.png": "6602f2d993f1476c0db460dade311caac24b2fe971ea200ec48801513b405dc3",
+    "pdca-learner-candidate.zip": "775697902415ebcbac00135df8f48c3c44928d02e9f1d5f93e8ed605bd8cd6eb",
+    "lesson.html": "845433ef817df2466b263410da8bb20d798e507264ac9316e91a89e199c1a139",
+    "quiz.json": "280715adc456be359f5683342ba5762064825c4fb217fcda9316364a4d7e1956",
+    "text.md": "c225989d76eaf710157b3a6ac8865fdac2e281ee65931d4adf419078f7a7a7ec",
+    "pdca-instructor-candidate.zip": "cba6a381f09305e37b63da63a8444e9cb23a214205295983e628858a174db8ff"
+  },
+  "humanApproval": "PENDING"
+}
