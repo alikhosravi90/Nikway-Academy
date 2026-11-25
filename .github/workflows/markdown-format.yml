@@ -1,5 +1,6 @@
 name: Markdown formatting patch
 on:
+  pull_request:
   push:
     branches: [architecture/v0.2]
 permissions:
