@@ -51,7 +51,9 @@ def validate_package(package):
     if errors:
         return errors
     def walk(value):
-        if isinstance(value, str) and unicodedata.normalize('NFC', value) != value:
+        if isinstance(value, str) and '\x00' in value:
+            errors.append('NUL characters forbidden for PostgreSQL text compatibility')
+        elif isinstance(value, str) and unicodedata.normalize('NFC', value) != value:
             errors.append('all strings must use NFC Unicode normalization')
         elif isinstance(value, float):
             errors.append('floating point numbers forbidden')
