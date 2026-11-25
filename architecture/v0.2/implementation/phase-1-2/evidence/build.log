@@ -1,0 +1,33 @@
+
+> nikway-learning-os@2.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 2383 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.70 kB │ gzip:  0.39 kB
+dist/assets/index-Cr2pC2i-.css                    24.49 kB │ gzip:  6.58 kB
+dist/assets/rolldown-runtime-WkwZ5CU-.js           0.59 kB │ gzip:  0.36 kB
+dist/assets/academy-CAYM8A9D.js                    2.20 kB │ gzip:  1.08 kB
+dist/assets/library-sqLc-eVS.js                    3.28 kB │ gzip:  1.70 kB
+dist/assets/competency-UvgubUvz.js                 3.29 kB │ gzip:  1.66 kB
+dist/assets/course-6tX0MlGw.js                     3.68 kB │ gzip:  1.86 kB
+dist/assets/tutor-D7Iy30qG.js                      3.79 kB │ gzip:  1.88 kB
+dist/assets/catalog-C0Com6CE.js                    4.07 kB │ gzip:  1.81 kB
+dist/assets/dashboard-DzM8KAEk.js                  5.24 kB │ gzip:  2.17 kB
+dist/assets/workbox-window.prod.es5-Bd17z0YL.js    5.65 kB │ gzip:  2.20 kB
+dist/assets/lab-Cwhj1HMf.js                        5.96 kB │ gzip:  2.50 kB
+dist/assets/index-HJ9kV0wf.js                     96.55 kB │ gzip: 33.32 kB
+dist/assets/data-core-BWCvuS_I.js                195.14 kB │ gzip: 58.98 kB
+dist/assets/react-runtime-CgtssnIG.js            250.69 kB │ gzip: 79.70 kB
+
+✓ built in 377ms
+
+PWA v2.0.0
+mode      generateSW
+precache  17 entries (829.56 KiB)
+files generated
+  dist/sw.js
+  dist/workbox-2fbc6a65.js

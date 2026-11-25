@@ -1,6 +1,6 @@
 # Architecture Blueprint
 
-Version: 0.2.0-draft | Proposed architecture | Not implemented or verified
+Version: 0.2.0-draft | Target architecture proposed | Local prototype evidence appended; target not fully implemented or verified
 
 ## Scope
 Learners, facilitators, experts and organizations share a portal for courses, articles, media, community, live workshops, practice, competitions and competency development.
@@ -26,3 +26,10 @@ graph TD
 Local Docker Compose first; separate media workloads; cloud deployment only after capacity and connectivity tests. No fixed sizing until measured.
 ## Gates
 G1 identity and catalog; G2 learning journey; G3 workshop and evidence; G4 community and challenges; G5 AI evaluation. Each requires reproducible tests and rollback instructions.
+
+## Phase 1–2 evidence update — 2026-11-25
+
+### Local implementation boundary
+The six-module React/TypeScript + Vite application is implemented and locally tested. Tailwind CSS, shadcn/ui, React Router, Zod and Dexie are used. This is a frontend prototype; the Next.js/FastAPI/PostgreSQL diagram above remains a proposed target, not the deployed implementation. See the decision reconciliation and actual component diagram in the linked package.
+
+[Implementation package and decision reconciliation](implementation/phase-1-2/README.md) · [Acceptance evidence](implementation/phase-1-2/ACCEPTANCE.md).

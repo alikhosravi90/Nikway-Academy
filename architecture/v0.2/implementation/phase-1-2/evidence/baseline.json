@@ -1,0 +1,1 @@
+{"source":"../nikway-learning-os/index.html","origin":"http://127.0.0.1:18765","observedLegacy":{"done":[3,1,0],"saved":[],"sim":0},"modules":["dashboard","academy","library","tutor","competency","lab"],"storageKey":"nikway-demo-v1","limitations":["single HTML","global mutable state","synchronous localStorage","no build or test suite","mock tutor only"]}

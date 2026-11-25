@@ -1,0 +1,47 @@
+[WebServer] (node:416410) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:416422) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:416455) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/product.spec.ts:8:1 › migrates real legacy shape and completes a lesson durably (30.1s)
+
+
+  1) tests/e2e/product.spec.ts:8:1 › migrates real legacy shape and completes a lesson durably ─────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('nav a[href="#/academy"]')
+
+
+       5 |  await page.goto('/');
+       6 | }
+    >  7 | async function nav(page:import('@playwright/test').Page,id:string){await page.locator(`nav a[href="#/${id}"]`).click()}
+         |                                                                                                                ^
+       8 | test('migrates real legacy shape and completes a lesson durably',async({page})=>{
+       9 |  await seed(page);await nav(page,'academy');await page.getByRole('button',{name:'ورود به دوره'}).first().click();await expect(page.getByRole('dialog')).toContainText('۵ از ۸');await page.getByRole('button',{name:'تکمیل این درس ✓'}).click();await page.reload();await page.getByRole('button',{name:'ورود به دوره'}).first().click();await expect(page.getByRole('dialog')).toContainText('۶ از ۸');expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('nikway-demo-v1')!))).toEqual(legacy);
+      10 | });
+        at nav (<LOCAL_WORKSPACE>
+        at <LOCAL_WORKSPACE>
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/product-migrates-real-lega-80fc5--completes-a-lesson-durably/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/product-migrates-real-lega-80fc5--completes-a-lesson-durably/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/product-migrates-real-lega-80fc5--completes-a-lesson-durably/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/product-migrates-real-lega-80fc5--completes-a-lesson-durably/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/e2e/product.spec.ts:8:1 › migrates real legacy shape and completes a lesson durably ──────

@@ -1,0 +1,371 @@
+
+> nikway-learning-os@2.0.0 test
+> vitest run
+
+
+ RUN  v5.1.1 <LOCAL_WORKSPACE>
+
+ ❯ tests/domain.test.ts (15 tests | 15 failed) 41ms
+   ❯ legacy validation and learning rules (15)
+     × preserves all legacy progress 21ms
+     × rejects corrupt data without silently replacing it: { 4ms
+     × rejects corrupt data without silently replacing it: null 1ms
+     × rejects corrupt data without silently replacing it: {"done":[-1,1,0],"saved":[],"sim":0} 1ms
+     × rejects corrupt data without silently replacing it: {"done":[9,1,0],"saved":[],"sim":0} 1ms
+     × rejects corrupt data without silently replacing it: {"done":[1],"saved":[],"sim":0} 1ms
+     × rejects corrupt data without silently replacing it: {"done":[1,1,0],"saved":[99],"sim":0} 1ms
+     × completes a specific lesson once, including repeated clicks 1ms
+     × rejects skipped lessons and unknown courses 2ms
+     × toggles bookmarks without duplicates 1ms
+     × counts each simulation attempt only once 1ms
+     × computes capacity and demand separately for 0 1ms
+     × computes capacity and demand separately for 1 1ms
+     × computes capacity and demand separately for 2 1ms
+     × rejects invalid decisions 1ms
+ ❯ tests/repository.test.ts (7 tests | 7 failed) 56ms
+   × imports existing local progress once and does not overwrite it on next boot 30ms
+   × does not lose concurrent changes from two connections 6ms
+   × rejects corrupt legacy and permits retry using corrected data 6ms
+   × does not ignore a blocked legacy storage read 3ms
+   × exports and imports a validated portable backup 4ms
+   × rejects invalid imports without altering existing progress 2ms
+   × resets current state without reimporting legacy on reload 3ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 22 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/domain.test.ts > legacy validation and learning rules > preserves all legacy progress
+AssertionError: expected { version: 2, …(4) } to match object { Object (version, done, ...) }
+(1 matching property omitted from actual)
+
+- Expected
++ Received
+
+  {
+    "done": [
+-     3,
+-     1,
++     0,
++     0,
+      0,
+    ],
+-   "saved": [
+-     2,
+-   ],
+-   "sim": 4,
++   "saved": [],
++   "sim": 0,
+    "version": 2,
+  }
+
+ ❯ tests/domain.test.ts:5:67
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/16]⎯
+
+ FAIL  tests/domain.test.ts > legacy validation and learning rules > rejects corrupt data without silently replacing it: {
+ FAIL  tests/domain.test.ts > legacy validation and learning rules > rejects corrupt data without silently replacing it: null
+ FAIL  tests/domain.test.ts > legacy validation and learning rules > rejects corrupt data without silently replacing it: {"done":[-1,1,0],"saved":[],"sim":0}
+ FAIL  tests/domain.test.ts > legacy validation and learning rules > rejects corrupt data without silently replacing it: {"done":[9,1,0],"saved":[],"sim":0}
+ FAIL  tests/domain.test.ts > legacy validation and learning rules > rejects corrupt data without silently replacing it: {"done":[1],"saved":[],"sim":0}
+ FAIL  tests/domain.test.ts > legacy validation and learning rules > rejects corrupt data without silently replacing it: {"done":[1,1,0],"saved":[99],"sim":0}
+AssertionError: expected [Function] to throw an error
+ ❯ tests/domain.test.ts:6:263
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/16]⎯
+
+ FAIL  tests/domain.test.ts > legacy validation and learning rules > completes a specific lesson once, including repeated clicks
+AssertionError: expected [ +0, +0, +0 ] to deeply equal [ 4, 1, +0 ]
+
+- Expected
++ Received
+
+  [
+-   4,
+-   1,
++   0,
++   0,
+    0,
+  ]
+
+ ❯ tests/domain.test.ts:7:200
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/16]⎯
+
+ FAIL  tests/domain.test.ts > legacy validation and learning rules > rejects skipped lessons and unknown courses
+AssertionError: expected [Function] to throw an error
+ ❯ tests/domain.test.ts:8:154
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/16]⎯
+
+ FAIL  tests/domain.test.ts > legacy validation and learning rules > toggles bookmarks without duplicates
+AssertionError: expected [] to deeply equal [ 2, +0 ]
+
+- Expected
++ Received
+
+- [
+-   2,
+-   0,
+- ]
++ []
+
+ ❯ tests/domain.test.ts:9:212
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/16]⎯
+
+ FAIL  tests/domain.test.ts > legacy validation and learning rules > counts each simulation attempt only once
+AssertionError: expected +0 to be 5 // Object.is equality
+
+- Expected
++ Received
+
+- 5
++ 0
+
+ ❯ tests/domain.test.ts:10:175
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/16]⎯
+
+ FAIL  tests/domain.test.ts > legacy validation and learning rules > computes capacity and demand separately for 0
+ FAIL  tests/domain.test.ts > legacy validation and learning rules > computes capacity and demand separately for 2
+AssertionError: expected { capacity: +0, delivery: +0, …(1) } to deeply equal { capacity: 60, delivery: 60, …(1) }
+
+- Expected
++ Received
+
+  {
+-   "capacity": 60,
+-   "delivery": 60,
++   "capacity": 0,
++   "delivery": 0,
+    "success": false,
+  }
+
+ ❯ tests/domain.test.ts:11:171
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/16]⎯
+
+ FAIL  tests/domain.test.ts > legacy validation and learning rules > computes capacity and demand separately for 1
+AssertionError: expected { capacity: +0, delivery: +0, …(1) } to deeply equal { capacity: 85, delivery: 80, …(1) }
+
+- Expected
++ Received
+
+  {
+-   "capacity": 85,
+-   "delivery": 80,
+-   "success": true,
++   "capacity": 0,
++   "delivery": 0,
++   "success": false,
+  }
+
+ ❯ tests/domain.test.ts:11:171
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/16]⎯
+
+ FAIL  tests/domain.test.ts > legacy validation and learning rules > rejects invalid decisions
+AssertionError: expected [Function] to throw an error
+ ❯ tests/domain.test.ts:12:61
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/16]⎯
+
+ FAIL  tests/repository.test.ts > imports existing local progress once and does not overwrite it on next boot
+AssertionError: expected { version: 2, …(4) } to match object { done: [ 5, 2, 1 ], …(2) }
+(2 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  {
+    "done": [
+-     5,
+-     2,
+-     1,
+-   ],
+-   "saved": [
+      0,
+-     3,
++     0,
++     0,
+    ],
+-   "sim": 7,
++   "saved": [],
++   "sim": 0,
+  }
+
+ ❯ tests/repository.test.ts:9:146
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/16]⎯
+
+ FAIL  tests/repository.test.ts > does not lose concurrent changes from two connections
+AssertionError: expected { version: 2, …(4) } to match object { done: [ 5, 3, 1 ], …(1) }
+(3 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  {
+    "done": [
+-     5,
+-     3,
+-     1,
+-   ],
+-   "saved": [
++     0,
++     0,
+      0,
+-     3,
+-     1,
+    ],
++   "saved": [],
+  }
+
+ ❯ tests/repository.test.ts:10:289
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/16]⎯
+
+ FAIL  tests/repository.test.ts > rejects corrupt legacy and permits retry using corrected data
+AssertionError: promise resolved "{ version: 2, …(4) }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "attemptIds": [],
++   "done": [
++     0,
++     0,
++     0,
++   ],
++   "saved": [],
++   "sim": 0,
++   "version": 2,
+  }
+
+ ❯ tests/repository.test.ts:11:134
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/16]⎯
+
+ FAIL  tests/repository.test.ts > does not ignore a blocked legacy storage read
+AssertionError: promise resolved "{ version: 2, …(4) }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "attemptIds": [],
++   "done": [
++     0,
++     0,
++     0,
++   ],
++   "saved": [],
++   "sim": 0,
++   "version": 2,
+  }
+
+ ❯ tests/repository.test.ts:12:133
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/16]⎯
+
+ FAIL  tests/repository.test.ts > exports and imports a validated portable backup
+AssertionError: expected { version: 2, …(4) } to match object { done: [ 5, 2, 1 ], …(2) }
+(2 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  {
+    "done": [
+-     5,
+-     2,
+-     1,
+-   ],
+-   "saved": [
+      0,
+-     3,
++     0,
++     0,
+    ],
+-   "sim": 7,
++   "saved": [],
++   "sim": 0,
+  }
+
+ ❯ tests/repository.test.ts:13:236
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/16]⎯
+
+ FAIL  tests/repository.test.ts > rejects invalid imports without altering existing progress
+AssertionError: promise resolved "{ version: 2, …(4) }" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
++ {
++   "attemptIds": [],
++   "done": [
++     0,
++     0,
++     0,
++   ],
++   "saved": [],
++   "sim": 0,
++   "version": 2,
+  }
+
+ ❯ tests/repository.test.ts:14:167
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/16]⎯
+
+ FAIL  tests/repository.test.ts > resets current state without reimporting legacy on reload
+AssertionError: expected { version: 2, …(4) } to match object { done: [ 3, 1, +0 ], saved: [], …(1) }
+(2 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  {
+    "done": [
+-     3,
+-     1,
++     0,
++     0,
+      0,
+    ],
+    "saved": [],
+    "sim": 0,
+  }
+
+ ❯ tests/repository.test.ts:15:192
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/16]⎯
+
+
+ Test Files  2 failed (2)
+      Tests  22 failed (22)
+   Start at  13:14:35
+   Duration  721ms (transform 41%, import 34%, tests 21%, worker 4%)
+

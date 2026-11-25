@@ -1,0 +1,61 @@
+
+> nikway-learning-os@2.0.0 test:e2e
+> playwright test
+
+[WebServer] (node:419172) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:419185) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 11 tests using 1 worker
+
+(node:419242) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/product.spec.ts:8:1 › migrates real legacy shape and completes a lesson durably (723ms)
+  ✓   2 tests/e2e/product.spec.ts:11:1 › searches courses and resources, saves and reads a resource (740ms)
+  ✓   3 tests/e2e/product.spec.ts:14:1 › tutor stays mocked and retains chat across navigation without executing user text (538ms)
+  ✓   4 tests/e2e/product.spec.ts:17:1 › simulation branches update dashboard and competency evidence (810ms)
+  ✘   5 tests/e2e/product.spec.ts:20:1 › mobile RTL and English LTR navigation work without horizontal overflow (539ms)
+(node:419462) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 tests/e2e/product.spec.ts:23:1 › offline reload and six modules work after first installation (952ms)
+  ✓   7 tests/e2e/product.spec.ts:26:1 › corrupt local data is preserved and shown as a recoverable error (328ms)
+  ✓   8 tests/e2e/product.spec.ts:29:1 › reset asks for confirmation and never resurrects legacy progress (710ms)
+  ✓   9 tests/e2e/product.spec.ts:32:1 › portable export/import restores progress, invalid backup leaves state intact (375ms)
+  ✓  10 tests/e2e/product.spec.ts:35:1 › simulation session survives module navigation and back button (449ms)
+  ✓  11 tests/e2e/product.spec.ts:36:1 › all six pages render without runtime exceptions or failed assets (588ms)
+
+
+  1) tests/e2e/product.spec.ts:20:1 › mobile RTL and English LTR navigation work without horizontal overflow 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      19 | });
+      20 | test('mobile RTL and English LTR navigation work without horizontal overflow',async({page})=>{
+    > 21 |  await page.setViewportSize({width:390,height:844});await seed(page);for(const id of ['dashboard','academy','library','tutor','competency','lab']){await nav(page,id);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)}await page.getByRole('button',{name:'English'}).click();await expect(page.locator('html')).toHaveAttribute('dir','ltr');await nav(page,'academy');await expect(page.getByRole('heading',{name:'NIKWAY Academy'})).toBeVisible();await page.reload();await expect(page.locator('html')).toHaveAttribute('lang','en');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+         |                                                                                                                                                                                                                                                         ^
+      22 | });
+      23 | test('offline reload and six modules work after first installation',async({page,context})=>{
+      24 |  await seed(page);await expect(page.getByTestId('offline-status')).toHaveText('آمادهٔ استفاده آفلاین');await page.evaluate(async()=>{await navigator.serviceWorker.ready});await context.setOffline(true);await page.reload();await expect(page.getByRole('heading',{name:/سلام محمدعلی/})).toBeVisible();for(const id of ['academy','library','tutor','competency','lab','dashboard'])await nav(page,id);await expect(page.getByTestId('simulation-count')).toHaveText('۷');await context.setOffline(false);
+        at <LOCAL_WORKSPACE>
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/product-mobile-RTL-and-Eng-bd134-without-horizontal-overflow/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/product-mobile-RTL-and-Eng-bd134-without-horizontal-overflow/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/product-mobile-RTL-and-Eng-bd134-without-horizontal-overflow/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/product-mobile-RTL-and-Eng-bd134-without-horizontal-overflow/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/e2e/product.spec.ts:20:1 › mobile RTL and English LTR navigation work without horizontal overflow 
+  10 passed (9.8s)

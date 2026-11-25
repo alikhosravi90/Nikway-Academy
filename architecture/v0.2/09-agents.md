@@ -1,6 +1,6 @@
 # AI Agent Architecture
 
-Version: 0.2.0-draft | Proposed architecture | Not implemented or verified
+Version: 0.2.0-draft | Target architecture proposed | Local prototype evidence appended; target not fully implemented or verified
 
 ## Roles
 Tutor explains and quizzes; facilitator drafts workshop plans; knowledge agent retrieves authorized sources; feedback agent proposes rubric feedback; content agent drafts resources.
@@ -14,3 +14,10 @@ Session context isolated by tenant and user; durable learning preferences opt-in
 Groundedness, citation validity, pedagogical correctness, injection resistance, leakage, cost and latency. Human approval for grading, publication and credential issuance.
 ## Acceptance
 Adversarial tests, cross-tenant retrieval denial, budget limit, tool failure fallback and human override.
+
+## Phase 1–2 evidence update — 2026-11-25
+
+### Mock-only adapter boundary
+TutorPort.reply(prompt, locale) is asynchronous and provider-independent. The current MockTutor returns prewritten answers for three topics and explicitly declines unsupported topics. Chat survives module navigation but is session-only. No model call, retrieval system, tools, durable AI memory or autonomous action exists. Text rendering and prompt bounds were checked; this is not adversarial evaluation of an LLM.
+
+[Implementation package and decision reconciliation](implementation/phase-1-2/README.md) · [Acceptance evidence](implementation/phase-1-2/ACCEPTANCE.md).
