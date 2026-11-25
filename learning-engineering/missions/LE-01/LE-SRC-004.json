@@ -1,0 +1,80 @@
+{
+  "referenceId": "LE-SRC-004",
+  "suppliedName": "ATD Capability Model",
+  "exactWork": "Talent Development Capability Model",
+  "version": "Live model; edition UNKNOWN",
+  "canonicalURL": "https://capability.td.org/",
+  "owner": {
+    "name": "ATD and/or licensors",
+    "status": "policy observed; item-level exceptions must be checked"
+  },
+  "identitySource": "baseline research/references.json; unchanged",
+  "dossierState": "documented_with_open_items",
+  "rightsClearedForIntendedUse": false,
+  "evidenceRefs": [
+    "atd"
+  ],
+  "uses": {
+    "quotation": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "atd"
+      ]
+    },
+    "summary": {
+      "status": "pending verification",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "atd"
+      ]
+    },
+    "translation": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "atd"
+      ]
+    },
+    "adaptation": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "atd"
+      ]
+    },
+    "redistribution": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "atd"
+      ]
+    },
+    "commercial_use": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "atd"
+      ]
+    }
+  },
+  "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+  "limitations": [
+    "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+  ],
+  "issuerFromBaseline": "Association for Talent Development",
+  "authoritativeTermsURLs": [
+    "https://www.td.org/terms-and-privacy"
+  ],
+  "observedAt": "2026-11-25",
+  "evidence": [
+    {
+      "id": "atd",
+      "url": "https://www.td.org/terms-and-privacy",
+      "locator": "Terms and Conditions 1–2",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Personal downloading/printing with notices is permitted. Modification, translation, distribution and derivative use are restricted; rights can belong to ATD or licensors."
+    }
+  ]
+}

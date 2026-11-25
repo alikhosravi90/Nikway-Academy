@@ -1,0 +1,15 @@
+test_tampered_cf_rendition_rejected (test_bridge.IntegrationTests.test_tampered_cf_rendition_rejected) ... FAIL
+
+======================================================================
+FAIL: test_tampered_cf_rendition_rejected (test_bridge.IntegrationTests.test_tampered_cf_rendition_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mohammadali/Documents/Codex/2026-11-25/referenced-chatgpt-conversation-this-is-an-2/work/learning-engineering/learning-engineering/missions/LE-03/test_bridge.py", line 24, in test_tampered_cf_rendition_rejected
+    with self.assertRaisesRegex(ValueError, 'CF_RENDITION_DIGEST_MISMATCH'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.030s
+
+FAILED (failures=1)

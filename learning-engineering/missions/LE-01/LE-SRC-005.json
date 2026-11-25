@@ -1,0 +1,81 @@
+{
+  "referenceId": "LE-SRC-005",
+  "suppliedName": "AECT",
+  "exactWork": "AECT Definition for Educational Technology",
+  "version": "2023 task force credited; revision UNKNOWN",
+  "canonicalURL": "https://www.aect.org/aect/about/aect-definition",
+  "owner": {
+    "name": "UNKNOWN",
+    "status": "pending verification"
+  },
+  "identitySource": "baseline research/references.json; unchanged",
+  "dossierState": "documented_with_open_items",
+  "rightsClearedForIntendedUse": false,
+  "evidenceRefs": [
+    "aect"
+  ],
+  "uses": {
+    "quotation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "aect"
+      ]
+    },
+    "summary": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "aect"
+      ]
+    },
+    "translation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "aect"
+      ]
+    },
+    "adaptation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "aect"
+      ]
+    },
+    "redistribution": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "aect"
+      ]
+    },
+    "commercial_use": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "aect"
+      ]
+    }
+  },
+  "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+  "limitations": [
+    "No transferable rights inference from institution, framework name, public access or download availability.",
+    "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+  ],
+  "issuerFromBaseline": "Association for Educational Communications and Technology",
+  "authoritativeTermsURLs": [
+    "https://www.aect.org/aect/about/aect-definition"
+  ],
+  "observedAt": "2026-11-25",
+  "evidence": [
+    {
+      "id": "aect",
+      "url": "https://www.aect.org/aect/about/aect-definition",
+      "locator": "definition and 2023 task-force credit",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Official definition page inspected; no affirmative license verified in returned content."
+    }
+  ]
+}

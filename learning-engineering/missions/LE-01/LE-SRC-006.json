@@ -1,0 +1,80 @@
+{
+  "referenceId": "LE-SRC-006",
+  "suppliedName": "UNESCO OER",
+  "exactWork": "Recommendation on Open Educational Resources (OER)",
+  "version": "2019 Recommendation",
+  "canonicalURL": "https://www.unesco.org/en/legal-affairs/recommendation-open-educational-resources-oer",
+  "owner": {
+    "name": "UNESCO; third-party exceptions unverified",
+    "status": "issuer terms observed"
+  },
+  "identitySource": "baseline research/references.json; unchanged",
+  "dossierState": "documented_with_open_items",
+  "rightsClearedForIntendedUse": false,
+  "evidenceRefs": [
+    "unesco"
+  ],
+  "uses": {
+    "quotation": {
+      "status": "restricted",
+      "basis": "Only occasional individual noncommercial educational/research uses under section 5; do not infer CC license for this legal-affairs page.",
+      "evidenceRefs": [
+        "unesco"
+      ]
+    },
+    "summary": {
+      "status": "restricted",
+      "basis": "Only occasional individual noncommercial educational/research uses under section 5; do not infer CC license for this legal-affairs page.",
+      "evidenceRefs": [
+        "unesco"
+      ]
+    },
+    "translation": {
+      "status": "restricted",
+      "basis": "Only occasional individual noncommercial educational/research uses under section 5; do not infer CC license for this legal-affairs page.",
+      "evidenceRefs": [
+        "unesco"
+      ]
+    },
+    "adaptation": {
+      "status": "pending verification",
+      "basis": "Only occasional individual noncommercial educational/research uses under section 5; do not infer CC license for this legal-affairs page.",
+      "evidenceRefs": [
+        "unesco"
+      ]
+    },
+    "redistribution": {
+      "status": "restricted",
+      "basis": "Only occasional individual noncommercial educational/research uses under section 5; do not infer CC license for this legal-affairs page.",
+      "evidenceRefs": [
+        "unesco"
+      ]
+    },
+    "commercial_use": {
+      "status": "permission-required",
+      "basis": "Only occasional individual noncommercial educational/research uses under section 5; do not infer CC license for this legal-affairs page.",
+      "evidenceRefs": [
+        "unesco"
+      ]
+    }
+  },
+  "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+  "limitations": [
+    "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+  ],
+  "issuerFromBaseline": "UNESCO General Conference",
+  "authoritativeTermsURLs": [
+    "https://www.unesco.org/en/terms-use"
+  ],
+  "observedAt": "2026-11-25",
+  "evidence": [
+    {
+      "id": "unesco",
+      "url": "https://www.unesco.org/en/terms-use",
+      "locator": "sections 5 and 7; last update 15 September 2026",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Occasional individual noncommercial educational/research consultation, citation, translation and reproduction permitted subject to attribution and material-specific conditions; commercial and broader reuse require an applicable license or authorization."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "referenceId": "LE-SRC-022",
+  "suppliedName": "cmi5",
+  "exactWork": "The cmi5 Project",
+  "version": "Quartz first edition; June 2016",
+  "canonicalURL": "https://aicc.github.io/CMI-5_Spec_Current/",
+  "owner": {
+    "name": "Repository contributors; complete ownership chain UNKNOWN",
+    "status": "repository license observed"
+  },
+  "identitySource": "baseline research/references.json; unchanged",
+  "dossierState": "documented_with_open_items",
+  "rightsClearedForIntendedUse": false,
+  "evidenceRefs": [
+    "cmi"
+  ],
+  "uses": {
+    "quotation": {
+      "status": "restricted",
+      "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+      "evidenceRefs": [
+        "cmi"
+      ]
+    },
+    "summary": {
+      "status": "restricted",
+      "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+      "evidenceRefs": [
+        "cmi"
+      ]
+    },
+    "translation": {
+      "status": "restricted",
+      "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+      "evidenceRefs": [
+        "cmi"
+      ]
+    },
+    "adaptation": {
+      "status": "restricted",
+      "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+      "evidenceRefs": [
+        "cmi"
+      ]
+    },
+    "redistribution": {
+      "status": "restricted",
+      "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+      "evidenceRefs": [
+        "cmi"
+      ]
+    },
+    "commercial_use": {
+      "status": "restricted",
+      "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+      "evidenceRefs": [
+        "cmi"
+      ]
+    }
+  },
+  "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+  "limitations": [
+    "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+  ],
+  "issuerFromBaseline": "AICC project transferred to ADL per project history",
+  "authoritativeTermsURLs": [
+    "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/LICENSE"
+  ],
+  "observedAt": "2026-11-25",
+  "evidence": [
+    {
+      "id": "cmi",
+      "url": "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/LICENSE",
+      "locator": "Apache License 2.0; sections 2 and 4; repository README release",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "License text inspected on quartz branch; repository identifies Quartz first edition June 2016. Exact commit and third-party notices remain to be reviewed."
+    }
+  ]
+}

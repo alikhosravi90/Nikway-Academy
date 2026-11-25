@@ -1,0 +1,65 @@
+{
+  "le": {
+    "repository": "/home/mohammadali/Documents/Codex/2026-11-25/referenced-chatgpt-conversation-this-is-an-2/work/learning-engineering",
+    "pinnedCommit": "3ff3f5df28d3f39968e42ba583b61e2a1dcf1b1b",
+    "observedHead": "3ff3f5df28d3f39968e42ba583b61e2a1dcf1b1b",
+    "archiveSha256": "5799a2ab770be520ba09f48c8ce73c89785dd75973f9ede789237e538b767215",
+    "files": {
+      "learning-engineering/engine/cli.py": "303f6187f1abd1af3678207e9ca5845326048297bd032be002f073317ddf0fff",
+      "learning-engineering/engine/exchange.py": "9ce64fe099ce1274a74e01bc11ecdde26cd69f3ddd90056146775807e118700f",
+      "learning-engineering/engine/knowledge.py": "6d3c4dd81d3231b333699ade98da0a4d748bd0175c4529a694b050b9d7754b9e",
+      "learning-engineering/engine/pilot.py": "fb84161fe7193595d5ada2151f0fd605018d7a969bf8a9f2cf09c94809420507",
+      "learning-engineering/engine/review.py": "1e898cc9ee452371906716eade1984cd0ab091d2a98e097170046c8c531eeac3",
+      "learning-engineering/engine/semantics.py": "41cd4934dd6870929bd49c68869db4e327d90cec651822492d034639bc16547e",
+      "learning-engineering/records/LE-ASSESS-PDCA.json": "7f5248e2f852a5e6765cf1a87e5a3f58063cc5d45e575d18346e9e244ff98f69",
+      "learning-engineering/records/LE-CARD-PDCA.json": "eb190ae7a88b3eac306ce09e2c4900abe867bd728f814d6665af4cf51dac3f53",
+      "learning-engineering/records/LE-COMP-PDCA.json": "c07fb8d324b1b00ac57ed285bb58eaca633c895ee3e145a7f03c3ada485db541",
+      "learning-engineering/records/LE-CONCEPT-PDCA.json": "91a61ab37072c37cee1552352f5f296e82953619f5355decadcafdd50d86846e",
+      "learning-engineering/records/LE-CONTENT-PDCA.json": "f4d4de68bac83724fcf1a23bee77940c4757085e6df98f80074a7b89b5bb7fe6",
+      "learning-engineering/records/LE-CUR-PDCA.json": "45f2cd508a3a452adea936e6aa1aecdec41e75b53a84d3da17971aa5eeb28c69",
+      "learning-engineering/records/LE-OBJ-PDCA.json": "d6f48905845de5be7b6b5c2c61008158fca684b8f35ba329f97cbbfb79016868",
+      "learning-engineering/records/LE-RUBRIC-PDCA.json": "0e79f5545d69845b5ad4721d26ca152513595ae22fd799522abae2b58324d4a6",
+      "learning-engineering/records/pdca-evidence.json": "ed8ada3d7abf1dc401e34d88c7b0ed7925fa99b9f95da1945fbde76b45ced0c1",
+      "learning-engineering/records/pdca-source.json": "bfe80ef7c2f4f9bb6edd7a43cb57460c8cd30c5feb95db96a44f1cf5f5effb50",
+      "learning-engineering/schemas/glossary.schema.json": "069c218922b231cb48bc664b1d7d62972f13d98866db95f9e0dbb7a5890aedd2",
+      "learning-engineering/schemas/ontology.schema.json": "959767b39a46182e62637d43afca87b61d877501ed9a58b8d7b498c79b342fb7",
+      "learning-engineering/schemas/package.schema.json": "df468d919ed95c261383b2f0a25d55e8d762a9707eb06aa6c4406cec8601bd87",
+      "learning-engineering/schemas/record.schema.json": "ef8a7b687f995982e775b486895f55fda3c03dad418f3cf050b3946df8806568"
+    }
+  },
+  "cf": {
+    "repository": "/home/mohammadali/Documents/Codex/2026-11-25/referenced-chatgpt-conversation-this-is-an-2/work/learning-engineering",
+    "pinnedCommit": "32423ee7963a213fc5ecd89457d42a1c63491385",
+    "observedHead": "3ff3f5df28d3f39968e42ba583b61e2a1dcf1b1b",
+    "archiveSha256": "fcc43faa89297eae56d84251860f41075e40d178c36ced15cce718da0708ab57",
+    "files": {
+      "content_factory/cf/__init__.py": "b96e2a19cab3af3a5f0920d749e29d75f01e8c3c8b2992df11db44ed3a2e0331",
+      "content_factory/cf/api.py": "bebccf0e354651c98ad62d818f2aef152fd996704b3a34b155ca2744d271cd51",
+      "content_factory/cf/consumer.py": "32fd018a952fae2e146dcd347732f22bcc2196310c40bea9c92ce7b4eb3d72b8",
+      "content_factory/cf/contracts.py": "e38a0e902b80b2beee7300054b6bdb4b9a203ed6747839599b43838778f08658",
+      "content_factory/cf/db.py": "30201b958639688389f0a4c7622dcfbd271c88d712fb9b63393f9e5e3c21d654",
+      "content_factory/cf/errors.py": "6ff1e3a48451db26ae070eaa3a1a8734125a5476a0147e9839210d47211e28f5",
+      "content_factory/cf/pipeline.py": "ab35aec1c20f8a0e8c9d0b32233bc38d30cd25bca1f5458099141546420874ba",
+      "content_factory/cf/recovery.py": "c34a611103d7d034883d07a4b2131068913685a21454b2d806f9b9c4ae7c831a",
+      "content_factory/cf/render.py": "0249f6264768d5ecfe9e6822d350dde0d159043924c4b964b8a89494ff5230cc",
+      "content_factory/cf/schema.sql": "d3a3388d4a9d8b03fb082400b0c67ef9739f7007f1eba6567231f5754487eaf7",
+      "content_factory/cf/store.py": "05a94f69116022c7204dbf5a7c0327dcdc2029705dd61c7c134c00e1c374d663"
+    }
+  },
+  "academy": {
+    "repository": "/home/mohammadali/Documents/Codex/2026-11-25/referenced-chatgpt-conversation-this-is-an-2/work/learning-engineering",
+    "pinnedCommit": "7364427aee7e69ff2e872e66bafb8df129faeaad",
+    "observedHead": "3ff3f5df28d3f39968e42ba583b61e2a1dcf1b1b",
+    "archiveSha256": "c52c5f6fa5d5d9f621add4e586677e60ae00b062038b36121c43bccd754f28ee",
+    "files": {
+      "backend/app/content_api.py": "57bbf73787c3e59ffedaa6f8ad4cc197e9ca14c819d6d1132eae0732300b91ba",
+      "backend/app/rules.py": "0ddd7b904fa672d3e9853f4e7327cc97ce5bc8fbaa7766cb2a03baf0bf2210f6",
+      "content/__init__.py": "bfed832758168ed3faca650cf6852bc7dc3b5060f75f71c827023b65848b0983",
+      "content/examples/agent-engineering-basics.fa.json": "50c46cd097ce8f6fe9714448cb5fbe0f065bfd2782f812956829f84a87256440",
+      "content/examples/invalid-objective-reference.json": "e5669a9fe96d34b30a0e1f15726239e230fb10c46ef94e9c7bc72223c52dd2ed",
+      "content/test_validate_package.py": "7f95363474989b9c2950e4fdc97d179456ccaeba8eba2a4a52a992e61aa7a8e4",
+      "content/validate_package.py": "36e15a71e63471b8792118e31c123c136d8fb744d50852d67eb0fe9982909ac3",
+      "contracts/content-package.schema.json": "0f1ef71d7e72e8f9dcf85333e88e3c81051d301ba742a3c0b1336b2512b3e7d1"
+    }
+  }
+}

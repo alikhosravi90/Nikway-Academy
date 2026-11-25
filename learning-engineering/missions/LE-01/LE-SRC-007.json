@@ -1,0 +1,96 @@
+{
+  "referenceId": "LE-SRC-007",
+  "suppliedName": "SoLAR",
+  "exactWork": "What is Learning Analytics?",
+  "version": "Live page cites 2026 report",
+  "canonicalURL": "https://www.solaresearch.org/about/what-is-learning-analytics/",
+  "owner": {
+    "name": "Society for Learning Analytics Research; excludes separately noted material",
+    "status": "page footer observed"
+  },
+  "identitySource": "baseline research/references.json; unchanged",
+  "dossierState": "documented_with_open_items",
+  "rightsClearedForIntendedUse": false,
+  "evidenceRefs": [
+    "solar",
+    "ccby"
+  ],
+  "uses": {
+    "quotation": {
+      "status": "allowed",
+      "basis": "Conditional CC BY 4.0 for unexcepted webpage text: attribute, link license, mark changes; exclude embedded video, logos and third-party exceptions. Exact reusable text and legal code still require reviewer signoff.",
+      "evidenceRefs": [
+        "solar",
+        "ccby"
+      ]
+    },
+    "summary": {
+      "status": "allowed",
+      "basis": "Conditional CC BY 4.0 for unexcepted webpage text: attribute, link license, mark changes; exclude embedded video, logos and third-party exceptions. Exact reusable text and legal code still require reviewer signoff.",
+      "evidenceRefs": [
+        "solar",
+        "ccby"
+      ]
+    },
+    "translation": {
+      "status": "allowed",
+      "basis": "Conditional CC BY 4.0 for unexcepted webpage text: attribute, link license, mark changes; exclude embedded video, logos and third-party exceptions. Exact reusable text and legal code still require reviewer signoff.",
+      "evidenceRefs": [
+        "solar",
+        "ccby"
+      ]
+    },
+    "adaptation": {
+      "status": "allowed",
+      "basis": "Conditional CC BY 4.0 for unexcepted webpage text: attribute, link license, mark changes; exclude embedded video, logos and third-party exceptions. Exact reusable text and legal code still require reviewer signoff.",
+      "evidenceRefs": [
+        "solar",
+        "ccby"
+      ]
+    },
+    "redistribution": {
+      "status": "allowed",
+      "basis": "Conditional CC BY 4.0 for unexcepted webpage text: attribute, link license, mark changes; exclude embedded video, logos and third-party exceptions. Exact reusable text and legal code still require reviewer signoff.",
+      "evidenceRefs": [
+        "solar",
+        "ccby"
+      ]
+    },
+    "commercial_use": {
+      "status": "allowed",
+      "basis": "Conditional CC BY 4.0 for unexcepted webpage text: attribute, link license, mark changes; exclude embedded video, logos and third-party exceptions. Exact reusable text and legal code still require reviewer signoff.",
+      "evidenceRefs": [
+        "solar",
+        "ccby"
+      ]
+    }
+  },
+  "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+  "limitations": [
+    "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+  ],
+  "issuerFromBaseline": "Society for Learning Analytics Research",
+  "authoritativeTermsURLs": [
+    "https://www.solaresearch.org/about/what-is-learning-analytics/",
+    "https://creativecommons.org/licenses/by/4.0/"
+  ],
+  "observedAt": "2026-11-25",
+  "evidence": [
+    {
+      "id": "solar",
+      "url": "https://www.solaresearch.org/about/what-is-learning-analytics/",
+      "locator": "footer lines 205–206; video lines 162–164",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Footer licenses site content CC BY 4.0 except noted items. Embedded video is expressly Standard YouTube License; exclude it from the CC scope."
+    },
+    {
+      "id": "ccby",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "locator": "You are free to; Under the following terms",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Sharing and adaptation including commercial purposes are permitted with attribution, license link and change indication; no endorsement or additional restrictions. Deed is a summary, legal-code review remains necessary."
+    }
+  ]
+}

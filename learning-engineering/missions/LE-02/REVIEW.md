@@ -1,0 +1,23 @@
+# LE-02 scientific and bilingual review
+
+Date: 2026-11-25. Baseline: 3ff3f5d. Author: AI research/review agent. **PARTIAL — desk review complete; independent human scientific/bilingual approval and measurement validation pending.** Original records are unchanged. Proposals below are not approved records or implemented revisions.
+
+## Findings and disposition
+
+1. **Learning Engineering definition is materially incomplete.** Its alignment-focused wording omits learning sciences, human-centered design and data-informed iteration present in IEEE ICICLE's definition. The alias «مهندسی نظام آموزشی» can imply educational-system engineering; no equivalence evidence was found. Remove it from equivalence aliases pending expert judgment (proposal R01).
+2. **Scientific lineage is narrower than design lineage.** ASQ supports the repeating PDCA stages and bounded test. It does not establish the 6% aim, one-week duration, 500-word cap, eight-point cut score, safety controls, instructional effectiveness or competence certification. These are legitimate local design choices, not conclusions of the cited source.
+3. **PDCA/PDSA distinction is now externally supported but still not incorporated into baseline records.** ASQ calls PDSA a variation and includes learning in Check; the Deming Institute distinguishes PDSA by prediction, theory and learning. Do not falsely reduce PDCA to mere compliance or claim the two are interchangeable. Add attributed contextual distinction, not a universal historical verdict. Full historical priority was not investigated.
+4. **Alignment is plausible at the intended task level, not demonstrated measurement validity.** Competency asks defining an aim, designing a reversible test, comparing rates and reasoning about uncertainty. Objective/task/rubric broadly cover these. However, the four compound criteria have no criterion-specific partial-credit anchors. A complete numerical answer plus a weak limitation could receive inconsistent marks. The word limit is mixed into Act, confusing reasoning with format compliance.
+5. **The task samples written planning and interpretation, not actual trial execution.** It presents already-known results; it cannot establish prospective planning, adaptive implementation, transfer to a workplace or sustained competence. Change competency scope or add a future separately authorized observed-performance assessment. No learner was studied here.
+6. **Content is a specification, not instruction delivered.** A planned worked calculation and linked card do not establish learner practice, feedback or instructional opportunity for stopping rules, confounds and next-cycle measurement. Add practice/feedback design before learner use.
+7. **Bilingual semantics mostly match but require specific repairs.** Persian PDCA says “proposed cycle” whereas English defines an existing cycle; proposed status belongs to the record. PDSA currently defines a label and review status rather than the concept. «شاهد مستند» is an evidence-record label, not all scientific evidence. «راهنمای امتیازدهی» is understandable but requires levels/descriptors. «نقص تحویل» should consistently mean incomplete shift handover, not generic delivery defects. No validated Persian terminology or cross-language score equivalence is claimed.
+
+## Numerical and interpretive check
+
+12/100 = 12%; 5/100 = 5%; reduction = 7 percentage points (not 7 percent). Relative reduction is approximately 58.3% if explicitly requested, but is unnecessary for this objective. The second synthetic sample meets a ≤6% aim descriptively. Two aggregate observations with no assignment mechanism, time series or case-mix control do not justify attributing change to the checklist. Rates describe incomplete handovers, not learning gains. A conservative next decision can be another bounded test; automatic real-world rollout is not warranted.
+
+## Proposed acceptance sequence
+
+Apply approved revisions as new versions, preserving 0.1.0. Obtain independent subject and Persian-English review with exact target hashes. Then create multiple synthetic response anchors including borderline and contradictory responses; two independent raters score them, resolve disagreement and revise descriptors. This calibration is design evidence only. Any later learner study needs separate scope, consent/data governance, sampling and analysis plan. Pre/post learner outcomes, transfer, cut-score defensibility and reliability remain UNKNOWN.
+
+See CLAIM-EVIDENCE-MATRIX.md for the complete 13-term review and source locators; REVISION-PROPOSALS.md for concrete replacement text; HUMAN-REVIEW-FORM.md for unfilled human decisions.

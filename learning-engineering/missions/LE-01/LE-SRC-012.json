@@ -1,0 +1,81 @@
+{
+  "referenceId": "LE-SRC-012",
+  "suppliedName": "Bloom",
+  "exactWork": "UNKNOWN",
+  "version": "UNKNOWN",
+  "canonicalURL": null,
+  "owner": {
+    "name": "UNKNOWN",
+    "status": "pending verification"
+  },
+  "identitySource": "baseline research/references.json; unchanged",
+  "dossierState": "documented_with_open_items",
+  "rightsClearedForIntendedUse": false,
+  "evidenceRefs": [
+    "bloom"
+  ],
+  "uses": {
+    "quotation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "bloom"
+      ]
+    },
+    "summary": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "bloom"
+      ]
+    },
+    "translation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "bloom"
+      ]
+    },
+    "adaptation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "bloom"
+      ]
+    },
+    "redistribution": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "bloom"
+      ]
+    },
+    "commercial_use": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "bloom"
+      ]
+    }
+  },
+  "ownerDecision": "Select exact primary work, author, edition/ISBN/DOI and asset first; then inspect that work’s copyright and permission scope. Candidate discovery is not adoption.",
+  "limitations": [
+    "No transferable rights inference from institution, framework name, public access or download availability.",
+    "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+  ],
+  "issuerFromBaseline": "UNKNOWN",
+  "authoritativeTermsURLs": [
+    "https://www.loc.gov/item/00063423/"
+  ],
+  "observedAt": "2026-11-25",
+  "evidence": [
+    {
+      "id": "bloom",
+      "url": "https://www.loc.gov/item/00063423/",
+      "locator": "About this Item",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Catalog identifies Anderson/Krathwohl 2001 revised taxonomy. This is one candidate, distinct from original Bloom; catalog is not a license for the book."
+    }
+  ]
+}

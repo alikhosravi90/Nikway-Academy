@@ -1,0 +1,1 @@
+{"datasetKind":"synthetic","protocolVersion":"0.1.0","rubricVersion":"0.1.0","rows":[{"participantId":"P-001","phase":"pre","scores":{"plan":1,"do":1,"check":0,"act":0}},{"participantId":"P-001","phase":"post","scores":{"plan":2,"do":2,"check":2,"act":2}}]}

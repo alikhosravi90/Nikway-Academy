@@ -1,0 +1,80 @@
+{
+  "referenceId": "LE-SRC-021",
+  "suppliedName": "xAPI",
+  "exactWork": "xAPI-Spec",
+  "version": "Repository 1.0.3; points to 2.0",
+  "canonicalURL": "https://github.com/adlnet/xAPI-Spec",
+  "owner": {
+    "name": "Repository contributors; complete ownership chain UNKNOWN",
+    "status": "repository license observed"
+  },
+  "identitySource": "baseline research/references.json; unchanged",
+  "dossierState": "documented_with_open_items",
+  "rightsClearedForIntendedUse": false,
+  "evidenceRefs": [
+    "xapi"
+  ],
+  "uses": {
+    "quotation": {
+      "status": "restricted",
+      "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+      "evidenceRefs": [
+        "xapi"
+      ]
+    },
+    "summary": {
+      "status": "restricted",
+      "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+      "evidenceRefs": [
+        "xapi"
+      ]
+    },
+    "translation": {
+      "status": "restricted",
+      "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+      "evidenceRefs": [
+        "xapi"
+      ]
+    },
+    "adaptation": {
+      "status": "restricted",
+      "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+      "evidenceRefs": [
+        "xapi"
+      ]
+    },
+    "redistribution": {
+      "status": "restricted",
+      "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+      "evidenceRefs": [
+        "xapi"
+      ]
+    },
+    "commercial_use": {
+      "status": "restricted",
+      "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+      "evidenceRefs": [
+        "xapi"
+      ]
+    }
+  },
+  "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+  "limitations": [
+    "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+  ],
+  "issuerFromBaseline": "ADL Initiative",
+  "authoritativeTermsURLs": [
+    "https://github.com/adlnet/xAPI-Spec/blob/master/LICENSE"
+  ],
+  "observedAt": "2026-11-25",
+  "evidence": [
+    {
+      "id": "xapi",
+      "url": "https://github.com/adlnet/xAPI-Spec/blob/master/LICENSE",
+      "locator": "LICENSE sections 2 and 4",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Apache-2.0 copyright grant includes derivatives and redistribution with license, retained notices and change notices. Commit not pinned; does not cover IEEE xAPI 2.0 by implication."
+    }
+  ]
+}

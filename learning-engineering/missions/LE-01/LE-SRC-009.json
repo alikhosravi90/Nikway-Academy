@@ -1,0 +1,56 @@
+{
+  "referenceId": "LE-SRC-009",
+  "suppliedName": "SAM",
+  "exactWork": "UNKNOWN",
+  "version": "UNKNOWN",
+  "canonicalURL": null,
+  "owner": {
+    "name": "UNKNOWN",
+    "status": "pending verification"
+  },
+  "identitySource": "baseline research/references.json; unchanged",
+  "dossierState": "documented_with_open_items",
+  "rightsClearedForIntendedUse": false,
+  "evidenceRefs": [],
+  "uses": {
+    "quotation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": []
+    },
+    "summary": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": []
+    },
+    "translation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": []
+    },
+    "adaptation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": []
+    },
+    "redistribution": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": []
+    },
+    "commercial_use": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": []
+    }
+  },
+  "ownerDecision": "Select exact primary work, author, edition/ISBN/DOI and asset first; then inspect that work’s copyright and permission scope. Candidate discovery is not adoption.",
+  "limitations": [
+    "SAM name alone does not identify a work; unrelated Cengage SAM license rejected as nonmatching.",
+    "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+  ],
+  "issuerFromBaseline": "UNKNOWN",
+  "authoritativeTermsURLs": [],
+  "observedAt": "2026-11-25",
+  "evidence": []
+}

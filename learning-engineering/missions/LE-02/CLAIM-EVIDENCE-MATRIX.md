@@ -1,0 +1,33 @@
+# Claim–evidence–source matrix
+
+Read/search-verified 2026-11-25. S = source-supported within stated scope; D = local design; U = unverified. These are evidence classifications, not approval statuses. All Persian wording remains proposed. No verbatim definition reuse is needed; proposals are original concise formulations.
+
+| ID / baseline term | Classification and specific assessment | Source / precise locator | Bilingual disposition |
+|---|---|---|---|
+| LE-TERM-LE / Learning Engineering | S for scientific/human-centered/data-informed practice; baseline omits essential dimensions. D for local objective-evidence linkage. | [IEEE ICICLE](https://sagroups.ieee.org/icicle/learning-engineering-process/), “What is Learning Engineering?” three bullets | R01; remove unsupported equivalence alias; human review pending |
+| LE-TERM-SOURCE / Source | D: identifying record plus rights state is a repository convention, not a universal definition of source. Provenance vocabulary supports lineage modeling only. | [PROV-O](https://www.w3.org/TR/prov-o/), §3.1 Starting Point Terms, Entity; §3.2 Expanded Terms, hadPrimarySource | Retain with explicit “in this system / در این سامانه” |
+| LE-TERM-EVIDENCE / Evidence | D: claim locator record is not scientific evidence itself. Presence cannot establish truth; source quality/relevance must be assessed. | Same PROV-O sections support derivation/primary-source relationships, not validity or truth | R02 distinguish evidence record from evidence quality |
+| LE-TERM-CARD / Knowledge Card | D; no authoritative standardized definition verified. A summary/evidence link is a useful local object. | Baseline glossary and LE-CARD-PDCA 0.1.0; no external normative source claimed | Retain local label, avoid presenting as standard |
+| LE-TERM-CONCEPT / Concept | S for semantic concept representation, labels and notes; D for mandated stable local ID and required boundary. | [SKOS Reference](https://www.w3.org/TR/skos-reference/), §3 skos:Concept; §5 Lexical Labels; §7 Documentation Properties | Translation plausible; distinguish concept from its database representation |
+| LE-TERM-COMP / Competency | S for contextual capability; D for proposed construct. A proposed capability is not demonstrated individual competence. | [Cedefop glossary](https://www.cedefop.europa.eu/en/tools/vet-glossary/glossary?letter=C), entry “competence”, Definition and Comment | R03 distinguish competency specification from attainment; competence/competency mapping is contextual |
+| LE-TERM-OBJ / Learning Objective | S for observable and measurable expected performance; D for requiring every statement to contain scoring criteria. | [CMU Learning Objectives](https://www.cmu.edu/teaching/designteach/syllabus/newcourse/learningobjectives.html), “Learning objectives should be” and alignment paragraphs | Retain; separate intended objective from observed learning outcome |
+| LE-TERM-CUR / Curriculum | S for designed learning plan; D for exact-version sequence. Baseline is narrower than broader curriculum including methods/assessment/resources. | [Cedefop curriculum](https://www.cedefop.europa.eu/en/tools/vet-glossary/glossary/curriculum), Definition and Comment | R04 mark local curriculum representation |
+| LE-TERM-CONTENT / Content Specification | D for production specification; accessibility constraints have external grounds but do not validate definition. | [WCAG 2.2](https://www.w3.org/TR/WCAG22/), success criteria 1.1.1 Non-text Content; 1.3.1 Info and Relationships; 3.1.1 Language of Page; 3.1.2 Language of Parts | Retain local wording; RTL direction and lang metadata need actual rendering tests |
+| LE-TERM-ASSESS / Assessment | S for tasks supplying evidence about knowledge/skills; D for the narrower task/method object. Scoring and interpretation are also needed. | [CMU Instructional Triangle](https://www.cmu.edu/teaching/resources/Teaching/Assessment/InstructionalTriangle.pdf), single-page Assessment paragraph | «سنجش» appropriate proposal; do not conflate with programme evaluation |
+| LE-TERM-RUBRIC / Rubric | S for criteria, descriptors and performance levels. Baseline defines criteria only and needs levels explicitly. U for reliability. | [CMU Creating and Using Rubrics](https://www.cmu.edu/teaching/assessment/assesslearning/rubrics.html), opening paragraph and three bullets | R05; retain روبریک as transliterated alias |
+| LE-TERM-PDCA / PDCA | S for repeated four-stage change cycle; D for local safeguards and thresholds. | [ASQ PDCA](https://asq.org/quality-resources/pdca-cycle), opening definition; “The Plan-do-check-act Procedure”, steps 1–4 | R06 remove Persian-only “proposed”; no PDCA=PDSA alias |
+| LE-TERM-PDSA / PDSA | S for planning, doing, studying prediction/results, acting on learning. Baseline is metadata, not substantive definition. | [Deming Institute](https://deming.org/explore/pdsa/), opening three paragraphs; “PDSA and PDCA” | R07 original bilingual definition; attributed distinction |
+
+## PDCA chain claim review
+
+| Record(s) | Claim and evidence | Disposition |
+|---|---|---|
+| LE-SRC-ASQ-PDCA → LE-EVD-PDCA | Official live page is identifiable; ASQ Procedure directly supports four stages. Immutable external edition UNKNOWN. | S descriptive source; rights remain independently unresolved |
+| LE-EVD-PDCA → LE-CARD-PDCA → LE-CONCEPT-PDCA | Summary and concept are broadly faithful to ASQ stages; bounded scope matches small-scale test. | S for stages; original language D; human translation approval U |
+| LE-COMP-PDCA → LE-OBJ-PDCA | Written problem/aim/trial/rates/decision task operationalizes a narrow reasoning capability. | D; broader competence attainment U |
+| LE-CONTENT-PDCA → LE-CUR-PDCA | Proposed formats and sequence exist; specification is not a delivered lesson. | D; learning opportunity and effectiveness U |
+| LE-ASSESS-PDCA | 12/100, 5/100, 7 percentage points arithmetically correct. Dataset explicitly synthetic. | Arithmetic checked; external data provenance not applicable; real effects U |
+| LE-RUBRIC-PDCA | Four dimensions correspond to task stages. No per-level descriptors; 8/8 rule is local. | D; psychometric validity, reliability, fairness and defensible cut score U |
+| All records citing LE-EVD-PDCA | ASQ citation does not support educational thresholds or measurement claims. | Retain distinct design provenance; do not upgrade lineage to scientific validation |
+
+Sources above were inspected via official-page web retrieval except the Cedefop competence entry, verified in official-domain search results after a direct slug failed. Live pages can drift. This review did not inspect full historical PDCA literature, licensed standards clauses or Persian normative terminology sources.

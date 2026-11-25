@@ -1,0 +1,81 @@
+{
+  "referenceId": "LE-SRC-008",
+  "suppliedName": "ADDIE",
+  "exactWork": "UNKNOWN",
+  "version": "UNKNOWN",
+  "canonicalURL": null,
+  "owner": {
+    "name": "UNKNOWN",
+    "status": "pending verification"
+  },
+  "identitySource": "baseline research/references.json; unchanged",
+  "dossierState": "documented_with_open_items",
+  "rightsClearedForIntendedUse": false,
+  "evidenceRefs": [
+    "addie"
+  ],
+  "uses": {
+    "quotation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "addie"
+      ]
+    },
+    "summary": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "addie"
+      ]
+    },
+    "translation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "addie"
+      ]
+    },
+    "adaptation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "addie"
+      ]
+    },
+    "redistribution": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "addie"
+      ]
+    },
+    "commercial_use": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "addie"
+      ]
+    }
+  },
+  "ownerDecision": "Select exact primary work, author, edition/ISBN/DOI and asset first; then inspect that work’s copyright and permission scope. Candidate discovery is not adoption.",
+  "limitations": [
+    "No transferable rights inference from institution, framework name, public access or download availability.",
+    "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+  ],
+  "issuerFromBaseline": "UNKNOWN",
+  "authoritativeTermsURLs": [
+    "https://link.springer.com/book/10.1007/978-0-387-09506-6"
+  ],
+  "observedAt": "2026-11-25",
+  "evidence": [
+    {
+      "id": "addie",
+      "url": "https://link.springer.com/book/10.1007/978-0-387-09506-6",
+      "locator": "book title and publisher",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Candidate work Instructional Design: The ADDIE Approach located. Selection not authorized; it is not a license for ADDIE generally."
+    }
+  ]
+}

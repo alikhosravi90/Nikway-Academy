@@ -1,0 +1,2568 @@
+{
+  "mission": "LE-01",
+  "observedAt": "2026-11-25",
+  "baseline": "3ff3f5d",
+  "sourceSHA256": "6decc80db57b35792ebbfaab3ce53c1499048c5ec9d5a60c9f222aca1199bff0",
+  "status": "PARTIAL",
+  "coverage": {
+    "dossiers": 29,
+    "expected": 29,
+    "rightsClearedForIntendedUse": 0,
+    "statusCells": {
+      "pending verification": 86,
+      "permission-required": 46,
+      "restricted": 36,
+      "allowed": 6
+    }
+  },
+  "meaning": "All 29 names documented, not all rights questions resolved. Status describes observed policy scope, not legal advice or owner approval.",
+  "evidence": [
+    {
+      "id": "iso",
+      "url": "https://www.iso.org/copyright.html",
+      "locator": "Copyright; All Rights Reserved",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "ISO asserts ownership of its publications and requires written permission for reproduction; the page also reserves AI uses."
+    },
+    {
+      "id": "ims",
+      "url": "https://www.1edtech.org/policy/how-to-use-1edtech-documents",
+      "locator": "sections 7, 8, 10, 12",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "As-is document redistribution is permitted. Distributed/commercial derivatives require agreement; translation requires a signed agreement, with nonmember distribution through 1EdTech. Implementation is distinct from document reuse."
+    },
+    {
+      "id": "imslic",
+      "url": "https://www.1edtech.org/standards/specification-license",
+      "locator": "sections 2–5",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Copyright attributed to 1EdTech except noted exceptions; implementation license is conditional; document derivatives are not granted by this license alone. It applies to specifications linking to it."
+    },
+    {
+      "id": "unesco",
+      "url": "https://www.unesco.org/en/terms-use",
+      "locator": "sections 5 and 7; last update 15 September 2026",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Occasional individual noncommercial educational/research consultation, citation, translation and reproduction permitted subject to attribution and material-specific conditions; commercial and broader reuse require an applicable license or authorization."
+    },
+    {
+      "id": "routledge",
+      "url": "https://www.routledge.com/contacts/rights-and-permissions/",
+      "locator": "opening; Books Permissions; Rights Licensing",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Written reproduction consent required; translation rights are separately administered; anthology extracts and figures may have other owners."
+    },
+    {
+      "id": "atd",
+      "url": "https://www.td.org/terms-and-privacy",
+      "locator": "Terms and Conditions 1–2",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Personal downloading/printing with notices is permitted. Modification, translation, distribution and derivative use are restricted; rights can belong to ATD or licensors."
+    },
+    {
+      "id": "asq",
+      "url": "https://asq.org/terms-of-use",
+      "locator": "sections 3 and 9(a–b)",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Site access does not grant IP rights. Copying, translating, adapting and distributing require written consent; site use is personal and noncommercial."
+    },
+    {
+      "id": "asqpermission",
+      "url": "https://asq.org/copyright/reprint-permission",
+      "locator": "Reprint Permission",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Requests are reviewed for the specified use; written permission and possibly fees are required. No request was submitted."
+    },
+    {
+      "id": "deming",
+      "url": "https://deming.org/about-us/f-a-qs/",
+      "locator": "Copyrights and Permissions",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "PDSA reprinting specifically requires a request and approval. Institute publications cannot be publicly disseminated without permission; logo separately reserved."
+    },
+    {
+      "id": "solar",
+      "url": "https://www.solaresearch.org/about/what-is-learning-analytics/",
+      "locator": "footer lines 205–206; video lines 162–164",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Footer licenses site content CC BY 4.0 except noted items. Embedded video is expressly Standard YouTube License; exclude it from the CC scope."
+    },
+    {
+      "id": "ccby",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "locator": "You are free to; Under the following terms",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Sharing and adaptation including commercial purposes are permitted with attribution, license link and change indication; no endorsement or additional restrictions. Deed is a summary, legal-code review remains necessary."
+    },
+    {
+      "id": "xapi",
+      "url": "https://github.com/adlnet/xAPI-Spec/blob/master/LICENSE",
+      "locator": "LICENSE sections 2 and 4",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Apache-2.0 copyright grant includes derivatives and redistribution with license, retained notices and change notices. Commit not pinned; does not cover IEEE xAPI 2.0 by implication."
+    },
+    {
+      "id": "cmi",
+      "url": "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/LICENSE",
+      "locator": "Apache License 2.0; sections 2 and 4; repository README release",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "License text inspected on quartz branch; repository identifies Quartz first edition June 2016. Exact commit and third-party notices remain to be reviewed."
+    },
+    {
+      "id": "lebok",
+      "url": "https://lebok.wiki/",
+      "locator": "open result: zero readable lines",
+      "observedAt": "2026-11-25",
+      "method": "official open unsuccessful for content",
+      "observation": "Direct official page returned no readable text. No rights conclusion possible."
+    },
+    {
+      "id": "cast",
+      "url": "https://udlguidelines.cast.org/more/downloads/",
+      "locator": "Version 3.0 (2024); translations",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "CAST identifies version 3.0 and published translations. No affirmative reuse license verified; available downloads do not grant reuse rights."
+    },
+    {
+      "id": "aect",
+      "url": "https://www.aect.org/aect/about/aect-definition",
+      "locator": "definition and 2023 task-force credit",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Official definition page inspected; no affirmative license verified in returned content."
+    },
+    {
+      "id": "ieee",
+      "url": "https://www.ieee.org/about/help/site-terms-conditions.html",
+      "locator": "direct open failed",
+      "observedAt": "2026-11-25",
+      "method": "official open failed",
+      "observation": "Authoritative terms URL identified but direct fetch restricted; no operative permission inferred from mirrored terms."
+    },
+    {
+      "id": "addie",
+      "url": "https://link.springer.com/book/10.1007/978-0-387-09506-6",
+      "locator": "book title and publisher",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Candidate work Instructional Design: The ADDIE Approach located. Selection not authorized; it is not a license for ADDIE generally."
+    },
+    {
+      "id": "backward",
+      "url": "https://www.ascd.org/books/the-understanding-by-design-guide-to-creating-high-quality-units?variant=109107",
+      "locator": "title and trademark notice",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Candidate book located; Understanding by Design and UbD trademarks identified. No content license verified."
+    },
+    {
+      "id": "bloom",
+      "url": "https://www.loc.gov/item/00063423/",
+      "locator": "About this Item",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Catalog identifies Anderson/Krathwohl 2001 revised taxonomy. This is one candidate, distinct from original Bloom; catalog is not a license for the book."
+    },
+    {
+      "id": "merrill",
+      "url": "https://doi.org/10.1007/bf02505024",
+      "locator": "article title",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Candidate First principles of instruction article located; article versus book selection remains open."
+    },
+    {
+      "id": "4cid",
+      "url": "https://4cid.org/",
+      "locator": "direct open failure",
+      "observedAt": "2026-11-25",
+      "method": "official open failed",
+      "observation": "Official candidate site inaccessible in this attempt; no license established."
+    }
+  ],
+  "dossiers": [
+    {
+      "referenceId": "LE-SRC-001",
+      "suppliedName": "IEEE ICICLE",
+      "exactWork": "ICICLE — Home",
+      "version": "Live page; revision UNKNOWN",
+      "canonicalURL": "https://sagroups.ieee.org/icicle/",
+      "owner": {
+        "name": "UNKNOWN",
+        "status": "pending verification"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "ieee"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "ieee"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "ieee"
+          ]
+        },
+        "translation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "ieee"
+          ]
+        },
+        "adaptation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "ieee"
+          ]
+        },
+        "redistribution": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "ieee"
+          ]
+        },
+        "commercial_use": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "ieee"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No transferable rights inference from institution, framework name, public access or download availability.",
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "IEEE-SA ICICLE",
+      "authoritativeTermsURLs": [
+        "https://www.ieee.org/about/help/site-terms-conditions.html"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "ieee",
+          "url": "https://www.ieee.org/about/help/site-terms-conditions.html",
+          "locator": "direct open failed",
+          "observedAt": "2026-11-25",
+          "method": "official open failed",
+          "observation": "Authoritative terms URL identified but direct fetch restricted; no operative permission inferred from mirrored terms."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-002",
+      "suppliedName": "Learning Engineering Toolkit",
+      "exactWork": "Learning Engineering Toolkit: Evidence-Based Practices from the Learning Sciences, Instructional Design, and Beyond",
+      "version": "1st; ISBN 9781032208503",
+      "canonicalURL": "https://www.routledge.com/Learning-Engineering-Toolkit-Evidence-Based-Practices-from-the-Learning-Sciences-Instructional-Design-and-Beyond/Goodell-Kolodner/p/book/9781032208503",
+      "owner": {
+        "name": "UNKNOWN per chapter/figure; Routledge/Taylor & Francis administers permissions",
+        "status": "policy observed; item-level exceptions must be checked"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "routledge"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "routledge"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "routledge"
+          ]
+        },
+        "translation": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "routledge"
+          ]
+        },
+        "adaptation": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "routledge"
+          ]
+        },
+        "redistribution": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "routledge"
+          ]
+        },
+        "commercial_use": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "routledge"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "Editors Jim Goodell and Janet Kolodner; Routledge",
+      "authoritativeTermsURLs": [
+        "https://www.routledge.com/contacts/rights-and-permissions/"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "routledge",
+          "url": "https://www.routledge.com/contacts/rights-and-permissions/",
+          "locator": "opening; Books Permissions; Rights Licensing",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Written reproduction consent required; translation rights are separately administered; anthology extracts and figures may have other owners."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-003",
+      "suppliedName": "LEBOK.wiki",
+      "exactWork": "Learning Engineering Body of Knowledge",
+      "version": "Beta; immutable revision UNKNOWN",
+      "canonicalURL": "https://lebok.wiki/",
+      "owner": {
+        "name": "UNKNOWN",
+        "status": "pending verification"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "lebok"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "lebok"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "lebok"
+          ]
+        },
+        "translation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "lebok"
+          ]
+        },
+        "adaptation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "lebok"
+          ]
+        },
+        "redistribution": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "lebok"
+          ]
+        },
+        "commercial_use": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "lebok"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No transferable rights inference from institution, framework name, public access or download availability.",
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "LEBOK.wiki; homepage credit Jim",
+      "authoritativeTermsURLs": [
+        "https://lebok.wiki/"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "lebok",
+          "url": "https://lebok.wiki/",
+          "locator": "open result: zero readable lines",
+          "observedAt": "2026-11-25",
+          "method": "official open unsuccessful for content",
+          "observation": "Direct official page returned no readable text. No rights conclusion possible."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-004",
+      "suppliedName": "ATD Capability Model",
+      "exactWork": "Talent Development Capability Model",
+      "version": "Live model; edition UNKNOWN",
+      "canonicalURL": "https://capability.td.org/",
+      "owner": {
+        "name": "ATD and/or licensors",
+        "status": "policy observed; item-level exceptions must be checked"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "atd"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "atd"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "atd"
+          ]
+        },
+        "translation": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "atd"
+          ]
+        },
+        "adaptation": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "atd"
+          ]
+        },
+        "redistribution": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "atd"
+          ]
+        },
+        "commercial_use": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "atd"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "Association for Talent Development",
+      "authoritativeTermsURLs": [
+        "https://www.td.org/terms-and-privacy"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "atd",
+          "url": "https://www.td.org/terms-and-privacy",
+          "locator": "Terms and Conditions 1–2",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Personal downloading/printing with notices is permitted. Modification, translation, distribution and derivative use are restricted; rights can belong to ATD or licensors."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-005",
+      "suppliedName": "AECT",
+      "exactWork": "AECT Definition for Educational Technology",
+      "version": "2023 task force credited; revision UNKNOWN",
+      "canonicalURL": "https://www.aect.org/aect/about/aect-definition",
+      "owner": {
+        "name": "UNKNOWN",
+        "status": "pending verification"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "aect"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "aect"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "aect"
+          ]
+        },
+        "translation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "aect"
+          ]
+        },
+        "adaptation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "aect"
+          ]
+        },
+        "redistribution": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "aect"
+          ]
+        },
+        "commercial_use": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "aect"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No transferable rights inference from institution, framework name, public access or download availability.",
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "Association for Educational Communications and Technology",
+      "authoritativeTermsURLs": [
+        "https://www.aect.org/aect/about/aect-definition"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "aect",
+          "url": "https://www.aect.org/aect/about/aect-definition",
+          "locator": "definition and 2023 task-force credit",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Official definition page inspected; no affirmative license verified in returned content."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-006",
+      "suppliedName": "UNESCO OER",
+      "exactWork": "Recommendation on Open Educational Resources (OER)",
+      "version": "2019 Recommendation",
+      "canonicalURL": "https://www.unesco.org/en/legal-affairs/recommendation-open-educational-resources-oer",
+      "owner": {
+        "name": "UNESCO; third-party exceptions unverified",
+        "status": "issuer terms observed"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "unesco"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "restricted",
+          "basis": "Only occasional individual noncommercial educational/research uses under section 5; do not infer CC license for this legal-affairs page.",
+          "evidenceRefs": [
+            "unesco"
+          ]
+        },
+        "summary": {
+          "status": "restricted",
+          "basis": "Only occasional individual noncommercial educational/research uses under section 5; do not infer CC license for this legal-affairs page.",
+          "evidenceRefs": [
+            "unesco"
+          ]
+        },
+        "translation": {
+          "status": "restricted",
+          "basis": "Only occasional individual noncommercial educational/research uses under section 5; do not infer CC license for this legal-affairs page.",
+          "evidenceRefs": [
+            "unesco"
+          ]
+        },
+        "adaptation": {
+          "status": "pending verification",
+          "basis": "Only occasional individual noncommercial educational/research uses under section 5; do not infer CC license for this legal-affairs page.",
+          "evidenceRefs": [
+            "unesco"
+          ]
+        },
+        "redistribution": {
+          "status": "restricted",
+          "basis": "Only occasional individual noncommercial educational/research uses under section 5; do not infer CC license for this legal-affairs page.",
+          "evidenceRefs": [
+            "unesco"
+          ]
+        },
+        "commercial_use": {
+          "status": "permission-required",
+          "basis": "Only occasional individual noncommercial educational/research uses under section 5; do not infer CC license for this legal-affairs page.",
+          "evidenceRefs": [
+            "unesco"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "UNESCO General Conference",
+      "authoritativeTermsURLs": [
+        "https://www.unesco.org/en/terms-use"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "unesco",
+          "url": "https://www.unesco.org/en/terms-use",
+          "locator": "sections 5 and 7; last update 15 September 2026",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Occasional individual noncommercial educational/research consultation, citation, translation and reproduction permitted subject to attribution and material-specific conditions; commercial and broader reuse require an applicable license or authorization."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-007",
+      "suppliedName": "SoLAR",
+      "exactWork": "What is Learning Analytics?",
+      "version": "Live page cites 2026 report",
+      "canonicalURL": "https://www.solaresearch.org/about/what-is-learning-analytics/",
+      "owner": {
+        "name": "Society for Learning Analytics Research; excludes separately noted material",
+        "status": "page footer observed"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "solar",
+        "ccby"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "allowed",
+          "basis": "Conditional CC BY 4.0 for unexcepted webpage text: attribute, link license, mark changes; exclude embedded video, logos and third-party exceptions. Exact reusable text and legal code still require reviewer signoff.",
+          "evidenceRefs": [
+            "solar",
+            "ccby"
+          ]
+        },
+        "summary": {
+          "status": "allowed",
+          "basis": "Conditional CC BY 4.0 for unexcepted webpage text: attribute, link license, mark changes; exclude embedded video, logos and third-party exceptions. Exact reusable text and legal code still require reviewer signoff.",
+          "evidenceRefs": [
+            "solar",
+            "ccby"
+          ]
+        },
+        "translation": {
+          "status": "allowed",
+          "basis": "Conditional CC BY 4.0 for unexcepted webpage text: attribute, link license, mark changes; exclude embedded video, logos and third-party exceptions. Exact reusable text and legal code still require reviewer signoff.",
+          "evidenceRefs": [
+            "solar",
+            "ccby"
+          ]
+        },
+        "adaptation": {
+          "status": "allowed",
+          "basis": "Conditional CC BY 4.0 for unexcepted webpage text: attribute, link license, mark changes; exclude embedded video, logos and third-party exceptions. Exact reusable text and legal code still require reviewer signoff.",
+          "evidenceRefs": [
+            "solar",
+            "ccby"
+          ]
+        },
+        "redistribution": {
+          "status": "allowed",
+          "basis": "Conditional CC BY 4.0 for unexcepted webpage text: attribute, link license, mark changes; exclude embedded video, logos and third-party exceptions. Exact reusable text and legal code still require reviewer signoff.",
+          "evidenceRefs": [
+            "solar",
+            "ccby"
+          ]
+        },
+        "commercial_use": {
+          "status": "allowed",
+          "basis": "Conditional CC BY 4.0 for unexcepted webpage text: attribute, link license, mark changes; exclude embedded video, logos and third-party exceptions. Exact reusable text and legal code still require reviewer signoff.",
+          "evidenceRefs": [
+            "solar",
+            "ccby"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "Society for Learning Analytics Research",
+      "authoritativeTermsURLs": [
+        "https://www.solaresearch.org/about/what-is-learning-analytics/",
+        "https://creativecommons.org/licenses/by/4.0/"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "solar",
+          "url": "https://www.solaresearch.org/about/what-is-learning-analytics/",
+          "locator": "footer lines 205–206; video lines 162–164",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Footer licenses site content CC BY 4.0 except noted items. Embedded video is expressly Standard YouTube License; exclude it from the CC scope."
+        },
+        {
+          "id": "ccby",
+          "url": "https://creativecommons.org/licenses/by/4.0/",
+          "locator": "You are free to; Under the following terms",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Sharing and adaptation including commercial purposes are permitted with attribution, license link and change indication; no endorsement or additional restrictions. Deed is a summary, legal-code review remains necessary."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-008",
+      "suppliedName": "ADDIE",
+      "exactWork": "UNKNOWN",
+      "version": "UNKNOWN",
+      "canonicalURL": null,
+      "owner": {
+        "name": "UNKNOWN",
+        "status": "pending verification"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "addie"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "addie"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "addie"
+          ]
+        },
+        "translation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "addie"
+          ]
+        },
+        "adaptation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "addie"
+          ]
+        },
+        "redistribution": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "addie"
+          ]
+        },
+        "commercial_use": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "addie"
+          ]
+        }
+      },
+      "ownerDecision": "Select exact primary work, author, edition/ISBN/DOI and asset first; then inspect that work’s copyright and permission scope. Candidate discovery is not adoption.",
+      "limitations": [
+        "No transferable rights inference from institution, framework name, public access or download availability.",
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "UNKNOWN",
+      "authoritativeTermsURLs": [
+        "https://link.springer.com/book/10.1007/978-0-387-09506-6"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "addie",
+          "url": "https://link.springer.com/book/10.1007/978-0-387-09506-6",
+          "locator": "book title and publisher",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Candidate work Instructional Design: The ADDIE Approach located. Selection not authorized; it is not a license for ADDIE generally."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-009",
+      "suppliedName": "SAM",
+      "exactWork": "UNKNOWN",
+      "version": "UNKNOWN",
+      "canonicalURL": null,
+      "owner": {
+        "name": "UNKNOWN",
+        "status": "pending verification"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [],
+      "uses": {
+        "quotation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        },
+        "translation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        },
+        "adaptation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        },
+        "redistribution": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        },
+        "commercial_use": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        }
+      },
+      "ownerDecision": "Select exact primary work, author, edition/ISBN/DOI and asset first; then inspect that work’s copyright and permission scope. Candidate discovery is not adoption.",
+      "limitations": [
+        "SAM name alone does not identify a work; unrelated Cengage SAM license rejected as nonmatching.",
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "UNKNOWN",
+      "authoritativeTermsURLs": [],
+      "observedAt": "2026-11-25",
+      "evidence": []
+    },
+    {
+      "referenceId": "LE-SRC-010",
+      "suppliedName": "Backward Design",
+      "exactWork": "UNKNOWN",
+      "version": "UNKNOWN",
+      "canonicalURL": null,
+      "owner": {
+        "name": "UNKNOWN",
+        "status": "pending verification"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "backward"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "backward"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "backward"
+          ]
+        },
+        "translation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "backward"
+          ]
+        },
+        "adaptation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "backward"
+          ]
+        },
+        "redistribution": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "backward"
+          ]
+        },
+        "commercial_use": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "backward"
+          ]
+        }
+      },
+      "ownerDecision": "Select exact primary work, author, edition/ISBN/DOI and asset first; then inspect that work’s copyright and permission scope. Candidate discovery is not adoption.",
+      "limitations": [
+        "No transferable rights inference from institution, framework name, public access or download availability.",
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "UNKNOWN",
+      "authoritativeTermsURLs": [
+        "https://www.ascd.org/books/the-understanding-by-design-guide-to-creating-high-quality-units?variant=109107"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "backward",
+          "url": "https://www.ascd.org/books/the-understanding-by-design-guide-to-creating-high-quality-units?variant=109107",
+          "locator": "title and trademark notice",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Candidate book located; Understanding by Design and UbD trademarks identified. No content license verified."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-011",
+      "suppliedName": "4C-ID",
+      "exactWork": "UNKNOWN",
+      "version": "UNKNOWN",
+      "canonicalURL": null,
+      "owner": {
+        "name": "UNKNOWN",
+        "status": "pending verification"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "4cid"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "4cid"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "4cid"
+          ]
+        },
+        "translation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "4cid"
+          ]
+        },
+        "adaptation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "4cid"
+          ]
+        },
+        "redistribution": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "4cid"
+          ]
+        },
+        "commercial_use": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "4cid"
+          ]
+        }
+      },
+      "ownerDecision": "Select exact primary work, author, edition/ISBN/DOI and asset first; then inspect that work’s copyright and permission scope. Candidate discovery is not adoption.",
+      "limitations": [
+        "No transferable rights inference from institution, framework name, public access or download availability.",
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "UNKNOWN",
+      "authoritativeTermsURLs": [
+        "https://4cid.org/"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "4cid",
+          "url": "https://4cid.org/",
+          "locator": "direct open failure",
+          "observedAt": "2026-11-25",
+          "method": "official open failed",
+          "observation": "Official candidate site inaccessible in this attempt; no license established."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-012",
+      "suppliedName": "Bloom",
+      "exactWork": "UNKNOWN",
+      "version": "UNKNOWN",
+      "canonicalURL": null,
+      "owner": {
+        "name": "UNKNOWN",
+        "status": "pending verification"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "bloom"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "bloom"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "bloom"
+          ]
+        },
+        "translation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "bloom"
+          ]
+        },
+        "adaptation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "bloom"
+          ]
+        },
+        "redistribution": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "bloom"
+          ]
+        },
+        "commercial_use": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "bloom"
+          ]
+        }
+      },
+      "ownerDecision": "Select exact primary work, author, edition/ISBN/DOI and asset first; then inspect that work’s copyright and permission scope. Candidate discovery is not adoption.",
+      "limitations": [
+        "No transferable rights inference from institution, framework name, public access or download availability.",
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "UNKNOWN",
+      "authoritativeTermsURLs": [
+        "https://www.loc.gov/item/00063423/"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "bloom",
+          "url": "https://www.loc.gov/item/00063423/",
+          "locator": "About this Item",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Catalog identifies Anderson/Krathwohl 2001 revised taxonomy. This is one candidate, distinct from original Bloom; catalog is not a license for the book."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-013",
+      "suppliedName": "Gagne",
+      "exactWork": "UNKNOWN",
+      "version": "UNKNOWN",
+      "canonicalURL": null,
+      "owner": {
+        "name": "UNKNOWN",
+        "status": "pending verification"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [],
+      "uses": {
+        "quotation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        },
+        "translation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        },
+        "adaptation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        },
+        "redistribution": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        },
+        "commercial_use": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        }
+      },
+      "ownerDecision": "Select exact primary work, author, edition/ISBN/DOI and asset first; then inspect that work’s copyright and permission scope. Candidate discovery is not adoption.",
+      "limitations": [
+        "Gagne may refer to different books/editions or nine-events representations; no work selected.",
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "UNKNOWN",
+      "authoritativeTermsURLs": [],
+      "observedAt": "2026-11-25",
+      "evidence": []
+    },
+    {
+      "referenceId": "LE-SRC-014",
+      "suppliedName": "Merrill",
+      "exactWork": "UNKNOWN",
+      "version": "UNKNOWN",
+      "canonicalURL": null,
+      "owner": {
+        "name": "UNKNOWN",
+        "status": "pending verification"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "merrill"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "merrill"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "merrill"
+          ]
+        },
+        "translation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "merrill"
+          ]
+        },
+        "adaptation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "merrill"
+          ]
+        },
+        "redistribution": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "merrill"
+          ]
+        },
+        "commercial_use": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "merrill"
+          ]
+        }
+      },
+      "ownerDecision": "Select exact primary work, author, edition/ISBN/DOI and asset first; then inspect that work’s copyright and permission scope. Candidate discovery is not adoption.",
+      "limitations": [
+        "No transferable rights inference from institution, framework name, public access or download availability.",
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "UNKNOWN",
+      "authoritativeTermsURLs": [
+        "https://doi.org/10.1007/bf02505024"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "merrill",
+          "url": "https://doi.org/10.1007/bf02505024",
+          "locator": "article title",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Candidate First principles of instruction article located; article versus book selection remains open."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-015",
+      "suppliedName": "UDL",
+      "exactWork": "CAST Universal Design for Learning Guidelines version 3.0",
+      "version": "3.0; citation year 2024",
+      "canonicalURL": "https://udlguidelines.cast.org/",
+      "owner": {
+        "name": "UNKNOWN",
+        "status": "pending verification"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "cast"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "cast"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "cast"
+          ]
+        },
+        "translation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "cast"
+          ]
+        },
+        "adaptation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "cast"
+          ]
+        },
+        "redistribution": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "cast"
+          ]
+        },
+        "commercial_use": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": [
+            "cast"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No transferable rights inference from institution, framework name, public access or download availability.",
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "CAST",
+      "authoritativeTermsURLs": [
+        "https://udlguidelines.cast.org/more/downloads/"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "cast",
+          "url": "https://udlguidelines.cast.org/more/downloads/",
+          "locator": "Version 3.0 (2024); translations",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "CAST identifies version 3.0 and published translations. No affirmative reuse license verified; available downloads do not grant reuse rights."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-016",
+      "suppliedName": "ISO 21001",
+      "exactWork": "ISO 21001:2025 — Educational organizations — Management systems for educational organizations — Requirements with guidance for use",
+      "version": "2; 2025-07",
+      "canonicalURL": "https://www.iso.org/standard/21001",
+      "owner": {
+        "name": "ISO",
+        "status": "issuer policy observed"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "iso"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "translation": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "adaptation": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "redistribution": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "commercial_use": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "ISO",
+      "authoritativeTermsURLs": [
+        "https://www.iso.org/copyright.html"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "iso",
+          "url": "https://www.iso.org/copyright.html",
+          "locator": "Copyright; All Rights Reserved",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "ISO asserts ownership of its publications and requires written permission for reproduction; the page also reserves AI uses."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-017",
+      "suppliedName": "ISO 29993",
+      "exactWork": "ISO 29993:2017 — Learning services outside formal education — Service requirements",
+      "version": "1; 2017-08",
+      "canonicalURL": "https://www.iso.org/standard/70357.html?browse=tc",
+      "owner": {
+        "name": "ISO",
+        "status": "issuer policy observed"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "iso"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "translation": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "adaptation": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "redistribution": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "commercial_use": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "ISO",
+      "authoritativeTermsURLs": [
+        "https://www.iso.org/copyright.html"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "iso",
+          "url": "https://www.iso.org/copyright.html",
+          "locator": "Copyright; All Rights Reserved",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "ISO asserts ownership of its publications and requires written permission for reproduction; the page also reserves AI uses."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-018",
+      "suppliedName": "ISO 10015",
+      "exactWork": "ISO 10015:2019 — Quality management — Guidelines for competence management and people development",
+      "version": "2; 2019-12",
+      "canonicalURL": "https://www.iso.org/standard/69459.html?browse=ics",
+      "owner": {
+        "name": "ISO",
+        "status": "issuer policy observed"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "iso"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "translation": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "adaptation": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "redistribution": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "commercial_use": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "ISO",
+      "authoritativeTermsURLs": [
+        "https://www.iso.org/copyright.html"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "iso",
+          "url": "https://www.iso.org/copyright.html",
+          "locator": "Copyright; All Rights Reserved",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "ISO asserts ownership of its publications and requires written permission for reproduction; the page also reserves AI uses."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-019",
+      "suppliedName": "ISO 30422",
+      "exactWork": "ISO 30422:2022 — Human resource management — Learning and development",
+      "version": "1; 2022-05",
+      "canonicalURL": "https://www.iso.org/standard/76365.html",
+      "owner": {
+        "name": "ISO",
+        "status": "issuer policy observed"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "iso"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "translation": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "adaptation": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "redistribution": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        },
+        "commercial_use": {
+          "status": "permission-required",
+          "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+          "evidenceRefs": [
+            "iso"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "ISO",
+      "authoritativeTermsURLs": [
+        "https://www.iso.org/copyright.html"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "iso",
+          "url": "https://www.iso.org/copyright.html",
+          "locator": "Copyright; All Rights Reserved",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "ISO asserts ownership of its publications and requires written permission for reproduction; the page also reserves AI uses."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-020",
+      "suppliedName": "SCORM",
+      "exactWork": "DoDI FY24 Functional Requirements, SCORM subsection",
+      "version": "FY24 document; selected SCORM spec pending verification",
+      "canonicalURL": "https://adlnet.gov/assets/uploads/DODI-FY24FR.pdf",
+      "owner": {
+        "name": "UNKNOWN",
+        "status": "pending verification"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [],
+      "uses": {
+        "quotation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        },
+        "translation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        },
+        "adaptation": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        },
+        "redistribution": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        },
+        "commercial_use": {
+          "status": "pending verification",
+          "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+          "evidenceRefs": []
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "FY24 DoDI reference is not selected SCORM specification; government provenance alone does not clear third-party text.",
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "ADL Initiative",
+      "authoritativeTermsURLs": [],
+      "observedAt": "2026-11-25",
+      "evidence": []
+    },
+    {
+      "referenceId": "LE-SRC-021",
+      "suppliedName": "xAPI",
+      "exactWork": "xAPI-Spec",
+      "version": "Repository 1.0.3; points to 2.0",
+      "canonicalURL": "https://github.com/adlnet/xAPI-Spec",
+      "owner": {
+        "name": "Repository contributors; complete ownership chain UNKNOWN",
+        "status": "repository license observed"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "xapi"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "restricted",
+          "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+          "evidenceRefs": [
+            "xapi"
+          ]
+        },
+        "summary": {
+          "status": "restricted",
+          "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+          "evidenceRefs": [
+            "xapi"
+          ]
+        },
+        "translation": {
+          "status": "restricted",
+          "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+          "evidenceRefs": [
+            "xapi"
+          ]
+        },
+        "adaptation": {
+          "status": "restricted",
+          "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+          "evidenceRefs": [
+            "xapi"
+          ]
+        },
+        "redistribution": {
+          "status": "restricted",
+          "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+          "evidenceRefs": [
+            "xapi"
+          ]
+        },
+        "commercial_use": {
+          "status": "restricted",
+          "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+          "evidenceRefs": [
+            "xapi"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "ADL Initiative",
+      "authoritativeTermsURLs": [
+        "https://github.com/adlnet/xAPI-Spec/blob/master/LICENSE"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "xapi",
+          "url": "https://github.com/adlnet/xAPI-Spec/blob/master/LICENSE",
+          "locator": "LICENSE sections 2 and 4",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Apache-2.0 copyright grant includes derivatives and redistribution with license, retained notices and change notices. Commit not pinned; does not cover IEEE xAPI 2.0 by implication."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-022",
+      "suppliedName": "cmi5",
+      "exactWork": "The cmi5 Project",
+      "version": "Quartz first edition; June 2016",
+      "canonicalURL": "https://aicc.github.io/CMI-5_Spec_Current/",
+      "owner": {
+        "name": "Repository contributors; complete ownership chain UNKNOWN",
+        "status": "repository license observed"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "cmi"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "restricted",
+          "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+          "evidenceRefs": [
+            "cmi"
+          ]
+        },
+        "summary": {
+          "status": "restricted",
+          "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+          "evidenceRefs": [
+            "cmi"
+          ]
+        },
+        "translation": {
+          "status": "restricted",
+          "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+          "evidenceRefs": [
+            "cmi"
+          ]
+        },
+        "adaptation": {
+          "status": "restricted",
+          "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+          "evidenceRefs": [
+            "cmi"
+          ]
+        },
+        "redistribution": {
+          "status": "restricted",
+          "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+          "evidenceRefs": [
+            "cmi"
+          ]
+        },
+        "commercial_use": {
+          "status": "restricted",
+          "basis": "Apache-2.0 repository license observed; pin commit and material scope, retain license/notices, mark modifications. No transfer to later IEEE standards.",
+          "evidenceRefs": [
+            "cmi"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "AICC project transferred to ADL per project history",
+      "authoritativeTermsURLs": [
+        "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/LICENSE"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "cmi",
+          "url": "https://github.com/AICC/CMI-5_Spec_Current/blob/quartz/LICENSE",
+          "locator": "Apache License 2.0; sections 2 and 4; repository README release",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "License text inspected on quartz branch; repository identifies Quartz first edition June 2016. Exact commit and third-party notices remain to be reviewed."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-023",
+      "suppliedName": "LTI",
+      "exactWork": "Learning Tools Interoperability",
+      "version": "Selected normative version pending verification",
+      "canonicalURL": "https://standards.1edtech.org/",
+      "owner": {
+        "name": "1EdTech, except item-specific third-party notices",
+        "status": "issuer policy observed"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "ims",
+        "imslic"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "translation": {
+          "status": "permission-required",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "adaptation": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "redistribution": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "commercial_use": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "1EdTech",
+      "authoritativeTermsURLs": [
+        "https://www.1edtech.org/policy/how-to-use-1edtech-documents",
+        "https://www.1edtech.org/standards/specification-license"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "ims",
+          "url": "https://www.1edtech.org/policy/how-to-use-1edtech-documents",
+          "locator": "sections 7, 8, 10, 12",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "As-is document redistribution is permitted. Distributed/commercial derivatives require agreement; translation requires a signed agreement, with nonmember distribution through 1EdTech. Implementation is distinct from document reuse."
+        },
+        {
+          "id": "imslic",
+          "url": "https://www.1edtech.org/standards/specification-license",
+          "locator": "sections 2–5",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Copyright attributed to 1EdTech except noted exceptions; implementation license is conditional; document derivatives are not granted by this license alone. It applies to specifications linking to it."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-024",
+      "suppliedName": "QTI",
+      "exactWork": "Question and Test Interoperability",
+      "version": "Selected normative version pending verification",
+      "canonicalURL": "https://standards.1edtech.org/",
+      "owner": {
+        "name": "1EdTech, except item-specific third-party notices",
+        "status": "issuer policy observed"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "ims",
+        "imslic"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "translation": {
+          "status": "permission-required",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "adaptation": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "redistribution": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "commercial_use": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "1EdTech",
+      "authoritativeTermsURLs": [
+        "https://www.1edtech.org/policy/how-to-use-1edtech-documents",
+        "https://www.1edtech.org/standards/specification-license"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "ims",
+          "url": "https://www.1edtech.org/policy/how-to-use-1edtech-documents",
+          "locator": "sections 7, 8, 10, 12",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "As-is document redistribution is permitted. Distributed/commercial derivatives require agreement; translation requires a signed agreement, with nonmember distribution through 1EdTech. Implementation is distinct from document reuse."
+        },
+        {
+          "id": "imslic",
+          "url": "https://www.1edtech.org/standards/specification-license",
+          "locator": "sections 2–5",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Copyright attributed to 1EdTech except noted exceptions; implementation license is conditional; document derivatives are not granted by this license alone. It applies to specifications linking to it."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-025",
+      "suppliedName": "CASE",
+      "exactWork": "Competencies and Academic Standards Exchange",
+      "version": "Selected normative version pending verification",
+      "canonicalURL": "https://standards.1edtech.org/",
+      "owner": {
+        "name": "1EdTech, except item-specific third-party notices",
+        "status": "issuer policy observed"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "ims",
+        "imslic"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "translation": {
+          "status": "permission-required",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "adaptation": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "redistribution": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "commercial_use": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "1EdTech",
+      "authoritativeTermsURLs": [
+        "https://www.1edtech.org/policy/how-to-use-1edtech-documents",
+        "https://www.1edtech.org/standards/specification-license"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "ims",
+          "url": "https://www.1edtech.org/policy/how-to-use-1edtech-documents",
+          "locator": "sections 7, 8, 10, 12",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "As-is document redistribution is permitted. Distributed/commercial derivatives require agreement; translation requires a signed agreement, with nonmember distribution through 1EdTech. Implementation is distinct from document reuse."
+        },
+        {
+          "id": "imslic",
+          "url": "https://www.1edtech.org/standards/specification-license",
+          "locator": "sections 2–5",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Copyright attributed to 1EdTech except noted exceptions; implementation license is conditional; document derivatives are not granted by this license alone. It applies to specifications linking to it."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-026",
+      "suppliedName": "Open Badges",
+      "exactWork": "Open Badges",
+      "version": "3.0 mentioned on CLR page; normative selection pending verification",
+      "canonicalURL": "https://www.1edtech.org/standards/clr",
+      "owner": {
+        "name": "1EdTech, except item-specific third-party notices",
+        "status": "issuer policy observed"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "ims",
+        "imslic"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "translation": {
+          "status": "permission-required",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "adaptation": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "redistribution": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "commercial_use": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "1EdTech",
+      "authoritativeTermsURLs": [
+        "https://www.1edtech.org/policy/how-to-use-1edtech-documents",
+        "https://www.1edtech.org/standards/specification-license"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "ims",
+          "url": "https://www.1edtech.org/policy/how-to-use-1edtech-documents",
+          "locator": "sections 7, 8, 10, 12",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "As-is document redistribution is permitted. Distributed/commercial derivatives require agreement; translation requires a signed agreement, with nonmember distribution through 1EdTech. Implementation is distinct from document reuse."
+        },
+        {
+          "id": "imslic",
+          "url": "https://www.1edtech.org/standards/specification-license",
+          "locator": "sections 2–5",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Copyright attributed to 1EdTech except noted exceptions; implementation license is conditional; document derivatives are not granted by this license alone. It applies to specifications linking to it."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-027",
+      "suppliedName": "CLR",
+      "exactWork": "Comprehensive Learner Record Standard",
+      "version": "2.0 Final listed; normative selection pending verification",
+      "canonicalURL": "https://www.1edtech.org/standards/clr",
+      "owner": {
+        "name": "1EdTech, except item-specific third-party notices",
+        "status": "issuer policy observed"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "ims",
+        "imslic"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "translation": {
+          "status": "permission-required",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "adaptation": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "redistribution": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        },
+        "commercial_use": {
+          "status": "restricted",
+          "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+          "evidenceRefs": [
+            "ims",
+            "imslic"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "1EdTech",
+      "authoritativeTermsURLs": [
+        "https://www.1edtech.org/policy/how-to-use-1edtech-documents",
+        "https://www.1edtech.org/standards/specification-license"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "ims",
+          "url": "https://www.1edtech.org/policy/how-to-use-1edtech-documents",
+          "locator": "sections 7, 8, 10, 12",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "As-is document redistribution is permitted. Distributed/commercial derivatives require agreement; translation requires a signed agreement, with nonmember distribution through 1EdTech. Implementation is distinct from document reuse."
+        },
+        {
+          "id": "imslic",
+          "url": "https://www.1edtech.org/standards/specification-license",
+          "locator": "sections 2–5",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Copyright attributed to 1EdTech except noted exceptions; implementation license is conditional; document derivatives are not granted by this license alone. It applies to specifications linking to it."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-028",
+      "suppliedName": "ASQ PDCA",
+      "exactWork": "What is the Plan-Do-Check-Act (PDCA) Cycle?",
+      "version": "Live page; date UNKNOWN",
+      "canonicalURL": "https://asq.org/quality-resources/pdca-cycle",
+      "owner": {
+        "name": "ASQ and/or third-party authors",
+        "status": "policy observed; item-level exceptions must be checked"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "asq",
+        "asqpermission"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "asq",
+            "asqpermission"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "asq",
+            "asqpermission"
+          ]
+        },
+        "translation": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "asq",
+            "asqpermission"
+          ]
+        },
+        "adaptation": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "asq",
+            "asqpermission"
+          ]
+        },
+        "redistribution": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "asq",
+            "asqpermission"
+          ]
+        },
+        "commercial_use": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "asq",
+            "asqpermission"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "American Society for Quality",
+      "authoritativeTermsURLs": [
+        "https://asq.org/terms-of-use",
+        "https://asq.org/copyright/reprint-permission"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "asq",
+          "url": "https://asq.org/terms-of-use",
+          "locator": "sections 3 and 9(a–b)",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Site access does not grant IP rights. Copying, translating, adapting and distributing require written consent; site use is personal and noncommercial."
+        },
+        {
+          "id": "asqpermission",
+          "url": "https://asq.org/copyright/reprint-permission",
+          "locator": "Reprint Permission",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "Requests are reviewed for the specified use; written permission and possibly fees are required. No request was submitted."
+        }
+      ]
+    },
+    {
+      "referenceId": "LE-SRC-029",
+      "suppliedName": "Deming PDSA",
+      "exactWork": "PDSA Cycle",
+      "version": "Live page; date UNKNOWN",
+      "canonicalURL": "https://deming.org/explore/pdsa/",
+      "owner": {
+        "name": "The W. Edwards Deming Institute",
+        "status": "policy observed; item-level exceptions must be checked"
+      },
+      "identitySource": "baseline research/references.json; unchanged",
+      "dossierState": "documented_with_open_items",
+      "rightsClearedForIntendedUse": false,
+      "evidenceRefs": [
+        "deming"
+      ],
+      "uses": {
+        "quotation": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "deming"
+          ]
+        },
+        "summary": {
+          "status": "pending verification",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "deming"
+          ]
+        },
+        "translation": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "deming"
+          ]
+        },
+        "adaptation": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "deming"
+          ]
+        },
+        "redistribution": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "deming"
+          ]
+        },
+        "commercial_use": {
+          "status": "permission-required",
+          "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+          "evidenceRefs": [
+            "deming"
+          ]
+        }
+      },
+      "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+      "limitations": [
+        "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+      ],
+      "issuerFromBaseline": "The W. Edwards Deming Institute",
+      "authoritativeTermsURLs": [
+        "https://deming.org/about-us/f-a-qs/"
+      ],
+      "observedAt": "2026-11-25",
+      "evidence": [
+        {
+          "id": "deming",
+          "url": "https://deming.org/about-us/f-a-qs/",
+          "locator": "Copyrights and Permissions",
+          "observedAt": "2026-11-25",
+          "method": "official page via web search/open",
+          "observation": "PDSA reprinting specifically requires a request and approval. Institute publications cannot be publicly disseminated without permission; logo separately reserved."
+        }
+      ]
+    }
+  ]
+}

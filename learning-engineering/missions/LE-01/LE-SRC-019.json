@@ -1,0 +1,80 @@
+{
+  "referenceId": "LE-SRC-019",
+  "suppliedName": "ISO 30422",
+  "exactWork": "ISO 30422:2022 — Human resource management — Learning and development",
+  "version": "1; 2022-05",
+  "canonicalURL": "https://www.iso.org/standard/76365.html",
+  "owner": {
+    "name": "ISO",
+    "status": "issuer policy observed"
+  },
+  "identitySource": "baseline research/references.json; unchanged",
+  "dossierState": "documented_with_open_items",
+  "rightsClearedForIntendedUse": false,
+  "evidenceRefs": [
+    "iso"
+  ],
+  "uses": {
+    "quotation": {
+      "status": "permission-required",
+      "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+      "evidenceRefs": [
+        "iso"
+      ]
+    },
+    "summary": {
+      "status": "pending verification",
+      "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+      "evidenceRefs": [
+        "iso"
+      ]
+    },
+    "translation": {
+      "status": "permission-required",
+      "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+      "evidenceRefs": [
+        "iso"
+      ]
+    },
+    "adaptation": {
+      "status": "permission-required",
+      "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+      "evidenceRefs": [
+        "iso"
+      ]
+    },
+    "redistribution": {
+      "status": "permission-required",
+      "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+      "evidenceRefs": [
+        "iso"
+      ]
+    },
+    "commercial_use": {
+      "status": "permission-required",
+      "basis": "ISO reproduction policy; original factual summary versus protected expression requires use-specific review.",
+      "evidenceRefs": [
+        "iso"
+      ]
+    }
+  },
+  "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+  "limitations": [
+    "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+  ],
+  "issuerFromBaseline": "ISO",
+  "authoritativeTermsURLs": [
+    "https://www.iso.org/copyright.html"
+  ],
+  "observedAt": "2026-11-25",
+  "evidence": [
+    {
+      "id": "iso",
+      "url": "https://www.iso.org/copyright.html",
+      "locator": "Copyright; All Rights Reserved",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "ISO asserts ownership of its publications and requires written permission for reproduction; the page also reserves AI uses."
+    }
+  ]
+}

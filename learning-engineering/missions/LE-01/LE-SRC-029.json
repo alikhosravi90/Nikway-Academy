@@ -1,0 +1,80 @@
+{
+  "referenceId": "LE-SRC-029",
+  "suppliedName": "Deming PDSA",
+  "exactWork": "PDSA Cycle",
+  "version": "Live page; date UNKNOWN",
+  "canonicalURL": "https://deming.org/explore/pdsa/",
+  "owner": {
+    "name": "The W. Edwards Deming Institute",
+    "status": "policy observed; item-level exceptions must be checked"
+  },
+  "identitySource": "baseline research/references.json; unchanged",
+  "dossierState": "documented_with_open_items",
+  "rightsClearedForIntendedUse": false,
+  "evidenceRefs": [
+    "deming"
+  ],
+  "uses": {
+    "quotation": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "deming"
+      ]
+    },
+    "summary": {
+      "status": "pending verification",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "deming"
+      ]
+    },
+    "translation": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "deming"
+      ]
+    },
+    "adaptation": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "deming"
+      ]
+    },
+    "redistribution": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "deming"
+      ]
+    },
+    "commercial_use": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "deming"
+      ]
+    }
+  },
+  "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+  "limitations": [
+    "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+  ],
+  "issuerFromBaseline": "The W. Edwards Deming Institute",
+  "authoritativeTermsURLs": [
+    "https://deming.org/about-us/f-a-qs/"
+  ],
+  "observedAt": "2026-11-25",
+  "evidence": [
+    {
+      "id": "deming",
+      "url": "https://deming.org/about-us/f-a-qs/",
+      "locator": "Copyrights and Permissions",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "PDSA reprinting specifically requires a request and approval. Institute publications cannot be publicly disseminated without permission; logo separately reserved."
+    }
+  ]
+}

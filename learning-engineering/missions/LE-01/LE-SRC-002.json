@@ -1,0 +1,80 @@
+{
+  "referenceId": "LE-SRC-002",
+  "suppliedName": "Learning Engineering Toolkit",
+  "exactWork": "Learning Engineering Toolkit: Evidence-Based Practices from the Learning Sciences, Instructional Design, and Beyond",
+  "version": "1st; ISBN 9781032208503",
+  "canonicalURL": "https://www.routledge.com/Learning-Engineering-Toolkit-Evidence-Based-Practices-from-the-Learning-Sciences-Instructional-Design-and-Beyond/Goodell-Kolodner/p/book/9781032208503",
+  "owner": {
+    "name": "UNKNOWN per chapter/figure; Routledge/Taylor & Francis administers permissions",
+    "status": "policy observed; item-level exceptions must be checked"
+  },
+  "identitySource": "baseline research/references.json; unchanged",
+  "dossierState": "documented_with_open_items",
+  "rightsClearedForIntendedUse": false,
+  "evidenceRefs": [
+    "routledge"
+  ],
+  "uses": {
+    "quotation": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "routledge"
+      ]
+    },
+    "summary": {
+      "status": "pending verification",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "routledge"
+      ]
+    },
+    "translation": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "routledge"
+      ]
+    },
+    "adaptation": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "routledge"
+      ]
+    },
+    "redistribution": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "routledge"
+      ]
+    },
+    "commercial_use": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "routledge"
+      ]
+    }
+  },
+  "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+  "limitations": [
+    "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+  ],
+  "issuerFromBaseline": "Editors Jim Goodell and Janet Kolodner; Routledge",
+  "authoritativeTermsURLs": [
+    "https://www.routledge.com/contacts/rights-and-permissions/"
+  ],
+  "observedAt": "2026-11-25",
+  "evidence": [
+    {
+      "id": "routledge",
+      "url": "https://www.routledge.com/contacts/rights-and-permissions/",
+      "locator": "opening; Books Permissions; Rights Licensing",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Written reproduction consent required; translation rights are separately administered; anthology extracts and figures may have other owners."
+    }
+  ]
+}

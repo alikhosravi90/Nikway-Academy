@@ -1,0 +1,96 @@
+{
+  "referenceId": "LE-SRC-028",
+  "suppliedName": "ASQ PDCA",
+  "exactWork": "What is the Plan-Do-Check-Act (PDCA) Cycle?",
+  "version": "Live page; date UNKNOWN",
+  "canonicalURL": "https://asq.org/quality-resources/pdca-cycle",
+  "owner": {
+    "name": "ASQ and/or third-party authors",
+    "status": "policy observed; item-level exceptions must be checked"
+  },
+  "identitySource": "baseline research/references.json; unchanged",
+  "dossierState": "documented_with_open_items",
+  "rightsClearedForIntendedUse": false,
+  "evidenceRefs": [
+    "asq",
+    "asqpermission"
+  ],
+  "uses": {
+    "quotation": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "asq",
+        "asqpermission"
+      ]
+    },
+    "summary": {
+      "status": "pending verification",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "asq",
+        "asqpermission"
+      ]
+    },
+    "translation": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "asq",
+        "asqpermission"
+      ]
+    },
+    "adaptation": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "asq",
+        "asqpermission"
+      ]
+    },
+    "redistribution": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "asq",
+        "asqpermission"
+      ]
+    },
+    "commercial_use": {
+      "status": "permission-required",
+      "basis": "Recorded issuer policy restricts protected-content reuse; independent summary and any legal exception remain unreviewed.",
+      "evidenceRefs": [
+        "asq",
+        "asqpermission"
+      ]
+    }
+  },
+  "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+  "limitations": [
+    "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+  ],
+  "issuerFromBaseline": "American Society for Quality",
+  "authoritativeTermsURLs": [
+    "https://asq.org/terms-of-use",
+    "https://asq.org/copyright/reprint-permission"
+  ],
+  "observedAt": "2026-11-25",
+  "evidence": [
+    {
+      "id": "asq",
+      "url": "https://asq.org/terms-of-use",
+      "locator": "sections 3 and 9(a–b)",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Site access does not grant IP rights. Copying, translating, adapting and distributing require written consent; site use is personal and noncommercial."
+    },
+    {
+      "id": "asqpermission",
+      "url": "https://asq.org/copyright/reprint-permission",
+      "locator": "Reprint Permission",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Requests are reviewed for the specified use; written permission and possibly fees are required. No request was submitted."
+    }
+  ]
+}

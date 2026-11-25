@@ -1,0 +1,81 @@
+{
+  "referenceId": "LE-SRC-003",
+  "suppliedName": "LEBOK.wiki",
+  "exactWork": "Learning Engineering Body of Knowledge",
+  "version": "Beta; immutable revision UNKNOWN",
+  "canonicalURL": "https://lebok.wiki/",
+  "owner": {
+    "name": "UNKNOWN",
+    "status": "pending verification"
+  },
+  "identitySource": "baseline research/references.json; unchanged",
+  "dossierState": "documented_with_open_items",
+  "rightsClearedForIntendedUse": false,
+  "evidenceRefs": [
+    "lebok"
+  ],
+  "uses": {
+    "quotation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "lebok"
+      ]
+    },
+    "summary": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "lebok"
+      ]
+    },
+    "translation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "lebok"
+      ]
+    },
+    "adaptation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "lebok"
+      ]
+    },
+    "redistribution": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "lebok"
+      ]
+    },
+    "commercial_use": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "lebok"
+      ]
+    }
+  },
+  "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+  "limitations": [
+    "No transferable rights inference from institution, framework name, public access or download availability.",
+    "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+  ],
+  "issuerFromBaseline": "LEBOK.wiki; homepage credit Jim",
+  "authoritativeTermsURLs": [
+    "https://lebok.wiki/"
+  ],
+  "observedAt": "2026-11-25",
+  "evidence": [
+    {
+      "id": "lebok",
+      "url": "https://lebok.wiki/",
+      "locator": "open result: zero readable lines",
+      "observedAt": "2026-11-25",
+      "method": "official open unsuccessful for content",
+      "observation": "Direct official page returned no readable text. No rights conclusion possible."
+    }
+  ]
+}

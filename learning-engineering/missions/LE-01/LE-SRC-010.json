@@ -1,0 +1,81 @@
+{
+  "referenceId": "LE-SRC-010",
+  "suppliedName": "Backward Design",
+  "exactWork": "UNKNOWN",
+  "version": "UNKNOWN",
+  "canonicalURL": null,
+  "owner": {
+    "name": "UNKNOWN",
+    "status": "pending verification"
+  },
+  "identitySource": "baseline research/references.json; unchanged",
+  "dossierState": "documented_with_open_items",
+  "rightsClearedForIntendedUse": false,
+  "evidenceRefs": [
+    "backward"
+  ],
+  "uses": {
+    "quotation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "backward"
+      ]
+    },
+    "summary": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "backward"
+      ]
+    },
+    "translation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "backward"
+      ]
+    },
+    "adaptation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "backward"
+      ]
+    },
+    "redistribution": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "backward"
+      ]
+    },
+    "commercial_use": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "backward"
+      ]
+    }
+  },
+  "ownerDecision": "Select exact primary work, author, edition/ISBN/DOI and asset first; then inspect that work’s copyright and permission scope. Candidate discovery is not adoption.",
+  "limitations": [
+    "No transferable rights inference from institution, framework name, public access or download availability.",
+    "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+  ],
+  "issuerFromBaseline": "UNKNOWN",
+  "authoritativeTermsURLs": [
+    "https://www.ascd.org/books/the-understanding-by-design-guide-to-creating-high-quality-units?variant=109107"
+  ],
+  "observedAt": "2026-11-25",
+  "evidence": [
+    {
+      "id": "backward",
+      "url": "https://www.ascd.org/books/the-understanding-by-design-guide-to-creating-high-quality-units?variant=109107",
+      "locator": "title and trademark notice",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Candidate book located; Understanding by Design and UbD trademarks identified. No content license verified."
+    }
+  ]
+}

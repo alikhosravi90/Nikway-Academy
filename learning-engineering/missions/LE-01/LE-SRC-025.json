@@ -1,0 +1,96 @@
+{
+  "referenceId": "LE-SRC-025",
+  "suppliedName": "CASE",
+  "exactWork": "Competencies and Academic Standards Exchange",
+  "version": "Selected normative version pending verification",
+  "canonicalURL": "https://standards.1edtech.org/",
+  "owner": {
+    "name": "1EdTech, except item-specific third-party notices",
+    "status": "issuer policy observed"
+  },
+  "identitySource": "baseline research/references.json; unchanged",
+  "dossierState": "documented_with_open_items",
+  "rightsClearedForIntendedUse": false,
+  "evidenceRefs": [
+    "ims",
+    "imslic"
+  ],
+  "uses": {
+    "quotation": {
+      "status": "restricted",
+      "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+      "evidenceRefs": [
+        "ims",
+        "imslic"
+      ]
+    },
+    "summary": {
+      "status": "pending verification",
+      "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+      "evidenceRefs": [
+        "ims",
+        "imslic"
+      ]
+    },
+    "translation": {
+      "status": "permission-required",
+      "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+      "evidenceRefs": [
+        "ims",
+        "imslic"
+      ]
+    },
+    "adaptation": {
+      "status": "restricted",
+      "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+      "evidenceRefs": [
+        "ims",
+        "imslic"
+      ]
+    },
+    "redistribution": {
+      "status": "restricted",
+      "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+      "evidenceRefs": [
+        "ims",
+        "imslic"
+      ]
+    },
+    "commercial_use": {
+      "status": "restricted",
+      "basis": "Issuer policy offers bounded uses; normative document/version and its license link must first be selected. Translation agreement is required; commercial implementation is not commercial document adaptation.",
+      "evidenceRefs": [
+        "ims",
+        "imslic"
+      ]
+    }
+  },
+  "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+  "limitations": [
+    "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+  ],
+  "issuerFromBaseline": "1EdTech",
+  "authoritativeTermsURLs": [
+    "https://www.1edtech.org/policy/how-to-use-1edtech-documents",
+    "https://www.1edtech.org/standards/specification-license"
+  ],
+  "observedAt": "2026-11-25",
+  "evidence": [
+    {
+      "id": "ims",
+      "url": "https://www.1edtech.org/policy/how-to-use-1edtech-documents",
+      "locator": "sections 7, 8, 10, 12",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "As-is document redistribution is permitted. Distributed/commercial derivatives require agreement; translation requires a signed agreement, with nonmember distribution through 1EdTech. Implementation is distinct from document reuse."
+    },
+    {
+      "id": "imslic",
+      "url": "https://www.1edtech.org/standards/specification-license",
+      "locator": "sections 2–5",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "Copyright attributed to 1EdTech except noted exceptions; implementation license is conditional; document derivatives are not granted by this license alone. It applies to specifications linking to it."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "mission": "LE-02",
+  "date": "2026-11-25",
+  "baselineCommit": "3ff3f5d",
+  "reviewerType": "AI-agent",
+  "humanApproval": null,
+  "outcome": "PARTIAL",
+  "scope": "desk scientific and bilingual review; no psychometric validation",
+  "originalRecordMutations": false,
+  "reviewedFiles": [
+    {
+      "path": "learning-engineering/semantics/glossary.json",
+      "sha256": "5795cb68571cf499bde7c355db44d7f0335eecd3bfecaea1146736ed1ce5bf87"
+    },
+    {
+      "path": "learning-engineering/records/LE-ASSESS-PDCA.json",
+      "sha256": "7f5248e2f852a5e6765cf1a87e5a3f58063cc5d45e575d18346e9e244ff98f69"
+    },
+    {
+      "path": "learning-engineering/records/LE-CARD-PDCA.json",
+      "sha256": "eb190ae7a88b3eac306ce09e2c4900abe867bd728f814d6665af4cf51dac3f53"
+    },
+    {
+      "path": "learning-engineering/records/LE-COMP-PDCA.json",
+      "sha256": "c07fb8d324b1b00ac57ed285bb58eaca633c895ee3e145a7f03c3ada485db541"
+    },
+    {
+      "path": "learning-engineering/records/LE-CONCEPT-PDCA.json",
+      "sha256": "91a61ab37072c37cee1552352f5f296e82953619f5355decadcafdd50d86846e"
+    },
+    {
+      "path": "learning-engineering/records/LE-CONTENT-PDCA.json",
+      "sha256": "f4d4de68bac83724fcf1a23bee77940c4757085e6df98f80074a7b89b5bb7fe6"
+    },
+    {
+      "path": "learning-engineering/records/LE-CUR-PDCA.json",
+      "sha256": "45f2cd508a3a452adea936e6aa1aecdec41e75b53a84d3da17971aa5eeb28c69"
+    },
+    {
+      "path": "learning-engineering/records/LE-OBJ-PDCA.json",
+      "sha256": "d6f48905845de5be7b6b5c2c61008158fca684b8f35ba329f97cbbfb79016868"
+    },
+    {
+      "path": "learning-engineering/records/LE-RUBRIC-PDCA.json",
+      "sha256": "0e79f5545d69845b5ad4721d26ca152513595ae22fd799522abae2b58324d4a6"
+    },
+    {
+      "path": "learning-engineering/records/pdca-evidence.json",
+      "sha256": "ed8ada3d7abf1dc401e34d88c7b0ed7925fa99b9f95da1945fbde76b45ced0c1"
+    },
+    {
+      "path": "learning-engineering/records/pdca-source.json",
+      "sha256": "bfe80ef7c2f4f9bb6edd7a43cb57460c8cd30c5feb95db96a44f1cf5f5effb50"
+    }
+  ],
+  "glossaryEntriesReviewed": 13,
+  "sourceRetrieval": "official-domain web open/search; precise URLs and locators in matrix",
+  "proposalStatus": "not applied"
+}

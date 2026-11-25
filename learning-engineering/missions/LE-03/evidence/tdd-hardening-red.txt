@@ -1,0 +1,42 @@
+test_academy_cannot_accept_untranslated_cf_object (test_bridge.IntegrationTests.test_academy_cannot_accept_untranslated_cf_object) ... ok
+test_academy_checksum_and_unknown_fields_fail_closed (test_bridge.IntegrationTests.test_academy_checksum_and_unknown_fields_fail_closed) ... ok
+test_cf_rejects_question_without_objective_binding (test_bridge.IntegrationTests.test_cf_rejects_question_without_objective_binding) ... ok
+test_created_at_is_current_execution_time (test_bridge.IntegrationTests.test_created_at_is_current_execution_time) ... FAIL
+test_real_three_engine_draft_path (test_bridge.IntegrationTests.test_real_three_engine_draft_path) ... ok
+test_redigested_changed_source_is_not_supported (test_bridge.IntegrationTests.test_redigested_changed_source_is_not_supported) ... FAIL
+test_snapshot_uses_one_repo_and_refuses_stale_directory (test_bridge.IntegrationTests.test_snapshot_uses_one_repo_and_refuses_stale_directory) ... ERROR
+test_tampered_cf_rendition_rejected (test_bridge.IntegrationTests.test_tampered_cf_rendition_rejected) ... ok
+test_tampered_le_package_rejected (test_bridge.IntegrationTests.test_tampered_le_package_rejected) ... ok
+test_unexpected_objective_rejected (test_bridge.IntegrationTests.test_unexpected_objective_rejected) ... ok
+
+======================================================================
+ERROR: test_snapshot_uses_one_repo_and_refuses_stale_directory (test_bridge.IntegrationTests.test_snapshot_uses_one_repo_and_refuses_stale_directory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mohammadali/Documents/Codex/2026-11-25/referenced-chatgpt-conversation-this-is-an-2/work/learning-engineering/learning-engineering/missions/LE-03/test_bridge.py", line 47, in test_snapshot_uses_one_repo_and_refuses_stale_directory
+    snapshot.snapshot(destination=target, repo=bridge.ROOT.parents[2], receipt_path=Path(temp)/'sources.json')
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: snapshot() got an unexpected keyword argument 'destination'
+
+======================================================================
+FAIL: test_created_at_is_current_execution_time (test_bridge.IntegrationTests.test_created_at_is_current_execution_time)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mohammadali/Documents/Codex/2026-11-25/referenced-chatgpt-conversation-this-is-an-2/work/learning-engineering/learning-engineering/missions/LE-03/test_bridge.py", line 41, in test_created_at_is_current_execution_time
+    self.assertGreaterEqual(created, before)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: datetime.datetime(2026, 11, 25, 0, 0, tzinfo=datetime.timezone.utc) not greater than or equal to datetime.datetime(2026, 11, 25, 12, 41, 10, 715734, tzinfo=datetime.timezone.utc)
+
+======================================================================
+FAIL: test_redigested_changed_source_is_not_supported (test_bridge.IntegrationTests.test_redigested_changed_source_is_not_supported)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mohammadali/Documents/Codex/2026-11-25/referenced-chatgpt-conversation-this-is-an-2/work/learning-engineering/learning-engineering/missions/LE-03/test_bridge.py", line 34, in test_redigested_changed_source_is_not_supported
+    with self.assertRaisesRegex(ValueError, 'UNSUPPORTED_SOURCE_DIGEST'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.300s
+
+FAILED (failures=2, errors=1)

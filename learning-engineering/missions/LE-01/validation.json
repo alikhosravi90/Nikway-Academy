@@ -1,0 +1,20 @@
+{
+  "dossierCoverage": "29/29",
+  "individualJSONFiles": 29,
+  "usageCells": 174,
+  "statusCounts": {
+    "pending verification": 86,
+    "permission-required": 46,
+    "restricted": 36,
+    "allowed": 6
+  },
+  "clearedUsageCount": 0,
+  "sourceUnchangedSHA256": "6decc80db57b35792ebbfaab3ce53c1499048c5ec9d5a60c9f222aca1199bff0",
+  "checks": [
+    "unique IDs",
+    "six usage statuses per dossier",
+    "JSON parsed/generated",
+    "baseline register read only"
+  ],
+  "result": "PASS_STRUCTURAL_ONLY"
+}

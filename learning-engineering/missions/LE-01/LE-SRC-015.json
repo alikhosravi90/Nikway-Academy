@@ -1,0 +1,81 @@
+{
+  "referenceId": "LE-SRC-015",
+  "suppliedName": "UDL",
+  "exactWork": "CAST Universal Design for Learning Guidelines version 3.0",
+  "version": "3.0; citation year 2024",
+  "canonicalURL": "https://udlguidelines.cast.org/",
+  "owner": {
+    "name": "UNKNOWN",
+    "status": "pending verification"
+  },
+  "identitySource": "baseline research/references.json; unchanged",
+  "dossierState": "documented_with_open_items",
+  "rightsClearedForIntendedUse": false,
+  "evidenceRefs": [
+    "cast"
+  ],
+  "uses": {
+    "quotation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "cast"
+      ]
+    },
+    "summary": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "cast"
+      ]
+    },
+    "translation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "cast"
+      ]
+    },
+    "adaptation": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "cast"
+      ]
+    },
+    "redistribution": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "cast"
+      ]
+    },
+    "commercial_use": {
+      "status": "pending verification",
+      "basis": "No work-specific affirmative permission verified; no statutory exception assessed.",
+      "evidenceRefs": [
+        "cast"
+      ]
+    }
+  },
+  "ownerDecision": "Specify exact excerpt/assets, language, audience, delivery channel, commercial context and reviewer; approve only the evidenced use.",
+  "limitations": [
+    "No transferable rights inference from institution, framework name, public access or download availability.",
+    "No purchase, contact, permission request, license selection, publication or operational release performed. Dossier completion is not G1 clearance."
+  ],
+  "issuerFromBaseline": "CAST",
+  "authoritativeTermsURLs": [
+    "https://udlguidelines.cast.org/more/downloads/"
+  ],
+  "observedAt": "2026-11-25",
+  "evidence": [
+    {
+      "id": "cast",
+      "url": "https://udlguidelines.cast.org/more/downloads/",
+      "locator": "Version 3.0 (2024); translations",
+      "observedAt": "2026-11-25",
+      "method": "official page via web search/open",
+      "observation": "CAST identifies version 3.0 and published translations. No affirmative reuse license verified; available downloads do not grant reuse rights."
+    }
+  ]
+}

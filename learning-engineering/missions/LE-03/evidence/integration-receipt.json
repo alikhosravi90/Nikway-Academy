@@ -1,0 +1,371 @@
+{
+  "scope": "offline-real-module-draft",
+  "promotionAllowed": false,
+  "blockers": [
+    "LE_RIGHTS_PENDING",
+    "HUMAN_CONTENT_REVIEW_REQUIRED",
+    "ACCESSIBILITY_UNTESTED",
+    "AUTHENTICATED_ADMISSION_AND_DATABASE_DELIVERY_NOT_TESTED",
+    "SEMANTIC_MAPPING_NOT_OWNER_ACCEPTED"
+  ],
+  "moduleChecks": [
+    "learning-engineering.exchange",
+    "content-factory.contracts+render",
+    "academy.content.validate_package"
+  ],
+  "sourcePayloadDigest": "02cfa7b471a2e84df8c63ae52955561a37d819dc2e976d7f86090a5c79a8fba0",
+  "sourceManifest": [
+    {
+      "id": "LE-ASSESS-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-CARD-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-COMP-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-CONCEPT-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-CONTENT-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-CUR-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-EVD-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-OBJ-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-RUBRIC-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-SRC-ASQ-PDCA",
+      "version": "0.1.0"
+    }
+  ],
+  "sourceRights": {
+    "LE-ASSESS-PDCA": {
+      "status": "pending verification",
+      "license": "UNKNOWN",
+      "evidenceUrls": [],
+      "allowedUses": []
+    },
+    "LE-CARD-PDCA": {
+      "status": "pending verification",
+      "license": "UNKNOWN",
+      "evidenceUrls": [],
+      "allowedUses": []
+    },
+    "LE-COMP-PDCA": {
+      "status": "pending verification",
+      "license": "UNKNOWN",
+      "evidenceUrls": [],
+      "allowedUses": []
+    },
+    "LE-CONCEPT-PDCA": {
+      "status": "pending verification",
+      "license": "UNKNOWN",
+      "evidenceUrls": [],
+      "allowedUses": []
+    },
+    "LE-CONTENT-PDCA": {
+      "status": "pending verification",
+      "license": "UNKNOWN",
+      "evidenceUrls": [],
+      "allowedUses": []
+    },
+    "LE-CUR-PDCA": {
+      "status": "pending verification",
+      "license": "UNKNOWN",
+      "evidenceUrls": [],
+      "allowedUses": []
+    },
+    "LE-EVD-PDCA": {
+      "status": "pending verification",
+      "license": "UNKNOWN",
+      "evidenceUrls": [],
+      "allowedUses": []
+    },
+    "LE-OBJ-PDCA": {
+      "status": "pending verification",
+      "license": "UNKNOWN",
+      "evidenceUrls": [],
+      "allowedUses": []
+    },
+    "LE-RUBRIC-PDCA": {
+      "status": "pending verification",
+      "license": "UNKNOWN",
+      "evidenceUrls": [],
+      "allowedUses": []
+    },
+    "LE-SRC-ASQ-PDCA": {
+      "status": "pending verification",
+      "license": "UNKNOWN",
+      "evidenceUrls": [],
+      "allowedUses": []
+    }
+  },
+  "component": {
+    "schemaVersion": "1.0.0",
+    "id": "le03-pdca-original-draft",
+    "semanticVersion": "0.1.0",
+    "locale": "en-US",
+    "type": "lesson",
+    "title": "Synthetic PDCA handover exercise — unreviewed draft",
+    "learningOutcomeIds": [
+      "LE-OBJ-PDCA"
+    ],
+    "competencyIds": [
+      "LE-COMP-PDCA"
+    ],
+    "prerequisiteIds": [],
+    "sourceEvidenceIds": [
+      "LE03-ORIGINAL-DRAFT"
+    ],
+    "license": "LicenseRef-NIKWAY-Local-Review",
+    "rightsStatus": "internal_trial_only",
+    "accessibility": {
+      "textAlternative": false,
+      "readingOrder": false,
+      "languageDeclared": true
+    },
+    "provenance": [
+      {
+        "id": "LE03-ORIGINAL-DRAFT",
+        "locator": "urn:nikway:le03:original-draft",
+        "rights": "original_synthetic",
+        "note": "New synthetic text authored for offline module tests. LE source rights remain pending; no distribution authorization."
+      }
+    ],
+    "audience": "Fictional adult learner; offline integration only",
+    "durationMinutes": 20,
+    "derivedFrom": [
+      "02cfa7b471a2e84df8c63ae52955561a37d819dc2e976d7f86090a5c79a8fba0"
+    ],
+    "body": {
+      "summary": "Original synthetic draft: use a small reversible change to investigate incomplete handovers. No learning effectiveness or causal conclusion is established.",
+      "sections": [
+        {
+          "title": "A bounded improvement cycle",
+          "text": "Plan: define incomplete handovers and aim for at most 6%. Do: trial a checklist for one fictional week, identify a fictional owner, a rollback and a stopping condition. Check: 12 incomplete handovers out of 100 is 12%; 5 out of 100 is 5%; the reduction is 7 percentage points. Act: consider continuing, revising or stopping, and collect comparable next-cycle data. Workload or staffing differences could explain the change; this comparison cannot establish causality."
+        }
+      ],
+      "exercise": "Write a proposed plan, reversible trial, calculation and next decision for this fictional example in at most 500 words. Explain one alternative explanation and what data you would collect next.",
+      "rubric": {
+        "id": "LE-RUBRIC-PDCA",
+        "criteria": [
+          "State the problem and a measurable aim.",
+          "Specify a reversible trial with an owner and stopping rule.",
+          "Calculate 12%, 5% and 7 percentage points and describe uncertainty.",
+          "Justify a next action and specify next-cycle evidence."
+        ]
+      },
+      "questions": [
+        {
+          "id": "le03-rate",
+          "prompt": "What is the absolute reduction from 12% to 5%?",
+          "options": [
+            "7 percentage points",
+            "7 percent relative reduction"
+          ],
+          "answer": 0,
+          "explanation": "Subtract 5 from 12 to obtain 7 percentage points.",
+          "outcomeId": "LE-OBJ-PDCA"
+        }
+      ]
+    }
+  },
+  "academy": {
+    "schemaVersion": "1.0.0",
+    "packageId": "000c34ba-b703-5458-8a64-5479f3ba65eb",
+    "version": "0.1.0",
+    "lifecycle": "draft",
+    "course": {
+      "id": "7456c309-b374-5b8d-a033-4efaf6358b13",
+      "title": "Synthetic PDCA handover exercise — unreviewed draft",
+      "description": "Original synthetic draft: use a small reversible change to investigate incomplete handovers. No learning effectiveness or causal conclusion is established.",
+      "language": "en-US",
+      "objectives": [
+        {
+          "id": "le-obj-pdca",
+          "description": "Apply a bounded improvement cycle to the synthetic handover scenario.",
+          "bloom": "apply",
+          "evidence": "A proposed written response assessed by a human; no response collected."
+        }
+      ],
+      "lessons": [
+        {
+          "id": "e025dcbf-3d80-5cdc-a9aa-26ec5ddb3ba7",
+          "position": 1,
+          "title": "Synthetic PDCA handover exercise — unreviewed draft",
+          "content": "# Local publication candidate — NOT RELEASED\n\n\n# Synthetic PDCA handover exercise — unreviewed draft\n\nOriginal synthetic draft: use a small reversible change to investigate incomplete handovers. No learning effectiveness or causal conclusion is established.\n\n## A bounded improvement cycle\n\nPlan: define incomplete handovers and aim for at most 6%. Do: trial a checklist for one fictional week, identify a fictional owner, a rollback and a stopping condition. Check: 12 incomplete handovers out of 100 is 12%; 5 out of 100 is 5%; the reduction is 7 percentage points. Act: consider continuing, revising or stopping, and collect comparable next-cycle data. Workload or staffing differences could explain the change; this comparison cannot establish causality.\n\n## تمرین\n\nWrite a proposed plan, reversible trial, calculation and next decision for this fictional example in at most 500 words. Explain one alternative explanation and what data you would collect next.",
+          "objectiveIds": [
+            "le-obj-pdca"
+          ],
+          "practice": {
+            "prompt": "Write a proposed plan, reversible trial, calculation and next decision for this fictional example in at most 500 words. Explain one alternative explanation and what data you would collect next.",
+            "deliverable": "A synthetic exercise response of at most 500 words."
+          }
+        }
+      ],
+      "assessment": {
+        "mode": "human_review",
+        "prompt": "Write a proposed plan, reversible trial, calculation and next decision for this fictional example in at most 500 words. Explain one alternative explanation and what data you would collect next.",
+        "minCharacters": 20,
+        "maxCharacters": 10000,
+        "rubricId": "le-rubric-pdca"
+      },
+      "rubric": {
+        "id": "le-rubric-pdca",
+        "version": "0.1.0",
+        "criteria": [
+          {
+            "id": "plan",
+            "description": "State the problem and a measurable aim.",
+            "objectiveIds": [
+              "le-obj-pdca"
+            ],
+            "maxScore": 2,
+            "anchors": [
+              {
+                "score": 0,
+                "description": "Absent or incorrect."
+              },
+              {
+                "score": 1,
+                "description": "Partially addressed."
+              },
+              {
+                "score": 2,
+                "description": "Fully addressed."
+              }
+            ]
+          },
+          {
+            "id": "do",
+            "description": "Specify a reversible trial with an owner and stopping rule.",
+            "objectiveIds": [
+              "le-obj-pdca"
+            ],
+            "maxScore": 2,
+            "anchors": [
+              {
+                "score": 0,
+                "description": "Absent or incorrect."
+              },
+              {
+                "score": 1,
+                "description": "Partially addressed."
+              },
+              {
+                "score": 2,
+                "description": "Fully addressed."
+              }
+            ]
+          },
+          {
+            "id": "check",
+            "description": "Calculate 12%, 5% and 7 percentage points and describe uncertainty.",
+            "objectiveIds": [
+              "le-obj-pdca"
+            ],
+            "maxScore": 2,
+            "anchors": [
+              {
+                "score": 0,
+                "description": "Absent or incorrect."
+              },
+              {
+                "score": 1,
+                "description": "Partially addressed."
+              },
+              {
+                "score": 2,
+                "description": "Fully addressed."
+              }
+            ]
+          },
+          {
+            "id": "act",
+            "description": "Justify a next action and specify next-cycle evidence.",
+            "objectiveIds": [
+              "le-obj-pdca"
+            ],
+            "maxScore": 2,
+            "anchors": [
+              {
+                "score": 0,
+                "description": "Absent or incorrect."
+              },
+              {
+                "score": 1,
+                "description": "Partially addressed."
+              },
+              {
+                "score": 2,
+                "description": "Fully addressed."
+              }
+            ]
+          }
+        ],
+        "passScore": 8,
+        "requiresHumanReview": true
+      }
+    },
+    "provenance": {
+      "producer": "offline-authoring",
+      "createdAt": "2026-11-25T12:41:50.583530Z",
+      "author": "LE-03 synthetic adapter; unreviewed",
+      "sources": []
+    },
+    "rights": {
+      "license": "LicenseRef-NIKWAY-Local-Review",
+      "attribution": "Original LE-03 synthetic text; local format testing only. Upstream LE rights pending; no publication approval.",
+      "redistribution": "local-review-only",
+      "containsThirdPartyMaterial": false
+    },
+    "integrity": {
+      "algorithm": "sha256",
+      "canonicalization": "nikway-json-v1",
+      "digest": "d94b694ae82a545de2c7d5a0b0d945ca0ef4ffb635016e711847825a3aad2be4"
+    }
+  },
+  "learnerQuiz": [
+    {
+      "componentId": "le03-pdca-original-draft",
+      "questions": [
+        {
+          "id": "le03-rate",
+          "options": [
+            "7 percentage points",
+            "7 percent relative reduction"
+          ],
+          "outcomeId": "LE-OBJ-PDCA",
+          "prompt": "What is the absolute reduction from 12% to 5%?"
+        }
+      ],
+      "revisionId": "LE03-offline-original-draft"
+    }
+  ],
+  "cfZipSha256": "13c8a50d241addec3ae8e5a2cf4a12e3e22ee4735a72a832d5f0274be852cbc9",
+  "mappingNotes": [
+    "LE objective exact ID -> CF learningOutcomeIds -> Academy lowercase objective ID.",
+    "Academy has no competency or source-version fields; the integration receipt retains CF and source manifest provenance.",
+    "Academy character bounds do not implement LE 500-word bound; human review remains required.",
+    "CF multiple-choice self-check is newly authored formative material, not a replacement for the human rubric.",
+    "Accessibility booleans are conservative draft declarations, not accessibility results."
+  ]
+}
