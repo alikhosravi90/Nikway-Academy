@@ -29,6 +29,13 @@ class PackageTests(unittest.TestCase):
     def test_third_party(self): self.check_bad(lambda p:p['rights'].update(containsThirdPartyMaterial=True))
     def test_duplicate_json(self):
         with self.assertRaises(ValueError):load_package(b'{"a":1,"a":2}')
+    def test_deep_json(self):
+        for depth in (25, 2000):
+            with self.assertRaises(ValueError):
+                load_package(b'{"nested":' + b'['*depth + b'0' + b']'*depth + b'}')
+    def test_nonobject(self):
+        for raw in (b'[]', b'null', b'true', b'1'):
+            with self.assertRaises(ValueError): load_package(raw)
     def test_nonfinite(self):
         with self.assertRaises(ValueError):load_package(b'{"a":NaN}')
     def test_size(self):

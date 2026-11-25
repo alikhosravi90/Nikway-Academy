@@ -30,6 +30,17 @@ def load_package(raw: bytes):
                            parse_constant=lambda _: (_ for _ in ()).throw(ValueError('non-finite number')))
     except (UnicodeError, json.JSONDecodeError, RecursionError) as exc:
         raise ValueError('invalid UTF-8 JSON') from exc
+    if not isinstance(value, dict):
+        raise ValueError('package must be an object')
+    pending = [(value, 0)]
+    while pending:
+        item, depth = pending.pop()
+        if depth > 20:
+            raise ValueError('JSON nesting exceeds 20 levels')
+        if isinstance(item, dict):
+            pending.extend((v, depth + 1) for v in item.values())
+        elif isinstance(item, list):
+            pending.extend((v, depth + 1) for v in item)
     errors = validate_package(value)
     if errors:
         raise ValueError('; '.join(errors))
