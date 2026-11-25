@@ -1,0 +1,19 @@
+name: Markdown formatting patch
+on:
+  pull_request:
+  push:
+    branches: [architecture/v0.2]
+permissions:
+  contents: read
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: npx --yes markdownlint-cli@0.44.0 --fix 'architecture/v0.2/*.md' 'governance/*.md' 'docs/*.md'
+        continue-on-error: true
+      - run: git diff --check && git diff > markdown-format.patch
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: markdown-format-patch
+          path: markdown-format.patch

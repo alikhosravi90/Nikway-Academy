@@ -1,0 +1,13 @@
+
+> nikway-learning-os@2.0.0 test
+> vitest run
+
+
+ RUN  v5.1.1 <LOCAL_WORKSPACE>
+
+
+ Test Files  3 passed (3)
+      Tests  24 passed (24)
+   Start at  13:27:21
+   Duration  557ms (import 54%, transform 23%, tests 19%, worker 3%)
+

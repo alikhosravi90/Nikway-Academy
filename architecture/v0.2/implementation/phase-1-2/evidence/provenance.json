@@ -1,0 +1,106 @@
+{
+  "evidence_date": "2026-11-25",
+  "scope": "historical local prototype test/build evidence, not GitHub CI",
+  "source_manifest": "source-sha256.json",
+  "original_local_artifact": "nikway-learning-os-v2.zip",
+  "artifact_sha256": "3dd62b626d7387ba17997d68ba1b1b4ee57b3e54d9c1f15cf10dd45899e6584e",
+  "code_included_in_this_documentation_commit": false,
+  "files": [
+    {
+      "file": "build.log",
+      "original_sha256": "a8b2a94a9cbc52641c2d8d74679fb43e975c76239dd4c03a520467ce25303937",
+      "published_sha256": "a8b2a94a9cbc52641c2d8d74679fb43e975c76239dd4c03a520467ce25303937",
+      "sanitization": "local absolute paths and ANSI escapes removed; results unchanged"
+    },
+    {
+      "file": "unit-green.log",
+      "original_sha256": "c6597a17bd9416c27fe8d368f65b2ab5e16343811667bd2ee7a9cfde6938271a",
+      "published_sha256": "a2506121160ebb2c75f0149e4998b5e7c61b6381d042bece6846afb8570d8cc3",
+      "sanitization": "local absolute paths and ANSI escapes removed; results unchanged"
+    },
+    {
+      "file": "e2e.log",
+      "original_sha256": "86a6a51ec615d5921b5ac2f2d89720bfe54342c01ece8acd9541d3efb662f2d9",
+      "published_sha256": "86a6a51ec615d5921b5ac2f2d89720bfe54342c01ece8acd9541d3efb662f2d9",
+      "sanitization": "local absolute paths and ANSI escapes removed; results unchanged"
+    },
+    {
+      "file": "npm-audit.json",
+      "original_sha256": "b3585412e5d2b97d0fce370047c6844239cdcd2630f9f10486101c82aff899e9",
+      "published_sha256": "b3585412e5d2b97d0fce370047c6844239cdcd2630f9f10486101c82aff899e9",
+      "sanitization": "local absolute paths and ANSI escapes removed; results unchanged"
+    },
+    {
+      "file": "source-sha256.json",
+      "original_sha256": "c984e937321656dcb39c1e293b01066b3407b1ad567e94b1af232bf805ad32f2",
+      "published_sha256": "c984e937321656dcb39c1e293b01066b3407b1ad567e94b1af232bf805ad32f2",
+      "sanitization": "local absolute paths and ANSI escapes removed; results unchanged"
+    },
+    {
+      "file": "dependencies.txt",
+      "original_sha256": "370d9c2792ed4d95f0bc4ac6bc6438979e32917c78959d73b1542a63d118b568",
+      "published_sha256": "79f72832c0dd87af2479d0753578e9ac3d9f9fccc84ebd6ee3711d09c6ce2dea",
+      "sanitization": "local absolute paths and ANSI escapes removed; results unchanged"
+    },
+    {
+      "file": "portability.json",
+      "original_sha256": "59f0cef0f22fbbcf6ea1383180f2ead28389c4d0d4d5e62b96cbb5c767d3bdd3",
+      "published_sha256": "59f0cef0f22fbbcf6ea1383180f2ead28389c4d0d4d5e62b96cbb5c767d3bdd3",
+      "sanitization": "local absolute paths and ANSI escapes removed; results unchanged"
+    },
+    {
+      "file": "package.json",
+      "original_sha256": "509c52974ddbe4fc244219a8c6d18a74b6f15cd9e53b397e94d6ad4f98a8670b",
+      "published_sha256": "509c52974ddbe4fc244219a8c6d18a74b6f15cd9e53b397e94d6ad4f98a8670b",
+      "sanitization": "none; dependency metadata"
+    },
+    {
+      "file": "package-lock.json",
+      "original_sha256": "c8d676c50f7acd6087d3df73716938597acfe6b0a9c6ab860be8077ea14adebd",
+      "published_sha256": "c8d676c50f7acd6087d3df73716938597acfe6b0a9c6ab860be8077ea14adebd",
+      "sanitization": "none; dependency metadata"
+    },
+    {
+      "file": "baseline.json",
+      "original_sha256": "ce2cc1417e241ca1a4f8f4f903292abd012bdd1f6288dfa648673a5084cd1a09",
+      "published_sha256": "ce2cc1417e241ca1a4f8f4f903292abd012bdd1f6288dfa648673a5084cd1a09",
+      "sanitization": "local paths and ANSI removed; numerical records are demo data only"
+    },
+    {
+      "file": "baseline-sha256.txt",
+      "original_sha256": "d0ce31aff39ee2b3dd09db075d75a795345086b1c8d2f0ca6d8662ef5b308818",
+      "published_sha256": "d0ce31aff39ee2b3dd09db075d75a795345086b1c8d2f0ca6d8662ef5b308818",
+      "sanitization": "local paths and ANSI removed; numerical records are demo data only"
+    },
+    {
+      "file": "live-migration.json",
+      "original_sha256": "45cade8703d1e7c1ed2de1fbc35c8bbd2fb4be1e63f745fbc15b13b6ce405935",
+      "published_sha256": "45cade8703d1e7c1ed2de1fbc35c8bbd2fb4be1e63f745fbc15b13b6ce405935",
+      "sanitization": "local paths and ANSI removed; numerical records are demo data only"
+    },
+    {
+      "file": "unit-red.log",
+      "original_sha256": "de53c17ee1f0439781839762116e0069d9d432003d0eb778f4f77aadb9e8209e",
+      "published_sha256": "e9a56fcecf1613cb0aca013d960285f6f1c40115e5df984ceaf8ab52531a0326",
+      "sanitization": "local paths and ANSI removed; numerical records are demo data only"
+    },
+    {
+      "file": "e2e-red.log",
+      "original_sha256": "be42513eed4a16f1ed944c7826f1f2b85066c8f65844f70d2731941766304eea",
+      "published_sha256": "7491f2b3c4d63ec4a2e9de36ea96a7dd86b96b922e82b0d666c8d2491ef7ed99",
+      "sanitization": "local paths and ANSI removed; numerical records are demo data only"
+    },
+    {
+      "file": "e2e-before-mobile-fix.log",
+      "original_sha256": "43861c03e1e3192988c5827de366f53571f844ea75171832ed185c163ba2a636",
+      "published_sha256": "dc4b945358fb3d66507c4003e3ca0041a1832429bd745a6b9a6d893d550454ad",
+      "sanitization": "local paths and ANSI removed; numerical records are demo data only"
+    },
+    {
+      "file": "playwright-results.json",
+      "original_sha256": "8654c1d4fabf7d1da5c02184d38092cd80b63dcca46b66a9d557b3e275f0138f",
+      "published_sha256": "c9bdbb6c63ae7a4bc95f0bd590ce5b483fc3e935aa9b61b9b432d796439a668a",
+      "sanitization": "local paths and ANSI removed; numerical records are demo data only"
+    }
+  ]
+}

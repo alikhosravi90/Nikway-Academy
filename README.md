@@ -1,6 +1,6 @@
 # NIKWAY Academy
 
-Public architecture baseline — v0.1.0-draft
+Public architecture baseline — v0.2.0-draft (pending review)
 
 AI-native social learning and professional capability development platform.
 
@@ -19,3 +19,17 @@ AI-native social learning and professional capability development platform.
 - ARC-12 Standards Compliance Matrix
 
 Status: proposed, not validated or deployed. No license selected yet. No secrets or personal data permitted.
+
+## v0.2 draft and implementation evidence
+
+- [Twelve-document architecture pack v0.2](architecture/v0.2/README.md)
+- [Learning OS phases 1–2: implementation results and test evidence](architecture/v0.2/implementation/phase-1-2/README.md)
+
+The locally tested frontend prototype is implemented; the full target platform remains proposed/partial. Standards conformance, real backend/AI integrations and production readiness are not established. The evidence is from local execution, not repository CI. No running application is deployed by this documentation update.
+
+## Documentation navigation
+
+- [Complete documentation catalog](docs/README.md)
+- [Documentation standard](governance/documentation-standard.md)
+- [Normalization backlog](governance/normalization-backlog.md)
+- [Frontend decision ADR-001](decisions/ADR-001-frontend-baseline.md)

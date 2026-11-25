@@ -1,0 +1,2 @@
+4faf2cd9ee9df2909e7ba7adb72c80e0ca3049b6944426c54bcbc23caf6dafe1  outputs/nikway-learning-os/index.html
+504d7407d86875acf7d04dfaa0fd7524d0b8797723bc4aa18022f29db25b0b6e  outputs/nikway-learning-os/font.ttf
