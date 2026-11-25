@@ -53,3 +53,11 @@ Each link names stable ID and immutable revision; contradictory findings remain 
 
 پذیرش این بسته صرفاً پذیرش مستندات پیشنهادی است؛ تأیید علمی، مجوز بازنشر،
 انطباق استانداردها، پیاده‌سازی و نتایج یادگیری را اثبات نمی‌کند.
+
+## Local implementation increment — 2026-11-25
+The design text above is retained as history. A local file-backed implementation now exists:
+[operations](OPERATIONS.md), [executable integration profile](INTEGRATION-PROFILE.md),
+[research evidence](research/BENCHMARK-VERIFICATION.md), [independent QA](QA-REVIEW.md),
+and [gate report](GO-NO-GO.md). It validates, searches, renders, accumulates immutable records,
+records declared review revisions, and exercises quarantined offline exchange. It does not
+supply production delivery, trusted human approval or measured learning effectiveness.

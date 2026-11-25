@@ -1,0 +1,39 @@
+{
+  "id": "LE-SRC-ASQ-PDCA",
+  "version": "0.1.0",
+  "kind": "Source",
+  "title": {
+    "fa": "منبع ASQ برای PDCA",
+    "en": "ASQ PDCA source"
+  },
+  "summary": {
+    "fa": "صفحه رسمی در ۲۰۲۶-۱۱-۲۵ خوانده شد؛ نسخه ثابت و حقوق بازاستفاده تأیید نشده است. شناسه ثبت پژوهش LE-SRC-028.",
+    "en": "Official page read 2026-11-25; immutable edition and reuse rights unresolved. Research register LE-SRC-028."
+  },
+  "domainIds": [
+    "LE-IMP"
+  ],
+  "relations": [],
+  "provenance": {
+    "claimType": "source-summary",
+    "evidenceRefs": []
+  },
+  "review": {
+    "status": "proposed",
+    "author": "research-agent",
+    "reviewer": null,
+    "reviewedAt": null
+  },
+  "rights": {
+    "status": "pending verification",
+    "license": "UNKNOWN",
+    "evidenceUrls": [],
+    "allowedUses": []
+  },
+  "data": {
+    "canonicalUrl": "https://asq.org/quality-resources/pdca-cycle",
+    "issuer": "ASQ",
+    "edition": "Live web page accessed 2026-11-25; immutable revision UNKNOWN",
+    "verificationStatus": "verified"
+  }
+}

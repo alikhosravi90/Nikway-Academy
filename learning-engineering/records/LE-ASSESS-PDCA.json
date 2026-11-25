@@ -1,0 +1,70 @@
+{
+  "id": "LE-ASSESS-PDCA",
+  "version": "0.1.0",
+  "kind": "Assessment",
+  "title": {
+    "fa": "تمرین ساختگی خطای تحویل شیفت",
+    "en": "Synthetic shift-handover error exercise"
+  },
+  "summary": {
+    "fa": "سناریو و داده‌ها ساختگی و اصیل‌اند؛ هیچ فرد یا سازمان واقعی ارزیابی نشده است.",
+    "en": "Original synthetic scenario and data; no real person or organization has been evaluated."
+  },
+  "domainIds": [
+    "LE-ASM",
+    "LE-IMP"
+  ],
+  "relations": [
+    {
+      "type": "assesses",
+      "target": {
+        "id": "LE-OBJ-PDCA",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "type": "uses-rubric",
+      "target": {
+        "id": "LE-RUBRIC-PDCA",
+        "version": "0.1.0"
+      }
+    }
+  ],
+  "provenance": {
+    "claimType": "synthetic",
+    "evidenceRefs": [
+      {
+        "id": "LE-EVD-PDCA",
+        "version": "0.1.0"
+      }
+    ]
+  },
+  "review": {
+    "status": "proposed",
+    "author": "ontology-curriculum-agent",
+    "reviewer": null,
+    "reviewedAt": null
+  },
+  "rights": {
+    "status": "pending verification",
+    "license": "UNKNOWN",
+    "evidenceUrls": [],
+    "allowedUses": []
+  },
+  "data": {
+    "objectiveRefs": [
+      {
+        "id": "LE-OBJ-PDCA",
+        "version": "0.1.0"
+      }
+    ],
+    "rubricRef": {
+      "id": "LE-RUBRIC-PDCA",
+      "version": "0.1.0"
+    },
+    "task": {
+      "fa": "در یک دفتر فرضی، ۱۲ مورد از ۱۰۰ تحویل شیفت اولیه ناقص بود. پس از آزمون فرضی چک‌لیست، ۵ مورد از ۱۰۰ تحویل ناقص بود. در حداکثر ۵۰۰ کلمه: برنامه را با هدف پیشنهادی حداکثر ۶٪ نقص بنویسید؛ اجرای آزمایش یک‌هفته‌ای و قابل بازگشت را با مسئول فرضی و شرط توقف مشخص کنید؛ نرخ‌ها و تفاوت واحد درصد را محاسبه کنید؛ درباره ادامه، اصلاح یا توقف تصمیم بگیرید. تفاوت حجم کار یا ترکیب کارکنان را به‌عنوان توضیح جایگزین بررسی کنید و برای چرخه بعد داده لازم را پیشنهاد دهید. امتیاز هر معیار: ۲ برای پوشش کامل، ۱ برای پوشش ناقص، صفر برای فقدان یا پاسخ نادرست؛ قبولی پیشنهادی ۸ از ۸ است.",
+      "en": "In a fictional office, 12 of 100 baseline shift handovers were incomplete. After a hypothetical checklist trial, 5 of 100 were incomplete. In at most 500 words: plan an aim of at most 6% incompleteness; describe a reversible one-week trial with a fictional owner and stopping condition; calculate rates and the percentage-point difference; decide whether to continue, modify or stop. Consider workload or staffing differences as alternative explanations and propose next-cycle data. Each criterion scores 2 if fully met, 1 if partially met, and 0 if absent or incorrect; proposed passing threshold is 8/8."
+    }
+  }
+}

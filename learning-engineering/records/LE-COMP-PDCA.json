@@ -1,0 +1,59 @@
+{
+  "id": "LE-COMP-PDCA",
+  "version": "0.1.0",
+  "kind": "Competency",
+  "title": {
+    "fa": "طراحی و تفسیر یک آزمایش محدود بهبود",
+    "en": "Design and interpret a bounded improvement trial"
+  },
+  "summary": {
+    "fa": "شایستگی پیشنهادی برای تمرین ساختگی محیط کار؛ اجرای واقعی را مجاز نمی‌کند.",
+    "en": "Proposed capability for a synthetic workplace exercise; no authorization for real operations."
+  },
+  "domainIds": [
+    "LE-COM",
+    "LE-IMP"
+  ],
+  "relations": [
+    {
+      "type": "develops",
+      "target": {
+        "id": "LE-CONCEPT-PDCA",
+        "version": "0.1.0"
+      }
+    }
+  ],
+  "provenance": {
+    "claimType": "original-design",
+    "evidenceRefs": [
+      {
+        "id": "LE-EVD-PDCA",
+        "version": "0.1.0"
+      }
+    ]
+  },
+  "review": {
+    "status": "proposed",
+    "author": "ontology-curriculum-agent",
+    "reviewer": null,
+    "reviewedAt": null
+  },
+  "rights": {
+    "status": "pending verification",
+    "license": "UNKNOWN",
+    "evidenceUrls": [],
+    "allowedUses": []
+  },
+  "data": {
+    "conceptRefs": [
+      {
+        "id": "LE-CONCEPT-PDCA",
+        "version": "0.1.0"
+      }
+    ],
+    "performance": {
+      "fa": "با داده‌های ساختگی، مسئله و هدف را تعریف کند، آزمایش محدود و قابل بازگشت طراحی کند، نرخ خطا را مقایسه و تصمیم بعدی را با ذکر عدم قطعیت توجیه کند.",
+      "en": "Using synthetic data, define a problem and aim, design a bounded reversible trial, compare error rates, and justify a next decision with uncertainty stated."
+    }
+  }
+}

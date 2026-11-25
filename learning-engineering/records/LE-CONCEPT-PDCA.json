@@ -1,0 +1,56 @@
+{
+  "id": "LE-CONCEPT-PDCA",
+  "version": "0.1.0",
+  "kind": "Concept",
+  "title": {
+    "fa": "چرخه PDCA",
+    "en": "PDCA cycle"
+  },
+  "summary": {
+    "fa": "تعریف پیشنهادی و خلاصه؛ تأیید ترجمه و حقوق در انتظار است.",
+    "en": "Proposed summary definition; language and rights review pending."
+  },
+  "domainIds": [
+    "LE-IMP"
+  ],
+  "relations": [
+    {
+      "type": "cites",
+      "target": {
+        "id": "LE-SRC-ASQ-PDCA",
+        "version": "0.1.0"
+      }
+    }
+  ],
+  "provenance": {
+    "claimType": "source-summary",
+    "evidenceRefs": [
+      {
+        "id": "LE-EVD-PDCA",
+        "version": "0.1.0"
+      }
+    ]
+  },
+  "review": {
+    "status": "proposed",
+    "author": "ontology-curriculum-agent",
+    "reviewer": null,
+    "reviewedAt": null
+  },
+  "rights": {
+    "status": "pending verification",
+    "license": "UNKNOWN",
+    "evidenceUrls": [],
+    "allowedUses": []
+  },
+  "data": {
+    "definition": {
+      "fa": "روشی تکرارشونده برای برنامه‌ریزی یک تغییر، اجرای محدود آن، بررسی شواهد و تصمیم‌گیری درباره اقدام بعدی؛ نتیجه موفق از پیش فرض نمی‌شود.",
+      "en": "An iterative approach to plan a change, try it within a bounded scope, check evidence, and decide the next action; success is not presumed."
+    },
+    "aliases": [
+      "Plan–Do–Check–Act",
+      "برنامه‌ریزی، اجرا، بررسی، اقدام"
+    ]
+  }
+}

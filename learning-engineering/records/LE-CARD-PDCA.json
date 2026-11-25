@@ -1,0 +1,61 @@
+{
+  "id": "LE-CARD-PDCA",
+  "version": "0.1.0",
+  "kind": "KnowledgeCard",
+  "title": {
+    "fa": "کارت دانشی PDCA",
+    "en": "PDCA knowledge card"
+  },
+  "summary": {
+    "fa": "خلاصه اصیل از چرخه برنامه‌ریزی، اجرا، بررسی و اقدام. این کارت اثربخشی یادگیری را اثبات نمی‌کند و PDCA و PDSA را هم‌ارز اعلام نمی‌کند.",
+    "en": "Original summary of plan, do, check and act. This card establishes neither learning effectiveness nor equivalence between PDCA and PDSA."
+  },
+  "domainIds": [
+    "LE-IMP"
+  ],
+  "relations": [
+    {
+      "type": "derived-from",
+      "target": {
+        "id": "LE-EVD-PDCA",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "type": "explains",
+      "target": {
+        "id": "LE-CONCEPT-PDCA",
+        "version": "0.1.0"
+      }
+    }
+  ],
+  "provenance": {
+    "claimType": "original-design",
+    "evidenceRefs": [
+      {
+        "id": "LE-EVD-PDCA",
+        "version": "0.1.0"
+      }
+    ]
+  },
+  "review": {
+    "status": "proposed",
+    "author": "ontology-curriculum-agent",
+    "reviewer": null,
+    "reviewedAt": null
+  },
+  "rights": {
+    "status": "pending verification",
+    "license": "UNKNOWN",
+    "evidenceUrls": [],
+    "allowedUses": []
+  },
+  "data": {
+    "conceptRefs": [
+      {
+        "id": "LE-CONCEPT-PDCA",
+        "version": "0.1.0"
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "LE-RUBRIC-PDCA",
+  "version": "0.1.0",
+  "kind": "Rubric",
+  "title": {
+    "fa": "روبریک پیشنهادی تحلیل PDCA",
+    "en": "Proposed PDCA reasoning rubric"
+  },
+  "summary": {
+    "fa": "چهار معیار با حداکثر ۲ امتیاز؛ مجموع ۸. دو: کامل؛ یک: ناقص؛ صفر: غایب یا نادرست. قبولی مستلزم پوشش کامل همه معیارهاست؛ اعتبار و پایایی آزموده نشده است.",
+    "en": "Four criteria worth up to 2 points each, totaling 8. Two: complete; one: partial; zero: absent or incorrect. Passing requires all criteria fully met; validity and reliability are untested."
+  },
+  "domainIds": [
+    "LE-ASM"
+  ],
+  "relations": [
+    {
+      "type": "assesses",
+      "target": {
+        "id": "LE-OBJ-PDCA",
+        "version": "0.1.0"
+      }
+    }
+  ],
+  "provenance": {
+    "claimType": "original-design",
+    "evidenceRefs": [
+      {
+        "id": "LE-EVD-PDCA",
+        "version": "0.1.0"
+      }
+    ]
+  },
+  "review": {
+    "status": "proposed",
+    "author": "ontology-curriculum-agent",
+    "reviewer": null,
+    "reviewedAt": null
+  },
+  "rights": {
+    "status": "pending verification",
+    "license": "UNKNOWN",
+    "evidenceUrls": [],
+    "allowedUses": []
+  },
+  "data": {
+    "objectiveRefs": [
+      {
+        "id": "LE-OBJ-PDCA",
+        "version": "0.1.0"
+      }
+    ],
+    "criteria": [
+      {
+        "id": "plan",
+        "description": {
+          "fa": "مسئله نقص تحویل و هدف حداکثر ۶٪ را مشخص می‌کند و برنامه را به هدف پیوند می‌دهد.",
+          "en": "States incomplete handovers as the problem and at most 6% as the aim, linking the plan to that aim."
+        },
+        "maxScore": 2
+      },
+      {
+        "id": "do",
+        "description": {
+          "fa": "آزمایش یک‌هفته‌ای، مسئول فرضی، روش بازگشت و شرط توقف مشخص ارائه می‌کند.",
+          "en": "Specifies a one-week trial, fictional owner, rollback method and explicit stopping condition."
+        },
+        "maxScore": 2
+      },
+      {
+        "id": "check",
+        "description": {
+          "fa": "۱۲٪، ۵٪ و کاهش ۷ واحد درصد را درست گزارش می‌کند؛ هدف برآورده شده را در داده ساختگی تشخیص می‌دهد و محدودیت مقایسه و توضیح جایگزین را بیان می‌کند.",
+          "en": "Correctly reports 12%, 5% and a 7 percentage-point reduction; recognizes the aim is met in synthetic data and states comparison limitations and an alternative explanation."
+        },
+        "maxScore": 2
+      },
+      {
+        "id": "act",
+        "description": {
+          "fa": "تصمیم بعدی را با شواهد توجیه و داده چرخه بعد را پیشنهاد می‌کند؛ ادعای علیت یا اثربخشی یادگیری نمی‌کند و محدودیت ۵۰۰ کلمه را رعایت می‌کند.",
+          "en": "Justifies the next decision with evidence and proposes next-cycle data; makes no causal or learning-effectiveness claim and respects the 500-word limit."
+        },
+        "maxScore": 2
+      }
+    ]
+  }
+}

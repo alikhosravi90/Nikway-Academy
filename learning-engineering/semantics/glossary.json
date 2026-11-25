@@ -1,0 +1,248 @@
+{
+  "id": "LE-GLOSSARY",
+  "version": "0.1.0",
+  "status": "proposed",
+  "definitionAuthorship": "Original operational definitions; Persian translations proposed; expert review pending.",
+  "entries": [
+    {
+      "id": "LE-TERM-LE",
+      "preferredLabel": {
+        "fa": "مهندسی یادگیری",
+        "en": "Learning Engineering"
+      },
+      "definition": {
+        "fa": "طراحی و اصلاح نظام‌مند تجربه‌ها و اجزای یادگیری با پیوند دادن هدف، شواهد و ارزیابی.",
+        "en": "Systematic design and revision of learning experiences and components by connecting objectives, evidence and evaluation."
+      },
+      "aliases": [
+        "مهندسی نظام آموزشی"
+      ],
+      "domainIds": [
+        "LE-ARC"
+      ],
+      "reviewStatus": "proposed",
+      "reviewer": null,
+      "scopeNote": "Contextual alias equivalence is pending bilingual expert review."
+    },
+    {
+      "id": "LE-TERM-SOURCE",
+      "preferredLabel": {
+        "fa": "منبع",
+        "en": "Source"
+      },
+      "definition": {
+        "fa": "رکورد شناسایی یک اثر یا صفحه با نشانی و نسخه و وضعیت بررسی مستقل حقوق.",
+        "en": "An identifying record for a work or page with a location, version and independent rights review state."
+      },
+      "aliases": [],
+      "domainIds": [
+        "LE-GOV"
+      ],
+      "reviewStatus": "proposed",
+      "reviewer": null,
+      "scopeNote": "Local operational definition; not an approved standard."
+    },
+    {
+      "id": "LE-TERM-EVIDENCE",
+      "preferredLabel": {
+        "fa": "شاهد مستند",
+        "en": "Evidence"
+      },
+      "definition": {
+        "fa": "رکورد مکان‌یابی ادعا در منبع همراه محدودیت‌ها؛ وجود آن به‌تنهایی درستی ادعا را ثابت نمی‌کند.",
+        "en": "A record locating a claim in a source with limitations; its presence alone does not prove the claim."
+      },
+      "aliases": [],
+      "domainIds": [
+        "LE-QUA"
+      ],
+      "reviewStatus": "proposed",
+      "reviewer": null,
+      "scopeNote": "Local operational definition; not an approved standard."
+    },
+    {
+      "id": "LE-TERM-CARD",
+      "preferredLabel": {
+        "fa": "کارت دانشی",
+        "en": "Knowledge Card"
+      },
+      "definition": {
+        "fa": "واحد خلاصه قابل بازبینی که مفاهیم را به شواهد مشخص پیوند می‌دهد.",
+        "en": "A reviewable summary unit linking concepts to identified evidence."
+      },
+      "aliases": [],
+      "domainIds": [
+        "LE-CON"
+      ],
+      "reviewStatus": "proposed",
+      "reviewer": null,
+      "scopeNote": "Local operational definition; not an approved standard."
+    },
+    {
+      "id": "LE-TERM-CONCEPT",
+      "preferredLabel": {
+        "fa": "مفهوم",
+        "en": "Concept"
+      },
+      "definition": {
+        "fa": "واحد معنایی دارای شناسه پایدار، تعریف و مرز کاربرد مشخص.",
+        "en": "A semantic unit with a stable identifier, definition and scope boundary."
+      },
+      "aliases": [],
+      "domainIds": [
+        "LE-ONT"
+      ],
+      "reviewStatus": "proposed",
+      "reviewer": null,
+      "scopeNote": "Local operational definition; not an approved standard."
+    },
+    {
+      "id": "LE-TERM-COMP",
+      "preferredLabel": {
+        "fa": "شایستگی",
+        "en": "Competency"
+      },
+      "definition": {
+        "fa": "توانایی پیشنهادی برای عملکرد قابل مشاهده در شرایط معین.",
+        "en": "A proposed capability to perform observably under stated conditions."
+      },
+      "aliases": [],
+      "domainIds": [
+        "LE-COM"
+      ],
+      "reviewStatus": "proposed",
+      "reviewer": null,
+      "scopeNote": "Local operational definition; not an approved standard."
+    },
+    {
+      "id": "LE-TERM-OBJ",
+      "preferredLabel": {
+        "fa": "هدف یادگیری",
+        "en": "Learning Objective"
+      },
+      "definition": {
+        "fa": "بیان عملکرد مورد انتظار همراه شرط و معیار سنجش؛ وقوع یادگیری را از پیش تأیید نمی‌کند.",
+        "en": "A statement of expected performance with conditions and scoring criteria; it does not pre-confirm learning."
+      },
+      "aliases": [],
+      "domainIds": [
+        "LE-INS"
+      ],
+      "reviewStatus": "proposed",
+      "reviewer": null,
+      "scopeNote": "Local operational definition; not an approved standard."
+    },
+    {
+      "id": "LE-TERM-CUR",
+      "preferredLabel": {
+        "fa": "برنامه درسی",
+        "en": "Curriculum"
+      },
+      "definition": {
+        "fa": "ترتیب هدفمند اهداف و اجزای یادگیری با ارجاع به نسخه دقیق هر جزء.",
+        "en": "A purposeful sequence of objectives and learning components referencing exact component versions."
+      },
+      "aliases": [],
+      "domainIds": [
+        "LE-CUR"
+      ],
+      "reviewStatus": "proposed",
+      "reviewer": null,
+      "scopeNote": "Local operational definition; not an approved standard."
+    },
+    {
+      "id": "LE-TERM-CONTENT",
+      "preferredLabel": {
+        "fa": "مشخصات محتوا",
+        "en": "Content Specification"
+      },
+      "definition": {
+        "fa": "تعریف نیاز محتوایی و قالب و الزامات دسترس‌پذیری پیش از تولید رسانه.",
+        "en": "A definition of content needs, formats and accessibility requirements before media production."
+      },
+      "aliases": [],
+      "domainIds": [
+        "LE-CON"
+      ],
+      "reviewStatus": "proposed",
+      "reviewer": null,
+      "scopeNote": "Local operational definition; not an approved standard."
+    },
+    {
+      "id": "LE-TERM-ASSESS",
+      "preferredLabel": {
+        "fa": "سنجش",
+        "en": "Assessment"
+      },
+      "definition": {
+        "fa": "تکلیف یا روش گردآوری پاسخ برای قضاوت درباره هدف مشخص با معیارهای اعلام‌شده.",
+        "en": "A task or response collection method for judging a stated objective against declared criteria."
+      },
+      "aliases": [],
+      "domainIds": [
+        "LE-ASM"
+      ],
+      "reviewStatus": "proposed",
+      "reviewer": null,
+      "scopeNote": "Local operational definition; not an approved standard."
+    },
+    {
+      "id": "LE-TERM-RUBRIC",
+      "preferredLabel": {
+        "fa": "راهنمای امتیازدهی",
+        "en": "Rubric"
+      },
+      "definition": {
+        "fa": "مجموعه معیارهای صریح برای امتیازدهی پاسخ؛ وجود آن پایایی سنجش را ثابت نمی‌کند.",
+        "en": "Explicit criteria for scoring a response; their existence does not establish assessment reliability."
+      },
+      "aliases": [
+        "روبریک"
+      ],
+      "domainIds": [
+        "LE-ASM"
+      ],
+      "reviewStatus": "proposed",
+      "reviewer": null,
+      "scopeNote": "Local operational definition; not an approved standard."
+    },
+    {
+      "id": "LE-TERM-PDCA",
+      "preferredLabel": {
+        "fa": "چرخه برنامه‌ریزی، اجرا، بررسی، اقدام",
+        "en": "PDCA"
+      },
+      "definition": {
+        "fa": "چرخه پیشنهادی بهبود برای برنامه‌ریزی تغییر، آزمودن محدود، بررسی شواهد و تصمیم بعدی.",
+        "en": "An improvement cycle for planning a change, trying it in a bounded scope, checking evidence and choosing a next action."
+      },
+      "aliases": [
+        "Plan–Do–Check–Act"
+      ],
+      "domainIds": [
+        "LE-IMP"
+      ],
+      "reviewStatus": "proposed",
+      "reviewer": null,
+      "scopeNote": "Local operational definition; not an approved standard."
+    },
+    {
+      "id": "LE-TERM-PDSA",
+      "preferredLabel": {
+        "fa": "چرخه برنامه‌ریزی، اجرا، مطالعه، اقدام",
+        "en": "PDSA"
+      },
+      "definition": {
+        "fa": "برچسب اصطلاحی پیشنهادی برای Plan–Do–Study–Act؛ تفاوت تاریخی و روش‌شناختی آن با PDCA در این بسته بررسی نشده است.",
+        "en": "Proposed terminology label for Plan–Do–Study–Act; its historical and methodological distinctions from PDCA are not established in this package."
+      },
+      "aliases": [],
+      "domainIds": [
+        "LE-IMP"
+      ],
+      "reviewStatus": "proposed",
+      "reviewer": null,
+      "scopeNote": "Local operational definition; not an approved standard."
+    }
+  ]
+}

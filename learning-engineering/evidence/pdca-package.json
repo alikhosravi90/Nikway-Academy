@@ -1,0 +1,668 @@
+{
+  "contractVersion": "0.1.0",
+  "packageId": "pdca-reference",
+  "packageRevision": "0.1.0",
+  "producer": "learning-engineering",
+  "objects": [
+    {
+      "id": "LE-ASSESS-PDCA",
+      "version": "0.1.0",
+      "kind": "Assessment",
+      "title": {
+        "fa": "تمرین ساختگی خطای تحویل شیفت",
+        "en": "Synthetic shift-handover error exercise"
+      },
+      "summary": {
+        "fa": "سناریو و داده‌ها ساختگی و اصیل‌اند؛ هیچ فرد یا سازمان واقعی ارزیابی نشده است.",
+        "en": "Original synthetic scenario and data; no real person or organization has been evaluated."
+      },
+      "domainIds": [
+        "LE-ASM",
+        "LE-IMP"
+      ],
+      "relations": [
+        {
+          "type": "assesses",
+          "target": {
+            "id": "LE-OBJ-PDCA",
+            "version": "0.1.0"
+          }
+        },
+        {
+          "type": "uses-rubric",
+          "target": {
+            "id": "LE-RUBRIC-PDCA",
+            "version": "0.1.0"
+          }
+        }
+      ],
+      "provenance": {
+        "claimType": "synthetic",
+        "evidenceRefs": [
+          {
+            "id": "LE-EVD-PDCA",
+            "version": "0.1.0"
+          }
+        ]
+      },
+      "review": {
+        "status": "proposed",
+        "author": "ontology-curriculum-agent",
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "rights": {
+        "status": "pending verification",
+        "license": "UNKNOWN",
+        "evidenceUrls": [],
+        "allowedUses": []
+      },
+      "data": {
+        "objectiveRefs": [
+          {
+            "id": "LE-OBJ-PDCA",
+            "version": "0.1.0"
+          }
+        ],
+        "rubricRef": {
+          "id": "LE-RUBRIC-PDCA",
+          "version": "0.1.0"
+        },
+        "task": {
+          "fa": "در یک دفتر فرضی، ۱۲ مورد از ۱۰۰ تحویل شیفت اولیه ناقص بود. پس از آزمون فرضی چک‌لیست، ۵ مورد از ۱۰۰ تحویل ناقص بود. در حداکثر ۵۰۰ کلمه: برنامه را با هدف پیشنهادی حداکثر ۶٪ نقص بنویسید؛ اجرای آزمایش یک‌هفته‌ای و قابل بازگشت را با مسئول فرضی و شرط توقف مشخص کنید؛ نرخ‌ها و تفاوت واحد درصد را محاسبه کنید؛ درباره ادامه، اصلاح یا توقف تصمیم بگیرید. تفاوت حجم کار یا ترکیب کارکنان را به‌عنوان توضیح جایگزین بررسی کنید و برای چرخه بعد داده لازم را پیشنهاد دهید. امتیاز هر معیار: ۲ برای پوشش کامل، ۱ برای پوشش ناقص، صفر برای فقدان یا پاسخ نادرست؛ قبولی پیشنهادی ۸ از ۸ است.",
+          "en": "In a fictional office, 12 of 100 baseline shift handovers were incomplete. After a hypothetical checklist trial, 5 of 100 were incomplete. In at most 500 words: plan an aim of at most 6% incompleteness; describe a reversible one-week trial with a fictional owner and stopping condition; calculate rates and the percentage-point difference; decide whether to continue, modify or stop. Consider workload or staffing differences as alternative explanations and propose next-cycle data. Each criterion scores 2 if fully met, 1 if partially met, and 0 if absent or incorrect; proposed passing threshold is 8/8."
+        }
+      }
+    },
+    {
+      "id": "LE-CARD-PDCA",
+      "version": "0.1.0",
+      "kind": "KnowledgeCard",
+      "title": {
+        "fa": "کارت دانشی PDCA",
+        "en": "PDCA knowledge card"
+      },
+      "summary": {
+        "fa": "خلاصه اصیل از چرخه برنامه‌ریزی، اجرا، بررسی و اقدام. این کارت اثربخشی یادگیری را اثبات نمی‌کند و PDCA و PDSA را هم‌ارز اعلام نمی‌کند.",
+        "en": "Original summary of plan, do, check and act. This card establishes neither learning effectiveness nor equivalence between PDCA and PDSA."
+      },
+      "domainIds": [
+        "LE-IMP"
+      ],
+      "relations": [
+        {
+          "type": "derived-from",
+          "target": {
+            "id": "LE-EVD-PDCA",
+            "version": "0.1.0"
+          }
+        },
+        {
+          "type": "explains",
+          "target": {
+            "id": "LE-CONCEPT-PDCA",
+            "version": "0.1.0"
+          }
+        }
+      ],
+      "provenance": {
+        "claimType": "original-design",
+        "evidenceRefs": [
+          {
+            "id": "LE-EVD-PDCA",
+            "version": "0.1.0"
+          }
+        ]
+      },
+      "review": {
+        "status": "proposed",
+        "author": "ontology-curriculum-agent",
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "rights": {
+        "status": "pending verification",
+        "license": "UNKNOWN",
+        "evidenceUrls": [],
+        "allowedUses": []
+      },
+      "data": {
+        "conceptRefs": [
+          {
+            "id": "LE-CONCEPT-PDCA",
+            "version": "0.1.0"
+          }
+        ]
+      }
+    },
+    {
+      "id": "LE-COMP-PDCA",
+      "version": "0.1.0",
+      "kind": "Competency",
+      "title": {
+        "fa": "طراحی و تفسیر یک آزمایش محدود بهبود",
+        "en": "Design and interpret a bounded improvement trial"
+      },
+      "summary": {
+        "fa": "شایستگی پیشنهادی برای تمرین ساختگی محیط کار؛ اجرای واقعی را مجاز نمی‌کند.",
+        "en": "Proposed capability for a synthetic workplace exercise; no authorization for real operations."
+      },
+      "domainIds": [
+        "LE-COM",
+        "LE-IMP"
+      ],
+      "relations": [
+        {
+          "type": "develops",
+          "target": {
+            "id": "LE-CONCEPT-PDCA",
+            "version": "0.1.0"
+          }
+        }
+      ],
+      "provenance": {
+        "claimType": "original-design",
+        "evidenceRefs": [
+          {
+            "id": "LE-EVD-PDCA",
+            "version": "0.1.0"
+          }
+        ]
+      },
+      "review": {
+        "status": "proposed",
+        "author": "ontology-curriculum-agent",
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "rights": {
+        "status": "pending verification",
+        "license": "UNKNOWN",
+        "evidenceUrls": [],
+        "allowedUses": []
+      },
+      "data": {
+        "conceptRefs": [
+          {
+            "id": "LE-CONCEPT-PDCA",
+            "version": "0.1.0"
+          }
+        ],
+        "performance": {
+          "fa": "با داده‌های ساختگی، مسئله و هدف را تعریف کند، آزمایش محدود و قابل بازگشت طراحی کند، نرخ خطا را مقایسه و تصمیم بعدی را با ذکر عدم قطعیت توجیه کند.",
+          "en": "Using synthetic data, define a problem and aim, design a bounded reversible trial, compare error rates, and justify a next decision with uncertainty stated."
+        }
+      }
+    },
+    {
+      "id": "LE-CONCEPT-PDCA",
+      "version": "0.1.0",
+      "kind": "Concept",
+      "title": {
+        "fa": "چرخه PDCA",
+        "en": "PDCA cycle"
+      },
+      "summary": {
+        "fa": "تعریف پیشنهادی و خلاصه؛ تأیید ترجمه و حقوق در انتظار است.",
+        "en": "Proposed summary definition; language and rights review pending."
+      },
+      "domainIds": [
+        "LE-IMP"
+      ],
+      "relations": [
+        {
+          "type": "cites",
+          "target": {
+            "id": "LE-SRC-ASQ-PDCA",
+            "version": "0.1.0"
+          }
+        }
+      ],
+      "provenance": {
+        "claimType": "source-summary",
+        "evidenceRefs": [
+          {
+            "id": "LE-EVD-PDCA",
+            "version": "0.1.0"
+          }
+        ]
+      },
+      "review": {
+        "status": "proposed",
+        "author": "ontology-curriculum-agent",
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "rights": {
+        "status": "pending verification",
+        "license": "UNKNOWN",
+        "evidenceUrls": [],
+        "allowedUses": []
+      },
+      "data": {
+        "definition": {
+          "fa": "روشی تکرارشونده برای برنامه‌ریزی یک تغییر، اجرای محدود آن، بررسی شواهد و تصمیم‌گیری درباره اقدام بعدی؛ نتیجه موفق از پیش فرض نمی‌شود.",
+          "en": "An iterative approach to plan a change, try it within a bounded scope, check evidence, and decide the next action; success is not presumed."
+        },
+        "aliases": [
+          "Plan–Do–Check–Act",
+          "برنامه‌ریزی، اجرا، بررسی، اقدام"
+        ]
+      }
+    },
+    {
+      "id": "LE-CONTENT-PDCA",
+      "version": "0.1.0",
+      "kind": "ContentSpecification",
+      "title": {
+        "fa": "مشخصات محتوای تمرین بهبود تحویل شیفت",
+        "en": "Shift-handover improvement content specification"
+      },
+      "summary": {
+        "fa": "محتوای پیشنهادی باید چهار مرحله، جدول داده ساختگی، نمونه محاسبه نرخ و پرسش تصمیم بعدی را ارائه کند؛ تولید رسانه هنوز انجام نشده است.",
+        "en": "Proposed content must present four stages, a synthetic data table, a worked rate calculation and a next-decision prompt; media have not been produced."
+      },
+      "domainIds": [
+        "LE-CON",
+        "LE-INS",
+        "LE-LXD"
+      ],
+      "relations": [
+        {
+          "type": "specifies",
+          "target": {
+            "id": "LE-OBJ-PDCA",
+            "version": "0.1.0"
+          }
+        }
+      ],
+      "provenance": {
+        "claimType": "original-design",
+        "evidenceRefs": [
+          {
+            "id": "LE-EVD-PDCA",
+            "version": "0.1.0"
+          }
+        ]
+      },
+      "review": {
+        "status": "proposed",
+        "author": "ontology-curriculum-agent",
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "rights": {
+        "status": "pending verification",
+        "license": "UNKNOWN",
+        "evidenceUrls": [],
+        "allowedUses": []
+      },
+      "data": {
+        "objectiveRefs": [
+          {
+            "id": "LE-OBJ-PDCA",
+            "version": "0.1.0"
+          }
+        ],
+        "formats": [
+          "bilingual-text",
+          "accessible-table"
+        ],
+        "accessibility": {
+          "fa": "پیشنهاد: متن راست‌به‌چپ فارسی و چپ‌به‌راست انگلیسی، سرستون معنادار و توضیح متنی نمودار؛ آزمون دسترس‌پذیری انجام نشده است.",
+          "en": "Proposed: Persian RTL and English LTR text, meaningful table headers and text alternatives for charts; accessibility testing has not been performed."
+        }
+      }
+    },
+    {
+      "id": "LE-CUR-PDCA",
+      "version": "0.1.0",
+      "kind": "Curriculum",
+      "title": {
+        "fa": "مسیر کوتاه تمرین PDCA",
+        "en": "Short PDCA practice pathway"
+      },
+      "summary": {
+        "fa": "ترتیب پیشنهادی: هدف، مشخصات محتوا، سپس تمرین سنجش. مفهوم و کارت از طریق شایستگی و شواهد در دسترس‌اند. زمان و اثربخشی آموزشی اندازه‌گیری نشده‌اند.",
+        "en": "Proposed sequence: objective, content specification, then assessment. Concept and card are available through competency and evidence links. Instructional duration and effectiveness have not been measured."
+      },
+      "domainIds": [
+        "LE-CUR"
+      ],
+      "relations": [
+        {
+          "type": "includes-objective",
+          "target": {
+            "id": "LE-OBJ-PDCA",
+            "version": "0.1.0"
+          }
+        }
+      ],
+      "provenance": {
+        "claimType": "original-design",
+        "evidenceRefs": [
+          {
+            "id": "LE-EVD-PDCA",
+            "version": "0.1.0"
+          }
+        ]
+      },
+      "review": {
+        "status": "proposed",
+        "author": "ontology-curriculum-agent",
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "rights": {
+        "status": "pending verification",
+        "license": "UNKNOWN",
+        "evidenceUrls": [],
+        "allowedUses": []
+      },
+      "data": {
+        "objectiveRefs": [
+          {
+            "id": "LE-OBJ-PDCA",
+            "version": "0.1.0"
+          }
+        ],
+        "sequence": [
+          {
+            "id": "LE-OBJ-PDCA",
+            "version": "0.1.0"
+          },
+          {
+            "id": "LE-CONTENT-PDCA",
+            "version": "0.1.0"
+          },
+          {
+            "id": "LE-ASSESS-PDCA",
+            "version": "0.1.0"
+          }
+        ]
+      }
+    },
+    {
+      "id": "LE-EVD-PDCA",
+      "version": "0.1.0",
+      "kind": "Evidence",
+      "title": {
+        "fa": "شاهد توصیفی مراحل PDCA",
+        "en": "Descriptive evidence for PDCA stages"
+      },
+      "summary": {
+        "fa": "ASQ چرخه تکرارشونده چهارمرحله‌ای برای تغییر را شرح می‌دهد؛ این شاهد اثربخشی آموزشی نیست.",
+        "en": "ASQ describes a repeating four-stage approach to change; this is not evidence of instructional effectiveness."
+      },
+      "domainIds": [
+        "LE-IMP"
+      ],
+      "relations": [
+        {
+          "type": "cites",
+          "target": {
+            "id": "LE-SRC-ASQ-PDCA",
+            "version": "0.1.0"
+          }
+        }
+      ],
+      "provenance": {
+        "claimType": "source-summary",
+        "evidenceRefs": []
+      },
+      "review": {
+        "status": "proposed",
+        "author": "research-agent",
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "rights": {
+        "status": "pending verification",
+        "license": "UNKNOWN",
+        "evidenceUrls": [],
+        "allowedUses": []
+      },
+      "data": {
+        "sourceRef": {
+          "id": "LE-SRC-ASQ-PDCA",
+          "version": "0.1.0"
+        },
+        "locator": "What is the Plan-Do-Check-Act (PDCA) Cycle?; The Plan-do-check-act Procedure; accessed 2026-11-25",
+        "claim": {
+          "fa": "برنامه‌ریزی، اجرای آزمایشی، بررسی یافته‌ها و اقدام بعدی چهار مرحله چرخه‌اند.",
+          "en": "The cycle links planning, a trial, examination of findings and a next action."
+        },
+        "limitations": "Descriptive professional guidance, not a controlled learning study. Original concise paraphrase; Persian expert review and reuse permission pending. See research/references.json LE-SRC-028; PDSA distinction LE-SRC-029."
+      }
+    },
+    {
+      "id": "LE-OBJ-PDCA",
+      "version": "0.1.0",
+      "kind": "LearningObjective",
+      "title": {
+        "fa": "تحلیل مستدل یک چرخه PDCA",
+        "en": "Reason through one PDCA cycle"
+      },
+      "summary": {
+        "fa": "هدف قابل مشاهده همسو با تمرین و روبریک.",
+        "en": "Observable objective aligned to the task and rubric."
+      },
+      "domainIds": [
+        "LE-COM",
+        "LE-ASM"
+      ],
+      "relations": [
+        {
+          "type": "targets-competency",
+          "target": {
+            "id": "LE-COMP-PDCA",
+            "version": "0.1.0"
+          }
+        }
+      ],
+      "provenance": {
+        "claimType": "original-design",
+        "evidenceRefs": [
+          {
+            "id": "LE-EVD-PDCA",
+            "version": "0.1.0"
+          }
+        ]
+      },
+      "review": {
+        "status": "proposed",
+        "author": "ontology-curriculum-agent",
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "rights": {
+        "status": "pending verification",
+        "license": "UNKNOWN",
+        "evidenceUrls": [],
+        "allowedUses": []
+      },
+      "data": {
+        "competencyRefs": [
+          {
+            "id": "LE-COMP-PDCA",
+            "version": "0.1.0"
+          }
+        ],
+        "criterion": {
+          "fa": "در یک گزارش حداکثر ۵۰۰ کلمه‌ای، هر چهار معیار روبریک را کامل پوشش دهد و ۸ از ۸ امتیاز بگیرد؛ نرخ‌های ۱۲٪ و ۵٪ و کاهش ۷ واحد درصد را درست محاسبه کند و از ادعای علیت خودداری کند. این آستانه پیشنهادی و اعتبارسنجی‌نشده است.",
+          "en": "In a report of at most 500 words, fully meet all four rubric criteria for 8/8 points; correctly calculate 12% and 5% rates and a 7 percentage-point reduction, without claiming causality. This threshold is proposed and unvalidated."
+        }
+      }
+    },
+    {
+      "id": "LE-RUBRIC-PDCA",
+      "version": "0.1.0",
+      "kind": "Rubric",
+      "title": {
+        "fa": "روبریک پیشنهادی تحلیل PDCA",
+        "en": "Proposed PDCA reasoning rubric"
+      },
+      "summary": {
+        "fa": "چهار معیار با حداکثر ۲ امتیاز؛ مجموع ۸. دو: کامل؛ یک: ناقص؛ صفر: غایب یا نادرست. قبولی مستلزم پوشش کامل همه معیارهاست؛ اعتبار و پایایی آزموده نشده است.",
+        "en": "Four criteria worth up to 2 points each, totaling 8. Two: complete; one: partial; zero: absent or incorrect. Passing requires all criteria fully met; validity and reliability are untested."
+      },
+      "domainIds": [
+        "LE-ASM"
+      ],
+      "relations": [
+        {
+          "type": "assesses",
+          "target": {
+            "id": "LE-OBJ-PDCA",
+            "version": "0.1.0"
+          }
+        }
+      ],
+      "provenance": {
+        "claimType": "original-design",
+        "evidenceRefs": [
+          {
+            "id": "LE-EVD-PDCA",
+            "version": "0.1.0"
+          }
+        ]
+      },
+      "review": {
+        "status": "proposed",
+        "author": "ontology-curriculum-agent",
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "rights": {
+        "status": "pending verification",
+        "license": "UNKNOWN",
+        "evidenceUrls": [],
+        "allowedUses": []
+      },
+      "data": {
+        "objectiveRefs": [
+          {
+            "id": "LE-OBJ-PDCA",
+            "version": "0.1.0"
+          }
+        ],
+        "criteria": [
+          {
+            "id": "plan",
+            "description": {
+              "fa": "مسئله نقص تحویل و هدف حداکثر ۶٪ را مشخص می‌کند و برنامه را به هدف پیوند می‌دهد.",
+              "en": "States incomplete handovers as the problem and at most 6% as the aim, linking the plan to that aim."
+            },
+            "maxScore": 2
+          },
+          {
+            "id": "do",
+            "description": {
+              "fa": "آزمایش یک‌هفته‌ای، مسئول فرضی، روش بازگشت و شرط توقف مشخص ارائه می‌کند.",
+              "en": "Specifies a one-week trial, fictional owner, rollback method and explicit stopping condition."
+            },
+            "maxScore": 2
+          },
+          {
+            "id": "check",
+            "description": {
+              "fa": "۱۲٪، ۵٪ و کاهش ۷ واحد درصد را درست گزارش می‌کند؛ هدف برآورده شده را در داده ساختگی تشخیص می‌دهد و محدودیت مقایسه و توضیح جایگزین را بیان می‌کند.",
+              "en": "Correctly reports 12%, 5% and a 7 percentage-point reduction; recognizes the aim is met in synthetic data and states comparison limitations and an alternative explanation."
+            },
+            "maxScore": 2
+          },
+          {
+            "id": "act",
+            "description": {
+              "fa": "تصمیم بعدی را با شواهد توجیه و داده چرخه بعد را پیشنهاد می‌کند؛ ادعای علیت یا اثربخشی یادگیری نمی‌کند و محدودیت ۵۰۰ کلمه را رعایت می‌کند.",
+              "en": "Justifies the next decision with evidence and proposes next-cycle data; makes no causal or learning-effectiveness claim and respects the 500-word limit."
+            },
+            "maxScore": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "LE-SRC-ASQ-PDCA",
+      "version": "0.1.0",
+      "kind": "Source",
+      "title": {
+        "fa": "منبع ASQ برای PDCA",
+        "en": "ASQ PDCA source"
+      },
+      "summary": {
+        "fa": "صفحه رسمی در ۲۰۲۶-۱۱-۲۵ خوانده شد؛ نسخه ثابت و حقوق بازاستفاده تأیید نشده است. شناسه ثبت پژوهش LE-SRC-028.",
+        "en": "Official page read 2026-11-25; immutable edition and reuse rights unresolved. Research register LE-SRC-028."
+      },
+      "domainIds": [
+        "LE-IMP"
+      ],
+      "relations": [],
+      "provenance": {
+        "claimType": "source-summary",
+        "evidenceRefs": []
+      },
+      "review": {
+        "status": "proposed",
+        "author": "research-agent",
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "rights": {
+        "status": "pending verification",
+        "license": "UNKNOWN",
+        "evidenceUrls": [],
+        "allowedUses": []
+      },
+      "data": {
+        "canonicalUrl": "https://asq.org/quality-resources/pdca-cycle",
+        "issuer": "ASQ",
+        "edition": "Live web page accessed 2026-11-25; immutable revision UNKNOWN",
+        "verificationStatus": "verified"
+      }
+    }
+  ],
+  "dependencyManifest": [
+    {
+      "id": "LE-ASSESS-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-CARD-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-COMP-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-CONCEPT-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-CONTENT-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-CUR-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-EVD-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-OBJ-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-RUBRIC-PDCA",
+      "version": "0.1.0"
+    },
+    {
+      "id": "LE-SRC-ASQ-PDCA",
+      "version": "0.1.0"
+    }
+  ],
+  "payloadDigest": "88145a69902c715140dc10e6c608b61871bfd97b8afca191f80d92ce7a572805"
+}

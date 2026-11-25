@@ -1,0 +1,68 @@
+{
+  "id": "LE-CUR-PDCA",
+  "version": "0.1.0",
+  "kind": "Curriculum",
+  "title": {
+    "fa": "مسیر کوتاه تمرین PDCA",
+    "en": "Short PDCA practice pathway"
+  },
+  "summary": {
+    "fa": "ترتیب پیشنهادی: هدف، مشخصات محتوا، سپس تمرین سنجش. مفهوم و کارت از طریق شایستگی و شواهد در دسترس‌اند. زمان و اثربخشی آموزشی اندازه‌گیری نشده‌اند.",
+    "en": "Proposed sequence: objective, content specification, then assessment. Concept and card are available through competency and evidence links. Instructional duration and effectiveness have not been measured."
+  },
+  "domainIds": [
+    "LE-CUR"
+  ],
+  "relations": [
+    {
+      "type": "includes-objective",
+      "target": {
+        "id": "LE-OBJ-PDCA",
+        "version": "0.1.0"
+      }
+    }
+  ],
+  "provenance": {
+    "claimType": "original-design",
+    "evidenceRefs": [
+      {
+        "id": "LE-EVD-PDCA",
+        "version": "0.1.0"
+      }
+    ]
+  },
+  "review": {
+    "status": "proposed",
+    "author": "ontology-curriculum-agent",
+    "reviewer": null,
+    "reviewedAt": null
+  },
+  "rights": {
+    "status": "pending verification",
+    "license": "UNKNOWN",
+    "evidenceUrls": [],
+    "allowedUses": []
+  },
+  "data": {
+    "objectiveRefs": [
+      {
+        "id": "LE-OBJ-PDCA",
+        "version": "0.1.0"
+      }
+    ],
+    "sequence": [
+      {
+        "id": "LE-OBJ-PDCA",
+        "version": "0.1.0"
+      },
+      {
+        "id": "LE-CONTENT-PDCA",
+        "version": "0.1.0"
+      },
+      {
+        "id": "LE-ASSESS-PDCA",
+        "version": "0.1.0"
+      }
+    ]
+  }
+}

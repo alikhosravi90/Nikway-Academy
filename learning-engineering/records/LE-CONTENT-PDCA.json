@@ -1,0 +1,64 @@
+{
+  "id": "LE-CONTENT-PDCA",
+  "version": "0.1.0",
+  "kind": "ContentSpecification",
+  "title": {
+    "fa": "مشخصات محتوای تمرین بهبود تحویل شیفت",
+    "en": "Shift-handover improvement content specification"
+  },
+  "summary": {
+    "fa": "محتوای پیشنهادی باید چهار مرحله، جدول داده ساختگی، نمونه محاسبه نرخ و پرسش تصمیم بعدی را ارائه کند؛ تولید رسانه هنوز انجام نشده است.",
+    "en": "Proposed content must present four stages, a synthetic data table, a worked rate calculation and a next-decision prompt; media have not been produced."
+  },
+  "domainIds": [
+    "LE-CON",
+    "LE-INS",
+    "LE-LXD"
+  ],
+  "relations": [
+    {
+      "type": "specifies",
+      "target": {
+        "id": "LE-OBJ-PDCA",
+        "version": "0.1.0"
+      }
+    }
+  ],
+  "provenance": {
+    "claimType": "original-design",
+    "evidenceRefs": [
+      {
+        "id": "LE-EVD-PDCA",
+        "version": "0.1.0"
+      }
+    ]
+  },
+  "review": {
+    "status": "proposed",
+    "author": "ontology-curriculum-agent",
+    "reviewer": null,
+    "reviewedAt": null
+  },
+  "rights": {
+    "status": "pending verification",
+    "license": "UNKNOWN",
+    "evidenceUrls": [],
+    "allowedUses": []
+  },
+  "data": {
+    "objectiveRefs": [
+      {
+        "id": "LE-OBJ-PDCA",
+        "version": "0.1.0"
+      }
+    ],
+    "formats": [
+      "bilingual-text",
+      "accessible-table"
+    ],
+    "accessibility": {
+      "fa": "پیشنهاد: متن راست‌به‌چپ فارسی و چپ‌به‌راست انگلیسی، سرستون معنادار و توضیح متنی نمودار؛ آزمون دسترس‌پذیری انجام نشده است.",
+      "en": "Proposed: Persian RTL and English LTR text, meaningful table headers and text alternatives for charts; accessibility testing has not been performed."
+    }
+  }
+}

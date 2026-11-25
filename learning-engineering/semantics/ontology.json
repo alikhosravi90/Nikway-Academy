@@ -1,0 +1,395 @@
+{
+  "id": "LE-ONTOLOGY",
+  "version": "0.1.0",
+  "status": "proposed",
+  "domains": [
+    {
+      "id": "LE-PHI",
+      "preferredLabel": {
+        "fa": "فلسفه یادگیری",
+        "en": "Learning Philosophy"
+      }
+    },
+    {
+      "id": "LE-ONT",
+      "preferredLabel": {
+        "fa": "هستی‌شناسی یادگیری",
+        "en": "Learning Ontology"
+      }
+    },
+    {
+      "id": "LE-GLO",
+      "preferredLabel": {
+        "fa": "واژه‌نامه",
+        "en": "Glossary"
+      }
+    },
+    {
+      "id": "LE-TAX",
+      "preferredLabel": {
+        "fa": "طبقه‌بندی",
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "id": "LE-SCI",
+      "preferredLabel": {
+        "fa": "علوم یادگیری",
+        "en": "Learning Science"
+      }
+    },
+    {
+      "id": "LE-ARC",
+      "preferredLabel": {
+        "fa": "معماری یادگیری",
+        "en": "Learning Architecture"
+      }
+    },
+    {
+      "id": "LE-COM",
+      "preferredLabel": {
+        "fa": "معماری شایستگی",
+        "en": "Competency Architecture"
+      }
+    },
+    {
+      "id": "LE-CUR",
+      "preferredLabel": {
+        "fa": "معماری برنامه درسی",
+        "en": "Curriculum Architecture"
+      }
+    },
+    {
+      "id": "LE-INS",
+      "preferredLabel": {
+        "fa": "طراحی آموزشی",
+        "en": "Instructional Design"
+      }
+    },
+    {
+      "id": "LE-LXD",
+      "preferredLabel": {
+        "fa": "طراحی تجربه یادگیری",
+        "en": "Learning Experience Design"
+      }
+    },
+    {
+      "id": "LE-CON",
+      "preferredLabel": {
+        "fa": "مهندسی محتوا",
+        "en": "Content Engineering"
+      }
+    },
+    {
+      "id": "LE-ASM",
+      "preferredLabel": {
+        "fa": "مهندسی سنجش",
+        "en": "Assessment Engineering"
+      }
+    },
+    {
+      "id": "LE-ANA",
+      "preferredLabel": {
+        "fa": "تحلیل یادگیری",
+        "en": "Learning Analytics"
+      }
+    },
+    {
+      "id": "LE-QUA",
+      "preferredLabel": {
+        "fa": "تضمین کیفیت",
+        "en": "Quality Assurance"
+      }
+    },
+    {
+      "id": "LE-GOV",
+      "preferredLabel": {
+        "fa": "حاکمیت آموزشی",
+        "en": "Learning Governance"
+      }
+    },
+    {
+      "id": "LE-IMP",
+      "preferredLabel": {
+        "fa": "بهبود مستمر",
+        "en": "Continuous Improvement"
+      }
+    }
+  ],
+  "entityKinds": [
+    "Source",
+    "Evidence",
+    "KnowledgeCard",
+    "Concept",
+    "Competency",
+    "LearningObjective",
+    "Curriculum",
+    "ContentSpecification",
+    "Assessment",
+    "Rubric"
+  ],
+  "relationTypes": [
+    {
+      "type": "derived-from",
+      "fromKinds": [
+        "KnowledgeCard"
+      ],
+      "toKinds": [
+        "Evidence"
+      ],
+      "direction": "subject-to-target",
+      "sameKindRequired": false,
+      "acyclic": false
+    },
+    {
+      "type": "explains",
+      "fromKinds": [
+        "KnowledgeCard"
+      ],
+      "toKinds": [
+        "Concept"
+      ],
+      "direction": "subject-to-target",
+      "sameKindRequired": false,
+      "acyclic": false
+    },
+    {
+      "type": "develops",
+      "fromKinds": [
+        "Competency"
+      ],
+      "toKinds": [
+        "Concept"
+      ],
+      "direction": "subject-to-target",
+      "sameKindRequired": false,
+      "acyclic": false
+    },
+    {
+      "type": "targets-competency",
+      "fromKinds": [
+        "LearningObjective"
+      ],
+      "toKinds": [
+        "Competency"
+      ],
+      "direction": "subject-to-target",
+      "sameKindRequired": false,
+      "acyclic": false
+    },
+    {
+      "type": "includes-objective",
+      "fromKinds": [
+        "Curriculum"
+      ],
+      "toKinds": [
+        "LearningObjective"
+      ],
+      "direction": "subject-to-target",
+      "sameKindRequired": false,
+      "acyclic": false
+    },
+    {
+      "type": "specifies",
+      "fromKinds": [
+        "ContentSpecification"
+      ],
+      "toKinds": [
+        "LearningObjective"
+      ],
+      "direction": "subject-to-target",
+      "sameKindRequired": false,
+      "acyclic": false
+    },
+    {
+      "type": "assesses",
+      "fromKinds": [
+        "Assessment",
+        "Rubric"
+      ],
+      "toKinds": [
+        "LearningObjective"
+      ],
+      "direction": "subject-to-target",
+      "sameKindRequired": false,
+      "acyclic": false
+    },
+    {
+      "type": "uses-rubric",
+      "fromKinds": [
+        "Assessment"
+      ],
+      "toKinds": [
+        "Rubric"
+      ],
+      "direction": "subject-to-target",
+      "sameKindRequired": false,
+      "acyclic": false
+    },
+    {
+      "type": "cites",
+      "fromKinds": [
+        "Source",
+        "Evidence",
+        "KnowledgeCard",
+        "Concept",
+        "Competency",
+        "LearningObjective",
+        "Curriculum",
+        "ContentSpecification",
+        "Assessment",
+        "Rubric"
+      ],
+      "toKinds": [
+        "Source"
+      ],
+      "direction": "subject-to-target",
+      "sameKindRequired": false,
+      "acyclic": false
+    },
+    {
+      "type": "supports",
+      "fromKinds": [
+        "Evidence"
+      ],
+      "toKinds": [
+        "KnowledgeCard",
+        "Concept"
+      ],
+      "direction": "subject-to-target",
+      "sameKindRequired": false,
+      "acyclic": false
+    },
+    {
+      "type": "contradicts",
+      "fromKinds": [
+        "Evidence"
+      ],
+      "toKinds": [
+        "KnowledgeCard",
+        "Concept"
+      ],
+      "direction": "subject-to-target",
+      "sameKindRequired": false,
+      "acyclic": false
+    },
+    {
+      "type": "defines",
+      "fromKinds": [
+        "Source",
+        "Evidence",
+        "KnowledgeCard",
+        "Concept",
+        "Competency",
+        "LearningObjective",
+        "Curriculum",
+        "ContentSpecification",
+        "Assessment",
+        "Rubric"
+      ],
+      "toKinds": [
+        "Concept"
+      ],
+      "direction": "subject-to-target",
+      "sameKindRequired": false,
+      "acyclic": false
+    },
+    {
+      "type": "teaches",
+      "fromKinds": [
+        "ContentSpecification"
+      ],
+      "toKinds": [
+        "LearningObjective"
+      ],
+      "direction": "subject-to-target",
+      "sameKindRequired": false,
+      "acyclic": false
+    },
+    {
+      "type": "prerequisiteOf",
+      "fromKinds": [
+        "Concept",
+        "Competency",
+        "LearningObjective",
+        "Curriculum"
+      ],
+      "toKinds": [
+        "Concept",
+        "Competency",
+        "LearningObjective",
+        "Curriculum"
+      ],
+      "direction": "subject-to-target",
+      "sameKindRequired": true,
+      "acyclic": true
+    },
+    {
+      "type": "derivesFrom",
+      "fromKinds": [
+        "Source",
+        "Evidence",
+        "KnowledgeCard",
+        "Concept",
+        "Competency",
+        "LearningObjective",
+        "Curriculum",
+        "ContentSpecification",
+        "Assessment",
+        "Rubric"
+      ],
+      "toKinds": [
+        "Source",
+        "Evidence",
+        "KnowledgeCard",
+        "Concept",
+        "Competency",
+        "LearningObjective",
+        "Curriculum",
+        "ContentSpecification",
+        "Assessment",
+        "Rubric"
+      ],
+      "direction": "subject-to-target",
+      "sameKindRequired": true,
+      "acyclic": false
+    },
+    {
+      "type": "supersedes",
+      "fromKinds": [
+        "Source",
+        "Evidence",
+        "KnowledgeCard",
+        "Concept",
+        "Competency",
+        "LearningObjective",
+        "Curriculum",
+        "ContentSpecification",
+        "Assessment",
+        "Rubric"
+      ],
+      "toKinds": [
+        "Source",
+        "Evidence",
+        "KnowledgeCard",
+        "Concept",
+        "Competency",
+        "LearningObjective",
+        "Curriculum",
+        "ContentSpecification",
+        "Assessment",
+        "Rubric"
+      ],
+      "direction": "subject-to-target",
+      "sameKindRequired": true,
+      "acyclic": true
+    }
+  ],
+  "referencePolicy": "Exact id and version; no implicit latest revision.",
+  "semanticScope": "Local operational vocabulary; no RDF/OWL/SKOS conformance or scientific validation claimed.",
+  "review": {
+    "status": "proposed",
+    "reviewer": null,
+    "reviewedAt": null
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "LE-OBJ-PDCA",
+  "version": "0.1.0",
+  "kind": "LearningObjective",
+  "title": {
+    "fa": "تحلیل مستدل یک چرخه PDCA",
+    "en": "Reason through one PDCA cycle"
+  },
+  "summary": {
+    "fa": "هدف قابل مشاهده همسو با تمرین و روبریک.",
+    "en": "Observable objective aligned to the task and rubric."
+  },
+  "domainIds": [
+    "LE-COM",
+    "LE-ASM"
+  ],
+  "relations": [
+    {
+      "type": "targets-competency",
+      "target": {
+        "id": "LE-COMP-PDCA",
+        "version": "0.1.0"
+      }
+    }
+  ],
+  "provenance": {
+    "claimType": "original-design",
+    "evidenceRefs": [
+      {
+        "id": "LE-EVD-PDCA",
+        "version": "0.1.0"
+      }
+    ]
+  },
+  "review": {
+    "status": "proposed",
+    "author": "ontology-curriculum-agent",
+    "reviewer": null,
+    "reviewedAt": null
+  },
+  "rights": {
+    "status": "pending verification",
+    "license": "UNKNOWN",
+    "evidenceUrls": [],
+    "allowedUses": []
+  },
+  "data": {
+    "competencyRefs": [
+      {
+        "id": "LE-COMP-PDCA",
+        "version": "0.1.0"
+      }
+    ],
+    "criterion": {
+      "fa": "در یک گزارش حداکثر ۵۰۰ کلمه‌ای، هر چهار معیار روبریک را کامل پوشش دهد و ۸ از ۸ امتیاز بگیرد؛ نرخ‌های ۱۲٪ و ۵٪ و کاهش ۷ واحد درصد را درست محاسبه کند و از ادعای علیت خودداری کند. این آستانه پیشنهادی و اعتبارسنجی‌نشده است.",
+      "en": "In a report of at most 500 words, fully meet all four rubric criteria for 8/8 points; correctly calculate 12% and 5% rates and a 7 percentage-point reduction, without claiming causality. This threshold is proposed and unvalidated."
+    }
+  }
+}

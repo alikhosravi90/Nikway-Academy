@@ -1,0 +1,53 @@
+{
+  "id": "LE-EVD-PDCA",
+  "version": "0.1.0",
+  "kind": "Evidence",
+  "title": {
+    "fa": "شاهد توصیفی مراحل PDCA",
+    "en": "Descriptive evidence for PDCA stages"
+  },
+  "summary": {
+    "fa": "ASQ چرخه تکرارشونده چهارمرحله‌ای برای تغییر را شرح می‌دهد؛ این شاهد اثربخشی آموزشی نیست.",
+    "en": "ASQ describes a repeating four-stage approach to change; this is not evidence of instructional effectiveness."
+  },
+  "domainIds": [
+    "LE-IMP"
+  ],
+  "relations": [
+    {
+      "type": "cites",
+      "target": {
+        "id": "LE-SRC-ASQ-PDCA",
+        "version": "0.1.0"
+      }
+    }
+  ],
+  "provenance": {
+    "claimType": "source-summary",
+    "evidenceRefs": []
+  },
+  "review": {
+    "status": "proposed",
+    "author": "research-agent",
+    "reviewer": null,
+    "reviewedAt": null
+  },
+  "rights": {
+    "status": "pending verification",
+    "license": "UNKNOWN",
+    "evidenceUrls": [],
+    "allowedUses": []
+  },
+  "data": {
+    "sourceRef": {
+      "id": "LE-SRC-ASQ-PDCA",
+      "version": "0.1.0"
+    },
+    "locator": "What is the Plan-Do-Check-Act (PDCA) Cycle?; The Plan-do-check-act Procedure; accessed 2026-11-25",
+    "claim": {
+      "fa": "برنامه‌ریزی، اجرای آزمایشی، بررسی یافته‌ها و اقدام بعدی چهار مرحله چرخه‌اند.",
+      "en": "The cycle links planning, a trial, examination of findings and a next action."
+    },
+    "limitations": "Descriptive professional guidance, not a controlled learning study. Original concise paraphrase; Persian expert review and reuse permission pending. See research/references.json LE-SRC-028; PDSA distinction LE-SRC-029."
+  }
+}
