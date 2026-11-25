@@ -1,0 +1,57 @@
+name: nikway-academy-moodle
+services:
+  db:
+    image: nikway-moodle-postgres:17-hardened
+    build: {context: ./postgres}
+    entrypoint: [sh, -c, 'cp /run/secrets/db_password /tmp/moodle-password; chown postgres:postgres /tmp/moodle-password; chmod 600 /tmp/moodle-password; exec docker-entrypoint.sh postgres']
+    environment:
+      POSTGRES_DB: moodle
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+    volumes:
+      - moodle-db:/var/lib/postgresql/data
+      - ./runtime/postgres_password:/run/secrets/postgres_password:ro
+      - ./runtime/db_password:/run/secrets/db_password:ro
+      - ./postgres-init.sh:/docker-entrypoint-initdb.d/10-moodle.sh:ro
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U postgres -d moodle']
+      interval: 5s
+      retries: 20
+    mem_limit: 512m
+    cpus: 1
+    networks: [private]
+  moodle:
+    image: nikway-moodle:5.3.1-local
+    build: {context: .}
+    ports: ['127.0.0.1:18701:80']
+    volumes:
+      - moodle-data:/var/moodledata
+      - ./runtime/config.php:/run/moodle/config.php:ro
+    depends_on:
+      db: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, curl, -fsS, http://localhost/login/index.php]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+    mem_limit: 1g
+    cpus: 2
+    networks: [private]
+  cron:
+    image: nikway-moodle:5.3.1-local
+    command: [sh, -c, 'while true; do su -s /bin/sh www-data -c "php /var/www/moodle/admin/cli/cron.php"; sleep 60; done']
+    volumes:
+      - moodle-data:/var/moodledata
+      - ./runtime/config.php:/run/moodle/config.php:ro
+    depends_on:
+      moodle: {condition: service_healthy}
+    mem_limit: 384m
+    cpus: 0.5
+    networks: [private]
+volumes:
+  moodle-db:
+  moodle-data:
+networks:
+  private:
+    ipam:
+      config: [{subnet: 10.253.243.0/28}]
