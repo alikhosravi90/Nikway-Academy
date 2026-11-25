@@ -22,3 +22,7 @@ The twelve documents below describe the proposed target architecture. Each now i
 **Local prototype phases 1–2: PASS. Full target architecture: PARTIAL. Standards conformance: not assessed.**
 
 The original architecture/v0.1-era files remain untouched. Prior v0.2 content remains in Git history and in the target sections of each document. This update does not merge the PR or publish a running application.
+
+## Extended architecture
+
+See [central catalog](../../docs/README.md) and [selected technology stack](technology-stack.md). Frontend reconciliation: [ADR-001](../../decisions/ADR-001-frontend-baseline.md).
