@@ -206,3 +206,8 @@ def invoke(body:ToolRequest,request:Request,ctx:Context=Depends(authenticated, s
 
 from .content_api import router as content_router
 app.include_router(content_router)
+
+@app.get('/api/integrations/moodle/overview')
+def moodle_overview(ctx:Context=Depends(authenticated, scope='function')):
+    from .moodle import overview
+    return overview(ctx.tenant_id,ctx.sub)

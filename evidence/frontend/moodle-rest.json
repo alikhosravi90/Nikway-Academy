@@ -1,0 +1,31 @@
+{
+  "at": "2026-11-26T09:20:44.130195+00:00",
+  "status": "PASS",
+  "scope": "Direct real Moodle REST read-only calls; authenticated Academy HTTP route tested separately by integration owner",
+  "users": [
+    {
+      "subject": "00000000-0000-4000-8000-000000000001",
+      "course_ids": [
+        6
+      ],
+      "module_count": 5,
+      "non_allowlisted_function_denied": true
+    },
+    {
+      "subject": "00000000-0000-4000-8000-000000000003",
+      "course_ids": [
+        6
+      ],
+      "module_count": 5,
+      "non_allowlisted_function_denied": true
+    }
+  ],
+  "unit_tests": 6,
+  "token_transport": "POST body, server-only secret file0600",
+  "limitations": [
+    "Local trusted network HTTP only",
+    "Seven-day token expiration; operator rotation required",
+    "Progress is Moodle activity completion, not assessment pass",
+    "No cross-system progress writes or revocation synchronization"
+  ]
+}
