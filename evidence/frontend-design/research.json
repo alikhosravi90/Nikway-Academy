@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-26",
+  "baseline": "cd60f98",
+  "status": "RESEARCH_COMPLETE_IMPLEMENTATION_VALIDATION_SEPARATE",
+  "scope": "read-only documented-pattern benchmark and repository audit",
+  "default_variant": "Focus Jade",
+  "variants": [
+    "Focus Jade",
+    "Studio Ink",
+    "Warm Paper"
+  ],
+  "preserved_stack": [
+    "React 19.3.1",
+    "Vite 8.3.8",
+    "TypeScript 7.0.2",
+    "Tailwind 4.3.5"
+  ],
+  "sources": [
+    "https://support.khanacademy.org/hc/en-us/articles/46935588089997-How-do-I-use-the-student-dashboard-in-Khan-Academy",
+    "https://www.coursera.org/projects/introduction-project-management",
+    "https://docs.moodle.org/503/en/Course_overview",
+    "https://www.w3.org/TR/WCAG22/",
+    "https://github.com/rastikerdar/vazirmatn/blob/master/OFL.txt"
+  ],
+  "github_inventory": {
+    "owner": "alikhosravi90",
+    "limit": 100,
+    "matching_repository_names": [
+      "Nikway-Academy"
+    ],
+    "separate_learning_engineering_content_factory_repository": "NOT_IDENTIFIED_IN_BOUNDED_NAME_INVENTORY",
+    "academy_repository_license": "NOT_DECLARED_BY_GITHUB"
+  },
+  "limitations": [
+    "No comparative learner usability experiment",
+    "No full WCAG certification",
+    "Research does not prove Moodle API integration",
+    "Adjacent service compatibility remains bounded by existing content contract"
+  ],
+  "licenses": {
+    "react": "MIT",
+    "vite": "MIT",
+    "typescript": "Apache-2.0",
+    "tailwindcss": "MIT",
+    "radix-ui": "MIT",
+    "lucide-react": "ISC",
+    "vite-plugin-pwa": "MIT",
+    "Vazirmatn": "OFL-1.1"
+  }
+}
