@@ -1,0 +1,82 @@
+{
+  "scope": "real OIDC authenticated browser reads; no mocks, no learning data mutation",
+  "base_url": "http://localhost:18901",
+  "stats": {
+    "startTime": "2026-11-26T09:38:35.920Z",
+    "duration": 20421.5,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "real authenticated ten-screen desktop accessibility and truthful capability states",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 11101
+        }
+      ]
+    },
+    {
+      "title": "real learner mobile 320px RTL, keyboard and reduced preferences",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 1861
+        }
+      ]
+    },
+    {
+      "title": "real learner mobile 390px RTL, keyboard and reduced preferences",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 1774
+        }
+      ]
+    },
+    {
+      "title": "real learner locale and preferences persist without sensitive web storage or caches",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 1749
+        }
+      ]
+    },
+    {
+      "title": "mobile menu traps keyboard focus and Escape restores trigger",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 1620
+        }
+      ]
+    },
+    {
+      "title": "PWA offline navigation exposes public fallback without cached learning data",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 1082
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Automated axe does not establish complete WCAG2.2AA conformance",
+    "Chrome local-only test; no screen-reader user evaluation",
+    "Public-only offline fallback; no offline learning capability"
+  ],
+  "frontend_image_id": "sha256:f836e8e7faad294631b1df2cd9365b7e361564121285936fe2c1e2fcd06b4536",
+  "source_base": "cd60f98",
+  "implementation_source": "root frontend-design worktree before final commit; exact image receipt above"
+}
