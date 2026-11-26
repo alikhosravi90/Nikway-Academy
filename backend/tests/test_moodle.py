@@ -33,6 +33,7 @@ def test_mismatched_remote_identity_fails_before_course_read(configured,monkeypa
 def test_output_is_minimal_and_course_parameters_server_derived(configured,monkeypatch):
     calls=[]
     def fake(token,function,**kw):
+        kw.pop('_timeout',None)
         calls.append((function,kw))
         if function=='core_webservice_get_site_info': return {'userid':4,'username':S,'secret':'omitted'}
         if function=='core_enrol_get_users_courses': return [{'id':6,'fullname':'Course','progress':100,'private':'omitted'}]
@@ -46,3 +47,32 @@ def test_output_is_minimal_and_course_parameters_server_derived(configured,monke
 def test_untrusted_endpoint_rejected(monkeypatch):
     monkeypatch.setenv('MOODLE_REST_URL','https://evil.example/webservice/rest/server.php')
     with pytest.raises(ValueError): moodle.rest('secret','core_webservice_get_site_info')
+
+
+def test_total_deadline_stops_further_calls(configured,monkeypatch):
+    clock=[0]; calls=[]
+    monkeypatch.setattr(moodle.time,'monotonic',lambda:clock[0])
+    def fake(token,function,**kw):
+        calls.append(function); clock[0]+=11
+        return {'userid':4,'username':S}
+    monkeypatch.setattr(moodle,'rest',fake)
+    with pytest.raises(HTTPException) as exc: moodle.overview(A,S)
+    assert exc.value.status_code==503 and len(calls)==1
+
+def test_course_bound_stops_contents(configured,monkeypatch):
+    calls=[]
+    def fake(token,function,**kw):
+        calls.append(function)
+        return {'userid':4,'username':S} if len(calls)==1 else [{}]*11
+    monkeypatch.setattr(moodle,'rest',fake)
+    with pytest.raises(HTTPException): moodle.overview(A,S)
+    assert len(calls)==2
+
+def test_module_bound(configured,monkeypatch):
+    def fake(token,function,**kw):
+        if function=='core_webservice_get_site_info': return {'userid':4,'username':S}
+        if function=='core_enrol_get_users_courses': return [{'id':6,'fullname':'Course'}]
+        return [{'modules':[{'id':22,'name':'Lesson','modname':'page'}]*1001}]
+    monkeypatch.setattr(moodle,'rest',fake)
+    with pytest.raises(HTTPException) as exc: moodle.overview(A,S)
+    assert exc.value.status_code==503
