@@ -12,7 +12,7 @@
     "duration_seconds": 8.7,
     "scope": "real PKCE, synthetic coursework submission/review; no mocks"
   },
-  "independent_browser_tests": 6,
+  "independent_browser_tests": 9,
   "npm_advisories": {
     "info": 0,
     "low": 0,
@@ -54,5 +54,12 @@
     "No offline learning; cached static notice/icons only",
     "No load/capacity benchmark; timings are local single-session observations",
     "Original source course text preserved; English translates shell, not source course/rubric content"
+  ],
+  "final_browser_total": 13,
+  "post_review_fixes": [
+    "in-memory drafts survive navigation",
+    "drawer closes at desktop breakpoint",
+    "localized static guidance and icon labels",
+    "portable native PHP CI fixtures"
   ]
 }

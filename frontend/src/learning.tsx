@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Button, Card, Progress, PageHeading, Empty } from "./components/ui";
 import { Objectives, Practice, AssessmentGuidance } from "./course-content";
 import { api } from "./api";
@@ -6,18 +5,21 @@ import { completion, type Course, type Submission } from "./model";
 type Act = (fn: () => Promise<unknown>) => Promise<void>;
 export function LearningWorkspace({
   course,
+  content,
+  setContent,
   busy,
   act,
   back,
   en,
 }: {
   course: Course | undefined;
+  content: string;
+  setContent: (value: string) => void;
   busy: boolean;
   act: Act;
   back: () => void;
   en: boolean;
 }) {
-  const [content, setContent] = useState("");
   if (!course)
     return (
       <Empty
@@ -47,7 +49,7 @@ export function LearningWorkspace({
       />
       <div className="learning-layout">
         <Card className="reading-surface">
-          <Objectives metadata={course.metadata} />
+          <Objectives en={en} metadata={course.metadata} />
           {!course.enrolled ? (
             <Button
               disabled={busy}
@@ -71,6 +73,7 @@ export function LearningWorkspace({
                     {lesson.content}
                   </p>
                   <Practice
+                    en={en}
                     metadata={lesson.metadata}
                     objectives={course.metadata?.objectives}
                   />
@@ -113,7 +116,7 @@ export function LearningWorkspace({
                   });
                 }}
               >
-                <AssessmentGuidance metadata={course.metadata} />
+                <AssessmentGuidance en={en} metadata={course.metadata} />
                 <h2>{en ? "Submit assignment" : "ارسال تکلیف"}</h2>
                 <label htmlFor="submission">
                   {en
@@ -183,6 +186,8 @@ export function LearningWorkspace({
 }
 export function Submissions({
   items,
+  feedback,
+  setFeedback,
   courses,
   review,
   busy,
@@ -190,13 +195,14 @@ export function Submissions({
   en,
 }: {
   items: Submission[];
+  feedback: Record<string, string>;
+  setFeedback: (value: Record<string, string>) => void;
   courses: Course[];
   review: boolean;
   busy: boolean;
   act: Act;
   en: boolean;
 }) {
-  const [feedback, setFeedback] = useState<Record<string, string>>({});
   return (
     <>
       {items.length === 0 && (
@@ -227,6 +233,7 @@ export function Submissions({
           {review && (
             <>
               <AssessmentGuidance
+                en={en}
                 metadata={courses.find((c) => c.id === s.course_id)?.metadata}
               />
               <label htmlFor={"feedback-" + s.id}>

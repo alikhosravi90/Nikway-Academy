@@ -23,14 +23,14 @@
   "resources": {
     "navigation": [
       {
-        "duration": 36,
-        "domContentLoaded": 35.70000000298023,
-        "responseEnd": 16.80000001192093,
-        "transferSize": 807
+        "duration": 41.79999999701977,
+        "domContentLoaded": 41.599999994039536,
+        "responseEnd": 20.5,
+        "transferSize": 865
       }
     ],
     "resourceCount": 12,
-    "encodedBytes": 496438
+    "encodedBytes": 501151
   },
   "errors": []
 }

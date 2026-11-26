@@ -1,13 +1,12 @@
 {
-  "scope": "real OIDC authenticated browser reads; no mocks, no learning data mutation",
+  "scope": "Latest6 real OIDC design tests:authenticated reads only, no coursework writes",
   "base_url": "http://localhost:18901",
   "stats": {
-    "startTime": "2026-11-26T09:38:35.920Z",
-    "duration": 20421.5,
     "expected": 6,
-    "skipped": 0,
     "unexpected": 0,
-    "flaky": 0
+    "flaky": 0,
+    "skipped": 0,
+    "duration_ms": 19521
   },
   "tests": [
     {
@@ -16,7 +15,7 @@
       "results": [
         {
           "status": "passed",
-          "duration_ms": 11101
+          "duration_ms": 11710
         }
       ]
     },
@@ -26,7 +25,7 @@
       "results": [
         {
           "status": "passed",
-          "duration_ms": 1861
+          "duration_ms": 2062
         }
       ]
     },
@@ -36,7 +35,7 @@
       "results": [
         {
           "status": "passed",
-          "duration_ms": 1774
+          "duration_ms": 1842
         }
       ]
     },
@@ -46,7 +45,7 @@
       "results": [
         {
           "status": "passed",
-          "duration_ms": 1749
+          "duration_ms": 1847
         }
       ]
     },
@@ -56,7 +55,7 @@
       "results": [
         {
           "status": "passed",
-          "duration_ms": 1620
+          "duration_ms": 972
         }
       ]
     },
@@ -66,17 +65,15 @@
       "results": [
         {
           "status": "passed",
-          "duration_ms": 1082
+          "duration_ms": 1088
         }
       ]
     }
   ],
+  "frontend_image_id": "sha256:b001415161bd385f9a7a70d55e31a4d88d2ef48f27c6952eff547fa665a1a8f4",
   "limitations": [
-    "Automated axe does not establish complete WCAG2.2AA conformance",
-    "Chrome local-only test; no screen-reader user evaluation",
-    "Public-only offline fallback; no offline learning capability"
-  ],
-  "frontend_image_id": "sha256:f836e8e7faad294631b1df2cd9365b7e361564121285936fe2c1e2fcd06b4536",
-  "source_base": "cd60f98",
-  "implementation_source": "root frontend-design worktree before final commit; exact image receipt above"
+    "Automated axe is not complete WCAG2.2AA certification",
+    "Chromium local run only",
+    "Performance single local navigation sample, not sustained load test"
+  ]
 }

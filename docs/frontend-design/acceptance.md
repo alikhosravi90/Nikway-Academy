@@ -8,7 +8,7 @@
 - Three selectable token palettes (Focus Jade default, Studio Ink, Warm Paper), light/dark, RTL/LTR shell, Vazirmatn local fonts, bento composition, restrained navigation glass and opaque learning content. Explicit reduced-motion/transparency settings and OS preferences. Atomic Button/Badge/Progress/Card/Heading/search/course and responsive workspace patterns; Storybook build passes.
 - Actual Moodle REST data through authenticated Academy membership and individual subject-bound tokens: learner/reviewer receive course6/five modules; tenantB disabled; anonymous401. No Moodle token in browser. Provider API is read-only and narrowly limited; unauthorized function denied. Progress is source-labeled and separate.
 - Local application and Storybook build, typecheck,31 frontend unit tests,43 backend/content unit tests,5 role capability fixtures PASS.
-- Four existing live browser regressions PASS: course delivery/submission/review/sign-out, forged/anonymous and tenant checks. Six independent real-login UI tests PASS: ten screens, light/dark×three palettes on profile/dashboard, RTL320/390, LTR preference persistence, keyboard trap/Escape, public-only offline fallback. Automated axe reports zero violations in these checks.
+- Four existing live browser regressions PASS: course delivery/submission/review/sign-out, forged/anonymous and tenant checks. Nine independent real-login UI/regression tests PASS (13 total browser tests): ten screens, light/dark×three palettes on profile/dashboard, RTL320/390, LTR preference persistence, keyboard trap/Escape, public-only offline fallback; assignment/reviewer drafts survive navigation; mobile drawer releases desktop content on resize. Automated axe reports zero violations in these checks.
 - Registry audit zero advisories; final API/web image package scans zero High/Critical with existing cached Trivy DB. Scans do not certify the full application or Moodle/plugin code.
 
 Evidence: [verification](../../evidence/frontend-design/verification.json), [live API](../../evidence/frontend-design/api-live.json), [independent browser](../../evidence/frontend-design/design-playwright.json), [performance observations](../../evidence/frontend-design/browser-observations.json), [image scans](../../evidence/frontend-design/image-scan.json), [research](../../evidence/frontend-design/research.json).
@@ -16,6 +16,8 @@ Evidence: [verification](../../evidence/frontend-design/verification.json), [liv
 ## Findings corrected
 
 Existing interface had measured contrast violations. New theme-transition interpolation briefly produced low-contrast button colors; semantic states and no color interpolation fix it. Mobile Escape initially attempted focus while the background was inert; post-render focus restoration now passes. Exact new preview logout redirect required a trailing slash; real logout regression now passes. Moodle reader-role capability drift now fails before assignment; overview response reads have size/course/module/elapsed-time bounds.
+
+Post-review corrections preserve per-course assignment and per-submission reviewer drafts in memory only, close the mobile drawer at desktop breakpoints, and localize static guidance/icon labels. All 13 browser tests pass on the rebuilt image. Source content without language metadata still needs language-of-parts tagging. Hosted PHP fixtures now use native PHP instead of assuming a local Moodle container.
 
 ## Remaining gates and assumptions
 

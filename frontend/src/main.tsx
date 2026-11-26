@@ -95,6 +95,12 @@ function App() {
     [busy, setBusy] = useState(false),
     [page, setPage] = useState<PageId>("dashboard"),
     [navOpen, setNavOpen] = useState(false);
+  const [assignmentDrafts, setAssignmentDrafts] = useState<
+    Record<string, string>
+  >({});
+  const [feedbackDrafts, setFeedbackDrafts] = useState<Record<string, string>>(
+    {},
+  );
   const [me, setMe] = useState<Identity | null>(null),
     [courses, setCourses] = useState<Course[]>([]),
     [submissions, setSubmissions] = useState<Submission[]>([]),
@@ -137,7 +143,18 @@ function App() {
         panel?.querySelectorAll<HTMLElement>(
           "button:not(:disabled), a[href]",
         ) || [],
-      );
+      ).filter((node) => node.getClientRects().length > 0);
+    const desktop = window.matchMedia("(min-width: 900px)");
+    const closeAtDesktop = () => {
+      if (!desktop.matches) return;
+      setNavOpen(false);
+      requestAnimationFrame(() => mainRef.current?.focus());
+    };
+    if (desktop.matches) {
+      closeAtDesktop();
+      return;
+    }
+    desktop.addEventListener("change", closeAtDesktop);
     controls()[0]?.focus();
     const handler = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -160,7 +177,10 @@ function App() {
       }
     };
     document.addEventListener("keydown", handler);
-    return () => document.removeEventListener("keydown", handler);
+    return () => {
+      document.removeEventListener("keydown", handler);
+      desktop.removeEventListener("change", closeAtDesktop);
+    };
   }, [navOpen]);
   useEffect(() => {
     const yes = () => setOnline(true),
@@ -776,6 +796,14 @@ function App() {
             <LearningWorkspace
               key={selected}
               course={course}
+              content={selected ? assignmentDrafts[selected] || "" : ""}
+              setContent={(value) => {
+                if (selected)
+                  setAssignmentDrafts((drafts) => ({
+                    ...drafts,
+                    [selected]: value,
+                  }));
+              }}
               busy={busy}
               act={act}
               back={() => navigate("courses")}
@@ -914,6 +942,8 @@ function App() {
               />
               <Submissions
                 items={submissions}
+                feedback={feedbackDrafts}
+                setFeedback={setFeedbackDrafts}
                 courses={courses}
                 review={page === "review" && reviewer}
                 busy={busy}
@@ -1438,6 +1468,7 @@ function MoodleSection({
                       />
                     ) : (
                       <CompletionIcon
+                        en={en}
                         done={m.completion === 1 || m.completion === 2}
                       />
                     )}

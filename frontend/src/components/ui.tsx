@@ -130,10 +130,28 @@ export function CourseCard({
     </Card>
   );
 }
-export function CompletionIcon({ done }: { done: boolean }) {
+export function CompletionIcon({
+  done,
+  en = false,
+}: {
+  done: boolean;
+  en?: boolean;
+}) {
+  const label = done
+    ? en
+      ? "Completed"
+      : "تکمیل شده"
+    : en
+      ? "Not completed"
+      : "تکمیل نشده";
   return done ? (
-    <CircleCheck aria-label="تکمیل شده" className="success" size={20} />
+    <CircleCheck
+      aria-label={label}
+      lang={en ? "en" : "fa"}
+      className="success"
+      size={20}
+    />
   ) : (
-    <CircleDashed aria-label="تکمیل نشده" size={20} />
+    <CircleDashed aria-label={label} lang={en ? "en" : "fa"} size={20} />
   );
 }

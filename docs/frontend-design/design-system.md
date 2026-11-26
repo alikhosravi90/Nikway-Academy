@@ -10,7 +10,7 @@ Learning before navigation; one primary next action per region; progressive disc
 
 Use CSS custom properties as a single semantic layer. All three palettes provide canvas, surface, elevated surface, text, muted text, border, primary, primary text, focus, success, warning and danger. Components consume roles rather than raw palette values. Keep content surfaces opaque in every palette. Dark mode is a complete role mapping, not an inversion filter.
 
-Spacing scale: 4, 8, 12, 16, 24, 32, 48 px. Typography: locally hosted Vazirmatn, system sans-serif fallback; reading content 16 px (15 px on mobile), interface chrome 15 px, line-height about 1.75 for Persian reading, readable measure about 70 characters. Type remains zoomable. Radius distinguishes small controls from cards without creating excessive ornament. Use a single restrained navigation shadow; content hierarchy comes from spacing, headings and borders.
+Spacing scale: 4, 8, 12, 16, 24, 32, 48 px. Typography: locally hosted Vazirmatn, system sans-serif fallback; reading content 16 px (15 px on mobile), interface chrome 15 px (14 px on mobile), line-height about 1.75 for Persian reading, readable measure about 70 characters. Type remains zoomable. Radius distinguishes small controls from cards without creating excessive ornament. Use a single restrained navigation shadow; content hierarchy comes from spacing, headings and borders.
 
 ## Atomic component library and UI kit
 
