@@ -16,26 +16,26 @@ GitHub read-only inventory (`gh repo list alikhosravi90 --limit 100`) found Nikw
 
 Installed package manifests in the existing checkout were inspected; versions agree with the lockfile:
 
-| Package | Version | License | Decision |
-| --- | --- | --- | --- |
-| React | 19.3.1 | MIT | Keep |
-| Vite | 8.3.8 | MIT | Keep; Node ^20.19 or >=22.12 |
-| TypeScript | 7.0.2 | Apache-2.0 | Keep |
-| Tailwind CSS | 4.3.5 | MIT | Keep |
-| Radix UI | 1.8.1 | MIT | Reuse existing primitives |
-| Lucide React | 1.80.0 | ISC | Reuse icon system |
-| vite-plugin-pwa | 2.0.0 | MIT | Existing dependency; no private-data cache |
-| Vazirmatn | Font asset version to be pinned by implementation | SIL OFL 1.1 | Self-host with upstream license |
+| Package         | Version                                           | License     | Decision                                   |
+| --------------- | ------------------------------------------------- | ----------- | ------------------------------------------ |
+| React           | 19.3.1                                            | MIT         | Keep                                       |
+| Vite            | 8.3.8                                             | MIT         | Keep; Node ^20.19 or >=22.12               |
+| TypeScript      | 7.0.2                                             | Apache-2.0  | Keep                                       |
+| Tailwind CSS    | 4.3.5                                             | MIT         | Keep                                       |
+| Radix UI        | 1.8.1                                             | MIT         | Reuse existing primitives                  |
+| Lucide React    | 1.80.0                                            | ISC         | Reuse icon system                          |
+| vite-plugin-pwa | 2.0.0                                             | MIT         | Existing dependency; no private-data cache |
+| Vazirmatn       | Font asset version to be pinned by implementation | SIL OFL 1.1 | Self-host with upstream license            |
 
 [Vazirmatn upstream license](https://github.com/rastikerdar/vazirmatn/blob/master/OFL.txt). No new Next.js server: migration would replace the validated static SPA deployment without a demonstrated requirement. Storybook is optional preferred tooling, not an accessibility gate; a local component gallery can document the UI kit without introducing an unverified toolchain dependency. Any later Storybook installation requires its actual peer-dependency/build verification.
 
 ## Primary-source benchmark
 
-| Platform | Observed documented pattern | NIKWAY design inference |
-| --- | --- | --- |
-| Khan Academy | Dashboard separates assigned work and mastery; queue prioritizes due work | Put one next learning action before secondary metrics; keep completion separate from mastery |
-| Coursera Guided Projects | A project presents instructor guidance beside a work area | Pair lesson guidance with the learner task on wide screens; stack on mobile |
-| Moodle | My courses filters and sorts enrolled courses; activity-completion percentages are not course-completion proof | Filter the catalog; label the actual progress measure and source |
+| Platform                 | Observed documented pattern                                                                                    | NIKWAY design inference                                                                      |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Khan Academy             | Dashboard separates assigned work and mastery; queue prioritizes due work                                      | Put one next learning action before secondary metrics; keep completion separate from mastery |
+| Coursera Guided Projects | A project presents instructor guidance beside a work area                                                      | Pair lesson guidance with the learner task on wide screens; stack on mobile                  |
+| Moodle                   | My courses filters and sorts enrolled courses; activity-completion percentages are not course-completion proof | Filter the catalog; label the actual progress measure and source                             |
 
 Sources reviewed: [Khan student dashboard](https://support.khanacademy.org/hc/en-us/articles/46935588089997-How-do-I-use-the-student-dashboard-in-Khan-Academy), [Coursera project example](https://www.coursera.org/projects/introduction-project-management), [Moodle course overview](https://docs.moodle.org/503/en/Course_overview). This is a documented-pattern benchmark, not a timed comparative usability study or pixel reproduction.
 

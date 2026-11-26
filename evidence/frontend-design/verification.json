@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-26",
+  "scope": "Local functional prototype, synthetic existing candidate data; not production acceptance",
+  "build": "PASS",
+  "storybook_build": "PASS",
+  "typecheck": "PASS",
+  "frontend_unit_tests": 31,
+  "backend_content_unit_tests": 43,
+  "role_negative_fixtures": 5,
+  "existing_live_browser_regressions": {
+    "passed": 4,
+    "duration_seconds": 8.7,
+    "scope": "real PKCE, synthetic coursework submission/review; no mocks"
+  },
+  "independent_browser_tests": 6,
+  "npm_advisories": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "runtime_point_sample": [
+    {
+      "BlockIO": "369kB / 0B",
+      "CPUPerc": "0.13%",
+      "Container": "nikway-academy-design-design-api-1",
+      "ID": "c9eefd84759d",
+      "MemPerc": "12.69%",
+      "MemUsage": "64.95MiB / 512MiB",
+      "Name": "nikway-academy-design-design-api-1",
+      "NetIO": "3.73MB / 2.59MB",
+      "PIDs": "6"
+    },
+    {
+      "BlockIO": "143kB / 8.19kB",
+      "CPUPerc": "0.00%",
+      "Container": "nikway-academy-design-design-frontend-1",
+      "ID": "ac81c3f278bf",
+      "MemPerc": "4.28%",
+      "MemUsage": "10.96MiB / 256MiB",
+      "Name": "nikway-academy-design-design-frontend-1",
+      "NetIO": "588kB / 10.7MB",
+      "PIDs": "13"
+    }
+  ],
+  "limitations": [
+    "AI provider unavailable; tutor shows reflection prompts with explicit status",
+    "Full WCAG2.2AA conformance not established; assistive technology/user study/cross-browser tests pending",
+    "Moodle local-only OIDC validation limitations remain",
+    "Moodle read-through progress only; no grade/revocation synchronization",
+    "Seven-day Moodle service tokens require operator rotation",
+    "No offline learning; cached static notice/icons only",
+    "No load/capacity benchmark; timings are local single-session observations",
+    "Original source course text preserved; English translates shell, not source course/rubric content"
+  ]
+}

@@ -2,11 +2,11 @@
 
 Status: design directions for the functional prototype. All share the same information architecture, semantics and interactions; theme choice must never alter authorization or learning state.
 
-| Variant | Palette and composition | Best fit | Trade-off |
-| --- | --- | --- | --- |
-| Focus Jade — default | Calm off-white opaque cards; deep jade action; restrained green tint; translucent navigation | Daily learning and Persian reading; closest continuity with existing Academy | Requires disciplined contrast on muted green text |
-| Studio Ink | Ink/navy foundations with cyan accent; same readable opaque content | Technical workshops and evening use | Avoid neon glow and cyan body text; dark mode requires its own contrast check |
-| Warm Paper | Sand canvas, warm opaque paper and earthy accent | Long reading and reflection | Warm hues cannot encode warnings without icon/text labels |
+| Variant              | Palette and composition                                                                      | Best fit                                                                     | Trade-off                                                                     |
+| -------------------- | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Focus Jade — default | Calm off-white opaque cards; deep jade action; restrained green tint; translucent navigation | Daily learning and Persian reading; closest continuity with existing Academy | Requires disciplined contrast on muted green text                             |
+| Studio Ink           | Ink/navy foundations with cyan accent; same readable opaque content                          | Technical workshops and evening use                                          | Avoid neon glow and cyan body text; dark mode requires its own contrast check |
+| Warm Paper           | Sand canvas, warm opaque paper and earthy accent                                             | Long reading and reflection                                                  | Warm hues cannot encode warnings without icon/text labels                     |
 
 Each supports light/dark, Persian RTL and English LTR. Variants are token palettes, not three independently maintained products. Selection is an explicit local preference, never inferred from sensitive learner profiling.
 

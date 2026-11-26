@@ -1,0 +1,50 @@
+name: nikway-academy-design
+services:
+  design-api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    image: nikway-academy-design-api:local
+    environment:
+      DATABASE_URL: postgresql+psycopg://academy_app:${ACADEMY_APP_PASSWORD}@postgres:5432/academy
+      OIDC_ISSUER: http://localhost:18580/realms/academy
+      OIDC_JWKS_URL: http://keycloak:8080/realms/academy/protocol/openid-connect/certs
+      OIDC_AUDIENCE: academy-api
+      TOOLS_ENABLED: 'true'
+      CORS_ORIGINS: http://localhost:18901
+      MOODLE_URL: http://localhost:18701
+      MOODLE_TENANT_ID: '10000000-0000-4000-8000-000000000001'
+      MOODLE_REST_URL: http://moodle/webservice/rest/server.php
+      MOODLE_TOKENS_FILE: /run/moodle/webservice-tokens.json
+    volumes: [design-secrets:/run/moodle:ro]
+    ports: ['127.0.0.1:18900:8000']
+    networks: [academy, moodle, design]
+    mem_limit: 512m
+    cpus: 1.0
+  design-frontend:
+    image: nikway-academy-design-web:local
+    build:
+      context: ./frontend
+      args:
+        VITE_OIDC_URL: http://localhost:18580
+        NGINX_OIDC_ORIGIN: http://localhost:18580
+        NGINX_API_HOST: design-api
+    ports: ['127.0.0.1:18901:80']
+    networks: [design]
+    depends_on: [design-api]
+    mem_limit: 256m
+    cpus: 0.5
+networks:
+  academy:
+    external: true
+    name: nikway-academy-content_default
+  moodle:
+    external: true
+    name: nikway-academy-moodle_private
+  design:
+    ipam:
+      config: [{subnet: 10.253.245.0/28}]
+volumes:
+  design-secrets:
+    external: true
+    name: nikway-academy-design-secrets

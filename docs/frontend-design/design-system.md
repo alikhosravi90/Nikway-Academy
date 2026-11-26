@@ -10,33 +10,33 @@ Learning before navigation; one primary next action per region; progressive disc
 
 Use CSS custom properties as a single semantic layer. All three palettes provide canvas, surface, elevated surface, text, muted text, border, primary, primary text, focus, success, warning and danger. Components consume roles rather than raw palette values. Keep content surfaces opaque in every palette. Dark mode is a complete role mapping, not an inversion filter.
 
-Spacing scale: 4, 8, 12, 16, 24, 32, 48 px. Typography: locally hosted Vazirmatn, existing Noto fallback, sans-serif; body at least 16 px, line-height about 1.75 for Persian reading, readable measure about 70 characters. Type remains zoomable. Radius distinguishes small controls from cards without creating excessive ornament. Use a single restrained navigation shadow; content hierarchy comes from spacing, headings and borders.
+Spacing scale: 4, 8, 12, 16, 24, 32, 48 px. Typography: locally hosted Vazirmatn, system sans-serif fallback; reading content 16 px (15 px on mobile), interface chrome 15 px, line-height about 1.75 for Persian reading, readable measure about 70 characters. Type remains zoomable. Radius distinguishes small controls from cards without creating excessive ornament. Use a single restrained navigation shadow; content hierarchy comes from spacing, headings and borders.
 
 ## Atomic component library and UI kit
 
-| Level | Components | Required states |
-| --- | --- | --- |
-| Atoms | Button, Icon, Input, Label, Badge, Heading, Progress | Default, hover, focus, disabled; non-color status |
-| Molecules | Search/filter field, course summary, status message, preference control | Empty, loading, error, success where relevant |
+| Level     | Components                                                                                  | Required states                                                |
+| --------- | ------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| Atoms     | Button, Icon, Input, Label, Badge, Heading, Progress                                        | Default, hover, focus, disabled; non-color status              |
+| Molecules | Search/filter field, course summary, status message, preference control                     | Empty, loading, error, success where relevant                  |
 | Organisms | Navigation, next-action panel, course grid, lesson reader, assessment form, rubric feedback | Keyboard traversal, retry, pending mutation, permission denied |
-| Templates | Learning overview, collection, split workspace, settings/admin | 320 px reflow and desktop composition; RTL/LTR |
+| Templates | Learning overview, collection, split workspace, settings/admin                              | 320 px reflow and desktop composition; RTL/LTR                 |
 
 Lucide supplies consistent stroke icons. Decorative icons are hidden from assistive technology; icon-only controls need localized accessible names. Directional arrows mirror with writing direction; media controls and brand marks do not. Native buttons and links retain their semantics; no clickable card div without an accessible control.
 
 ## UX pattern library and ten screens
 
-| Screen | Main purpose | Operational boundary |
-| --- | --- | --- |
-| Dashboard | Resume learning; concise real progress | No fabricated analytics |
-| Catalog | Search/filter available courses and select | Respect tenant-visible results |
-| Workspace | Read content and perform the next action | Preserve network-backed submissions |
-| Learning path | Explain sequence and completion | Label completion, never imply competency mastery |
-| AI tutor | Explain service state and access available capability | No simulated tutor conversation |
-| Assessment | Submit work and inspect rubric/feedback | Confirm pending/success/failure; no duplicate submission |
-| Projects | Find practical tasks and workshops | Distinguish available tasks from external services |
-| Knowledge library | Browse/search actual lesson resources | No invented external corpus |
-| Profile | Identity and display preferences | Display is not an authorization control |
-| Administration | Role-appropriate operational controls | Backend permissions remain authoritative |
+| Screen            | Main purpose                                          | Operational boundary                                     |
+| ----------------- | ----------------------------------------------------- | -------------------------------------------------------- |
+| Dashboard         | Resume learning; concise real progress                | No fabricated analytics                                  |
+| Catalog           | Search/filter available courses and select            | Respect tenant-visible results                           |
+| Workspace         | Read content and perform the next action              | Preserve network-backed submissions                      |
+| Learning path     | Explain sequence and completion                       | Label completion, never imply competency mastery         |
+| AI tutor          | Explain service state and access available capability | No simulated tutor conversation                          |
+| Assessment        | Submit work and inspect rubric/feedback               | Confirm pending/success/failure; no duplicate submission |
+| Projects          | Find practical tasks and workshops                    | Distinguish available tasks from external services       |
+| Knowledge library | Browse/search actual lesson resources                 | No invented external corpus                              |
+| Profile           | Identity and display preferences                      | Display is not an authorization control                  |
+| Administration    | Role-appropriate operational controls                 | Backend permissions remain authoritative                 |
 
 Empty states explain what is missing and provide a valid next action. Errors preserve entered work, give a human-readable message and support retry. Disabled operations explain why. External Moodle transitions are named clearly; Academy and Moodle progress must not be conflated. Confirmation is reserved for destructive or consequential actions.
 

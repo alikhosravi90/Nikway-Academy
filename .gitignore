@@ -10,3 +10,6 @@
 **/test-results/
 **/playwright-report/
 *.tsbuildinfo
+
+**/storybook-static/
+**/build-storybook.log

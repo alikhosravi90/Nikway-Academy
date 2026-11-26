@@ -1,0 +1,28 @@
+{
+  "scope": "Real PKCE, active Academy membership, real per-subject Moodle REST; no course writes",
+  "status": "PASS",
+  "anonymous_status": 401,
+  "subjects": [
+    {
+      "subject_fixture": "learner-a",
+      "status": 200,
+      "enabled": true,
+      "courses": 1,
+      "elapsed_ms": 202.31
+    },
+    {
+      "subject_fixture": "reviewer-a",
+      "status": 200,
+      "enabled": true,
+      "courses": 1,
+      "elapsed_ms": 181.47
+    },
+    {
+      "subject_fixture": "learner-b",
+      "status": 200,
+      "enabled": false,
+      "courses": 0,
+      "elapsed_ms": 5.96
+    }
+  ]
+}
