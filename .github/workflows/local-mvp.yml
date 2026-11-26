@@ -34,9 +34,10 @@ jobs:
         run: |
           python3 -m venv /tmp/academy-tests
           /tmp/academy-tests/bin/pip install -r backend/requirements.txt pytest==9.2.0
-          PYTHONPATH=backend:. /tmp/academy-tests/bin/python -m pytest backend/tests/test_rules.py backend/tests/test_auth.py backend/tests/test_integrations.py content/test_validate_package.py -q
+          PYTHONPATH=backend:. /tmp/academy-tests/bin/python -m pytest backend/tests/test_rules.py backend/tests/test_auth.py backend/tests/test_integrations.py backend/tests/test_moodle.py content/test_validate_package.py -q
           /tmp/academy-tests/bin/python infra/moodle/content-test.py
           python3 -m unittest discover -s infra/moodle -p test_auth_keycloak.py -v
+          python3 infra/moodle/webservice-role-test.py
           bash -n scripts/moodle-connect.sh scripts/moodle-compose.sh scripts/moodle-backup.sh
       - name: Portable content admission and learning cycle
         run: |
@@ -48,6 +49,7 @@ jobs:
           python3 -c "import json; c=json.load(open('../infra/runtime/credentials.json')); assert all(c[n]['password'] and c[n]['username'] for n in ('learner-a','learner-b','reviewer-a'))"
           npm ci
           npm test
+          npm run build-storybook
           npx playwright install --with-deps chromium
           npm run test:e2e
       - name: Stop only test project

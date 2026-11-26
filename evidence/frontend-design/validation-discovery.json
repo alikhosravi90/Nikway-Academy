@@ -1,0 +1,40 @@
+{
+  "observed_at": "2026-11-26T09:20:12.465414+00:00",
+  "base_commit": "cd60f98",
+  "scope": "read-only pre-implementation discovery",
+  "node": "v22.22.1",
+  "playwright": "1.65.1",
+  "browser_cache": "chromium-1255 and chromium_headless_shell-1255 present",
+  "axe_registry": {
+    "version": "4.14.1",
+    "license": "MPL-2.0",
+    "node": ">=22.12.0",
+    "playwright_core": ">=1.0.0"
+  },
+  "reusable": [
+    "real OIDC browser login flow",
+    "Academy content semantic components",
+    "existing backend RS256 issuer/audience/expiry verification",
+    "active DB membership and tenant-scoped transaction RLS",
+    "prototype UI atoms subject to live-data adaptation"
+  ],
+  "risks": [
+    "Existing prototype mock tutor and Dexie must not be mistaken for operational capability",
+    "Automated axe is incomplete WCAG evidence",
+    "New PWA must not cache API, identity, Moodle tokens or submissions",
+    "Learning data writes excluded from design checks; existing regression tests are separate"
+  ],
+  "observed_service_health": [
+    "nikway-academy-moodle-moodle-1 Up 20 hours (healthy)",
+    "nikway-academy-moodle-db-1 Up 20 hours (healthy)",
+    "nikway-academy-content-api-1 Up 20 hours",
+    "nikway-academy-content-frontend-1 Up 20 hours",
+    "nikway-academy-moodle-cron-1 Up 20 hours",
+    "nikway-academy-content-keycloak-1 Up 21 hours (healthy)",
+    "nikway-academy-content-postgres-1 Up 21 hours (healthy)",
+    "nikway-academy-local-frontend-1 Up 22 hours",
+    "nikway-academy-local-api-1 Up 22 hours",
+    "nikway-academy-local-keycloak-1 Up 22 hours (healthy)",
+    "nikway-academy-local-postgres-1 Up 22 hours (healthy)"
+  ]
+}

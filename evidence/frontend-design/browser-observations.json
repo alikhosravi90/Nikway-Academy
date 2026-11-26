@@ -1,0 +1,36 @@
+{
+  "scope": "real18901 authenticated read-only screenshot/keyboard bounded performance sample",
+  "results": [
+    {
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "overflow": false
+    }
+  ],
+  "keyboard": {
+    "firstFocus": "رفتن به محتوا",
+    "tag": "A",
+    "href": "#main",
+    "outline": "solid"
+  },
+  "resources": {
+    "navigation": [
+      {
+        "duration": 41.79999999701977,
+        "domContentLoaded": 41.599999994039536,
+        "responseEnd": 20.5,
+        "transferSize": 865
+      }
+    ],
+    "resourceCount": 12,
+    "encodedBytes": 501151
+  },
+  "errors": []
+}

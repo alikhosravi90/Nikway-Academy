@@ -1,0 +1,104 @@
+{
+  "scope": "existing18501 authenticated learner dashboard, real OIDC reads only",
+  "results": [
+    {
+      "width": 1280,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            [
+              ".identity > button"
+            ],
+            [
+              "header > button"
+            ],
+            [
+              "article:nth-child(1) > .tag"
+            ],
+            [
+              "article:nth-child(1) > button"
+            ],
+            [
+              "article:nth-child(2) > .tag"
+            ],
+            [
+              "article:nth-child(2) > button"
+            ],
+            [
+              "footer"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            [
+              ".identity > button"
+            ],
+            [
+              "header > button"
+            ],
+            [
+              "article:nth-child(1) > .tag"
+            ],
+            [
+              "article:nth-child(1) > button"
+            ],
+            [
+              "article:nth-child(2) > .tag"
+            ],
+            [
+              "article:nth-child(2) > button"
+            ],
+            [
+              "footer"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "targets": [
+            [
+              ".identity > button"
+            ],
+            [
+              "header > button"
+            ],
+            [
+              "article:nth-child(1) > .tag"
+            ],
+            [
+              "article:nth-child(1) > button"
+            ],
+            [
+              "article:nth-child(2) > .tag"
+            ],
+            [
+              "article:nth-child(2) > button"
+            ],
+            [
+              "footer"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

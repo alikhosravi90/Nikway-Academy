@@ -1,0 +1,22 @@
+{
+  "scanner": "Trivy; existing cached advisory DB, package-scanner scope only",
+  "results": [
+    {
+      "image": "nikway-academy-design-web:local",
+      "id": "sha256:f836e8e7faad294631b1df2cd9365b7e361564121285936fe2c1e2fcd06b4536",
+      "counts": {
+        "MEDIUM": 1
+      },
+      "high_critical": 0
+    },
+    {
+      "image": "nikway-academy-design-api:local",
+      "id": "sha256:753a2f1b71d5a8ac59390c560239f83f21e8e6b33e607e42a8d9c64ce1b6edf0",
+      "counts": {
+        "MEDIUM": 6,
+        "LOW": 1
+      },
+      "high_critical": 0
+    }
+  ]
+}

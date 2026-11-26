@@ -32,17 +32,31 @@ export type LessonMetadata = {
   practice?: { prompt: string; deliverable: string };
 };
 
-export function Objectives({ metadata }: { metadata?: CourseMetadata }) {
+export function Objectives({
+  metadata,
+  en = false,
+}: {
+  metadata?: CourseMetadata;
+  en?: boolean;
+}) {
   if (!metadata?.objectives?.length) return null;
   return (
-    <section className="learning-guidance" aria-label="هدف‌های یادگیری">
-      <h3>هدف‌های یادگیری</h3>
+    <section
+      className="learning-guidance"
+      aria-label={en ? "Learning objectives" : "هدف‌های یادگیری"}
+    >
+      <h3 lang={en ? "en" : "fa"}>
+        {en ? "Learning objectives" : "هدف‌های یادگیری"}
+      </h3>
       <ul>
         {metadata.objectives.map((objective) => (
           <li key={objective.id}>
             <p dir="auto">{objective.description}</p>
             <p className="muted" dir="auto">
-              شواهد یادگیری: {objective.evidence}
+              <span lang={en ? "en" : "fa"}>
+                {en ? "Learning evidence: " : "شواهد یادگیری: "}
+              </span>
+              {objective.evidence}
             </p>
           </li>
         ))}
@@ -53,9 +67,11 @@ export function Objectives({ metadata }: { metadata?: CourseMetadata }) {
 export function Practice({
   metadata,
   objectives,
+  en = false,
 }: {
   metadata?: LessonMetadata;
   objectives?: Objective[];
+  en?: boolean;
 }) {
   if (!metadata) return null;
   const linked =
@@ -64,16 +80,26 @@ export function Practice({
     <>
       {linked.length > 0 && (
         <p className="muted" dir="auto">
-          هدف این درس: {linked.map((o) => o.description).join("؛ ")}
+          <span lang={en ? "en" : "fa"}>
+            {en ? "Lesson objective: " : "هدف این درس: "}
+          </span>
+          {linked.map((o) => o.description).join(en ? "; " : "؛ ")}
         </p>
       )}
       {metadata.practice && (
-        <section className="learning-guidance" aria-label="تمرین درس">
-          <h4>تمرین درس</h4>
+        <section
+          className="learning-guidance"
+          aria-label={en ? "Lesson practice" : "تمرین درس"}
+        >
+          <h4 lang={en ? "en" : "fa"}>
+            {en ? "Lesson practice" : "تمرین درس"}
+          </h4>
           <p className="text-content" dir="auto">
             {metadata.practice.prompt}
           </p>
-          <h4>خروجی مورد انتظار</h4>
+          <h4 lang={en ? "en" : "fa"}>
+            {en ? "Expected deliverable" : "خروجی مورد انتظار"}
+          </h4>
           <p className="text-content" dir="auto">
             {metadata.practice.deliverable}
           </p>
@@ -84,26 +110,39 @@ export function Practice({
 }
 export function AssessmentGuidance({
   metadata,
+  en = false,
 }: {
   metadata?: CourseMetadata;
+  en?: boolean;
 }) {
   if (!metadata?.assessment) return null;
   return (
-    <section className="learning-guidance" aria-label="راهنمای تکلیف">
-      <h3>راهنمای تکلیف</h3>
+    <section
+      className="learning-guidance"
+      aria-label={en ? "Assignment guidance" : "راهنمای تکلیف"}
+    >
+      <h3 lang={en ? "en" : "fa"}>
+        {en ? "Assignment guidance" : "راهنمای تکلیف"}
+      </h3>
       <p className="text-content" dir="auto">
         {metadata.assessment.prompt}
       </p>
-      <p>
-        طول پاسخ: {metadata.assessment.minCharacters.toLocaleString("fa")} تا{" "}
-        {metadata.assessment.maxCharacters.toLocaleString("fa")} نویسه
+      <p lang={en ? "en" : "fa"}>
+        {en ? "Response length: " : "طول پاسخ: "}
+        {metadata.assessment.minCharacters.toLocaleString(en ? "en" : "fa")}
+        {en ? " to " : " تا "}
+        {metadata.assessment.maxCharacters.toLocaleString(en ? "en" : "fa")}
+        {en ? " characters" : " نویسه"}
       </p>
       {metadata.rubric && (
         <details>
-          <summary>معیارهای بازبینی انسانی</summary>
-          <p className="muted">
-            این معیارها راهنمای بازخورد بازبین هستند؛ در این نسخه نمره عددی ثبت
-            نمی‌شود.
+          <summary lang={en ? "en" : "fa"}>
+            {en ? "Human review criteria" : "معیارهای بازبینی انسانی"}
+          </summary>
+          <p className="muted" lang={en ? "en" : "fa"}>
+            {en
+              ? "These criteria guide reviewer feedback; this version does not record a numeric score."
+              : "این معیارها راهنمای بازخورد بازبین هستند؛ در این نسخه نمره عددی ثبت نمی‌شود."}
           </p>
           {metadata.rubric.criteria.map((criterion) => (
             <section className="rubric-criterion" key={criterion.id}>

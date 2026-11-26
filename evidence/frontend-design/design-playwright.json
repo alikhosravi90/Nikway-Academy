@@ -1,0 +1,79 @@
+{
+  "scope": "Latest6 real OIDC design tests:authenticated reads only, no coursework writes",
+  "base_url": "http://localhost:18901",
+  "stats": {
+    "expected": 6,
+    "unexpected": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "duration_ms": 19521
+  },
+  "tests": [
+    {
+      "title": "real authenticated ten-screen desktop accessibility and truthful capability states",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 11710
+        }
+      ]
+    },
+    {
+      "title": "real learner mobile 320px RTL, keyboard and reduced preferences",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 2062
+        }
+      ]
+    },
+    {
+      "title": "real learner mobile 390px RTL, keyboard and reduced preferences",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 1842
+        }
+      ]
+    },
+    {
+      "title": "real learner locale and preferences persist without sensitive web storage or caches",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 1847
+        }
+      ]
+    },
+    {
+      "title": "mobile menu traps keyboard focus and Escape restores trigger",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 972
+        }
+      ]
+    },
+    {
+      "title": "PWA offline navigation exposes public fallback without cached learning data",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration_ms": 1088
+        }
+      ]
+    }
+  ],
+  "frontend_image_id": "sha256:b001415161bd385f9a7a70d55e31a4d88d2ef48f27c6952eff547fa665a1a8f4",
+  "limitations": [
+    "Automated axe is not complete WCAG2.2AA certification",
+    "Chromium local run only",
+    "Performance single local navigation sample, not sustained load test"
+  ]
+}
