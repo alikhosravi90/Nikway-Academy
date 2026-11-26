@@ -23,6 +23,14 @@ $actual=array_values($DB->get_fieldset_select('external_services_functions','fun
 if ($actual!==$expected || !$s->enabled || !$s->restrictedusers || $s->downloadfiles || $s->uploadfiles) throw new Exception('Service profile drift');
 $role=$DB->get_record('role',['shortname'=>'nikway_ws_reader']);
 if (!$role) {$rid=create_role('NIKWAY REST reader','nikway_ws_reader','Only REST transport access; no course or user administration'); $role=$DB->get_record('role',['id'=>$rid]);}
+// Refuse repurposed roles before granting system-level assignments.
+$caps=$DB->get_records('role_capabilities',['roleid'=>$role->id]);
+foreach ($caps as $cap) {
+ if ($cap->capability !== 'webservice/rest:use' || (int)$cap->permission !== CAP_ALLOW ||
+     (int)$cap->contextid !== context_system::instance()->id) {
+  throw new Exception('REST reader role capability drift');
+ }
+}
 assign_capability('webservice/rest:use',CAP_ALLOW,$role->id,context_system::instance()->id);
 $output=['tenant_id'=>'10000000-0000-4000-8000-000000000001','users'=>[]];
 foreach ($users as $sub=>$u) {
